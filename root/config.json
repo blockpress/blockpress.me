@@ -1,11 +1,13 @@
 {
-  "sitetitle": "Project B",
+  "sitetitle": "Blockpress",
   "theme": "default",
 
 	"modules": ["static","link"],
 
 	"menu": [
     {"label": "Home", "type": "static", "args": ["home.html"]},
-  	{"label": "Link", "type": "link", "args": ["https://blockpress.me"]}
+  	{"label": "Anton", "type": "link", "args": ["https://anton.blockpress.me"]},
+  	{"label": "Dana", "type": "link", "args": ["https://dana.blockpress.me"]},
+  	{"label": "Henrik", "type": "link", "args": ["https://hkjn.blockpress.me"]}
   ]
 }

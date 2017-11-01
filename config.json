@@ -10,6 +10,6 @@
 	"menu": {
 		"Home": ["static","home.html"],
   	"Blog": ["steemstream","antonchanning",""],
-    "Home": ["steemstream","","projectb"],
+    "Project": ["steemstream","","projectb"]
 	}
 }

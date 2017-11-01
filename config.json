@@ -1,0 +1,15 @@
+{
+  "sitetitle": "Project B",
+  "theme": "default",
+
+	"modules": [
+		"modules/static",
+		"modules/steemstream",
+		"modules/decent"],
+
+	"menu": {
+		"Home": ["static","home.html"],
+  	"Blog": ["steemstream","antonchanning",""],
+    "Home": ["steemstream","","projectb"],
+	}
+}

@@ -5,8 +5,8 @@ function configFail() {
 }
 function parseConfig(config_json) {
   config =  config_json;
-
-  parseModules(config_json.modules);
+console.log(config);
+  parseModules(config.modules);
 }
 function getConfigJSON() {
   return $.ajax({

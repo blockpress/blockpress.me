@@ -2,10 +2,11 @@
   "sitetitle": "Anton Channing",
   "theme": "default",
 
-	"modules": ["static","link"],
+	"modules": ["static"],
 
 	"menu": [
     {"label": "Home", "type": "static", "args": ["home.html"]},
-  	{"label": "Link", "type": "link", "args": ["https://blockpress.me"]}
+    {"label": "Steem", "type": "static", "args": ["steem.html"]},
+    {"label": "Post", "type": "static", "args": ["home.html"]}
   ]
 }

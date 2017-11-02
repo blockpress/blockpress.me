@@ -5,9 +5,9 @@ function configFail() {
 }
 function parseConfig(config_json) {
   console.log(config_json);
-  config =  config_json;
+  config = config_json;
   console.log(config);
-  parseModules(config.modules);
+  parseModules(config_json.modules);
 }
 function getConfigJSON() {
   return $.ajax({

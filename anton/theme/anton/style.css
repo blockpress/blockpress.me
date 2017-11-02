@@ -1,37 +1,76 @@
 html
 
+ #header  {
+    display: inline-block;
+		margin-right: 3em;
+		margin-top: 1em;
+		width:350px;
+		border-style: solid;
+		border-width: thin;
+		border-radius: 5px;
+		border-color: black;
+}
+ #sitetitle{
+	margin-bottom: 1em;
+
+ }
+
+ #header-text{
+	 display: inline-block;
+	 vertical-align: top;
+	 text-align: center;
+	 color:#088A85;
+
+ }
 body{
 	width: 100%;
 	margin:0;
 	text-align:justified;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1.3em;
-  background-color:#1C1C1C;
+  background-color:#0A2A29;
 }
 header{
   padding:1em;
-  border-radius: 6px;
 }
 
 h1{
-    100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
-    color:#F7BE81;
-    margin-bottom: 0.5em;
-    text-align: center;
-		padding-top:0.5em;
+  font:100% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color:#04B486;
+  margin-bottom: 0.5em;
+  text-align: center;
+  width: 100%;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-bottom: 0.5em;
 }
 
 h2{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    font:80% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
-    color:#FAAC58;
+    color:#04B486;
     margin-bottom: 0.5em;
-    text-align: left;
-		width: 70%;
+    text-align: center;
+		width: 100%;
 		margin-right:auto;
 		margin-left:auto;
+		margin-top: 2em;
+		margin-bottom: 2em;
 		padding-bottom: 0.5em;
+}
+
+h3{
+	font:70% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-style: normal;
+	color:#04B486;
+	margin-bottom: 0.2em;
+	text-align: center;
+	width: 60%;
+	margin-right:auto;
+	margin-left:auto;
+	padding-bottom: 0.5em;
 }
 
 #menu ul{
@@ -40,15 +79,15 @@ h2{
 }
 #menu li{
   display: inline-block;
-  padding:8px;
+  padding:10px;
+	margin:o.5em;
   font-size: 1em;
-  text-transform: uppercase;
-  background-color:#2E2E2E;
-  border-radius: 5px;
+  background-color:#0A2229;
+  border-radius: 25px;
 }
 
 p{
-  color:#58ACFA;
+  color:#088A85;
 	width: 70%;
 	margin-right:auto;
 	margin-left:auto;
@@ -56,11 +95,11 @@ p{
 
 a:link {
   text-decoration: none;
-	color:#FF8000;
+	color:#04B486;
 }
 
 a:hover{
-	color:#819FF7;
+	color:#088A85;
 }
 
 a:active{
@@ -68,7 +107,7 @@ a:active{
 }
 
 a:visited{
-	color:#FF8000;
+	color:#088A85;
 }
 
 img{
@@ -79,16 +118,33 @@ img{
 	color: #04B486;
 }
 
+#contentArea{
+	background-color: #0A2229;
+	width:70%;
+	margin-right:auto;
+	margin-left:auto;
+	border-style:solid;
+	border-width: 1px;
+	border-color: #04B486;
+	border-radius: 10px;
+	padding:1em;
+}
+
 #contentArea h1{
-    100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
-    color:#04B486;
-    margin-bottom: 0.5em;
-    text-align: center;
+  font:90% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color:#04B486;
+  margin-bottom: 0.5em;
+  text-align:left;
+  width: 70%;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-bottom: 0.5em;
 }
 
 #contentArea h2{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    font-size:80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
     font-style: normal;
     color:#04B486;
     margin-bottom: 0.5em;
@@ -98,7 +154,7 @@ img{
 		margin-left:auto;
 }
 #contentArea h3{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    font-size: 70% "Lucida Sans Unicode", "Lucida Grande", sans-serif
     font-style: normal;
     color:#04B486;
     margin-bottom: 0.5em;
@@ -117,16 +173,16 @@ img{
 
 }
  #contentArea li{
-  	font-size: 1em;
-	  color:#FFFFFF;
+  	font-size: 60%;
+	  color:#088A85;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
 		padding: 0.5em;
 	}
 	#contentArea p{
-		font-size: 1em;
-	  color:#FFFFFF;
+		font-size: 60%;
+	  color:#088A85;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
@@ -160,7 +216,7 @@ img{
 #footer-menu li a:link{
 	text-decoration: none;
 	font-style: oblique;
-	color:#FF8000;
+	color:#04B486;
 }
 #footer-menu ul{
   list-style: none;

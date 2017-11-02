@@ -1,6 +1,6 @@
 {
   "sitetitle": "Anton Channing",
-  "theme": "default",
+  "theme": "anton",
 
 	"modules": ["static","link"],
 

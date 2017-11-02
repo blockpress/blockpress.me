@@ -6,7 +6,7 @@
 
 	"menu": [
     {"label": "Home", "type": "static", "args": ["home.html"]},
-    {"label": "Steem", "type": "static", "args": ["steem.html"]},
-    {"label": "Post", "type": "static", "args": ["home.html"]}
+    {"label": "Steem", "type": "static", "args": ["steemstream.html"]},
+    {"label": "Post", "type": "static", "args": ["steempost.html"]}
   ]
 }

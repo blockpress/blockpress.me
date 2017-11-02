@@ -1,11 +1,11 @@
 {
   "sitetitle": "HKJN",
-  "theme": "henrik",
+  "theme": "default",
 
 	"modules": ["static","link"],
 
 	"menu": [
     {"label": "Home", "type": "static", "args": ["home.html"]},
-  	{"label": "Link", "type": "link", "args": ["https://blockpress.me"]}
+  	{"label": "Trackers", "type": "static", "args": ["trackers.html"]}
   ]
 }

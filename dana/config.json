@@ -1,11 +1,12 @@
 {
   "sitetitle": "Dana Varahi",
-  "theme": "dana",
+  "theme": "default",
 
 	"modules": ["static","link"],
 
 	"menu": [
     {"label": "Home", "type": "static", "args": ["home.html"]},
-  	{"label": "Link", "type": "link", "args": ["https://blockpress.me"]}
+    {"label": "Video", "type": "static", "args": ["video.html"]},
+    {"label": "Audio", "type": "static", "args": ["audio.html"]}
   ]
 }

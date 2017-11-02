@@ -11,6 +11,15 @@ header{
   border-radius: 6px;
 }
 
+a:link {
+  text-decoration: none;
+	color:#585858;
+}
+
+a:hover{
+	color:#A9BCF5;
+}
+
 h1{
     font-style: 100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
     font-style: normal;
@@ -42,39 +51,11 @@ h3{
 		margin-left:auto;
 		padding-bottom: 0.5em;
 }
-
-#menu ul{
-  list-style: none;
-  text-align: center;
-}
-#menu li{
-  display: inline-block;
-  padding:8px;
-  font-size: 1em;
-}
-
 p{
   color:black;
 	width: 70%;
 	margin-right:auto;
 	margin-left:auto;
-}
-
-a:link {
-  text-decoration: none;
-	color:#585858;
-}
-
-a:hover{
-	color:#A9BCF5;
-}
-
-a:active{
-	color:#A9BCF5;
-}
-
-a:visited{
-	color:#585858;
 }
 
 img{
@@ -84,6 +65,24 @@ img{
 	border-radius: 10px;
 	color: #04B486;
 }
+
+.menu ul{
+  list-style: none;
+  text-align: center;
+}
+.menu li a{
+  text-decoration: none;
+	color:#585858;
+}
+.menu li a:hover{
+	color:#A9BCF5;
+}
+.menu li{
+  display: inline-block;
+  padding:8px;
+  font-size: 1em;
+}
+
 #contentArea{
 	width:70%;
 	margin-right:auto;
@@ -120,14 +119,12 @@ img{
 		margin-right:auto;
 		margin-left:auto;
 }
-
  #contentArea ul{
 	  display: block;
     list-style-type:disc;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
-
 }
  #contentArea li{
   	font-size: 1em;
@@ -154,13 +151,6 @@ img{
 		color: #585858;
 	}
 
-	#contentArea a:active{
-		color:#585858;
-	}
-
-	#contentArea a:visited{
-		color:#585858;
-	}
 #footer-menu li{
 	display: inline-block;
 	padding-top: 5px;
@@ -173,6 +163,9 @@ img{
 	text-decoration: none;
 	font-style: oblique;
 	color:#585858;
+}
+#footer-menu li a:visited{
+color:#585858;
 }
 #footer-menu li a:hover{
 color:#A9BCF5;

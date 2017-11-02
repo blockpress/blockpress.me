@@ -65,20 +65,24 @@ img{
 	border-radius: 10px;
 	color: #04B486;
 }
-#menu ul{
+.menu ul{
   list-style: none;
   text-align: center;
+	margin-left: 0;
+	padding-left: 0;
 }
-#menu li{
+.menu li {
   display: inline-block;
   padding:8px;
   font-size: 1em;
   text-transform: uppercase;
   background-color:#9F81F7;
   border-radius: 5px;
+	margin-left: 0.3em;
+	margin-right: 0.3em;
 }
 
-#menu li:hover{
+.menu li:hover{
   background-color:#7F61c7;
 }
 #contentArea{

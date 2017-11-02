@@ -1,6 +1,6 @@
 {
   "sitetitle": "Project B",
-  "theme": "default",
+  "theme": "dana",
 
 	"modules": ["static","link"],
 

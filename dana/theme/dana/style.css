@@ -1,10 +1,12 @@
+html
+
 body{
 	width: 100%;
 	margin:0;
 	text-align:justified;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1.3em;
-  background-color:#E6E6E6;
+  background-color:#1C1C1C;
 }
 header{
   padding:1em;
@@ -12,29 +14,18 @@ header{
 }
 
 h1{
-    font-style: 100% "Palatino Linotype", "Book Antiqua", Palatino, serif
+    100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
     font-style: normal;
-    color:#045FB4;
+    color:#F7BE81;
     margin-bottom: 0.5em;
     text-align: center;
 		padding-top:0.5em;
 }
 
 h2{
-    font-style: 80% "Palatino Linotype", "Book Antiqua", Palatino, serif
+    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
     font-style: normal;
-    color:#045FB4;
-    margin-bottom: 0.5em;
-    text-align: left;
-		width: 70%;
-		margin-right:auto;
-		margin-left:auto;
-		padding-bottom: 0.5em;
-}
-h3{
-    font-style: 60% "Palatino Linotype", "Book Antiqua", Palatino, serif
-    font-style: normal;
-    color:#045FB4;
+    color:#FAAC58;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
@@ -52,12 +43,12 @@ h3{
   padding:8px;
   font-size: 1em;
   text-transform: uppercase;
-  background-color:#9F81F7;
+  background-color:#2E2E2E;
   border-radius: 5px;
 }
 
 p{
-  color:black;
+  color:#58ACFA;
 	width: 70%;
 	margin-right:auto;
 	margin-left:auto;
@@ -65,7 +56,7 @@ p{
 
 a:link {
   text-decoration: none;
-	color:#045FB4;
+	color:#FF8000;
 }
 
 a:hover{
@@ -77,7 +68,7 @@ a:active{
 }
 
 a:visited{
-	color:#045FB4;
+	color:#FF8000;
 }
 
 img{
@@ -87,32 +78,19 @@ img{
 	border-radius: 10px;
 	color: #04B486;
 }
-#contentArea{
-	background-color: #D8CEF6;
-	width:70%;
-	margin-right:auto;
-	margin-left:auto;
-	border-style:solid;
-	border-width: 1px;
-	border-color: #585858;
-	border-radius: 10px;
-	padding:1em;
-}
+
 #contentArea h1{
-    font-style: 80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
     font-style: normal;
-    color:#9F81F7;
+    color:#04B486;
     margin-bottom: 0.5em;
-    text-align: left;
-		width: 70%;
-		margin-right:auto;
-		margin-left:auto;
+    text-align: center;
 }
 
 #contentArea h2{
-    font-style: 70% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
     font-style: normal;
-    color:#9F81F7;
+    color:#04B486;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
@@ -120,9 +98,9 @@ img{
 		margin-left:auto;
 }
 #contentArea h3{
-    font-style: 60% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
     font-style: normal;
-    color:#9F81F7;
+    color:#04B486;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
@@ -140,7 +118,7 @@ img{
 }
  #contentArea li{
   	font-size: 1em;
-	  color:black;
+	  color:#FFFFFF;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
@@ -148,7 +126,7 @@ img{
 	}
 	#contentArea p{
 		font-size: 1em;
-	  color:black;
+	  color:#FFFFFF;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
@@ -156,7 +134,8 @@ img{
 	}
 	#contentArea a {
 	  text-decoration: none;
-		-color: #9F81F7;
+		-color: #04B486;
+		color: #f00;
 	}
 
 	#contentArea a:hover{
@@ -168,7 +147,7 @@ img{
 	}
 
 	#contentArea a:visited{
-		color:#9F81F7;
+		color:#04B486;
 	}
 #footer-menu li{
 	display: inline-block;
@@ -181,7 +160,7 @@ img{
 #footer-menu li a:link{
 	text-decoration: none;
 	font-style: oblique;
-	color:#045FB4;
+	color:#FF8000;
 }
 #footer-menu ul{
   list-style: none;

@@ -2,11 +2,14 @@
   "sitetitle": "Anton Channing",
   "theme": "anton",
 
-	"modules": ["static"],
+	"modules": ["static","link"],
 
 	"menu": [
     {"label": "Home", "type": "static", "args": ["home.html"]},
     {"label": "Steem", "type": "static", "args": ["steemstream.html"]},
-    {"label": "Post", "type": "static", "args": ["steempost.html"]}
+    {"label": "Post", "type": "static", "args": ["steempost.html"]},
+  	{"label": "Dana", "type": "link", "args": ["http://localhost/dana"]},
+  	{"label": "Henrik", "type": "link", "args": ["http://localhost/hkjn"]},
+    {"label": "Blockpress.me", "type": "link", "args": ["http://localhost/root"]}
   ]
 }

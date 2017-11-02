@@ -28,8 +28,11 @@ function getThemeHTML(theme) {
 function parseThemeHTML(themeHTML) {
   //console.log(themeHTML);
   $(document.body).html(themeHTML);
-  //console.log(config.sitetitle);
-  $('#sitetitle').text(config.sitetitle);
+
+    console.log("Updating site title to: "+config.sitetitle);
+    $('#sitetitle').text(config.sitetitle);
+    document.title = config.sitetitle;
+
 
   // TO DO: parseMenu
   parseMenu();

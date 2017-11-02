@@ -4,10 +4,10 @@ function configFail() {
   console.log('FAILED TO LOAD CONFIG!');
 }
 function parseConfig(config_json) {
+  console.log(config_json);
   config =  config_json;
-
   console.log(config);
-  parseModules(config_json.modules);
+  parseModules(config.modules);
 }
 function getConfigJSON() {
   return $.ajax({

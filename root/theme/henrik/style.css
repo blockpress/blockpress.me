@@ -66,18 +66,18 @@ img{
 	color: #04B486;
 }
 
-#menu ul{
+.menu ul{
   list-style: none;
   text-align: center;
 }
-#menu li a{
+.menu li a{
   text-decoration: none;
 	color:#585858;
 }
-#menu li a:hover{
+.menu li a:hover{
 	color:#A9BCF5;
 }
-#menu li{
+.menu li{
   display: inline-block;
   padding:8px;
   font-size: 1em;

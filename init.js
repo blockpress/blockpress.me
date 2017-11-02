@@ -30,8 +30,8 @@ function parseThemeHTML(themeHTML) {
   $(document.body).html(themeHTML);
   //console.log(config.sitetitle);
   $('#sitetitle').text(config.sitetitle);
+  document.title = config.sitetitle;
 
-  // TO DO: parseMenu
   parseMenu();
   // TO DO: parse default content (first page?)
 }

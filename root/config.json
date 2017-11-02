@@ -1,11 +1,14 @@
 {
-  "sitetitle": "Blockpress",
-  "theme": "default",
+  "sitetitle": "Blockpress.me",
+  "theme": "dark",
 
 	"modules": ["static","link"],
 
 	"menu": [
-    {"label": "Home", "type": "static", "args": ["home.html"]},
+    {"label": "Blockpress", "type": "static", "args": ["about.html"]},
+    {"label": "Steem", "type": "static", "args": ["steem.html"]},
+    {"label": "Bitshares", "type": "static", "args": ["bitshares.html"]},
+    {"label": "Decent", "type": "static", "args": ["decent.html"]},
   	{"label": "Anton", "type": "link", "args": ["http://localhost/anton"]},
   	{"label": "Dana", "type": "link", "args": ["http://localhost/dana"]},
   	{"label": "Henrik", "type": "link", "args": ["http://localhost/hkjn"]}

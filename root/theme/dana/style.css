@@ -1,12 +1,10 @@
-html
-
 body{
 	width: 100%;
 	margin:0;
 	text-align:justified;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size: 1.3em;
-  background-color:#1C1C1C;
+  background-color:#E6E6E6;
 }
 header{
   padding:1em;
@@ -14,18 +12,26 @@ header{
 }
 
 h1{
-    100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
-    color:#F7BE81;
+    font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color:#045FB4;
     margin-bottom: 0.5em;
     text-align: center;
 		padding-top:0.5em;
 }
 
 h2{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
-    color:#FAAC58;
+    font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color:#045FB4;
+    margin-bottom: 0.5em;
+    text-align: left;
+		width: 70%;
+		margin-right:auto;
+		margin-left:auto;
+		padding-bottom: 0.5em;
+}
+h3{
+    font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color:#045FB4;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
@@ -34,21 +40,8 @@ h2{
 		padding-bottom: 0.5em;
 }
 
-#menu ul{
-  list-style: none;
-  text-align: center;
-}
-#menu li{
-  display: inline-block;
-  padding:8px;
-  font-size: 1em;
-  text-transform: uppercase;
-  background-color:#2E2E2E;
-  border-radius: 5px;
-}
-
 p{
-  color:#58ACFA;
+  color:black;
 	width: 70%;
 	margin-right:auto;
 	margin-left:auto;
@@ -56,19 +49,13 @@ p{
 
 a:link {
   text-decoration: none;
-	color:#FF8000;
+	color:#045FB4;
 }
-
+a:visited{
+	color:#045FB4;
+}
 a:hover{
 	color:#819FF7;
-}
-
-a:active{
-	color:#819FF7;
-}
-
-a:visited{
-	color:#FF8000;
 }
 
 img{
@@ -78,19 +65,47 @@ img{
 	border-radius: 10px;
 	color: #04B486;
 }
+#menu ul{
+  list-style: none;
+  text-align: center;
+}
+#menu li{
+  display: inline-block;
+  padding:8px;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color:#9F81F7;
+  border-radius: 5px;
+}
 
+#menu li:hover{
+  background-color:#7F61c7;
+}
+#contentArea{
+  font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: #D8CEF6;
+	width:70%;
+	margin-right:auto;
+	margin-left:auto;
+	border-style:solid;
+	border-width: 1px;
+	border-color: #585858;
+	border-radius: 10px;
+	padding:1em;
+}
 #contentArea h1{
-    100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
-    color:#04B486;
+    font: 120% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color:#9F81F7;
     margin-bottom: 0.5em;
-    text-align: center;
+    text-align: left;
+		width: 70%;
+		margin-right:auto;
+		margin-left:auto;
 }
 
 #contentArea h2{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
-    color:#04B486;
+    font: 110% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color:#9F81F7;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
@@ -98,9 +113,8 @@ img{
 		margin-left:auto;
 }
 #contentArea h3{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
-    color:#04B486;
+    font: 100% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color:#9F81F7;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
@@ -117,16 +131,16 @@ img{
 
 }
  #contentArea li{
-  	font-size: 1em;
-	  color:#FFFFFF;
+     font: 80% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	  color:black;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
 		padding: 0.5em;
 	}
 	#contentArea p{
-		font-size: 1em;
-	  color:#FFFFFF;
+	    font: 90% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	  color:black;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
@@ -134,21 +148,13 @@ img{
 	}
 	#contentArea a {
 	  text-decoration: none;
-		-color: #04B486;
-		color: #f00;
+		color: #9F81F7;
 	}
 
 	#contentArea a:hover{
 		color:#819FF7;
 	}
 
-	#contentArea a:active{
-		color:#819FF7;
-	}
-
-	#contentArea a:visited{
-		color:#04B486;
-	}
 #footer-menu li{
 	display: inline-block;
 	padding-top: 5px;
@@ -160,7 +166,13 @@ img{
 #footer-menu li a:link{
 	text-decoration: none;
 	font-style: oblique;
-	color:#FF8000;
+	color:#045FB4;
+}
+#footer-menu li a:visited{
+	color:#045FB4;
+}
+#footer-menu li a:hover{
+	color:#819FF7;
 }
 #footer-menu ul{
   list-style: none;

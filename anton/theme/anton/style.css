@@ -1,54 +1,78 @@
-html
+#title-img  {
+    width: 300px;
+		margin-right: auto;
+    margin-left: auto;
+		margin-top: 1em;
+      border-style: solid;
+      border-width: thin;
+      border-radius: 5px;
+      border-color: black;
+      padding: 0;
+}
+ #sitetitle{
+	margin: 0.2em;
+  text-align: center;
+ }
 
+ #header-text{
+	 vertical-align: top;
+	 text-align: center;
+	 color:#088A85;
+ }
+  #header-text h2{
+ 	 margin: 0.2em;
+   text-align: center;
+  }
 body{
 	width: 100%;
 	margin:0;
 	text-align:justified;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1.3em;
-  background-color:#1C1C1C;
+  background-color:#0A2A29;
 }
 header{
   padding:1em;
-  border-radius: 6px;
 }
 
 h1{
-    100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
-    color:#F7BE81;
-    margin-bottom: 0.5em;
-    text-align: center;
-		padding-top:0.5em;
+  font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color:#04B486;
+  margin-bottom: 0.5em;
+  text-align: center;
+  width: 100%;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 h2{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
-    color:#FAAC58;
-    margin-bottom: 0.5em;
-    text-align: left;
-		width: 70%;
+    font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-style: oblique;
+    font-weight: lighter;
+    color:#04B486;
+    text-align: center;
+		width: 100%;
 		margin-right:auto;
 		margin-left:auto;
-		padding-bottom: 0.5em;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
 }
 
-#menu ul{
-  list-style: none;
-  text-align: center;
-}
-#menu li{
-  display: inline-block;
-  padding:8px;
-  font-size: 1em;
-  text-transform: uppercase;
-  background-color:#2E2E2E;
-  border-radius: 5px;
+h3{
+	font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:#04B486;
+	margin-bottom: 0.2em;
+	text-align: center;
+	width: 60%;
+	margin-right:auto;
+	margin-left:auto;
+	padding-bottom: 0.5em;
 }
 
 p{
-  color:#58ACFA;
+  color:#088A85;
 	width: 70%;
 	margin-right:auto;
 	margin-left:auto;
@@ -56,22 +80,22 @@ p{
 
 a:link {
   text-decoration: none;
-	color:#FF8000;
-}
-
-a:hover{
-	color:#819FF7;
-}
-
-a:active{
-	color:#819FF7;
+	color:#04B486;
 }
 
 a:visited{
-	color:#FF8000;
+	color:#04B486;
+}
+a:hover{
+	color:#088A85;
 }
 
-img{
+a:active{
+	color:#088A85;
+}
+
+
+#contentArea img{
 	max-width: 70%;
 	margin-right:auto;
 	margin-left:auto;
@@ -79,17 +103,32 @@ img{
 	color: #04B486;
 }
 
+#contentArea{
+	background-color: #0A2229;
+	width:70%;
+	margin-right:auto;
+	margin-left:auto;
+	border-style:solid;
+	border-width: 1px;
+	border-color: #04B486;
+	border-radius: 10px;
+	padding:1em;
+}
+
 #contentArea h1{
-    100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
-    color:#04B486;
-    margin-bottom: 0.5em;
-    text-align: center;
+  font:120% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color:#04B486;
+  margin-bottom: 0.5em;
+  text-align:left;
+  width: 70%;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 #contentArea h2{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
+    font:110% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     color:#04B486;
     margin-bottom: 0.5em;
     text-align: left;
@@ -98,8 +137,7 @@ img{
 		margin-left:auto;
 }
 #contentArea h3{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
-    font-style: normal;
+    font: 100% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     color:#04B486;
     margin-bottom: 0.5em;
     text-align: left;
@@ -117,16 +155,16 @@ img{
 
 }
  #contentArea li{
-  	font-size: 1em;
-	  color:#FFFFFF;
+  	font-size: 90%;
+	  color:#088A85;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
 		padding: 0.5em;
 	}
 	#contentArea p{
-		font-size: 1em;
-	  color:#FFFFFF;
+		font-size: 80%;
+	  color:#088A85;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
@@ -134,21 +172,56 @@ img{
 	}
 	#contentArea a {
 	  text-decoration: none;
-		-color: #04B486;
-		color: #f00;
+		color: #04B486;
 	}
 
+  	#contentArea a:visited{
+  		color:#04B486;
+  	}
 	#contentArea a:hover{
-		color:#819FF7;
+		color:#088A85;
 	}
 
 	#contentArea a:active{
-		color:#819FF7;
+		color:#088A85;
 	}
 
-	#contentArea a:visited{
-		color:#04B486;
-	}
+  .menu ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 1em;
+  }
+  .menu li{
+    display: inline-block;
+    padding:10px;
+  	margin:o.5em;
+    font-size: 1em;
+    background-color:#0A2229;
+    border-radius: 25px;
+  }
+.social li:hover{
+    background-color: #088A85;
+}
+  .menu li a:hover{
+    color: #088A85;
+  }
+
+  footer {
+    width: 70%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer #footer-img{
+    display: block;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+  }
 #footer-menu li{
 	display: inline-block;
 	padding-top: 5px;
@@ -160,9 +233,17 @@ img{
 #footer-menu li a:link{
 	text-decoration: none;
 	font-style: oblique;
-	color:#FF8000;
+	color:#04B486;
+}
+#footer-menu li a:visited{
+		color:#04B486;
+}
+#footer-menu li a:hover{
+  color:#088A85;
 }
 #footer-menu ul{
   list-style: none;
   text-align: center;
+  padding: 0;
+  margin: 0.5em;
 }

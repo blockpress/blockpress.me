@@ -5,7 +5,7 @@ function configFail() {
 }
 function parseConfig(config_json) {
   config =  config_json;
-
+console.log("config type: "+typeof config);
   parseModules(config_json.modules);
 }
 function getConfigJSON() {

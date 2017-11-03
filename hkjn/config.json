@@ -7,8 +7,8 @@
 	"menu": [
     {"label": "Home", "type": "static", "args": ["home.html"]},
   	{"label": "Trackers", "type": "static", "args": ["trackers.html"]},
-  	{"label": "Anton", "type": "link", "args": ["http://localhost/anton"]},
-  	{"label": "Dana", "type": "link", "args": ["http://localhost/dana"]},
-    {"label": "Blockpress.me", "type": "link", "args": ["http://localhost/root"]}
+  	{"label": "Anton", "type": "link", "args": ["http://anton.blockpress.me"]},
+  	{"label": "Dana", "type": "link", "args": ["http://dana.blockpress.me"]},
+    {"label": "Blockpress.me", "type": "link", "args": ["http://blockpress.me"]}
   ]
 }

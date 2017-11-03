@@ -8,8 +8,8 @@
     {"label": "Home", "type": "static", "args": ["home.html"]},
     {"label": "Video", "type": "static", "args": ["video.html"]},
     {"label": "Audio", "type": "static", "args": ["audio.html"]},
-  	{"label": "Henrik", "type": "link", "args": ["http://localhost/hkjn"]},
-  	{"label": "Anton", "type": "link", "args": ["http://localhost/anton"]},
-    {"label": "Blockpress.me", "type": "link", "args": ["http://localhost/root"]}
+  	{"label": "Henrik", "type": "link", "args": ["https://hkjn.blockpress.me"]},
+  	{"label": "Anton", "type": "link", "args": ["https://anton.blockpress.me"]},
+    {"label": "Blockpress.me", "type": "link", "args": ["https://blockpress.me"]}
   ]
 }

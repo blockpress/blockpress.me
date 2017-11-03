@@ -4,9 +4,8 @@ function configFail() {
   console.log('FAILED TO LOAD CONFIG!');
 }
 function parseConfig(config_json) {
-  console.log(config_json);
+  if(typeof config_json ==='string') config_json = JSON.parse(config_json);
   config = config_json;
-  console.log(config);
   parseModules(config.modules);
 }
 function getConfigJSON() {
@@ -29,7 +28,7 @@ function parseThemeHTML(themeHTML) {
   //console.log(themeHTML);
   $(document.body).html(themeHTML);
   //console.log(config.sitetitle);
-    
+
     console.log("Updating site title to: "+config.sitetitle);
     $('#sitetitle').text(config.sitetitle);
     document.title = config.sitetitle;

@@ -1,13 +1,14 @@
+/* The simplest form of content module */
 function static_menuitem(args) {
-  return "javascript:static_onclick('"+args[0]+"');";
+  return "javascript:static_load('"+args[0]+"');";
 }
 
-function static_load(content) {
+function static_display(content) {
   $('#contentArea').html(content);
 }
-function static_onclick(file) {
+function static_load(file) {
   $.ajax({
       type: 'GET',
       url: file
-  }).done(static_load)
+  }).done(static_display)
 };

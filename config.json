@@ -4,6 +4,8 @@
 
 	"modules": ["static","link"],
 
+	"firstpage": {"type": "static", "args": ["home.html"]},
+
 	"menu": [
     {"label": "Home", "type": "static", "args": ["home.html"]},
   	{"label": "Link", "type": "link", "args": ["https://blockpress.me"]}

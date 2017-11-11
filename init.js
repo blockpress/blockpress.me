@@ -33,6 +33,7 @@ function parseThemeHTML(themeHTML) {
   document.title = config.sitetitle;
 
   parseMenu();
+	parseFirstPage();
   // TO DO: parse default content (first page?)
 }
 function parseTheme(theme) {
@@ -44,6 +45,14 @@ function parseTheme(theme) {
      type: "text/css",
      href: "/theme/"+theme+"/style.css"
   }).appendTo("head");
+}
+
+function parseFirstPage() {
+	var type = config.firstpage.type;
+	var args = config.firstpage.args;
+	load_funct = type+"_load";
+
+	window[load_funct](args);
 }
 
 function parseMenu() {

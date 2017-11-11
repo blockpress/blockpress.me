@@ -34,7 +34,6 @@ function parseThemeHTML(themeHTML) {
 
   parseMenu();
 	parseFirstPage();
-  // TO DO: parse default content (first page?)
 }
 function parseTheme(theme) {
   getThemeHTML(theme).done(parseThemeHTML).fail(themeHTMLFail);
@@ -47,9 +46,27 @@ function parseTheme(theme) {
   }).appendTo("head");
 }
 
+function getFirstContentModuleFromMenu(menu) {
+		// Look for first content module in menu
+		var arrayLength = menu.length;
+		for (var i = 0; i < arrayLength; i++) {
+			if(menu[i].type != 'link') {
+				return menu[i];
+			}
+		}
+		return false;
+}
+
 function parseFirstPage() {
-	var type = config.firstpage.type;
-	var args = config.firstpage.args;
+	var type, args;
+	if('firstpage' in config) {
+		type = config.firstpage.type;
+		args = config.firstpage.args;
+	} else {
+		var menuItem = getFirstContentModuleFromMenu(content.menu);
+		type = menuItem.type;
+		args = menuItem.args;
+	}
 	load_funct = type+"_load";
 
 	window[load_funct](args);

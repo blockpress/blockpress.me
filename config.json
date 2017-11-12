@@ -2,12 +2,13 @@
   "sitetitle": "Blockpress.me",
   "theme": "dark",
 
-	"modules": ["static","link"],
+	"modules": ["static","link","steem"],
 
 	"firstpage": {"type": "static", "args": ["home.html"]},
 
 	"menu": [
     {"label": "Home", "type": "static", "args": ["home.html"]},
+	  {"label": "Steem", "type": "steem", "args": {"user":"antonchanning", "tag": "blockpress"}},
   	{"label": "Link", "type": "link", "args": ["https://blockpress.me"]}
   ]
 }

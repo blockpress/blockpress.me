@@ -17,7 +17,7 @@ function getConfigJSON() {
 }
 
 function themeHTMLFail() {
-  console.log('FAILED TO THEME HTML!');
+  console.log('FAILED TO LOAD THEME HTML!');
 }
 function getThemeHTML(theme) {
   return $.ajax({
@@ -73,49 +73,46 @@ function parseFirstPage() {
 }
 
 function parseMenu() {
-  var list = $('<ul/>').appendTo('#menuArea');
-  var list, href_funct, href, label, menuitem, menu = config.menu;
-  console.log(menu);
+	var list = $('<ul/>').appendTo('#menuArea');
+	var href_funct, href, label, menuitem, menu = config.menu;
+	// console.log(menu);
 
+	var arrayLength = menu.length;
+	for (var i = 0; i < arrayLength; i++) {
+		//console.log(menu[i]);
+		//Do something
+		label = menu[i].label;
+		type = menu[i].type;
+		args = menu[i].args;
+		href_funct = type+"_menuitem";
 
-  var arrayLength = menu.length;
-  for (var i = 0; i < arrayLength; i++) {
-      console.log(menu[i]);
-      //Do something
-      label = menu[i].label;
-      type = menu[i].type;
-      args = menu[i].args;
-      href_funct = type+"_menuitem";
+		//console.log(href_funct);
+		href = window[href_funct](args);
 
-      console.log(href_funct);
-      href = window[href_funct](args);
-
-      list.append('<li><a href="'+href+'">'+label+'</a></li>');
-  }
+		list.append('<li><a href="'+href+'">'+label+'</a></li>');
+	}
 }
 
 
 function parseModules(modules_data) {
-  console.log(modules_data);
-  var moduleItem, arrayLength = modules_data.length;
-  for (var i = 0; i < arrayLength; i++) {
-      moduleItem = modules_data[i];
-      parseModule(moduleItem);
-  }
-  parseTheme(config.theme);
+	console.log(modules_data);
+	var moduleItem, arrayLength = modules_data.length;
+	for (var i = 0; i < arrayLength; i++) {
+		moduleItem = modules_data[i];
+		parseModule(moduleItem);
+	}
+	parseTheme(config.theme);
 }
 
 function parseModule(module_name) {
-    console.log(module_name);
-    $.getScript( "module/"+module_name+"/"+module_name+".js", function( data, textStatus, jqxhr ) {
-  console.log( data ); // Data returned
-  console.log( textStatus ); // Success
-  console.log( jqxhr.status ); // 200
-  console.log( "Load was performed." );
-  });
+	$.getScript( "module/"+module_name+"/"+module_name+".js", function( data, textStatus, jqxhr ) {
+		//console.log( data ); // Data returned
+		//console.log( textStatus ); // Success
+		//console.log( jqxhr.status ); // 200
+		console.log( "Load was performed for "+module_name+"." );
+	});
 }
 
 $(document).ready(function() {
-  console.log('ready');
-  getConfigJSON().done(parseConfig).fail(configFail);
+	getConfigJSON().done(parseConfig).fail(configFail);
 });

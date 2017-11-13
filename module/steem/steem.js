@@ -18,7 +18,8 @@ function steem_load(args) {
 
 	switch(args.show) {
 		case "profile":
-			console.log("profile");
+			console.log("Get profile of: "+args.user);
+			getSteemProfile(args.user);
 			break;
 		case "posts":
 			console.log("posts");
@@ -62,20 +63,39 @@ function getSteemPost(postid) {
 	displaySteemPost("Post content")
 }
 
-function displaySteemProfile(err, profile) {
-	// Get template from theme
-
-	// Else use default template
-	content = 'profile';
+function displaySteemProfile(template) {
+	console.log(steem_profile);
 	// Display template
-	$('#contentArea').html(content);
+	$('#contentArea').html(template);
 
 	// Then add profile values
+	var metadata = JSON.parse(steem_profile.json_metadata);
+	console.log(metadata.profile);
+console.log(metadata.profile.cover_image);
+console.log("url("+metadata.profile.cover_image+") no-repeat");
+	$("#profile-banner").css("background","url("+metadata.profile.cover_image+") no-repeat");
+	$("#profile-username").html('@'+steem_profile.name);
+	$("#profile-name").html(metadata.profile.name);
+}
+function getSteemProfileTemplate(err, profile) {
+	// Save profile in global variable
+	steem_profile = profile[0];
+
+	// Get template from theme
+	var theme_template = "/theme/"+config.theme+"/steem-profile.html";
+	$.ajax(theme_template).done(displaySteemProfile).fail(function(){
+		// Else use default template
+		$.ajax("/module/steem/steem-profile.html").done(displaySteemProfile);
+	});
+
+	content = 'profile';
 }
 function getSteemProfile(username) {
 	//
-	steem.api.getAccounts([username],	displaySteemProfile(err, profile));
+	steem.api.getAccounts([username],	function(err, profile){getSteemProfileTemplate(err, profile)});
 }
+
+var steem_profile, steem_post, steem_posts;
 
 //Load the steem javascript API
 $.getScript( "module/steem/steem.min.js", function( data, textStatus, jqxhr ) {

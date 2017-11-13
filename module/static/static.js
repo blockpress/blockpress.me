@@ -1,6 +1,6 @@
 /* The simplest form of content module */
 function static_menuitem(args) {
-  return "javascript:static_load('"+args[0]+"');";
+  return "javascript:static_load('"+args+"');";
 }
 
 function static_display(content) {

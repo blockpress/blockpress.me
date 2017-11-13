@@ -12,17 +12,69 @@ function steem_display(content) {
 }
 function steem_load(args) {
 	console.log("Inside steem_load.");
+	args = JSON.parse(args.replace(/&quot;/g,'"'));
 	console.log(args);
-	steem.api.getAccounts(['antonchanning', 'dana-varahi'], function(err, response) {
-		var output = JSON.stringify(response)
-	   // console.log(err, JSON.stringify(response));
-			steem_display("<p>This is where the fun begins. We'll now be loading content from steem. "+output+"</p>");
-	});
+	console.log(args.show);
 
-	/* $.ajax({
-		type: 'GET',
-		url: file
-	}).done(steem_display); */
+	switch(args.show) {
+		case "profile":
+			console.log("profile");
+			break;
+		case "posts":
+			console.log("posts");
+			break;
+		case "post":
+			console.log("post");
+			break;
+	}
+}
+
+function displaySteemPosts(posts) {
+	// Get template from theme
+
+	// Else use default template
+
+	// Then insert post values for each post returned
+
+	// Append post to content string
+	content = 'SteemPosts';
+
+	// Display content string
+	$('#contentArea').html(content);
+}
+function getSteemPosts(usernames,tags) {
+	//
+	displaySteemPosts(['AAA']);
+}
+
+function displaySteemPost(post) {
+	// Get template from theme
+
+	// Else use default template
+	content = post;
+	// Display template
+	$('#contentArea').html(content);
+
+	// Then add post values
+}
+function getSteemPost(postid) {
+	//
+	displaySteemPost("Post content")
+}
+
+function displaySteemProfile(err, profile) {
+	// Get template from theme
+
+	// Else use default template
+	content = 'profile';
+	// Display template
+	$('#contentArea').html(content);
+
+	// Then add profile values
+}
+function getSteemProfile(username) {
+	//
+	steem.api.getAccounts([username],	displaySteemProfile(err, profile));
 }
 
 //Load the steem javascript API

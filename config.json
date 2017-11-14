@@ -1,5 +1,6 @@
 {
   "sitetitle": "Blockpress.me",
+  "tagline":"Blockpress site",
   "theme": "dark",
 
 	"modules": ["static","link","steem"],
@@ -8,7 +9,9 @@
 
 	"menu": [
     {"label": "Home", "type": "static", "args": "home.html"},
-	  {"label": "Steem", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress"}},
+	  {"label": "Profile", "type": "steem", "args": {"show":"profile", "user":"antonchanning"}},
+	  {"label": "Posts", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress"}},
+	  {"label": "Post", "type": "steem", "args": {"show":"post", "postid":"somepost"}},
   	{"label": "Link", "type": "link", "args": "https://blockpress.me"}
   ]
 }

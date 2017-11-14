@@ -30,6 +30,7 @@ function parseThemeHTML(themeHTML) {
   $(document.body).html(themeHTML);
   //console.log(config.sitetitle);
   $('#sitetitle').text(config.sitetitle);
+  $('#tagline').text(config.tagline);
   document.title = config.sitetitle;
 
   parseMenu();

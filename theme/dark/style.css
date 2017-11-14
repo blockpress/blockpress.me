@@ -165,3 +165,11 @@ img{
   list-style: none;
   text-align: center;
 }
+#profile-banner {
+	width: 70%;
+	min-width: 1000px;
+	min-height: 180px;
+	margin-right:auto;
+	margin-left:auto;
+	color: #ccb;
+}

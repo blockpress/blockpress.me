@@ -79,7 +79,8 @@ img{
 }
 
 #contentArea h1{
-    100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    font-size: 1.1em;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
     color:#04B486;
     margin-bottom: 0.5em;
@@ -87,7 +88,8 @@ img{
 }
 
 #contentArea h2{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    font-size: 0.9em;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
     color:#04B486;
     margin-bottom: 0.5em;
@@ -97,7 +99,8 @@ img{
 		margin-left:auto;
 }
 #contentArea h3{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    font-size: 0.8em;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
     color:#04B486;
     margin-bottom: 0.5em;
@@ -165,11 +168,38 @@ img{
   list-style: none;
   text-align: center;
 }
+/* Steem Content Module Themes */
+/* Steem Profile */
 #profile-banner {
 	width: 70%;
-	min-width: 1000px;
-	min-height: 180px;
+	width: 1000px;
+	height: 180px;
 	margin-right:auto;
 	margin-left:auto;
 	color: #ccb;
+}
+#profile-banner h1 {
+	color: #eee;
+	margin-top: 25px;
+}
+#profile-image {
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+	vertical-align: middle;
+	margin-top: 15px;
+}
+#profile-image img {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	border-radius: 50%;
+}
+#profile-about {
+	font-size: 0.7em;
+	text-align: center;
+	max-width: 50%;
+	margin-right:auto;
+	margin-left:auto;
 }

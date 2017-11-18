@@ -63,6 +63,14 @@ function getSteemPost(postid) {
 	displaySteemPost("Post content")
 }
 
+function simpleReputation(raw_reputation) {
+	var simple_reputation = Math.log10(raw_reputation);
+	simple_reputation = simple_reputation - 9;
+	simple_reputation = simple_reputation * 9;
+	simple_reputation = simple_reputation + 25;
+	return simple_reputation;
+}
+
 function displaySteemProfile(template) {
 	console.log(steem_profile);
 	// Display template
@@ -71,11 +79,16 @@ function displaySteemProfile(template) {
 	// Then add profile values
 	var metadata = JSON.parse(steem_profile.json_metadata);
 	console.log(metadata.profile);
-console.log(metadata.profile.cover_image);
-console.log("url("+metadata.profile.cover_image+") no-repeat");
+	console.log("profile image: "+metadata.profile.profile_image);
 	$("#profile-banner").css("background","url("+metadata.profile.cover_image+") no-repeat");
+	$("#profile-image").html('<img src="'+metadata.profile.profile_image+'">');
+	$("#profile-username").html('@'+steem_profile.name);
 	$("#profile-username").html('@'+steem_profile.name);
 	$("#profile-name").html(metadata.profile.name);
+	var reputation = simpleReputation(steem_profile.reputation);
+	$("#profile-reputation").html(Math.round(reputation));
+
+	$("#profile-about").html(metadata.profile.about);
 }
 function getSteemProfileTemplate(err, profile) {
 	// Save profile in global variable

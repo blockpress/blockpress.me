@@ -1,6 +1,6 @@
 {
   "sitetitle": "Blockpress.me",
-  "tagline":"Blockpress site",
+  "tagline":"The CMS with blockchains for its database...",
   "theme": "dark",
 
 	"modules": ["static","link","steem"],

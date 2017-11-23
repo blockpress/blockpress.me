@@ -78,6 +78,11 @@ img{
 	color: #04B486;
 }
 
+#contentArea {
+	width: 70%;
+	margin-right:auto;
+	margin-left:auto;
+}
 #contentArea h1{
     font-size: 1.1em;
 		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -94,7 +99,6 @@ img{
     color:#04B486;
     margin-bottom: 0.5em;
     text-align: left;
-		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
 }
@@ -105,7 +109,6 @@ img{
     color:#04B486;
     margin-bottom: 0.5em;
     text-align: left;
-		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
 }
@@ -113,7 +116,6 @@ img{
  #contentArea ul{
 	  display: block;
     list-style-type: disc;
-		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
 
@@ -121,7 +123,6 @@ img{
  #contentArea li{
   	font-size: 1em;
 	  color:#FFFFFF;
-		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
 		padding: 0.5em;
@@ -129,7 +130,6 @@ img{
 	#contentArea p{
 		font-size: 1em;
 	  color:#FFFFFF;
-		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
 		text-align: left;
@@ -171,7 +171,6 @@ img{
 /* Steem Content Module Themes */
 /* Steem Profile */
 #profile-banner {
-	width: 70%;
 	width: 1000px;
 	height: 180px;
 	margin-right:auto;

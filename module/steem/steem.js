@@ -25,7 +25,8 @@ function steem_load(args) {
 			console.log("posts");
 			break;
 		case "post":
-			console.log("post");
+			getSteemPost(args.user,args.postid);
+			console.log("post: "+args.user+" "+args.postid);
 			break;
 	}
 }
@@ -56,11 +57,31 @@ function displaySteemPost(post) {
 	// Display template
 	$('#contentArea').html(content);
 
+		console.log(steem_post.body);
+
+	var converter = new showdown.Converter();
+	var body_html = converter.makeHtml(steem_post.body);
+
+	console.log(body_html);
 	// Then add post values
+	$("#steem-post-content").html(body_html);
 }
-function getSteemPost(postid) {
+function getSteemPostTemplate(err, post) {
+	// Save profile in global variable
+	steem_post = post;
+
+	// Get template from theme
+	var theme_template = "/theme/"+config.theme+"/steem-post.html";
+	$.ajax(theme_template).done(displaySteemProfile).fail(function(){
+		// Else use default template
+		$.ajax("/module/steem/steem-post.html").done(displaySteemPost);
+	});
+
+	content = 'post';
+}
+function getSteemPost(username,postid) {
 	//
-	displaySteemPost("Post content")
+	steem.api.getContent(username, postid,	function(err, result){getSteemPostTemplate(err, result)});
 }
 
 function simpleReputation(raw_reputation) {
@@ -108,12 +129,26 @@ function getSteemProfile(username) {
 	steem.api.getAccounts([username],	function(err, profile){getSteemProfileTemplate(err, profile)});
 }
 
+//Load the showdown library (for parsing markdown)
+$.getScript( "lib/showdown/showdown.min.js").done(function( script, textStatus ) {
+		console.log( textStatus );
+		console.log( "showdown.min.js load was performed." );
+	})
+	.fail(function( jqxhr, settings, exception ) {
+		console.log( exception );
+		console.log( jqxhr.status );
+		console.log( settings );
+		$( "div.log" ).text( "Triggered ajaxError handler." );
+	});
+
 var steem_profile, steem_post, steem_posts;
 
 //Load the steem javascript API
-$.getScript( "module/steem/steem.min.js", function( data, textStatus, jqxhr ) {
+$.getScript( "lib/steem-js/steem.min.js", function( data, textStatus, jqxhr ) {
 	console.log( data ); // Data returned
 	console.log( textStatus ); // Success
 	console.log( jqxhr.status ); // 200
-	console.log( "Load was performed." );
+	console.log( "steem.min.js load was performed." );
 });
+
+	console.log( "XXXXX" ); // Data returned

@@ -11,7 +11,7 @@
     {"label": "Home", "type": "static", "args": "home.html"},
 	  {"label": "Profile", "type": "steem", "args": {"show":"profile", "user":"antonchanning"}},
 	  {"label": "Posts", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress"}},
-	  {"label": "Post", "type": "steem", "args": {"show":"post", "user":"antonchanning", "postid":"blockpress-the-ajax-blockchain-cms"}},
+	  {"label": "Post", "type": "steem", "args": {"show":"post", "user":"dana-varahi", "postid":"utopian-and-yehey-support-plus-chainbb-fix-for-steemswitch"}},
   	{"label": "Link", "type": "link", "args": "https://blockpress.me"}
   ]
 }

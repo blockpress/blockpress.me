@@ -48,7 +48,7 @@ h2{
 
 p{
   color:#58ACFA;
-	width: 70%;
+	--width: 70%;
 	margin-right:auto;
 	margin-left:auto;
 }
@@ -57,18 +57,16 @@ a:link {
   text-decoration: none;
 	color:#FF8000;
 }
-
+a:visited{
+	color:#FF8800;
+}
 a:hover{
 	color:#819FF7;
 }
-
 a:active{
 	color:#819FF7;
 }
 
-a:visited{
-	color:#FF8000;
-}
 
 img{
 	max-width: 70%;
@@ -135,11 +133,14 @@ img{
 		text-align: left;
 	}
 	#contentArea a {
-	  text-decoration: none;
-		-color: #04B486;
+		text-decoration: none;
+	-color: #04B486;
 		color: #f00;
 	}
 
+	#contentArea a:visited{
+		color:#04B486;
+	}
 	#contentArea a:hover{
 		color:#819FF7;
 	}
@@ -148,9 +149,6 @@ img{
 		color:#819FF7;
 	}
 
-	#contentArea a:visited{
-		color:#04B486;
-	}
 #footer-menu li{
 	display: inline-block;
 	padding-top: 5px;

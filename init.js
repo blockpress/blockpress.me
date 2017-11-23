@@ -4,6 +4,7 @@ function configFail() {
   console.log('FAILED TO LOAD CONFIG!');
 }
 function parseConfig(config_json) {
+  if(typeof config_json ==='string') config_json = JSON.parse(config_json);
   console.log(config_json);
   config = config_json;
   console.log(config);

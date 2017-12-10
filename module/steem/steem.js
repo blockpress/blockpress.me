@@ -22,7 +22,8 @@ function steem_load(args) {
 			getSteemProfile(args.user);
 			break;
 		case "posts":
-			console.log("posts");
+			getSteemPosts(args.users,args.tags);
+			console.log("Get posts for: user(s): "+args.user+", tag(s): "+args.tags);
 			break;
 		case "post":
 			getSteemPost(args.user,args.postid);
@@ -32,17 +33,34 @@ function steem_load(args) {
 }
 
 function displaySteemPosts(posts) {
-	// Get template from theme
+	// Template should be stored in global steem_posts
 
-	// Else use default template
+	// First clear contentArea
+	$('#contentArea').html('');
 
-	// Then insert post values for each post returned
+	// Loop through posts, populate the template and append it to contentArea
+
+	// Insert post values for each post returned
 
 	// Append post to content string
+
 	content = 'SteemPosts';
 
 	// Display content string
 	$('#contentArea').html(content);
+}
+function getSteemPostsTemplate(usernames,tags) {
+	// Save profile in global variable
+	steem_posts = posts;
+
+	// Get template from theme
+	var theme_template = "/theme/"+config.theme+"/steem-posts.html";
+	$.ajax(theme_template).done(displaySteemProfile).fail(function(){
+		// Else use default template
+		$.ajax("/module/steem/steem-posts.html").done(displaySteemPosts);
+	});
+
+	content = 'posts';
 }
 function getSteemPosts(usernames,tags) {
 	//
@@ -50,9 +68,6 @@ function getSteemPosts(usernames,tags) {
 }
 
 function displaySteemPost(post) {
-	// Get template from theme
-
-	// Else use default template
 	content = post;
 	// Display template
 	$('#contentArea').html(content);
@@ -150,5 +165,3 @@ $.getScript( "lib/steem-js/steem.min.js", function( data, textStatus, jqxhr ) {
 	console.log( jqxhr.status ); // 200
 	console.log( "steem.min.js load was performed." );
 });
-
-	console.log( "XXXXX" ); // Data returned

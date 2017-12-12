@@ -1,3 +1,6 @@
+// Globals used in this module
+var steem_profile, steem_post, steem_posts, steem_tags;
+
 /* A special content module for pulling content from steem blockchain */
 function steem_menuitem(args) {
 	var args_json = JSON.stringify(args);
@@ -22,8 +25,8 @@ function steem_load(args) {
 			getSteemProfile(args.user);
 			break;
 		case "posts":
-			getSteemPosts(args.users,args.tags);
-			console.log("Get posts for: user(s): "+args.user+", tag(s): "+args.tags);
+			getSteemPosts(args.users,args.tag);
+			console.log("Get posts for: user(s): "+args.user+", tag(s): "+args.tag);
 			break;
 		case "post":
 			getSteemPost(args.user,args.postid);
@@ -32,25 +35,30 @@ function steem_load(args) {
 	}
 }
 
-function displaySteemPosts(posts) {
+function displaySteemPosts(posts_template) {
 	// Template should be stored in global steem_posts
+	var template = posts_template;
+	var content = '';
 
-	// First clear contentArea
-	$('#contentArea').html('');
 
 	// Loop through posts, populate the template and append it to contentArea
+	var post, postsLength = steem_posts.length;
+	for (var i = 0; i < postsLength; i++) {
+		console.log("Post "+i+": "+steem_posts[i]);
+		// Insert post values for this post
 
-	// Insert post values for each post returned
+		// Append post to content string if it has a matching tag
+		content += template;
+		//Reset template
+		var template = steem_posts;
+	}
 
-	// Append post to content string
-
-	content = 'SteemPosts';
-
-	// Display content string
+	// Append content to contentArea
 	$('#contentArea').html(content);
 }
-function getSteemPostsTemplate(usernames,tags) {
+function getSteemPostsTemplate(err,posts) {
 	// Save profile in global variable
+	console.log(posts);
 	steem_posts = posts;
 
 	// Get template from theme
@@ -63,8 +71,13 @@ function getSteemPostsTemplate(usernames,tags) {
 	content = 'posts';
 }
 function getSteemPosts(usernames,tags) {
-	//
-	displaySteemPosts(['AAA']);
+	// First clear contentArea, because we might need to make multiple calls to refill it.
+	$('#contentArea').html('');
+
+	steem_tags = tags;
+
+	steem.api.getDiscussionsByAuthorBeforeDate(usernames, '', '', 50,	function(err, result){getSteemPostsTemplate(err, result)});
+	//displaySteemPosts(['AAA']);
 }
 
 function displaySteemPost(post) {
@@ -156,7 +169,6 @@ $.getScript( "lib/showdown/showdown.min.js").done(function( script, textStatus )
 		$( "div.log" ).text( "Triggered ajaxError handler." );
 	});
 
-var steem_profile, steem_post, steem_posts;
 
 //Load the steem javascript API
 $.getScript( "lib/steem-js/steem.min.js", function( data, textStatus, jqxhr ) {

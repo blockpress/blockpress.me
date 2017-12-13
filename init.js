@@ -1,42 +1,46 @@
 var config;
 
-function configFail() {
-  console.log('FAILED TO LOAD CONFIG!');
-}
-function parseConfig(config_json) {
-  if(typeof config_json ==='string') config_json = JSON.parse(config_json);
-  console.log(config_json);
-  config = config_json;
-  console.log(config);
-  parseModules(config_json.modules);
-}
+/*** Functions for handling config.json ***/
+// Load config.json
 function getConfigJSON() {
   return $.ajax({
     type: 'GET',
     url: "config.json"
   });
 }
+// Parse config.json once loaded...
+function parseConfig(config_json) {
+  if(typeof config_json ==='string') config_json = JSON.parse(config_json);
+  config = config_json;
+  parseModules(config_json.modules);
+}
+// Failed to load config.json
+function configFail() {
+  console.log('FAILED TO LOAD CONFIG!');
+}
 
-function themeHTMLFail() {
-  console.log('FAILED TO LOAD THEME HTML!');
+/*** Functions for loading the content modules ***/
+// Parse the module json data from the config object
+function parseModules(modules_data) {
+	var moduleItem, arrayLength = modules_data.length;
+	for (var i = 0; i < arrayLength; i++) {
+		moduleItem = modules_data[i];
+		parseModule(moduleItem);
+	}
+	parseTheme(config.theme);
 }
-function getThemeHTML(theme) {
-  return $.ajax({
-    type: 'GET',
-    url: "/theme/"+theme+"/template.html"
-  });
+// Parse an individual module item, load the script...
+function parseModule(module_name) {
+	$.getScript( "module/"+module_name+"/"+module_name+".js", function( data, textStatus, jqxhr ) {
+		//console.log( data ); // Data returned
+		//console.log( textStatus ); // Success
+		//console.log( jqxhr.status ); // 200
+		console.log( "Load was performed for "+module_name+"." );
+	});
 }
-function parseThemeHTML(themeHTML) {
-  //console.log(themeHTML);
-  $(document.body).html(themeHTML);
-  //console.log(config.sitetitle);
-  $('#sitetitle').text(config.sitetitle);
-  $('#tagline').text(config.tagline);
-  document.title = config.sitetitle;
 
-  parseMenu();
-	parseFirstPage();
-}
+/*** Functions for parsing themes ***/
+// Parse the theme
 function parseTheme(theme) {
   getThemeHTML(theme).done(parseThemeHTML).fail(themeHTMLFail);
 
@@ -47,33 +51,29 @@ function parseTheme(theme) {
      href: "/theme/"+theme+"/style.css"
   }).appendTo("head");
 }
+// Load the theme template
+function getThemeHTML(theme) {
+  return $.ajax({
+    type: 'GET',
+    url: "/theme/"+theme+"/template.html"
+  });
+}
+// Theme template failed to load...
+function themeHTMLFail() {
+  console.log('FAILED TO LOAD THEME HTML!');
+}
+// Parse the theme template
+function parseThemeHTML(themeHTML) {
+  $(document.body).html(themeHTML);
+  $('#sitetitle').text(config.sitetitle);
+  $('#tagline').text(config.tagline);
+  document.title = config.sitetitle;
 
-function getFirstContentModuleFromMenu(menu) {
-		// Look for first content module in menu
-		var arrayLength = menu.length;
-		for (var i = 0; i < arrayLength; i++) {
-			if(menu[i].type != 'link') {
-				return menu[i];
-			}
-		}
-		return false;
+  parseMenu();
+	parseFirstPage();
 }
 
-function parseFirstPage() {
-	var type, args;
-	if('firstpage' in config) {
-		type = config.firstpage.type;
-		args = config.firstpage.args;
-	} else {
-		var menuItem = getFirstContentModuleFromMenu(content.menu);
-		type = menuItem.type;
-		args = menuItem.args;
-	}
-	load_funct = type+"_load";
-
-	window[load_funct](args);
-}
-
+// Create the Menu
 function parseMenu() {
 	var list = $('<ul/>').appendTo('#menuArea');
 	var href_funct, href, label, menuitem, menu = config.menu;
@@ -95,26 +95,37 @@ function parseMenu() {
 	}
 }
 
-
-function parseModules(modules_data) {
-	console.log(modules_data);
-	var moduleItem, arrayLength = modules_data.length;
-	for (var i = 0; i < arrayLength; i++) {
-		moduleItem = modules_data[i];
-		parseModule(moduleItem);
+/*** Functions for loading the default content ***/
+function parseFirstPage() {
+	var type, args;
+	if('firstpage' in config) {
+		type = config.firstpage.type;
+		args = config.firstpage.args;
+	} else {
+		var menuItem = getFirstContentModuleFromMenu(content.menu);
+		type = menuItem.type;
+		args = menuItem.args;
 	}
-	parseTheme(config.theme);
+	load_funct = type+"_load";
+
+	window[load_funct](args);
+}
+function getFirstContentModuleFromMenu(menu) {
+		// Look for first content module in menu
+		var arrayLength = menu.length;
+		for (var i = 0; i < arrayLength; i++) {
+			if(menu[i].type != 'link') {
+				return menu[i];
+			}
+		}
+		return false;
 }
 
-function parseModule(module_name) {
-	$.getScript( "module/"+module_name+"/"+module_name+".js", function( data, textStatus, jqxhr ) {
-		//console.log( data ); // Data returned
-		//console.log( textStatus ); // Success
-		//console.log( jqxhr.status ); // 200
-		console.log( "Load was performed for "+module_name+"." );
-	});
-}
 
+
+
+
+// JQuery ready function that is called once document has loaded.
 $(document).ready(function() {
 	getConfigJSON().done(parseConfig).fail(configFail);
 });

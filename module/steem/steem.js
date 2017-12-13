@@ -15,8 +15,9 @@ function steem_display(content) {
 }
 function steem_load(args) {
 	console.log("Inside steem_load.");
+console.log('args: '+args);
 	args = JSON.parse(args.replace(/&quot;/g,'"'));
-	console.log(args);
+console.log('args JSON parsed: '+args);
 	console.log(args.show);
 
 	switch(args.show) {
@@ -25,7 +26,7 @@ function steem_load(args) {
 			getSteemProfile(args.user);
 			break;
 		case "posts":
-			getSteemPosts(args.users,args.tag);
+			getSteemPosts(args.user,args.tag);
 			console.log("Get posts for: user(s): "+args.user+", tag(s): "+args.tag);
 			break;
 		case "post":
@@ -38,23 +39,42 @@ function steem_load(args) {
 function displaySteemPosts(posts_template) {
 	// Template should be stored in global steem_posts
 	var template = posts_template;
-	var content = '';
+	var json_metadata, post_obj, body, content = '';
 
+	var converter = new showdown.Converter();
 
 	// Loop through posts, populate the template and append it to contentArea
 	var post, postsLength = steem_posts.length;
 	for (var i = 0; i < postsLength; i++) {
-		console.log("Post "+i+": "+steem_posts[i]);
+		post_obj = steem_posts[i];
+		json_metadata = JSON.parse(post_obj.json_metadata);
+
+		console.log("Post "+i+": "+JSON.stringify(post_obj));
+		console.log("metadata "+i+": "+JSON.stringify(json_metadata));
+
 		// Insert post values for this post
+		template = template.replace('{steem_post_tag}',post_obj.category);
+		template = template.replace('{steem_post_title}',post_obj.title);
+		template = template.replace('{steem_post_permlink}',post_obj.permlink);
+		template = template.replace('{steem_post_img}',json_metadata.image);
+
+		// Full body
+		body = converter.makeHtml(post_obj.body);
+		template = template.replace('{steem_post_body}',body);
+
+		// Body preview
+		body = body.replace(/<(?:.|\n)*?>/gm, ''); //strip html
+		if(body.length > 250) body = body.substring(0,247)+'...';
+		template = template.replace('{steem_post_preview}',body);
 
 		// Append post to content string if it has a matching tag
 		content += template;
 		//Reset template
-		var template = steem_posts;
+		var template = posts_template;
 	}
 
 	// Append content to contentArea
-	$('#contentArea').html(content);
+	$('#contentArea').append(content);
 }
 function getSteemPostsTemplate(err,posts) {
 	// Save profile in global variable
@@ -75,8 +95,8 @@ function getSteemPosts(usernames,tags) {
 	$('#contentArea').html('');
 
 	steem_tags = tags;
-
-	steem.api.getDiscussionsByAuthorBeforeDate(usernames, '', '', 50,	function(err, result){getSteemPostsTemplate(err, result)});
+console.log('usernames: '+usernames);
+	steem.api.getDiscussionsByAuthorBeforeDate(usernames, '', '2100-01-01T00:00:00', 10,	function(err, result){getSteemPostsTemplate(err, result)});
 	//displaySteemPosts(['AAA']);
 }
 

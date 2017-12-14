@@ -104,12 +104,12 @@ function displaySteemProfile(template) {
 	$("#profile-banner").css("background","url("+metadata.profile.cover_image+") no-repeat");
 	$("#profile-image").html('<img src="'+metadata.profile.profile_image+'">');
 	$("#profile-username").html('@'+steem_profile.name);
-	$("#profile-username").html('@'+steem_profile.name);
 	$("#profile-name").html(metadata.profile.name);
 	var reputation = simpleReputation(steem_profile.reputation);
 	$("#profile-reputation").html(Math.round(reputation));
-
 	$("#profile-about").html(metadata.profile.about);
+	$("#profile-location").html(metadata.profile.location);
+	$("#profile-website").html('<a href="'+metadata.profile.website+'">'+metadata.profile.website+'</a>');
 }
 function getSteemProfileTemplate(err, profile) {
 	// Save profile in global variable
@@ -122,7 +122,6 @@ function getSteemProfileTemplate(err, profile) {
 		$.ajax("/module/steem/steem-profile.html").done(displaySteemProfile);
 	});
 
-	content = 'profile';
 }
 function getSteemProfile(username) {
 	//

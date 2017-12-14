@@ -1,3 +1,6 @@
+// Globals used in this module
+var steem_profile, steem_post, steem_posts, steem_tags;
+
 /* A special content module for pulling content from steem blockchain */
 function steem_menuitem(args) {
 	var args_json = JSON.stringify(args);
@@ -12,8 +15,9 @@ function steem_display(content) {
 }
 function steem_load(args) {
 	console.log("Inside steem_load.");
+console.log('args: '+args);
 	args = JSON.parse(args.replace(/&quot;/g,'"'));
-	console.log(args);
+console.log('args JSON parsed: '+args);
 	console.log(args.show);
 
 	switch(args.show) {
@@ -22,7 +26,8 @@ function steem_load(args) {
 			getSteemProfile(args.user);
 			break;
 		case "posts":
-			console.log("posts");
+			getSteemPosts(args.user,args.tag);
+			console.log("Get posts for: user(s): "+args.user+", tag(s): "+args.tag);
 			break;
 		case "post":
 			getSteemPost(args.user,args.postid);
@@ -31,28 +36,71 @@ function steem_load(args) {
 	}
 }
 
-function displaySteemPosts(posts) {
+function displaySteemPosts(posts_template) {
+	// Template should be stored in global steem_posts
+	var template = posts_template;
+	var json_metadata, post_obj, body, content = '';
+
+	var converter = new showdown.Converter();
+
+	// Loop through posts, populate the template and append it to contentArea
+	var post, postsLength = steem_posts.length;
+	for (var i = 0; i < postsLength; i++) {
+		post_obj = steem_posts[i];
+		json_metadata = JSON.parse(post_obj.json_metadata);
+
+		console.log("Post "+i+": "+JSON.stringify(post_obj));
+		console.log("metadata "+i+": "+JSON.stringify(json_metadata));
+
+		// Insert post values for this post
+		template = template.replace('{steem_post_tag}',post_obj.category);
+		template = template.replace('{steem_post_title}',post_obj.title);
+		template = template.replace('{steem_post_permlink}',post_obj.permlink);
+		template = template.replace('{steem_post_img}',json_metadata.image);
+
+		// Full body
+		body = converter.makeHtml(post_obj.body);
+		template = template.replace('{steem_post_body}',body);
+
+		// Body preview
+		body = body.replace(/<(?:.|\n)*?>/gm, ''); //strip html
+		if(body.length > 250) body = body.substring(0,247)+'...';
+		template = template.replace('{steem_post_preview}',body);
+
+		// Append post to content string if it has a matching tag
+		content += template;
+		//Reset template
+		var template = posts_template;
+	}
+
+	// Append content to contentArea
+	$('#contentArea').append(content);
+}
+function getSteemPostsTemplate(err,posts) {
+	// Save profile in global variable
+	console.log(posts);
+	steem_posts = posts;
+
 	// Get template from theme
+	var theme_template = "/theme/"+config.theme+"/steem-posts.html";
+	$.ajax(theme_template).done(displaySteemProfile).fail(function(){
+		// Else use default template
+		$.ajax("/module/steem/steem-posts.html").done(displaySteemPosts);
+	});
 
-	// Else use default template
-
-	// Then insert post values for each post returned
-
-	// Append post to content string
-	content = 'SteemPosts';
-
-	// Display content string
-	$('#contentArea').html(content);
+	content = 'posts';
 }
 function getSteemPosts(usernames,tags) {
-	//
-	displaySteemPosts(['AAA']);
+	// First clear contentArea, because we might need to make multiple calls to refill it.
+	$('#contentArea').html('');
+
+	steem_tags = tags;
+console.log('usernames: '+usernames);
+	steem.api.getDiscussionsByAuthorBeforeDate(usernames, '', '2100-01-01T00:00:00', 10,	function(err, result){getSteemPostsTemplate(err, result)});
+	//displaySteemPosts(['AAA']);
 }
 
 function displaySteemPost(post) {
-	// Get template from theme
-
-	// Else use default template
 	content = post;
 	// Display template
 	$('#contentArea').html(content);
@@ -140,7 +188,6 @@ $.getScript( "lib/showdown/showdown.min.js").done(function( script, textStatus )
 		$( "div.log" ).text( "Triggered ajaxError handler." );
 	});
 
-var steem_profile, steem_post, steem_posts;
 
 //Load the steem javascript API
 $.getScript( "lib/steem-js/steem.min.js", function( data, textStatus, jqxhr ) {
@@ -149,5 +196,3 @@ $.getScript( "lib/steem-js/steem.min.js", function( data, textStatus, jqxhr ) {
 	console.log( jqxhr.status ); // 200
 	console.log( "steem.min.js load was performed." );
 });
-
-	console.log( "XXXXX" ); // Data returned

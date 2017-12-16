@@ -53,19 +53,19 @@ function displaySteemPosts(posts_template) {
 		console.log("metadata "+i+": "+JSON.stringify(json_metadata));
 
 		// Insert post values for this post
-		template = template.replace('{steem_post_tag}',post_obj.category);
-		template = template.replace('{steem_post_title}',post_obj.title);
-		template = template.replace('{steem_post_permlink}',post_obj.permlink);
-		template = template.replace('{steem_post_img}',json_metadata.image);
+		template = template.replace('{steem_posts_tag}',post_obj.category);
+		template = template.replace('{steem_posts_title}',post_obj.title);
+		template = template.replace('{steem_posts_permlink}',post_obj.permlink);
+		template = template.replace('{steem_posts_img}',json_metadata.image);
 
 		// Full body
 		body = converter.makeHtml(post_obj.body);
-		template = template.replace('{steem_post_body}',body);
+		template = template.replace('{steem_posts_body}',body);
 
 		// Body preview
 		body = body.replace(/<(?:.|\n)*?>/gm, ''); //strip html
 		if(body.length > 250) body = body.substring(0,247)+'...';
-		template = template.replace('{steem_post_preview}',body);
+		template = template.replace('{steem_posts_preview}',body);
 
 		// Append post to content string if it has a matching tag
 		content += template;
@@ -142,11 +142,15 @@ function simpleReputation(raw_reputation) {
 
 function displaySteemProfile(template) {
 	console.log(steem_profile);
+
+	var metadata = JSON.parse(steem_profile.json_metadata);
+	template = template.replace('{steem_profile_website}','<a href="'+metadata.profile.website+'">'+metadata.profile.website+'</a>');
+template = template.replace('{steem_profile_location}',metadata.profile.location);
 	// Display template
 	$('#contentArea').html(template);
 
 	// Then add profile values
-	var metadata = JSON.parse(steem_profile.json_metadata);
+
 	console.log(metadata.profile);
 	console.log("profile image: "+metadata.profile.profile_image);
 	$("#profile-banner").css("background","url("+metadata.profile.cover_image+") no-repeat");

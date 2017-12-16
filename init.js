@@ -1,4 +1,4 @@
-var config;
+var config, modules_to_load;
 
 /*** Functions for handling config.json ***/
 // Load config.json
@@ -22,7 +22,8 @@ function configFail() {
 /*** Functions for loading the content modules ***/
 // Parse the module json data from the config object
 function parseModules(modules_data) {
-	var moduleItem, arrayLength = modules_data.length;
+	modules_to_load=modules_data;
+	var moduleItem, arrayLength = modules_to_load.length;
 	for (var i = 0; i < arrayLength; i++) {
 		moduleItem = modules_data[i];
 		parseModule(moduleItem);
@@ -36,6 +37,9 @@ function parseModule(module_name) {
 		//console.log( textStatus ); // Success
 		//console.log( jqxhr.status ); // 200
 		console.log( "Load was performed for "+module_name+"." );
+
+		var index = modules_to_load.indexOf(module_name);
+		modules_to_load.splice(index, 1);
 	});
 }
 
@@ -75,6 +79,14 @@ function parseThemeHTML(themeHTML) {
 
 // Create the Menu
 function parseMenu() {
+	if(modules_to_load.length > 0) {
+		// Try to call menu again in 1/10 of a second.
+		setTimeout(function () {
+			parseMenu();
+		}, 100);
+		return null;
+	}
+
 	var list = $('<ul/>').appendTo('#menuArea');
 	var href_funct, href, label, menuitem, menu = config.menu;
 	// console.log(menu);

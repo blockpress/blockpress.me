@@ -51,12 +51,16 @@ function displaySteemPosts(posts_template) {
 
 		console.log("Post "+i+": "+JSON.stringify(post_obj));
 		console.log("metadata "+i+": "+JSON.stringify(json_metadata));
+		//template+="post_obj "+i+": "+JSON.stringify(post_obj)+"<br><br>";
+		//template+="json_metadata "+i+": "+JSON.stringify(json_metadata);
 
 		// Insert post values for this post
 		template = template.replace('{steem_posts_tag}',post_obj.category);
 		template = template.replace('{steem_posts_title}',post_obj.title);
 		template = template.replace('{steem_posts_permlink}',post_obj.permlink);
 		template = template.replace('{steem_posts_img}',json_metadata.image);
+		template = template.replace('{steem_posts_author}',post_obj.author);
+
 
 		// Full body
 		body = converter.makeHtml(post_obj.body);
@@ -106,13 +110,14 @@ function displaySteemPost(post) {
 	$('#contentArea').html(content);
 
 		console.log(steem_post.body);
-
+// Convert markdown into html
 	var converter = new showdown.Converter();
 	var body_html = converter.makeHtml(steem_post.body);
 
 	console.log(body_html);
 	// Then add post values
 	$("#steem-post-content").html(body_html);
+	$("#steem-post-title").html(steem_post.title);
 }
 function getSteemPostTemplate(err, post) {
 	// Save profile in global variable

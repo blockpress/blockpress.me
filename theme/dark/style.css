@@ -5,9 +5,15 @@ body{
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1.3em;
   background-color:#1C1C1C;
+	padding: 0;
 }
 header{
-  border-radius: 6px;
+	background-color: #323232;
+	padding: 0,3em;
+	border: 1px solid #585858;
+	border-right: 0;
+	border-left: 0;
+	margin-bottom: 1em;
 }
 
 h1{
@@ -61,13 +67,11 @@ a:visited{
 	color:#FF8800;
 }
 a:hover{
-	color:#819FF7;
+	color:#F3E2A9;
 }
 a:active{
-	color:#819FF7;
+	color:#F3E2A9;
 }
-
-
 img{
 	max-width: 70%;
 	margin-right:auto;
@@ -78,8 +82,14 @@ img{
 
 #contentArea {
 	width: 70%;
+	color: #eee;
 	margin-right:auto;
 	margin-left:auto;
+	margin-bottom: 1em;
+	border: solid 1px #BDBDBD;
+	background-color: #505050;
+	border-radius: 6px;
+	padding: 1em;
 }
 #contentArea h1{
     font-size: 1.1em;
@@ -132,21 +142,16 @@ img{
 		margin-left:auto;
 		text-align: left;
 	}
-	#contentArea a {
-		text-decoration: none;
-		color: #f00;
-	}
 
-	#contentArea a:visited{
-		color:#04B486;
-	}
-	#contentArea a:hover{
-		color:#819FF7;
-	}
 
-	#contentArea a:active{
-		color:#819FF7;
-	}
+	/*Footer styles*/
+
+footer{
+	text-align: center;
+	font-style: italic;
+	font-size: 0.7em;
+	margin-bottom: 3em;
+}
 
 #footer-menu li{
 	display: inline-block;
@@ -165,8 +170,11 @@ img{
   list-style: none;
   text-align: center;
 }
+
+
 /* Steem Content Module Themes */
 /* Steem Profile */
+
 #profile-banner {
 	width: 1000px;
 	height: 180px;
@@ -227,4 +235,24 @@ img{
 #profile-info span{
 	margin-left: 1em;
 	margin-right: 1em;
+}
+
+
+/* Steem Posts */
+
+.steem_posts{
+	border-bottom: 1px solid #424242;
+	padding: 0.7em;
+}
+.steem_posts img{
+	max-width: 20%;
+	max-height: 15%;
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.steem_posts_preview {
+	max-width: 75%;
+	display: inline-block;
+	vertical-align: top;
 }

@@ -39,7 +39,7 @@ console.log('args JSON parsed: '+args);
 function displaySteemPosts(posts_template) {
 	// Template should be stored in global steem_posts
 	var template = posts_template;
-	var json_metadata, post_obj, body, content = '';
+	var json_metadata, post_tags, post_obj, body, content = '', show_post;
 
 	var converter = new showdown.Converter();
 
@@ -48,35 +48,46 @@ function displaySteemPosts(posts_template) {
 	for (var i = 0; i < postsLength; i++) {
 		post_obj = steem_posts[i];
 		json_metadata = JSON.parse(post_obj.json_metadata);
+		post_tags = json_metadata.tags;
+
+		show_post = false;
+		if(Array.isArray(steem_tags.isArray)) {
+			for(var j =0; j < steem_tags.length; j++) {
+				if(post_tags.indexOf(steem_tags[j]) !== -1) show_post = true;
+			}
+		}
+		else if(steem_tags === '') show_post = true;
+		else if(post_tags.indexOf(steem_tags) !== -1) show_post = true;
 
 		console.log("Post "+i+": "+JSON.stringify(post_obj));
 		console.log("metadata "+i+": "+JSON.stringify(json_metadata));
-		//template+="post_obj "+i+": "+JSON.stringify(post_obj)+"<br><br>";
-		//template+="json_metadata "+i+": "+JSON.stringify(json_metadata);
 
-		// Insert post values for this post
-		template = template.replace('{steem_posts_tag}',post_obj.category);
-		template = template.replace('{steem_posts_title}',post_obj.title);
-		template = template.replace('{steem_posts_permlink}',post_obj.permlink);
-		template = template.replace('{steem_posts_img}',json_metadata.image);
-		template = template.replace('{steem_posts_author}',post_obj.author);
+		if(show_post) {
+			//template+="post_obj "+i+": "+JSON.stringify(post_obj)+"<br><br>";
+			//template+="json_metadata "+i+": "+JSON.stringify(json_metadata);
 
+			// Insert post values for this post
+			template = template.replace('{steem_posts_tag}',post_obj.category);
+			template = template.replace('{steem_posts_title}',post_obj.title);
+			template = template.replace('{steem_posts_permlink}',post_obj.permlink);
+			template = template.replace('{steem_posts_img}',json_metadata.image);
+			template = template.replace('{steem_posts_author}',post_obj.author);
 
-		// Full body
-		body = converter.makeHtml(post_obj.body);
-		template = template.replace('{steem_posts_body}',body);
+			// Full body
+			body = converter.makeHtml(post_obj.body);
+			template = template.replace('{steem_posts_body}',body);
 
-		// Body preview
-		body = body.replace(/<(?:.|\n)*?>/gm, ''); //strip html
-		if(body.length > 250) body = body.substring(0,247)+'...';
-		template = template.replace('{steem_posts_preview}',body);
+			// Body preview
+			body = body.replace(/<(?:.|\n)*?>/gm, ''); //strip html
+			if(body.length > 250) body = body.substring(0,247)+'...';
+			template = template.replace('{steem_posts_preview}',body);
 
-		// Append post to content string if it has a matching tag
-		content += template;
-		//Reset template
-		var template = posts_template;
+			// Append post to content string if it has a matching tag
+			content += template;
+			//Reset template
+			var template = posts_template;
+		}
 	}
-
 	// Append content to contentArea
 	$('#contentArea').append(content);
 }

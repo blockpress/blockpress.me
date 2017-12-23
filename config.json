@@ -10,7 +10,7 @@
 	"menu": [
     {"label": "Home", "type": "static", "args": "home.html"},
 	  {"label": "Profile", "type": "steem", "args": {"show":"profile", "user":"antonchanning"}},
-	  {"label": "Posts", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress"}},
+	  {"label": "Posts", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress", "count":3}},
 	  {"label": "Post", "type": "steem", "args": {"show":"post", "user":"dana-varahi", "postid":"first-snow"}},
   	{"label": "Link", "type": "link", "args": "https://blockpress.me"}
   ]

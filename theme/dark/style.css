@@ -15,6 +15,7 @@ orange pallete:
 
 offwhite pallete:
 #eee1cf
+#fcf4e9
 */
 body{
 	width: 100%;
@@ -81,6 +82,12 @@ box-shadow: 1px 1px 5px #0f0d0c;
 .menu li a:hover {
 	background-color:#5b5349;
 	box-shadow: 1px 1px 5px #eee1cf;
+}
+
+.menu li a:active {
+	background-color:#6f6559;
+	box-shadow: 1px 1px 5px  #fcf4e9;
+	color:#eee1cf;
 }
 
 p{

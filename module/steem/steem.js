@@ -9,7 +9,6 @@ var steem_post_template,steem_post;
 
 // Steem posts variables
 var steem_posts_template, steem_posts, steem_posts_displayed, steem_username, steem_tags, steem_posts_count;
-steem_posts_displayed = new Array();
 
 /* A special content module for pulling content from steem blockchain */
 function steem_menuitem(args) {
@@ -39,6 +38,7 @@ console.log('args JSON parsed: '+args);
 		case "posts":
 			// First clear contentArea, because we might need to make multiple calls to refill it.
 			$('#contentArea').html('');
+			steem_posts_displayed = new Array();
 			getSteemPosts(args.user,args.tag,args.count,'2100-01-01T00:00:00','');
 			console.log("Get posts for: user(s): "+args.user+", tag(s): "+args.tag+", count: "+args.count);
 			break;
@@ -210,7 +210,7 @@ template = template.replace('{steem_profile_location}',metadata.profile.location
 }
 function getSteemProfile(username) {
 	//
-	steem.api.getAccounts([username],	function(err, profile){getSteemProfileTemplate(err, profile)});
+	steem.api.getAccounts([username],	function(err, profile){displaySteemProfile(err, profile)});
 }
 
 //Load the showdown library (for parsing markdown)

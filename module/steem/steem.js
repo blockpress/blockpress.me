@@ -39,7 +39,7 @@ console.log('args JSON parsed: '+args);
 			// First clear contentArea, because we might need to make multiple calls to refill it.
 			$('#contentArea').html('');
 			steem_posts_displayed = new Array();
-			getSteemPosts(args.user,args.tag,args.count,'2100-01-01T00:00:00','');
+			getSteemPosts(args.user,args.tag,args.count,'');
 			console.log("Get posts for: user(s): "+args.user+", tag(s): "+args.tag+", count: "+args.count);
 			break;
 		case "post":
@@ -57,8 +57,9 @@ function displaySteemPosts(err, posts) {
 
 console.log("steem_username: "+steem_username);
 
+	var args = steem_args;
 console.log("displaySteemPosts args: "+args);
-	var content = '', display_count = 0;
+	var content = '', display_count = steem_posts_displayed.length;
 	var json_metadata, post_tags, post_obj, body, show_post, last_date, last_permlink, loop_end = false;
 
 	var converter = new showdown.Converter();
@@ -86,16 +87,15 @@ console.log("displaySteemPosts args: "+args);
 		console.log("created "+i+": "+JSON.stringify(post_obj.created));
 
 		if(steem_posts_displayed.indexOf(post_obj.permlink) !== -1) {
-			loop_end = true;
+			//loop_end = true;
 			show_post = false;
 		} else {
-			steem_posts_displayed.push(post_obj.permlink);
-			if (typeof post_obj.created !== "undefined") last_date = post_obj.created;
 			last_permlink = post_obj.permlink;
 	console.log("Last permlink: "+last_permlink);
 		}
 
 		if(show_post) {
+			steem_posts_displayed.push(post_obj.permlink);
 			display_count++;
 			//template+="post_obj "+i+": "+JSON.stringify(post_obj)+"<br><br>";
 			//template+="json_metadata "+i+": "+JSON.stringify(json_metadata);
@@ -128,25 +128,27 @@ console.log("username: "+steem_username);
 console.log("steem_tags: "+steem_tags);
 console.log("steem_posts_count: "+steem_posts_count);
 console.log("last_permlink: "+last_permlink);
-		getSteemPosts(steem_username,steem_tags,steem_posts_count,last_date ,last_permlink);
+		getSteemPosts(steem_username,steem_tags,steem_posts_count,last_permlink);
 	}
-	if(!loop_end) console.log('Blocked infinite loop. Quitting...');
-	if(display_count >= steem_posts_count) console.log('Reached post limit. Quitting...');
+	if(loop_end) console.log('Blocked infinite loop. Quitting...');
+	if(display_count >= steem_posts_count) {
+		console.log('Reached post limit. Quitting...');
+		console.log(steem_posts_displayed);
+	}
 	// Append content to contentArea
 	$('#contentArea').append(content);
 }
-function getSteemPosts(usernames,tags,count,beforeDate,lastPermlink) {
-console.log('getSteemPosts usernames: '+usernames+' tags: '+tags+' count: '+count+' beforeDate: '+beforeDate+' lastPermlink: '+lastPermlink);
+function getSteemPosts(usernames,tags,count,lastPermlink) {
+console.log('getSteemPosts usernames: '+usernames+' tags: '+tags+' count: '+count+' lastPermlink: '+lastPermlink);
 	if (typeof count === "undefined") count=10; // Default to 10 if no count specified.
-	if (typeof beforeDate === "undefined") beforeDate=''; // Default to 10 if no count specified.
 	if (typeof lastPermlink === "undefined") lastPermlink=''; // Default to 10 if no count specified.
 
 	steem_tags = tags;
 	steem_posts_count = count;
 	steem_username = usernames;
-console.log('usernames: '+usernames+' tags: '+tags+' count: '+count+' beforeDate: '+beforeDate+' lastPermlink: '+lastPermlink);
+console.log('usernames: '+usernames+' tags: '+tags+' count: '+count+' lastPermlink: '+lastPermlink);
 
-	steem.api.getDiscussionsByAuthorBeforeDate(usernames, lastPermlink, beforeDate, count,	function(err, result){displaySteemPosts(err, result)});
+	steem.api.getDiscussionsByAuthorBeforeDate(usernames, lastPermlink, '2100-01-01T00:00:00', count,	function(err, result){displaySteemPosts(err, result)});
 	//displaySteemPosts(['AAA']);
 }
 
@@ -215,7 +217,7 @@ function getSteemProfile(username) {
 
 //Load the showdown library (for parsing markdown)
 $.getScript( "lib/showdown/showdown.min.js").done(function( script, textStatus ) {
-		console.log( textStatus );
+		//console.log( textStatus );
 		console.log( "showdown.min.js load was performed." );
 	})
 	.fail(function( jqxhr, settings, exception ) {
@@ -228,9 +230,9 @@ $.getScript( "lib/showdown/showdown.min.js").done(function( script, textStatus )
 
 //Load the steem javascript API
 $.getScript( "lib/steem-js/steem.min.js", function( data, textStatus, jqxhr ) {
-	console.log( data ); // Data returned
-	console.log( textStatus ); // Success
-	console.log( jqxhr.status ); // 200
+	//console.log( data ); // Data returned
+	//console.log( textStatus ); // Success
+	//console.log( jqxhr.status ); // 200
 	console.log( "steem.min.js load was performed." );
 });
 

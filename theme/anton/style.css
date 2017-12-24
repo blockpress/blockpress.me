@@ -105,6 +105,7 @@ a:active{
 
 #contentArea{
 	background-color: #0A2229;
+	color:#088A85;
 	width:70%;
 	margin-right:auto;
 	margin-left:auto;
@@ -164,7 +165,6 @@ a:active{
 	}
 	#contentArea p{
 		font-size: 80%;
-	  color:#088A85;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
@@ -246,4 +246,53 @@ a:active{
   text-align: center;
   padding: 0;
   margin: 0.5em;
+}
+/* Steem Content Module Themes */
+/* Steem Profile */
+#profile-banner {
+	width: 70%;
+	width: 1000px;
+	height: 180px;
+	margin-right:auto;
+	margin-left:auto;
+	color: #ccb;
+}
+#profile-banner h1 {
+	color: #eee;
+	margin-top: 25px;
+	text-align: center;
+	width:100%;
+}
+#profile-image {
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+	vertical-align: middle;
+	margin-top: 15px;
+}
+#profile-image img {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	border-radius: 50%;
+}
+#profile-about {
+	font-size: 0.7em;
+	text-align: center;
+	max-width: 50%;
+	margin-right:auto;
+	margin-left:auto;
+}
+/* Steem Posts */
+#contentArea img.steemposts_thumbnail {
+    max-width: 20%;
+    display: inline-block;
+    vertical-align: top;
+}
+.steem_posts_preview {
+    max-width: 70%;
+		padding-left: 10px;
+	display: inline-block;
+	vertical-align: top;
 }

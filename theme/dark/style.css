@@ -38,7 +38,7 @@ header{
 }
 
 h1{
-    100% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    font: 200% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
     color:#f0be7e;
     margin-bottom: 0.5em;
@@ -47,7 +47,7 @@ h1{
 }
 
 h2{
-    80% "Lucida Sans Unicode", "Lucida Grande", sans-serif
+    font: 150% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
     color:#ec9c36;
     margin-bottom: 0.5em;
@@ -59,32 +59,34 @@ h2{
 		text-shadow: 1px 1px  #eee1cf;
 }
 
-.menu ul{
-  list-style: none;
-  text-align: center;
-	padding-left: 0;
+.menu div{
+	text-align: center;
+  padding-left: 0;
+	margin-bottom: 0.2em;
+	flex-wrap: wrap;
 }
-.menu li{
+.menu span{
   display: inline-block;
   font-size: 1em;
   text-transform: uppercase;
 	margin-left: 0.3em;
 	margin-right: 0.3em;
+	height: 2.5em;
 
 }
-.menu li a {
+.menu span a {
 padding:8px;
 background-color:#332e29;
 border-radius: 5px;
 box-shadow: 1px 1px 5px #0f0d0c;
 }
 
-.menu li a:hover {
+.menu span a:hover {
 	background-color:#5b5349;
 	box-shadow: 1px 1px 5px #eee1cf;
 }
 
-.menu li a:active {
+.menu span a:active {
 	background-color:#6f6559;
 	box-shadow: 1px 1px 5px  #fcf4e9;
 	color:#eee1cf;
@@ -240,7 +242,8 @@ footer{
 /* Steem Profile */
 
 #profile-banner {
-	width: 1000px;
+	width: 100%;
+	max-width: 1000px;
 	height: 180px;
 	margin-right:auto;
 	margin-left:auto;
@@ -311,7 +314,7 @@ footer{
 }
 
 .steem_posts_preview {
-	max-width: 75%;
+	max-width: 100%;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -321,4 +324,127 @@ footer{
 	max-height: 15%;
 	display: inline-block;
 	margin-right: 1em;
+}
+
+@media only screen and (max-width: 800px) {
+
+	h1{
+		font-size: 150%;
+	}
+	h2{
+		font-size: 120%;
+	}
+
+	#contentArea {
+		width: 100%;
+		margin-right:0;
+		margin-left:0;
+		padding:1em;
+		padding-left: 0;
+		border-radius: 0;
+	}
+
+	#contentArea p {
+		margin-left:0;
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+
+	#contentArea img.steemposts_thumbnail{
+		max-width: 100%;
+	}
+
+	.menu li{
+		display: flex;
+	  flex-wrap: wrap;
+	}
+
+	/* Steem Profile*/
+
+#profile-banner{
+	margin: 0;
+	margin-top: 140px;
+}
+#profile-about {
+	max-width: 90%;
+	position: relative;
+	top:-130px;
+}
+#profile-info {
+	max-width: 99%;
+	position: relative;
+	top:-120px;
+}
+
+#profile-image{
+	display: block;
+	height:96px;
+	width:96px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-right: auto;
+	margin-left: auto;
+}
+#profile-banner h1{
+	position: relative;
+	top:-150px;
+}
+
+/* Steem Posts*/
+
+#contentArea img.steemposts_thumbnail{
+	width: 100%;
+	display:block;
+	border-radius: 0;
+	max-height: none;
+	margin-bottom: 0.5em;
+}
+.steem_posts{
+	padding: 0em;
+}
+.steem_posts_preview {
+	margin-left: 1em;
+	font-size: 1em;
+}
+#contentArea .steem_posts h2{
+	font-size: 1.25em;
+	width: 85%;
+}
+/* Steem Post*/
+#contentArea .steem_post h1{
+	font-size: 1.5em;
+	width: 85%;
+}
+#contentArea .steem_post h2{
+	font-size: 1.25em;
+	width: 85%;
+}
+
+#contentArea #steem-post img{
+width: 100%;
+max-width: 100%;
+border-radius: 0;
+padding: 0;
+margin: 0;
+border: none;
+}
+#contentArea #steem-post h1{
+	width:85%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#contentArea #steem-post h2{
+	width:85%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#contentArea ul li{
+	font-size: 0.8em;
+	max-width: 90%;
+	margin-left: 1em;
+	margin-right: 0.5em;
+}
+
 }

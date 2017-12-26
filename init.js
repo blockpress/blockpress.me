@@ -87,7 +87,7 @@ function parseMenu() {
 		return null;
 	}
 
-	var list = $('<ul/>').appendTo('#menuArea');
+	var list = $('<div/>').appendTo('#menuArea');
 	var href_funct, href, label, menuitem, menu = config.menu;
 	// console.log(menu);
 
@@ -103,7 +103,7 @@ function parseMenu() {
 		//console.log(href_funct);
 		href = window[href_funct](args);
 
-		list.append('<li><a href="'+href+'">'+label+'</a></li>');
+		list.append('<span><a href="'+href+'">'+label+'</a></span>');
 	}
 }
 

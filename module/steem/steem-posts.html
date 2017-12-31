@@ -1,5 +1,9 @@
 <div class="steem_posts steem_posts_{steem_posts_tag}" id="steem_posts_{steem_posts_permlink}">
 	<h2><a href="javascript:steem_load('{&quot;show&quot;:&quot;post&quot;,&quot;user&quot;:&quot;{steem_posts_author}&quot;,&quot;postid&quot;:&quot;{steem_posts_permlink}&quot;}');">{steem_posts_title}</a></h2>
-	<img class="steemposts_thumbnail" src="{steem_posts_img}" style="display:none;" onload="javascript:steemPostsDisplayThumbnail('steem_posts_{steem_posts_permlink}')">
+	<div class="steem_posts_meta">
+		<span class="steem_posts_author"><a href="javascript:steem_load('{&quot;show&quot;:&quot;profile&quot;,&quot;user&quot;:&quot;{steem_posts_author}&quot;}');">{steem_posts_author}</a></span>
+		<span class="steem_posts_date">{steem_posts_date}</span>
+	</div>
+	<img class="steem_posts_thumbnail" src="{steem_posts_img}" style="display:none;" onload="javascript:steemPostsDisplayThumbnail('steem_posts_{steem_posts_permlink}')">
 	<span class="steem_posts_preview">{steem_posts_preview}</span>
 </div>

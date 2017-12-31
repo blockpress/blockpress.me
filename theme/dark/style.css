@@ -318,8 +318,13 @@ footer{
 	display: inline-block;
 	vertical-align: top;
 }
+.steem_posts_meta {
+	font-size: 0.7em;
+	color: #f3f1ee;
+	font-style: italic;
+}
 
-#contentArea img.steemposts_thumbnail{
+#contentArea img.steem_posts_thumbnail{
 	max-width: 20%;
 	max-height: 15%;
 	display: inline-block;

@@ -65,7 +65,7 @@ function displaySteemPosts(err, posts) {
 	var args = steem_args;
 //console.log("displaySteemPosts args: "+args);
 	var content = '', display_count = steem_posts_displayed.length;
-	var json_metadata, post_tags, post_obj, body, show_post, last_date, last_permlink, loop_end = false;
+	var json_metadata, post_tags, post_obj, body, show_post, last_date, last_permlink, created_date, display_date, loop_end = false;
 
 	var converter = new showdown.Converter();
 
@@ -106,11 +106,15 @@ function displaySteemPosts(err, posts) {
 			//template+="json_metadata "+i+": "+JSON.stringify(json_metadata);
 
 			// Insert post values for this post
-			template = template.replace('{steem_posts_tag}',post_obj.category);
-			template = template.replace('{steem_posts_title}',post_obj.title);
+			template = template.replace(/{steem_posts_tag}/g,post_obj.category);
+			template = template.replace(/{steem_posts_title}/g,post_obj.title);
 			template = template.replace(/{steem_posts_permlink}/g,post_obj.permlink);
-			template = template.replace('{steem_posts_img}',json_metadata.image);
-			template = template.replace('{steem_posts_author}',post_obj.author);
+			template = template.replace(/{steem_posts_img}/g,json_metadata.image);
+			template = template.replace(/{steem_posts_author}/g,post_obj.author);
+
+			created_date=new Date(post_obj.created);
+			display_date = created_date.toLocaleDateString(config.dateformat.locale, config.dateformat.options);
+			template = template.replace(/{steem_posts_date}/g,display_date);
 
 			// Full body
 			body = converter.makeHtml(post_obj.body);
@@ -160,6 +164,13 @@ function displaySteemPost(err, post) {
 	steem_post = post;
 
 	var template = steem_post_template;
+
+
+	// Insert post values for this post
+	template = template.replace(/{steem_post_category}/g,steem_post.category);
+	template = template.replace(/{steem_post_title}/g,steem_post.title);
+	template = template.replace(/{steem_post_permlink}/g,steem_post.permlink);
+	template = template.replace(/{steem_post_author}/g,steem_post.author);
 
 	// Display template
 	$('#contentArea').html(template);

@@ -13,5 +13,7 @@
 	  {"label": "Posts", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress", "count":10}},
 	  {"label": "Post", "type": "steem", "args": {"show":"post", "user":"dana-varahi", "postid":"first-snow"}},
   	{"label": "Link", "type": "link", "args": "https://blockpress.me"}
-  ]
+  ],
+
+	"dateformat": {"locale": "en-US", "options":{ "weekday": "long", "year": "numeric", "month": "long", "day": "numeric" }}
 }

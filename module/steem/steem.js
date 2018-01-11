@@ -153,8 +153,8 @@ function getSteemPosts(usernames,tags,count,lastPermlink) {
 	steem_tags = tags;
 	steem_posts_count = count;
 	steem_username = usernames;
-//console.log('usernames: '+usernames+' tags: '+tags+' count: '+count+' lastPermlink: '+lastPermlink);
-
+	//console.log('usernames: '+usernames+' tags: '+tags+' count: '+count+' lastPermlink: '+lastPermlink);
+	steem.api.setOptions({ url: 'https://api.steemit.com' });
 	steem.api.getDiscussionsByAuthorBeforeDate(usernames, lastPermlink, '2100-01-01T00:00:00', count,	function(err, result){displaySteemPosts(err, result)});
 	//displaySteemPosts(['AAA']);
 }
@@ -187,6 +187,7 @@ function displaySteemPost(err, post) {
 }
 function getSteemPost(username,postid) {
 	//
+	steem.api.setOptions({ url: 'https://api.steemit.com' });
 	steem.api.getContent(username, postid,	function(err, result){displaySteemPost(err, result)});
 }
 
@@ -227,6 +228,7 @@ template = template.replace('{steem_profile_location}',metadata.profile.location
 }
 function getSteemProfile(username) {
 	//
+	steem.api.setOptions({ url: 'https://api.steemit.com' });
 	steem.api.getAccounts([username],	function(err, profile){displaySteemProfile(err, profile)});
 }
 

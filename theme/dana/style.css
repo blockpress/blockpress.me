@@ -52,7 +52,7 @@ button#openNav:hover{
 }
 
 h1{
-    font: "Garamond", "Palatino", serif;
+    font-family: "Garamond", "Palatino", serif;
 		font-size: 2em;
     color:#d7c7c3;
     margin-bottom: 0.5em;
@@ -63,7 +63,7 @@ h1{
 }
 
 h2{
-    font: "Garamond", "Palatino", serif;
+  	font-family: "Garamond", "Palatino", serif;
 		font-size: 1.5em;
     color:#d7c7c3;
     margin-bottom: 0.5em;
@@ -75,7 +75,7 @@ h2{
 		text-shadow: 1px 1px #5d2534,1px 1px 5px #d7c7c3;
 }
 h3{
-    font: "Garamond", "Palatino", serif;
+    font-family: "Garamond", "Palatino", serif;
 		font-size: 1.3em;
     color:#d7c7c3;
     margin-bottom: 0.5em;
@@ -89,6 +89,8 @@ h3{
 
 p{
   color:#eadfdc;
+	font-family: "Garamond", "Palatino", serif;
+	font-size: 1em;
 	width: 70%;
 	margin-right:auto;
 	margin-left:auto;
@@ -136,6 +138,7 @@ a:active{
     overflow: hidden;
     padding-top: 20px;
 		text-align: center;
+		display:none;
 
 }
 
@@ -266,7 +269,7 @@ white: #eadfdc
 */
 
 #contentArea{
-  font: "Garamond", "Palatino", serif;
+  font-family: "Garamond", "Palatino", serif;
 	background-color:  #9d8c8e;
 	width:70%;
 	margin-right:auto;
@@ -281,7 +284,7 @@ white: #eadfdc
 
 }
 #contentArea h1{
-    font: "Garamond", "Palatino", serif;
+    font-family: "Garamond", "Palatino", serif;
 		font-size: 1.3em;
     color:#a06775;
 		font-weight: bold;
@@ -294,7 +297,7 @@ white: #eadfdc
 }
 
 #contentArea h2{
-    font: "Garamond", "Palatino", serif;
+    font-family: "Garamond", "Palatino", serif;
 		font-size: 1.2em;
     color:#a06775;
 		font-weight: bold;
@@ -306,7 +309,7 @@ white: #eadfdc
 		text-shadow: 1px 1px #5d2534,1px 1px 5px #d7c7c3;
 }
 #contentArea h3{
-    font: "Garamond", "Palatino", serif;
+    font-family: "Garamond", "Palatino", serif;
 		font-size: 1.1em;
 		font-weight: lighter;
     color:#a06775;
@@ -336,13 +339,14 @@ white: #eadfdc
 }
 
 	#contentArea ul li::before {
-		  color: #a06775;   /* color of bullet or square */
-	 		content: "\25C8"; /* Unicode of character to precede the list item */
-		  font-size: 1em;
-			padding-right: 1em;
+	  color: #a06775;   /* color of bullet or square */
+			content: "\25C8"; /* Unicode of character to precede the list item */
+	  font-size: 1em;
+		padding-right: 1em;
 	}
 	#contentArea p{
-	    font: 90% "Garamond", "Palatino", serif;
+    font-family: "Garamond", "Palatino", serif;
+		font-size: 1em;
 	  color:#5d2534;
 		width: 90%;
 		margin-right:auto;
@@ -350,7 +354,10 @@ white: #eadfdc
 		text-align: left;
 	}
 
-
+	div.steem_posts_meta{
+		margin-bottom: 0.5em;
+		font-style: italic;
+	}
 
 	/* Steem Profile */
 
@@ -393,19 +400,50 @@ white: #eadfdc
 		margin-right: 1em;
 	}
 
-	div.steem_posts_meta{
-		margin-bottom: 0.5em;
-		font-style: italic;
-	}
 
 	/*Steem Post*/
 
 	#contentArea #steem-post img{
-	width: 90%;
-	max-width: 90%;
-	border-radius: 0;
-	padding: 0;
-	margin: 0;
-	border: none;
-	box-shadow: 1px 1px 10px #5d2534;
+		width: 90%;
+		max-width: 90%;
+		border-radius: 0;
+		padding: 0;
+		margin: 0;
+		border: none;
+		box-shadow: 1px 1px 10px #5d2534;
+	}
+
+	@media only screen and (max-width: 800px) {
+
+		.sidebar {
+		    height: 100%;
+		    background-color: #5d2534;
+		    padding-top: 20px;
+				text-align: center;
+				display:block;
+				position:static;
+				width:100%;
+		}
+		button#closeNav, button#openNav{
+			display: none;
+		}
+		#contentArea{
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			padding: 0;
+			padding-bottom: 1em;
+			border-left: none;
+			border-right: none;
+		}
+	.steem_posts_preview, .steem_posts_author, #steem-post-comments {
+			margin-left: 1em;
+			display: block;
+		}
+.steem_posts_date{
+	margin-left: 1em;
+	display:block;
+	color:#d7c7c3;
+	font-size: 0.8em;
+}
 	}

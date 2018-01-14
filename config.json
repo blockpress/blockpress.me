@@ -1,7 +1,7 @@
 {
   "sitetitle": "Blockpress.me",
   "tagline":"The CMS with blockchains for its database...",
-  "theme": "dark",
+  "theme": "dana",
 
 	"modules": ["static","link","steem"],
 
@@ -9,7 +9,7 @@
 
 	"menu": [
     {"label": "Home", "type": "static", "args": "home.html"},
-	  {"label": "Profile", "type": "steem", "args": {"show":"profile", "user":"antonchanning"}},
+	  {"label": "Profile", "type": "steem", "args": {"show":"profile", "user":"dana-varahi"}},
 	  {"label": "Posts", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress", "count":10}},
 	  {"label": "Post", "type": "steem", "args": {"show":"post", "user":"dana-varahi", "postid":"first-snow"}},
   	{"label": "Link", "type": "link", "args": "https://blockpress.me"}

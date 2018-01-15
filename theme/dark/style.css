@@ -38,8 +38,9 @@ header{
 }
 
 h1{
-    font: 200% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
+		font-size: 1.8em;
     color:#f0be7e;
     margin-bottom: 0.5em;
     text-align: center;
@@ -47,8 +48,9 @@ h1{
 }
 
 h2{
-    font: 150% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
+		font-size: 1.6em;
     color:#ec9c36;
     margin-bottom: 0.5em;
     text-align: center;
@@ -137,7 +139,7 @@ img{
 }
 
 #contentArea h1{
-    font-size: 1.1em;
+    font-size: 1.4em;
 		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
     color: #eeae5c;
@@ -147,7 +149,7 @@ img{
 }
 
 #contentArea h2{
-    font-size: 0.9em;
+    font-size: 1.2em;
 		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
     color:#ec9c36;
@@ -158,7 +160,7 @@ img{
 		text-shadow: none;
 }
 #contentArea h3{
-    font-size: 0.8em;
+    font-size: 1em;
 		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: normal;
     color: #c87c1a;
@@ -329,6 +331,12 @@ footer{
 	max-height: 15%;
 	display: inline-block;
 	margin-right: 1em;
+}
+
+div.steem_posts_meta{
+	margin-bottom: 0.7em;
+	font-style: italic;
+	color: #eee1cf;
 }
 
 @media only screen and (max-width: 800px) {

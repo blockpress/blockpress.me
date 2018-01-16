@@ -423,6 +423,10 @@ div.steem_posts_meta{
 	font-size: 1.25em;
 	width: 85%;
 }
+.steem_posts_meta{
+margin-left: 1.5em;
+}
+	
 /* Steem Post*/
 #contentArea .steem_post h1{
 	font-size: 1.5em;

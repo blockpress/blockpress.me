@@ -394,7 +394,7 @@ div.steem_posts_meta{
 	height:96px;
 	width:96px;
 	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	margin-right: auto;
 	margin-left: auto;
 }

@@ -418,6 +418,7 @@ div.steem_posts_meta{
 .steem_posts_preview {
 	margin-left: 1em;
 	font-size: 1em;
+	padding-bottom: 1em;
 }
 #contentArea .steem_posts h2{
 	font-size: 1.25em;
@@ -426,7 +427,7 @@ div.steem_posts_meta{
 .steem_posts_meta{
 margin-left: 1.5em;
 }
-	
+
 /* Steem Post*/
 #contentArea .steem_post h1{
 	font-size: 1.5em;

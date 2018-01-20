@@ -29,6 +29,7 @@ function parseModules(modules_data) {
 		parseModule(moduleItem);
 	}
 	parseTheme(config.theme);
+	parsePallete(config.pallete);
 }
 // Parse an individual module item, load the script...
 function parseModule(module_name) {
@@ -43,6 +44,16 @@ function parseModule(module_name) {
 	});
 }
 
+/*** Functions for parsing themes ***/
+// Parse the theme
+function parsePallete(pallete) {
+  // load theme CSS
+  $("<link/>", {
+     rel: "stylesheet",
+     type: "text/css",
+     href: "/pallete/"+pallete+"/pallete.css"
+  }).appendTo("head");
+}
 /*** Functions for parsing themes ***/
 // Parse the theme
 function parseTheme(theme) {

@@ -1,0 +1,164 @@
+/*
+offwhite pallete:
+#beb19f
+#ded1bf
+#eee1cf
+#fcf4e9
+
+font pallete:
+#665
+#554
+#443
+#332
+#998
+
+
+link pallete:
+#874
+#982
+#a93
+
+*/
+body{
+  background-color: #eee1cf;
+}
+header{
+	background-color: #ded1bf;
+	background: linear-gradient(#ded1bf,#beb19f);
+	border-color: : #beb19f;
+	box-shadow: 1px 1px 6px #443;
+}
+
+h1{
+    color:#332;
+		text-shadow: 1px 1px 5px #fcf4e9,2px 2px 10px #eee1cf;
+}
+
+h2{
+    color:#332;
+		text-shadow: 1px 1px  #eee1cf;
+}
+
+.menu span a {
+background-color:#fcf4e9;
+box-shadow: 1px 1px 5px #332;
+}
+
+.menu span a:hover {
+	background-color:#beb19f;
+	box-shadow: 1px 1px 5px #443;
+}
+
+.menu span a:active {
+	background-color:#ded1bf;
+	box-shadow: 1px 1px 5px  #554;
+	color:#eee1cf;
+}
+
+p{
+  color: #665;
+}
+
+a:link {
+	color:#874;
+}
+a:visited{
+	color:#763;
+}
+a:hover{
+	color:#541;
+}
+a:active, a:focus{
+	color:#430;
+}
+img{
+	color: #0f0d0c;
+	border-color: #5b5349;
+	box-shadow: 3px 3px 27px #0f0d0c;
+}
+
+#contentArea {
+	color: #665;
+	border-color: #332;
+	background-color: #fcf4e9;
+	box-shadow: 1px 1px 15px #474139;
+}
+
+#contentArea h1{
+    color: #332;
+}
+
+#contentArea h2{
+    color:#443;
+}
+#contentArea h3{
+    color: #554;
+}
+
+
+	/* Change bullet color of list item by replacing it with CSS*/
+
+	#contentArea ul li {
+	  color: #332; 	/* set color of list item text */
+	}
+
+	#contentArea ul li::before {
+	  color: #443;   /* color of bullet or square */
+}
+
+	#contentArea p{
+	  color: #665;
+	}
+
+
+	/*Footer styles*/
+#footer-menu li a:link{
+	color:#ec9c36;
+
+}
+
+
+/* Steem Content Module Themes */
+
+/* Steem Profile */
+#profile-banner {
+	background-color: #665;
+	color: #beb19f;
+	box-shadow: 3px 3px 27px #0f0d0c;
+}
+#profile-banner h1 {
+	color: #eee1cf;
+}
+#profile-about {
+	color: #eee1cf;
+}
+#profile-info {
+	color: #eee1cf;
+}
+#profile-info a {
+	color: #eee1cf;
+}
+#profile-info a:visited{
+	color:#eee1cf;
+}
+#profile-info a:hover{
+	color:#f0be7e;
+}
+
+#profile-info a:active{
+	color:#f0be7e;
+}
+
+
+/* Steem Posts */
+.steem_posts{
+	border-bottom-color: #332;
+}
+
+.steem_posts_meta {
+	color: #998;
+}
+
+div.steem_posts_meta{
+	color: #998;
+}

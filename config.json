@@ -1,16 +1,20 @@
 {
   "sitetitle": "Blockpress.me",
   "tagline":"The CMS with blockchains for its database...",
-	"pallete": "vanilla",
-  "theme": "simple",
+	"pallete": "",
+  "theme": "henrik",
 
 	"themeoptions": {
 		"banner_image": "",
-		"site_image": "",
-		"steem_user": ""
+		"site_image": ""
 	},
 
 	"modules": ["static","link","steem"],
+
+
+	"steem_options": {
+		"": ""
+	},
 
 	"firstpage": {"type": "static", "args": ["home.html"]},
 
@@ -22,12 +26,15 @@
   ],
 
 	"socialmenu": {
-		"steem": "https://steemit.com/trending/blockpress",
+		"steemit": "https://steemit.com/trending/blockpress",
 		"github": "https://github.com/blockpress/blockpress.me",
 		"linkedin": "",
 		"twitter": "",
 		"facebook": "",
-		"stackoverflow": ""
+		"gplus": "",
+		"stackoverflow": "",
+		"link_url": "https://blockpress.me",
+		"email": ""
 	},
 
 	"dateformat": {"locale": "en-US", "options":{ "weekday": "long", "year": "numeric", "month": "long", "day": "numeric" }}

@@ -79,6 +79,7 @@ function themeHTMLFail() {
 }
 // Parse the theme template
 function parseThemeHTML(themeHTML) {
+	themeHTML = themeHTML.replace(/{sitetitle}/g,config.sitetitle);
   $(document.body).html(themeHTML);
   $('#sitetitle').text(config.sitetitle);
   $('#tagline').text(config.tagline);
@@ -86,6 +87,7 @@ function parseThemeHTML(themeHTML) {
 
   parseMenu();
 	parseFirstPage();
+	parseSocialMenu();
 }
 
 // Create the Menu
@@ -144,7 +146,45 @@ function getFirstContentModuleFromMenu(menu) {
 		return false;
 }
 
+function parseSocialMenu() {
+	if(config.socialmenu !== null && typeof config.socialmenu === 'object') {
+		var smenu = config.socialmenu;
+		if(typeof smenu.steemit == "string" && smenu.steemit != "") $(".socialmenu .steemit").prop("href",smenu.steemit);
+		else $(".socialmenu .steemit").hide();
 
+		if(typeof smenu.github == "string" && smenu.github != "") $(".socialmenu .github").prop("href",smenu.github);
+		else $(".socialmenu .github").hide();
+
+		if(typeof smenu.facebook == "string" && smenu.facebook != "") $(".socialmenu .facebook").prop("href",smenu.facebook);
+		else $(".socialmenu .facebook").hide();
+
+		if(typeof smenu.twitter == "string" && smenu.twitter != "") $(".socialmenu .twitter").prop("href",smenu.twitter);
+		else $(".socialmenu .twitter").hide();
+
+		if(typeof smenu.gplus == "string" && smenu.gplus != "") $(".socialmenu .gplus").prop("href",smenu.gplus);
+		else $(".socialmenu .gplus").hide();
+
+		if(typeof smenu.linkedin == "string" && smenu.linkedin != "") $(".socialmenu .linkedin").prop("href",smenu.linkedin);
+		else $(".socialmenu .linkedin").hide();
+
+		if(typeof smenu.stackoverflow == "string" && smenu.stackoverflow != "") $(".socialmenu .stackoverflow").prop("href",smenu.stackoverflow);
+		else $(".socialmenu .stackoverflow").hide();
+
+		if(typeof smenu.link_url == "string" && smenu.link_url != "") {
+			$(".socialmenu a.link_url").prop("href",smenu.link_url);
+			var link_url = smenu.link_url.replace(/https\:\/\//g,'');
+			console.log(link_url);
+			$(".socialmenu a.link_url").text(link_url);
+		}	else $(".socialmenu .email").hide();
+
+		if(typeof smenu.email == "string" && smenu.email != "") {
+			$(".socialmenu a.email").prop("href","mailto:"+smenu.email);
+			$(".socialmenu a.email").text(smenu.email);
+		}	else $(".socialmenu .email").hide();
+	} else {
+		$(".socialmenu").hide();
+	}
+}
 
 
 

@@ -140,10 +140,10 @@ function parseFirstPage() {
 }
 function getFirstContentModuleFromMenu(menu) {
 		// Look for first content module in menu
-		var arrayLength = menu.length;
+		var arrayLength = config.menu.length;
 		for (var i = 0; i < arrayLength; i++) {
-			if(menu[i].type != 'link') {
-				return menu[i];
+			if(config.menu[i].type != 'link') {
+				return config.menu[i];
 			}
 		}
 		return false;

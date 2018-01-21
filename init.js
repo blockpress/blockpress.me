@@ -81,6 +81,9 @@ function themeHTMLFail() {
 function parseThemeHTML(themeHTML) {
 	themeHTML = themeHTML.replace(/{sitetitle}/g,config.sitetitle);
   $(document.body).html(themeHTML);
+  if(typeof config.themeoptions == "string" && typeof config.themeoptions.banner_image == "string" && config.themeoptions.banner_image != "") {
+		$('.banner_image').css("background-image",config.themeoptions.banner_image);
+	}
   $('#sitetitle').text(config.sitetitle);
   $('#tagline').text(config.tagline);
   document.title = config.sitetitle;

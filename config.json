@@ -1,9 +1,20 @@
 {
   "sitetitle": "Blockpress.me",
   "tagline":"The CMS with blockchains for its database...",
+	"pallete": "",
   "theme": "dana",
 
+	"themeoptions": {
+		"banner_image": "https://steemitimages.com/DQmUgGiwvvq39ig4UbY1GXYNboTjQtS4QiRiy5kEPanu4KZ/banner2.JPG",
+		"site_image": ""
+	},
+
 	"modules": ["static","link","steem"],
+
+
+	"steem_options": {
+		"": ""
+	},
 
 	"firstpage": {"type": "static", "args": ["home.html"]},
 
@@ -11,9 +22,20 @@
     {"label": "Home", "type": "static", "args": "home.html"},
 	  {"label": "Profile", "type": "steem", "args": {"show":"profile", "user":"dana-varahi"}},
 	  {"label": "Posts", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress", "count":10}},
-	  {"label": "Post", "type": "steem", "args": {"show":"post", "user":"dana-varahi", "postid":"first-snow"}},
-  	{"label": "Link", "type": "link", "args": "https://blockpress.me"}
+	  {"label": "Post", "type": "steem", "args": {"show":"post", "user":"dana-varahi", "postid":"first-snow"}}
   ],
+
+	"socialmenu": {
+		"steemit": "https://steemit.com/trending/blockpress",
+		"github": "https://github.com/blockpress/blockpress.me",
+		"linkedin": "",
+		"twitter": "",
+		"facebook": "",
+		"gplus": "",
+		"stackoverflow": "",
+		"link_url": "https://blockpress.me",
+		"email": ""
+	},
 
 	"dateformat": {"locale": "en-US", "options":{ "weekday": "long", "year": "numeric", "month": "long", "day": "numeric" }}
 }

@@ -26,17 +26,17 @@
 body{
 	width: 100%;
 	margin:0;
-	text-align:justified;
+	text-align: justify;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1.3em;
-  background-color:#0A2A29;
+	background-color: #1c0f0f;
 }
 header{
   padding:1em;
 }
 
 h1{
-  font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color:#04B486;
   margin-bottom: 0.5em;
   text-align: center;
@@ -48,7 +48,7 @@ h1{
 }
 
 h2{
-    font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: oblique;
     font-weight: lighter;
     color:#04B486;
@@ -61,7 +61,7 @@ h2{
 }
 
 h3{
-	font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#04B486;
 	margin-bottom: 0.2em;
 	text-align: center;
@@ -102,22 +102,31 @@ a:active{
 	border-radius: 10px;
 	color: #04B486;
 }
+#contentArea img.flowleft{
+	float:left;
+	vertical-align: top;
+	margin-right: 1em;
+}
 
 #contentArea{
-	background-color: #0A2229;
+	background-color: #160909;
+	font-family: "Courier New", courier, fixed-width;
+	font-size: 1.2em;
 	color:#088A85;
 	width:70%;
 	margin-right:auto;
 	margin-left:auto;
+	margin-top: 1em;
 	border-style:solid;
 	border-width: 1px;
 	border-color: #04B486;
-	border-radius: 10px;
+	border-radius: 23px;
 	padding:1em;
 }
 
 #contentArea h1{
-  font:120% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1.5em;
   color:#04B486;
   margin-bottom: 0.5em;
   text-align:left;
@@ -129,8 +138,8 @@ a:active{
 }
 
 #contentArea h2{
-    font:110% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color:#04B486;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1.4em;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
@@ -138,8 +147,8 @@ a:active{
 		margin-left:auto;
 }
 #contentArea h3{
-    font: 100% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color:#04B486;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1.3em;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
@@ -186,17 +195,17 @@ a:active{
 		color:#088A85;
 	}
 
-  .menu ul{
+  .menu div, .menu ul {
     list-style: none;
     text-align: center;
     padding: 0;
     margin: 0;
     margin-top: 1em;
   }
-  .menu li{
+  .menu span, .menu li{
     display: inline-block;
     padding:10px;
-  	margin:o.5em;
+  	margin:0.2em;
     font-size: 1em;
     background-color:#0A2229;
     border-radius: 25px;
@@ -204,7 +213,7 @@ a:active{
 .social li:hover{
     background-color: #088A85;
 }
-  .menu li a:hover{
+  .menu span a:hover, .menu li a:hover {
     color: #088A85;
   }
 

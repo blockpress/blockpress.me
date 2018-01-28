@@ -9,7 +9,7 @@
 		"site_image": ""
 	},
 
-	"modules": ["static","link","steem"],
+	"modules": ["static","steem"],
 
 	"steem_options": {
 		"": ""

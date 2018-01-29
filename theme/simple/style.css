@@ -40,6 +40,7 @@ h2{
   padding-left: 0;
 	margin-bottom: 0.2em;
 	flex-wrap: wrap;
+	height: 2em;
 }
 .menu span{
   display: inline-block;
@@ -47,7 +48,6 @@ h2{
   text-transform: uppercase;
 	margin-left: 0.3em;
 	margin-right: 0.3em;
-	height: 2.5em;
 
 }
 .menu span a {
@@ -72,6 +72,11 @@ img{
 	border-width: 1px;
 	border-style: solid;
 }
+
+.transparent, .transparent div{
+	background:none !important;
+}
+
 
 #contentArea {
 	width: 70%;
@@ -144,6 +149,10 @@ img{
 		text-align: left;
 	}
 
+	#contentArea p img{
+		margin-top: 1em;
+	}
+
 	#contentArea img{
 		display: block;
     margin: auto;
@@ -192,6 +201,10 @@ footer{
 }
 #profile-banner h1 {
 	margin-top: 25px;
+}
+
+#profile-banner h1 span{
+	vertical-align:bottom;
 }
 #profile-image {
 	display: inline-block;

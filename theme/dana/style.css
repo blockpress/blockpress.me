@@ -1,25 +1,16 @@
-/* Palette:
-plum:  #5d2534
-red: #bd0e3b
-purple: #a06775
-pink: #d21f65;
-brown:  #9d8c8e
-cream: #d7c7c3
-white: #eadfdc
-*/
 
 html{
 	margin: 0;
 	padding: 0;
 }
+
 body{
 	width: 100%;
 	margin:0;
 	font-family: "Garamond", "Palatino", serif;
 	font-size: 1.3em;
-  background-color: #d7c7c3;
-	color: #5d2534;
 }
+
 header{
 	background-image: url("https://steemitimages.com/DQmUgGiwvvq39ig4UbY1GXYNboTjQtS4QiRiy5kEPanu4KZ/banner2.JPGx");
 	background-repeat: no-repeat;
@@ -29,15 +20,10 @@ header{
 	margin:0;
 }
 
-div#banner-gradient {
-	background: linear-gradient(to right, rgba(234,223,220,0), rgba( 138,12,52,1));
-	margin-top: 0;
-}
+div#banner-gradient { margin-top: 0;}
 
 button#openNav{
-	background: #5d2534;
 	font-size: 2em;
-	color: #d7c7c3;
 	margin-left: 1em;
 	border:none;
 	position: fixed;
@@ -47,78 +33,55 @@ button#openNav{
 	opacity: 0.7;
 }
 
-button#openNav:hover{
-	background: #bd0e3b;
-}
-
 h1{
-    font-family: "Garamond", "Palatino", serif;
-		font-size: 2em;
-    color:#d7c7c3;
-    margin-bottom: 0.5em;
-    text-align: center;
-		padding-top:0.5em;
-		margin-top: 0;
-		text-shadow: 1px 1px #5d2534,1px 1px 5px #d7c7c3;
+  font-family: "Garamond", "Palatino", serif;
+	font-size: 2em;
+  margin-bottom: 0.5em;
+  text-align: center;
+	padding-top:0.5em;
+	margin-top: 0;
+
 }
 
 h2{
-  	font-family: "Garamond", "Palatino", serif;
-		font-size: 1.5em;
-    color:#d7c7c3;
-    margin-bottom: 0.5em;
-    text-align: left;
-		width: 70%;
-		margin-right:auto;
-		margin-left:auto;
-		padding-bottom: 0.5em;
-		text-shadow: 1px 1px #5d2534,1px 1px 5px #d7c7c3;
+	font-family: "Garamond", "Palatino", serif;
+	font-size: 1.5em;
+  margin-bottom: 0.5em;
+  text-align: left;
+	width: 70%;
+	margin-right:auto;
+	margin-left:auto;
+	padding-bottom: 0.5em;
+
 }
 h3{
-    font-family: "Garamond", "Palatino", serif;
-		font-size: 1.3em;
-    color:#d7c7c3;
-    margin-bottom: 0.5em;
-    text-align: left;
-		width: 70%;
-		margin-right:auto;
-		margin-left:auto;
-		padding-bottom: 0.5em;
-		text-shadow: 1px 1px #5d2534,1px 1px 5px #d7c7c3;
+  font-family: "Garamond", "Palatino", serif;
+	font-size: 1.3em;
+  margin-bottom: 0.5em;
+  text-align: left;
+	width: 70%;
+	margin-right:auto;
+	margin-left:auto;
+	padding-bottom: 0.5em;
+
 }
 
 p{
-  color:#eadfdc;
 	font-family: "Garamond", "Palatino", serif;
 	font-size: 1em;
 	width: 70%;
 	margin-right:auto;
 	margin-left:auto;
 }
+
 img{
 	max-width: 70%;
 	margin-right:auto;
 	margin-left:auto;
 	border-radius: 10px;
-	color: #d7c7c3;
 }
 
-a {
-	color: #a06775;
-	text-decoration: none;
-}
-
-a:hover{
-	color: #bd0e3b;
-}
-
-a:focus{
-	color: #bd0e3b;
-}
-
-a:active{
-	color: #a06775;
-}
+a { text-decoration: none;}
 
 #leftpad{
 	padding: 0;
@@ -134,7 +97,6 @@ a:active{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #5d2534;
     overflow: hidden;
     padding-top: 20px;
 		text-align: center;
@@ -144,30 +106,15 @@ a:active{
 
 button#closeNav{
 	margin-bottom:1em;
-	background:  #a06775;
-	color: #9d8c8e;
 	font-size: 1em;
 	border: none;
 	border-radius: 5px;
 	padding: 0 5px 2px 5px;
-	box-shadow: 2px 2px 5px #413;
-
-}
-
-button#closeNav:hover{
-	box-shadow: 2px 2px 5px #967;
-	background:#d7c7c3;
-	color:#d21f65;
 }
 
 .sidebar a {
     text-decoration: none;
-		color: #d7c7c3;
 		text-align: center;
-}
-
-.sidebar a:hover {
-    color: #f1f1f1;
 }
 
 .menu div{
@@ -175,41 +122,23 @@ button#closeNav:hover{
 	list-style: none;
 	text-align: center;
 	flex-wrap: wrap;
-	background-color: #d7c7c3;
 	padding-top: 2px;
 	padding-bottom: 1px;
 	margin-bottom: 1em;
-	box-shadow: 1px 1px 6px #5d2534;
 }
 
 .menu span{
   display: block;
   font-size: 1.25em;
   text-transform: uppercase;
-	background: #9d8c8e;
-	color: #5d2534;
 	width: 100%;
 	padding-top: 4px;
 	padding-bottom: 2px;
 	margin-bottom: 1px;
-
-}
-.menu span a {
-color: #5d2534;
-text-decoration:none;
 }
 
-.menu span a:hover {
-	color:#bd0e3b;
-}
+.menu span a { text-decoration:none;}
 
-.menu span a:focus {
-	color:#bd0e3b;
-}
-
-.menu span a:active {
-color:#bd0e3b;
-}
 footer div{
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -226,30 +155,17 @@ footer span{
 	font-size: 1em;
 	font-style: normal;
 }
+
  div.icon span a:link{
 	display: inline-block;
 	text-decoration: none;
 	font-style: oblique;
-	color:#d7c7c3;
 	height: 45px;
 	width: 45px;
 	padding:0;
 	border-radius: 5px;
 	margin-bottom: 0.5em;
 }
- div.icon span a:visited{
-	color:#d7c7c3;
-}
- div.icon span a:hover{
-	color:#a06775;
-	box-shadow: 1px 1px 10px #d7c7c3;
-}
-div.icon span a:focus{
-		color:#a06775;
-	}
- div.icon span a:active{
-	  color:#d7c7c3;
-	}
 
  div.icon img{
 	margin: 0;
@@ -258,19 +174,8 @@ div.icon span a:focus{
 
 /* content area styles*/
 
-/* Palette:
-plum:  #5d2534
-red: #bd0e3b
-purple: #a06775
-pink: #d21f65;
-brown:  #9d8c8e
-cream: #d7c7c3
-white: #eadfdc
-*/
-
 #contentArea{
   font-family: "Garamond", "Palatino", serif;
-	background-color:  #9d8c8e;
 	width:70%;
 	margin-right:auto;
 	margin-left:auto;
@@ -278,47 +183,40 @@ white: #eadfdc
 	margin-bottom: 2em;
 	border-style:solid;
 	border-width: 1px;
-	border-color: #5d2534;
 	padding:1em;
-	box-shadow: 1px 1px 6px #5d2534;
-
 }
+
 #contentArea h1{
     font-family: "Garamond", "Palatino", serif;
 		font-size: 1.3em;
-    color:#a06775;
 		font-weight: bold;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
-		text-shadow: 1px 1px #5d2534,1px 1px 5px #d7c7c3;
 }
 
 #contentArea h2{
     font-family: "Garamond", "Palatino", serif;
 		font-size: 1.2em;
-    color:#a06775;
 		font-weight: bold;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
-		text-shadow: 1px 1px #5d2534,1px 1px 5px #d7c7c3;
 }
+
 #contentArea h3{
     font-family: "Garamond", "Palatino", serif;
 		font-size: 1.1em;
 		font-weight: lighter;
-    color:#a06775;
     margin-bottom: 0.5em;
     text-align: left;
 		width: 70%;
 		margin-right:auto;
 		margin-left:auto;
-		text-shadow: 1px 1px #5d2534,1px 1px 5px #d7c7c3;
 }
 
  #contentArea ul{
@@ -329,8 +227,8 @@ white: #eadfdc
 		margin-left:auto;
 
 }
+
  #contentArea ul li{
-	color: #5d2534; 	/* set color of list item text */
 	list-style: none;
 	font-size: 1em;
 	margin-right:auto;
@@ -339,15 +237,14 @@ white: #eadfdc
 }
 
 	#contentArea ul li::before {
-	  color: #a06775;   /* color of bullet or square */
-			content: "\25C8"; /* Unicode of character to precede the list item */
+		content: "\25C8"; /* Unicode of character to precede the list item */
 	  font-size: 1em;
 		padding-right: 1em;
 	}
+
 	#contentArea p{
     font-family: "Garamond", "Palatino", serif;
 		font-size: 1em;
-	  color:#5d2534;
 		width: 90%;
 		margin-right:auto;
 		margin-left:auto;
@@ -365,20 +262,19 @@ white: #eadfdc
 		text-align: center;
 		font-size: 1em;
 	}
-	#steem_profile h1{
-		text-align: center;
-	}
+
+	#steem_profile h1{ text-align: center;}
 
 	#profile-image {
 		vertical-align: middle;
 		margin-top: 15px;
 	}
+
 	#profile-image img {
 		display:block;
 		margin: 0 auto;
 		max-width: 100%;
 		border-radius: 50%;
-		box-shadow: 1px 1px 10px #5d2534;
 		margin-bottom: 1em;
 
 	}
@@ -387,6 +283,7 @@ white: #eadfdc
 		margin-right:auto;
 		margin-left:auto;
 	}
+
 	#profile-info {
 		max-width: 70%;
 		margin-right:auto;
@@ -410,25 +307,23 @@ white: #eadfdc
 		padding: 0;
 		margin: 0;
 		border: none;
-		box-shadow: 1px 1px 10px #5d2534;
 	}
 
 	@media only screen and (max-width: 800px) {
 
 		.sidebar {
 		    height: 100%;
-		    background-color: #5d2534;
 		    padding-top: 20px;
 				text-align: center;
 				display:block;
 				position:static;
 				width:100%;
 		}
-		button#closeNav, button#openNav{
-			display: none;
-		}
+
+		button#closeNav, button#openNav{ display: none;}
+
 		#contentArea{
-			width: 100%;
+			width: 100% !important;
 			margin-left: 0;
 			margin-right: 0;
 			padding: 0;
@@ -436,14 +331,21 @@ white: #eadfdc
 			border-left: none;
 			border-right: none;
 		}
-	.steem_posts_preview, .steem_posts_author, #steem-post-comments {
+
+.steem_posts_preview, .steem_posts_author, #steem-post-comments {
 			margin-left: 1em;
 			display: block;
 		}
+
 .steem_posts_date{
 	margin-left: 1em;
 	display:block;
-	color:#d7c7c3;
 	font-size: 0.8em;
 }
-	}
+
+#leftpad{
+	padding-left:0 !important;
+	margin: 0;
+}
+
+}

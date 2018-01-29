@@ -1,75 +1,74 @@
-/*
+
+/*grey/brown pallete:
+#0f0d0c
+#211e1a
+#332e29
+#474139
+#5b5349
+#6f6559
+
+orange pallete:
+#c87c1a
+#ec9c36
+#eeae5c
+#f0be7e
+
 offwhite pallete:
-#beb19f
-#ded1bf
 #eee1cf
 #fcf4e9
-
-font pallete:
-#665
-#554
-#443
-#332
-#998
-
-
-link pallete:
-#874
-#982
-#a93
-
 */
 body{
-  background-color: #eee1cf;
+  background-color: #0f0d0c;
 }
+
 header{
-	background-color: #ded1bf;
-	background: linear-gradient(#ded1bf,#beb19f);
-	border-color: : #beb19f;
-	box-shadow: 1px 1px 6px #443;
+	background-color: #211e1a;
+	background: linear-gradient(#0f0d0c,#211e1a);
+	border-color: : #474139;
+	box-shadow: 1px 1px 6px #474139;
 }
 
 h1{
-    color:#332;
-		text-shadow: 1px 1px 5px #fcf4e9,2px 2px 10px #eee1cf;
+    color:#f0be7e;
+		text-shadow: 1px 1px 5px #0f0d0c,2px 2px 10px #eee1cf;
 }
 
 h2{
-    color:#332;
+    color:#ec9c36;
 		text-shadow: 1px 1px  #eee1cf;
 }
 
 .menu span a {
-background-color:#fcf4e9;
-box-shadow: 1px 1px 5px #332;
+background-color:#332e29;
+box-shadow: 1px 1px 5px #0f0d0c;
 }
 
 .menu span a:hover {
-	background-color:#beb19f;
-	box-shadow: 1px 1px 5px #443;
+	background-color:#5b5349;
+	box-shadow: 1px 1px 5px #eee1cf;
 }
 
 .menu span a:active {
-	background-color:#ded1bf;
-	box-shadow: 1px 1px 5px  #554;
+	background-color:#6f6559;
+	box-shadow: 1px 1px 5px  #fcf4e9;
 	color:#eee1cf;
 }
 
 p{
-  color: #665;
+  color: #eee1cf;
 }
 
 a:link {
-	color:#874;
+	color:#ec9c36;
 }
 a:visited{
-	color:#763;
+	color:#ec9c36;
 }
 a:hover{
-	color:#541;
+	color:#f0be7e;
 }
 a:active, a:focus{
-	color:#430;
+	color:#f0be7e;
 }
 img{
 	color: #0f0d0c;
@@ -78,36 +77,36 @@ img{
 }
 
 #contentArea {
-	color: #665;
-	border-color: #332;
-	background-color: #fcf4e9;
+	color: #eee1cf;
+	border-color: #474139;
+	background-color: #332e29;
 	box-shadow: 1px 1px 15px #474139;
 }
 
 #contentArea h1{
-    color: #332;
+    color: #eeae5c;
 }
 
 #contentArea h2{
-    color:#443;
+    color:#ec9c36;
 }
 #contentArea h3{
-    color: #554;
+    color: #c87c1a;
 }
 
 
 	/* Change bullet color of list item by replacing it with CSS*/
 
 	#contentArea ul li {
-	  color: #332; 	/* set color of list item text */
+	  color: #eee1cf; 	/* set color of list item text */
 	}
 
 	#contentArea ul li::before {
-	  color: #443;   /* color of bullet or square */
+	  color: #ec9c36;   /* color of bullet or square */
 }
 
 	#contentArea p{
-	  color: #665;
+	  color: #eee1cf;
 	}
 
 
@@ -122,8 +121,7 @@ img{
 
 /* Steem Profile */
 #profile-banner {
-	background-color: #665;
-	color: #beb19f;
+	color: #211e1a;
 	box-shadow: 3px 3px 27px #0f0d0c;
 }
 #profile-banner h1 {
@@ -152,13 +150,13 @@ img{
 
 /* Steem Posts */
 .steem_posts{
-	border-bottom-color: #332;
+	border-bottom-color: #424242;
 }
 
 .steem_posts_meta {
-	color: #998;
+	color: #f3f1ee;
 }
 
 div.steem_posts_meta{
-	color: #998;
+	color: #eee1cf;
 }

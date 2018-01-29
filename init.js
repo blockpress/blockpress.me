@@ -51,7 +51,7 @@ function parsePallete(pallete) {
   $("<link/>", {
      rel: "stylesheet",
      type: "text/css",
-     href: "/pallete/"+pallete+"/pallete.css"
+     href: "/pallete/"+pallete+".css"
   }).appendTo("head");
 }
 /*** Functions for parsing themes ***/
@@ -81,8 +81,9 @@ function themeHTMLFail() {
 function parseThemeHTML(themeHTML) {
 	themeHTML = themeHTML.replace(/{sitetitle}/g,config.sitetitle);
   $(document.body).html(themeHTML);
-  if(typeof config.themeoptions == "string" && typeof config.themeoptions.banner_image == "string" && config.themeoptions.banner_image != "") {
+  if(typeof config.themeoptions == "object" && typeof config.themeoptions.banner_image == "string" && config.themeoptions.banner_image != "") {
 		$('.banner_image').css("background-image",config.themeoptions.banner_image);
+    console.log('banner_image: '+config.themeoptions.banner_image);
 	}
   $('#sitetitle').text(config.sitetitle);
   $('#tagline').text(config.tagline);

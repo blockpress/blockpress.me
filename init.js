@@ -47,7 +47,7 @@ function parsePallete(pallete) {
   $("<link/>", {
      rel: "stylesheet",
      type: "text/css",
-     href: "/pallete/"+pallete+".css"
+     href: "./pallete/"+pallete+".css"
   }).appendTo("head");
 }
 /*** Functions for parsing themes ***/
@@ -59,14 +59,14 @@ function parseTheme(theme) {
   $("<link/>", {
      rel: "stylesheet",
      type: "text/css",
-     href: "/theme/"+theme+"/style.css"
+     href: "./theme/"+theme+"/style.css"
   }).appendTo("head");
 }
 // Load the theme template
 function getThemeHTML(theme) {
   return $.ajax({
     type: 'GET',
-    url: "/theme/"+theme+"/template.html"
+    url: "./theme/"+theme+"/template.html"
   });
 }
 // Theme template failed to load...

@@ -75,11 +75,20 @@ function themeHTMLFail() {
 }
 // Parse the theme template
 function parseThemeHTML(themeHTML) {
+  var banner_image = "";
+  if(typeof config.themeoptions == "object") {
+    if(typeof config.themeoptions.banner_image == "string" && config.themeoptions.banner_image != "") {
+      banner_image = config.themeoptions.banner_image;
+    }
+    if(typeof config.themeoptions.site_image == "string" && config.themeoptions.site_image != "") {
+      themeHTML = themeHTML.replace(/{site-img}/g,config.themeoptions.site_image);
+    }
+  }
 	themeHTML = themeHTML.replace(/{sitetitle}/g,config.sitetitle);
   $(document.body).html(themeHTML);
-  if(typeof config.themeoptions == "object" && typeof config.themeoptions.banner_image == "string" && config.themeoptions.banner_image != "") {
-		$('.banner_image').css("background-image",config.themeoptions.banner_image);
-    console.log('banner_image: '+config.themeoptions.banner_image);
+  if(banner_image != "") {
+  		$('.banner_image').css("background-image",banner_image);
+      console.log('banner_image: '+banner_image);
 	}
   $('#sitetitle').text(config.sitetitle);
   $('#tagline').text(config.tagline);

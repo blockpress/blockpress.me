@@ -1,0 +1,259 @@
+
+/*grey/brown palette:
+#0f0d0c RGB 15, 13, 12,
+#211e1a RGB 33, 30, 26
+#332e29 RBG 51, 46, 41,
+#474139 RGB 71, 65, 57,
+#5b5349
+#6f6559
+
+orange palette:
+#c87c1a
+#ec9c36
+#eeae5c
+#f0be7e
+
+offwhite palette:
+#eee1cf
+#fcf4e9
+*/
+
+body{
+  background-color: #0f0d0c;
+}
+
+h1{
+    color:#f0be7e;
+		text-shadow: 1px 1px 5px #0f0d0c,2px 2px 10px #eee1cf;
+}
+
+h2{
+    color:#ec9c36;
+		text-shadow: 1px 1px  #eee1cf;
+}
+
+h3{
+    color:#ec9c36;
+		text-shadow: 1px 1px  #eee1cf;
+}
+
+p{
+  color: #eee1cf;
+}
+
+a:link {
+	color:#ec9c36;
+}
+a:visited{
+	color:#ec9c36;
+}
+a:hover{
+	color:#f0be7e;
+}
+a:active, a:focus{
+	color:#f0be7e;
+}
+img{
+	color: #0f0d0c;
+	border-color: #5b5349;
+	box-shadow: 3px 3px 27px #0f0d0c;
+}
+
+/*Header styles*/
+
+header{
+	background-color: #211e1a;
+	border-color: : #474139;
+	box-shadow: 1px 1px 6px #474139;
+}
+
+header.no_bg_img {
+background: linear-gradient(#211e1a,#474139);
+}
+
+div#banner-gradient {
+	background: linear-gradient(to right, rgba(33, 30, 26,0.5), rgba(71, 65, 57, 1));
+}
+
+/* Button styles */
+
+button#openNav {
+  background: #474139;
+  color: #f0be7e;
+}
+
+button#openNav:hover { background: #c87c1a;}
+
+button#closeNav {
+  background: #474139;
+	color: #6f6559;
+  box-shadow: 2px 2px 5px #f0be7e;
+}
+
+button#closeNav:hover {
+	box-shadow:  #fcf4e9;
+	background: #f0be7e;
+	color: #0f0d0c;
+}
+
+/* Menu Styles*/
+
+.menu span a {
+background-color:#332e29;
+box-shadow: 1px 1px 5px #0f0d0c;
+}
+
+.menu span a:hover {
+	background-color:#5b5349;
+	box-shadow: 1px 1px 5px #eee1cf;
+}
+
+.menu span a:focus {
+	background-color:#5b5349;
+	box-shadow: 1px 1px 5px #eee1cf;
+}
+
+.menu span a:active {
+	background-color:#6f6559;
+	box-shadow: 1px 1px 5px  #fcf4e9;
+	color:#eee1cf;
+}
+
+/* Sidebar styles*/
+
+.sidebar { background-color: #332e29;}
+
+/*.sidebar a { color: #d7c7c3;}
+
+.sidebar a:hover { color: #f1f1f1;}
+
+.sidebar a:focus { color: #f1f1f1;}
+
+.sidebar a:active { color: #f1f1f1;}*/
+
+.sidebar .menu span a {
+  background: #6f6559;
+  color: #eeae5c;
+  box-shadow: none;
+}
+
+.sidebar .menu span a:hover {
+  color:#fcf4e9;
+  box-shadow: none;
+}
+
+.sidebar .menu span a:focus {
+   color:#fcf4e9;
+   box-shadow: none;
+ }
+
+.sidebar .menu span a:active {
+  color:#fcf4e9;
+  box-shadow: none;
+}
+
+.sidebar .menu div {
+  background-color: #f0be7e;
+  box-shadow: 1px 1px 6px #5d2534;
+}
+
+.sidebar .menu span {
+  background: #6f6559;
+  color: #5d2534;
+}
+
+/* content area styles*/
+
+#contentArea {
+	color: #eee1cf;
+	border-color: #474139;
+	background-color: #332e29;
+	box-shadow: 1px 1px 15px #474139;
+}
+
+#contentArea h1{
+    color: #eeae5c;
+}
+
+#contentArea h2{
+    color:#ec9c36;
+}
+#contentArea h3{
+    color: #c87c1a;
+}
+
+#contentArea p {color: #eee1cf;}
+
+#contentArea ul li {
+	  color: #eee1cf; 	/* set color of list item text */
+	}
+
+#contentArea ul li::before {
+	  color: #ec9c36;    /* color of unicode character */
+
+	/*Footer styles*/
+#footer-menu li a:link{
+	color:#ec9c36;
+}
+
+/* Steem Content Modules */
+
+/* Steem Profile */
+
+#profile-image img { box-shadow:1px 1px 10px #0f0d0c;}
+
+#profile-banner {
+  background-color:#0f0d0c;
+	color: #211e1a;
+	box-shadow: 3px 3px 27px #0f0d0c;
+}
+#profile-banner h1 {color: #eee1cf;}
+
+#profile-banner #profile-about {color: #eee1cf;}
+
+#profile-banner #profile-info { color: #eee1cf;}
+
+#profile-banner #profile-info a {color: #eee1cf;}
+
+#profile-banner #profile-info a:visited { color:#eee1cf;}
+
+#profile-banner #profile-info a:active { color:#f0be7e;}
+
+#profile-banner #profile-info a:hover { color:#f0be7e;}
+
+/*Steem Post*/
+
+#contentArea #steem-post img { box-shadow:1px 1px 10px #0f0d0c;}
+
+/* Steem Posts */
+
+.steem_posts { border-bottom-color: #424242;}
+
+.steem_posts_meta { color: #f3f1ee;}
+
+div.steem_posts_meta { color: #eee1cf;}
+
+/*Social Menu*/
+
+div.icon span a:link { color:#f0be7e;}
+
+div.icon span a:visited { color:#f0be7e;}
+
+div.icon span a:hover {
+ color:#5b5349;
+ box-shadow: 1px 1px 10px #f0be7e;
+}
+
+div.icon span a:focus { color:#5b5349;}
+
+div.icon span a:active { color:#f0be7e;}
+
+
+/* Responsive Design */
+
+@media only screen and (max-width: 800px) {
+
+.sidebar { background-color: #0f0d0c;}
+
+.steem_posts_date { color:#f0be7e;}
+}

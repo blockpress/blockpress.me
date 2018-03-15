@@ -82,16 +82,6 @@ button#closeNav:hover {
 
 /* Menu Styles*/
 
-.menu div {
-  background-color: #d7c7c3;
-  box-shadow: 1px 1px 6px #5d2534;
-}
-
-.menu span {
-  background: #9d8c8e;
-  color: #5d2534;
-}
-
 .menu span a {
   background: #9d8c8e;
   color: #5d2534;
@@ -146,6 +136,16 @@ button#closeNav:hover {
   background: #9d8c8e;
   color:#bd0e3b;
   box-shadow: none;
+}
+
+.sidebar .menu div {
+  background-color: #d7c7c3;
+  box-shadow: 1px 1px 6px #5d2534;
+}
+
+.sidebar .menu span {
+  background: #9d8c8e;
+  color: #5d2534;
 }
 
 /* content area styles*/
@@ -218,7 +218,7 @@ button#closeNav:hover {
 
 /*Steem Post*/
 
-#contentArea #steem-post img { box-shadow:1px 1px 10px#5d2534;}
+#contentArea #steem-post img { box-shadow:1px 1px 10px# 5d2534;}
 
 /* Steem Posts */
 

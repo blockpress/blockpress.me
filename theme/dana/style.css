@@ -131,13 +131,15 @@ button#closeNav{
   display: block;
   font-size: 1.25em;
   text-transform: uppercase;
-	width: 100%;
 	padding-top: 4px;
 	padding-bottom: 2px;
 	margin-bottom: 1px;
 }
 
-.menu span a { text-decoration:none;}
+.menu span a {
+	text-decoration:none;
+	width: 100%;
+}
 
 footer div{
 	padding-top: 5px;

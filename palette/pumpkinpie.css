@@ -1,0 +1,266 @@
+
+/*
+liquorice:  #2B1234  RGB 43, 18, 52
+lavender:   #773090  RGB 119, 48, 144
+blue:       #1581D6  RGB 21, 129, 214
+dark green: #1E9B1E  RGB 30, 155, 30
+green:      #79ed97  RGB 121, 237, 151
+pink:       #D615A7  RGB 214, 21, 167
+red:        #D61544  RGB 214, 21, 68
+orange:     #D66415  RGB 214, 100, 21
+yellow:     #F8E311  RGB 248, 227, 17
+white-moss: #DEF9DE  RGB 222, 249, 222
+*/
+
+body { background-color: #2B1234;
+      color:#DEF9DE;
+    }
+h1 {
+  color:#773090;
+  text-shadow: 1px 1px 5px  #79ed97,2px 2px 10px  #773090;
+}
+
+h2 {
+  color:#773090;
+	text-shadow: 1px 1px  #79ed97;
+}
+
+h3 {
+  color:#773090;
+  text-shadow: 1px 1px  #79ed97;
+}
+
+p { color: #2B1234;}
+
+a:link { color:#D61544;}
+
+a:visited { color:#D61544;}
+
+a:hover { color:#D615A7;}
+
+a:active, a:focus { color:#D615A7;}
+
+img {
+	color: #2B1234;
+	border-color: #2B1234;
+	box-shadow: 3px 3px 27px #2B1234;
+}
+
+/*Header styles*/
+
+header {
+	background-color: #1581D6;
+	background: linear-gradient(#1E9B1E,#2B1234);
+	border-color: : #DEF9DE;
+	box-shadow: 1px 1px 6px #DEF9DE;
+}
+
+header.no_bg_img {
+  background: linear-gradient(#1E9B1E,#2B1234);
+}
+
+div#banner-gradient {
+	background: linear-gradient(to right, rgba(30, 155, 30,0.5), rgba( 43, 18, 52,1));
+}
+
+/* Button styles */
+
+button#openNav {
+  background: #6f6559;
+  color: #D615A7;
+}
+
+button#openNav:hover {
+  background: #773090;
+  box-shadow: 1px 1px 5px #DEF9DE;
+}
+
+button#closeNav {
+  background: #773090;
+	color: #D615A7;
+  box-shadow: 2px 2px 5px  #2B1234;
+}
+
+button#closeNav:hover {
+	background: #2B1234;
+	color: #D615A7;
+  box-shadow: #DEF9DE;
+}
+
+/* Menu Styles*/
+
+.menu span a {
+  background-color:#1E9B1E;
+  box-shadow: 1px 1px 5px #2B1234;
+}
+
+.menu span a:hover {
+	background-color:#79ed97;
+	box-shadow: 1px 1px 5px #DEF9DE;
+}
+
+.menu span a:focus {
+	background-color:#79ed97;
+	box-shadow: 1px 1px 5px #DEF9DE;
+}
+
+.menu span a:active {
+	background-color:#79ed97;
+	box-shadow: 1px 1px 5px  #2B1234;
+	color:#2B1234;
+}
+
+/*Sidebar styles*/
+
+.sidebar { background-color: #773090;}
+
+.sidebar a { color:  #F8E311;}
+
+.sidebar a:hover { color: #DEF9DE;}
+
+.sidebar a:focus { color: #DEF9DE;}
+
+.sidebar a:active { color: #DEF9DE;}
+
+.sidebar .menu div {
+  background-color: #79ed97;
+  box-shadow: 1px 1px 6px #5d2534;
+}
+
+.sidebar .menu span {
+  background:#1E9B1E;
+  color: #5d2534;
+}
+
+.sidebar .menu span a {
+  background: #1E9B1E;
+  color: #5d2534;
+  box-shadow: none;
+}
+
+.sidebar .menu span a:hover {
+  background: #1E9B1E;
+  color:#bd0e3b;
+  box-shadow: none;
+}
+
+.sidebar .menu span a:focus {
+  background: #1E9B1E;
+   color:#bd0e3b;
+   box-shadow: none;
+ }
+
+.sidebar .menu span a:active {
+  background: #1E9B1E;
+  color:#bd0e3b;
+  box-shadow: none;
+}
+
+  /* content area styles*/
+
+#contentArea {
+	color: #2B1234;
+	border-color: #F8E311;
+	background-color: #D66415;
+	box-shadow: 1px 1px 15px #F8E311;
+}
+
+#contentArea h1 { color: #D61544;}
+
+#contentArea h2 { color:#D61544;}
+
+#contentArea h3 { color: #D61544;}
+
+#contentArea p { color: #2B1234;}
+
+#contentArea ul li {
+  color: #2B1234; 	/* set color of list item text */
+	}
+
+#contentArea ul li::before {
+  color: #D61544;   /* color of bullet or square */
+}
+
+/* Footer Styles */
+
+#footer-menu li a:link { color:#D615A7;}
+
+/* Steem Content Module Themes */
+
+/* Steem Profile */
+
+#profile-banner {
+	color: #DEF9DE;
+  background-color: #D615A7;
+	box-shadow: 3px 3px 27px #DEF9DE;
+}
+#profile-banner h1 { color: #DEF9DE;}
+
+#profile-about { color: #DEF9DE; }
+
+#profile-info { color: #DEF9DE;}
+
+#profile-info a { color: #F8E311;}
+
+#profile-info a:visited { color:#F8E311;}
+
+#profile-info a:hover { color:#DEF9DE;}
+
+#profile-info a:active { color:#DEF9DE;}
+
+
+#profile-banner #profile-about {color: #DEF9DE;}
+
+#profile-banner #profile-info {color: #DEF9DE;}
+
+#profile-banner #profile-info a {color: #F8E311;}
+
+#profile-banner #profile-info a:visited {color:#F8E311;}
+
+#profile-banner #profile-info a:hover {
+	color:#DEF9DE;
+  text-shadow: none;
+}
+
+#profile-banner #profile-info a:active {
+	color:#F8E311;
+  text-shadow: none;
+}
+
+/*Steem Post*/
+
+/* Steem Posts */
+
+.steem_posts { border-bottom-color: #2B1234;}
+
+.steem_posts_meta { color: #2B1234;}
+
+div.steem_posts_meta { color: #2B1234;}
+
+/*Social Menu*/
+
+div.icon span a:link { color:#DEF9DE;}
+
+div.icon span a:visited { color:#DEF9DE;}
+
+div.icon span a:hover {
+ color:#F8E311;
+ box-shadow: 1px 1px 10px #DEF9DE;
+}
+
+div.icon span a:focus { color:#F8E311;}
+
+div.icon span a:active { color:#F8E311;}
+
+div.icon span a img{
+  box-shadow: none;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 800px) {
+
+.sidebar { background-color: #5d2534;}
+
+.steem_posts_date { color:#d7c7c3;}
+}

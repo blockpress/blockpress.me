@@ -1,11 +1,11 @@
 /*
-offwhite pallete:
+offwhite palette:
 #beb19f (darkest)
 #ded1bf
 #eee1cf
 #fcf4e9 (lightest)
 
-font pallete:
+font palette:
 #332 (darkest)
 #443
 #554
@@ -13,7 +13,7 @@ font pallete:
 #998 (lightest)
 
 
-link pallete:
+link palette:
 #874 (darkest)
 #982
 #a93 (lightest)
@@ -94,13 +94,6 @@ button#closeNav:hover {
 
 /* Menu Styles*/
 
-.menu div { background-color: #fcf4e9;}
-
-.menu span {
-  background: #ded1bf;
-  color: #5d2534;
-}
-
 .menu span a {
   background-color:#fcf4e9;
   box-shadow: 1px 1px 5px #332;
@@ -136,6 +129,13 @@ button#closeNav:hover {
 .sidebar .menu span a:active { box-shadow: none;}
 
 .sidebar { background-color: #beb19f;}
+
+.sidebar .menu span {
+  background: #ded1bf;
+  color: #5d2534;
+}
+
+.sidebar.menu div { background-color: #fcf4e9;}
 
   /* content area styles*/
 

@@ -9,3 +9,7 @@ Each of these three example sites using blockpress.me are inspired by the three 
 
 ## Server side setup
 See also https://github.com/hkjn/blockpress.me, where the server-side setup lives. This pulls data for the blockpress website, and the three example sites, directly from four subfolders in the https://github.com/miblodge/projectb repository.
+
+## Social media presence
+- [BlockPress Facebook group](https://www.facebook.com/groups/blockpress)
+- [BlockPress Subreddit](https://www.reddit.com/r/blockpressCMS/)

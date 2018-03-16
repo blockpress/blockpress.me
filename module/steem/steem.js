@@ -305,19 +305,19 @@ function steemCommentTemplateLoaded(template) {
 //Load the templates
 function loadSteemTemplates() {
 	// Get template from theme
-	var theme_template = "/theme/"+config.theme+"/steem-profile.html";
+	var theme_template = "./theme/"+config.theme+"/steem-profile.html";
 	$.ajax(theme_template).done(steemProfileTemplateLoaded).fail(function(){
 		// Else use default template
 		$.ajax("./module/steem/steem-profile.html").done(steemProfileTemplateLoaded);
 	});
 	// Get template from theme
-	var theme_template = "/theme/"+config.theme+"/steem-post.html";
+	var theme_template = "./theme/"+config.theme+"/steem-post.html";
 	$.ajax(theme_template).done(steemPostTemplateLoaded).fail(function(){
 		// Else use default template
 		$.ajax("./module/steem/steem-post.html").done(steemPostTemplateLoaded);
 	});
 	// Get template from theme
-	var theme_template = "/theme/"+config.theme+"/steem-posts.html";
+	var theme_template = "./theme/"+config.theme+"/steem-posts.html";
 	$.ajax(theme_template).done(steemPostsTemplateLoaded).fail(function(){
 		// Else use default template
 		$.ajax("./module/steem/steem-posts.html").done(steemPostsTemplateLoaded);

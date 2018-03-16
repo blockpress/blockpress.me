@@ -10,6 +10,9 @@ var steem_post_template,steem_post;
 // Steem posts variables
 var steem_posts_template, steem_posts, steem_posts_displayed, steem_username, steem_tags, steem_posts_count;
 
+// Steem comment variables
+var steem_comment_template;
+
 /* A special content module for pulling content from steem blockchain */
 function steem_menuitem(args) {
 	var args_json = JSON.stringify(args);
@@ -60,10 +63,10 @@ function displaySteemPosts(err, posts) {
 	//console.log(posts);
 	steem_posts = posts;
 
-//console.log("steem_username: "+steem_username);
+console.log("steem_username: "+steem_username);
 
 	var args = steem_args;
-//console.log("displaySteemPosts args: "+args);
+console.log("displaySteemPosts args: "+args);
 	var content = '', display_count = steem_posts_displayed.length;
 	var json_metadata, post_tags, post_obj, body, show_post, last_date, last_permlink, created_date, display_date, loop_end = false;
 
@@ -158,6 +161,32 @@ function getSteemPosts(usernames,tags,count,lastPermlink) {
 	steem.api.getDiscussionsByAuthorBeforeDate(usernames, lastPermlink, '2100-01-01T00:00:00', count,	function(err, result){displaySteemPosts(err, result)});
 	//displaySteemPosts(['AAA']);
 }
+function displaySteemComments(err, comments) {
+	console.log('displaySteemComments');
+	var converter = new showdown.Converter();
+	var author, comment, template, created_date, display_date, commentsLength = comments.length;
+	for (var i = 0; i < commentsLength; i++) {
+			comment_obj = comments[i];
+			author = comment_obj.author;
+			comment = converter.makeHtml(comment_obj.body);
+
+			template = steem_comment_template;
+			template = template.replace(/{steem_comment}/g,comment);
+			template = template.replace(/{steem_comment_author}/g,comment_obj.author);
+
+			created_date=new Date(comment_obj.created);
+			display_date = created_date.toLocaleDateString(config.dateformat.locale, config.dateformat.options);
+			template = template.replace(/{steem_comment_date}/g,display_date);
+console.log(template);
+			$('.steem-comments').append(template);
+	}
+	console.log(comments);
+}
+function getSteemComments(username,permlink) {
+	console.log('getSteemComments username: '+username+' & permlink: '+permlink);
+	steem.api.setOptions({ url: 'https://api.steemit.com' });
+	steem.api.getContentReplies(username, permlink,	function(err, result){displaySteemComments(err, result)});
+}
 
 function displaySteemPost(err, post) {
 	// Save post in global variable
@@ -184,6 +213,9 @@ function displaySteemPost(err, post) {
 	// Then add post values
 	$("#steem-post-content").html(body_html);
 	$("#steem-post-title").html(steem_post.title);
+
+	// Get comments
+	getSteemComments(steem_post.author,steem_post.permlink);
 }
 function getSteemPost(username,postid) {
 	//
@@ -266,6 +298,10 @@ function steemPostsTemplateLoaded(template) {
 	steem_posts_template = template;
 	console.log( "steem PostsTemplate load was performed." );
 }
+function steemCommentTemplateLoaded(template) {
+	steem_comment_template = template;
+	console.log( "steem CommentTemplate load was performed." );
+}
 //Load the templates
 function loadSteemTemplates() {
 	// Get template from theme
@@ -285,6 +321,12 @@ function loadSteemTemplates() {
 	$.ajax(theme_template).done(steemPostsTemplateLoaded).fail(function(){
 		// Else use default template
 		$.ajax("./module/steem/steem-posts.html").done(steemPostsTemplateLoaded);
+	});
+	// Get template from theme
+	var theme_template = "/theme/"+config.theme+"/steem-comment.html";
+	$.ajax(theme_template).done(steemCommentTemplateLoaded).fail(function(){
+		// Else use default template
+		$.ajax("./module/steem/steem-comment.html").done(steemCommentTemplateLoaded);
 	});
 }
 loadSteemTemplates();

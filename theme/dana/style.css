@@ -303,7 +303,7 @@ footer span{
 	/*Steem Post*/
 
 	#contentArea #steem-post img{
-		width: 90%;
+		/* width: 90%; This makes small images like steemitboard badges display real ugly */
 		max-width: 90%;
 		border-radius: 0;
 		padding: 0;

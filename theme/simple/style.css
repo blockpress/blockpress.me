@@ -157,7 +157,7 @@ img{
 	#contentArea img{
 		display: block;
     margin: auto;
-    width: 70%;
+    max-width: 70%;
 	}
 
 	/*Footer styles*/
@@ -274,6 +274,34 @@ footer{
 div.steem_posts_meta{
 	margin-bottom: 0.7em;
 	font-style: italic;
+}
+/* steem post comments */
+#steem-post-comments {
+	border-top: 1px solid #000;
+	padding: 0.7em;
+}
+#steem-post-comments span.steem_comment {
+    padding-right:0.7em;
+}
+#steem-post-comments div.steem_comment {
+    margin:0;
+    padding-left:1em;
+    padding-right:0;
+    padding-top:0.7em;
+}
+#steem-post-comments div.steem_comment .steem_comment_meta {
+    font-size: 0.6em;
+}
+.steem-comments {
+    padding-left: 1px;
+		padding-right:0;
+    display: none;
+}
+#steem-post-comments div.steem_comment p {
+    margin:0;
+    padding-left:1em;
+		padding-right:0;
+    width: 100%;
 }
 
 @media only screen and (max-width: 800px) {

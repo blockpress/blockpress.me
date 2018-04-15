@@ -305,3 +305,38 @@ a:active{
 	display: inline-block;
 	vertical-align: top;
 }
+#steem-post-comments {
+  width: 70%;
+  margin-right:auto;
+  margin-left:auto;
+}
+#steem-post-comments div.steem_comment {
+    margin:0;
+    padding:1em;
+    color: #eff;
+}
+#steem-post-comments div.steem_comment .steem_comment_meta {
+    font-size: 0.6em;
+}
+#steem-post-comments div.steem_comment:nth-child(odd) {
+  	background-color: #261919;
+}
+#steem-post-comments div.steem_comment:nth-child(even) {
+  	background-color: #191313;
+}
+div.steem_comment:nth-child(odd)>.steem-comments {
+  	background-color: #191313;
+}
+div.steem_comment:nth-child(even)>.steem-comments {
+  	background-color: #261919;
+}
+.steem-comments {
+    padding: 1px;
+    display: none;
+}
+#steem-post-comments div.steem_comment p {
+    margin:0;
+    padding:1em;
+    width: 100%;
+    color: #cee;
+}

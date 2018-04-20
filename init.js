@@ -11,7 +11,7 @@ function parseConfig(config_json) {
 function configFail() {
   console.log('FAILED TO LOAD CONFIG!');
 	// Load default theme and display error page.
-	config={"sitetitle": "Error loading config","palette":"vanilla","theme":"simple","modules":["static"],"firstpage":{"type":"static","args":["content/default/config_load_error.html"]},"menu":[]};
+	config={"sitetitle": "Error loading config","palette":"vanilla","theme":"metaverse","modules":["static"],"firstpage":{"type":"static","args":["content/default/config_load_error.html"]},"menu":[]};
   parseModules(config.modules);
 }
 

@@ -170,6 +170,9 @@ function parseSocialMenu() {
 		if(typeof smenu.twitter == "string" && smenu.twitter != "") $(".socialmenu .twitter").prop("href",smenu.twitter);
 		else $(".socialmenu .twitter").hide();
 
+		if(typeof smenu.reddit == "string" && smenu.reddit != "") $(".socialmenu .reddit").prop("href",smenu.reddit);
+		else $(".socialmenu .reddit").hide();
+
 		if(typeof smenu.gplus == "string" && smenu.gplus != "") $(".socialmenu .gplus").prop("href",smenu.gplus);
 		else $(".socialmenu .gplus").hide();
 

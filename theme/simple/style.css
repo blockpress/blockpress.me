@@ -6,6 +6,7 @@ body{
 	font-size: 1.3em;
 	padding: 0;
 }
+
 header{
 	padding: 0,3em;
 	border-width: 1px;
@@ -40,15 +41,15 @@ h2{
   padding-left: 0;
 	margin-bottom: 0.2em;
 	flex-wrap: wrap;
-	height: 2em;
 }
+
 .menu span{
   display: inline-block;
   font-size: 1em;
   text-transform: uppercase;
 	margin-left: 0.3em;
 	margin-right: 0.3em;
-
+	height: 2.5em;
 }
 .menu span a {
 	padding:8px;
@@ -156,7 +157,7 @@ img{
 	#contentArea img{
 		display: block;
     margin: auto;
-    width: 70%;
+    max-width: 70%;
 	}
 
 	/*Footer styles*/
@@ -274,6 +275,34 @@ div.steem_posts_meta{
 	margin-bottom: 0.7em;
 	font-style: italic;
 }
+/* steem post comments */
+#steem-post-comments {
+	border-top: 1px solid #000;
+	padding: 0.7em;
+}
+#steem-post-comments span.steem_comment {
+    padding-right:0.7em;
+}
+#steem-post-comments div.steem_comment {
+    margin:0;
+    padding-left:1em;
+    padding-right:0;
+    padding-top:0.7em;
+}
+#steem-post-comments div.steem_comment .steem_comment_meta {
+    font-size: 0.6em;
+}
+.steem-comments {
+    padding-left: 1px;
+		padding-right:0;
+    display: none;
+}
+#steem-post-comments div.steem_comment p {
+    margin:0;
+    padding-left:1em;
+		padding-right:0;
+    width: 100%;
+}
 
 @media only screen and (max-width: 800px) {
 
@@ -291,6 +320,7 @@ div.steem_posts_meta{
 		padding:1em;
 		padding-left: 0;
 		border-radius: 0;
+		border: none;
 	}
 
 	#contentArea p {
@@ -303,9 +333,8 @@ div.steem_posts_meta{
 		max-width: 100%;
 	}
 
-	.menu li{
-		display: flex;
-	  flex-wrap: wrap;
+	.menu span{
+		display: inline-block;
 	}
 
 	/* Steem Profile*/
@@ -401,4 +430,18 @@ border: none;
 	margin-right: 0.5em;
 }
 
+}
+@media only screen and (max-width: 400px) {
+	.menu span{
+		display:block;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+
+	}
+	.menu span a{
+		width:100%;
+		display:block;
+		border-radius: 0;
+	}
 }

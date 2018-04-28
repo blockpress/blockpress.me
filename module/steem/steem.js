@@ -63,10 +63,7 @@ function displaySteemPosts(err, posts) {
 	//console.log(posts);
 	steem_posts = posts;
 
-console.log("steem_username: "+steem_username);
-
 	var args = steem_args;
-console.log("displaySteemPosts args: "+args);
 	var content = '', display_count = steem_posts_displayed.length;
 	var json_metadata, post_tags, post_obj, body, show_post, last_date, last_permlink, created_date, display_date, loop_end = false;
 
@@ -87,12 +84,6 @@ console.log("displaySteemPosts args: "+args);
 		}
 		else if(steem_tags === '') show_post = true;
 		else if(post_tags.indexOf(steem_tags) !== -1) show_post = true;
-
-		//console.log("Post "+i+": "+JSON.stringify(post_obj));
-		//console.log("metadata "+i+": "+JSON.stringify(json_metadata));
-
-		//console.log("permlink "+i+": "+JSON.stringify(post_obj.permlink));
-		//console.log("created "+i+": "+JSON.stringify(post_obj.created));
 
 		if(steem_posts_displayed.indexOf(post_obj.permlink) !== -1) {
 			//loop_end = true;
@@ -136,7 +127,7 @@ console.log("displaySteemPosts args: "+args);
 	}
 	if(display_count < steem_posts_count && !loop_end) {
 //console.log("username: "+steem_username);
-//console.log("steem_posts_count: "+steem_posts_count);
+console.log("steem_posts_count: "+steem_posts_count);
 //console.log("last_permlink: "+last_permlink);
 		getSteemPosts(steem_username,steem_tags,steem_posts_count,last_permlink);
 	}
@@ -145,13 +136,22 @@ console.log("displaySteemPosts args: "+args);
 		//console.log('Reached post limit. Quitting...');
 		//console.log(steem_posts_displayed);
 	}
-	// Append content to contentArea
-	$('#contentArea').append(content);
+	console.log('before if');
+	if ($(".profile-posts")[0]){
+	console.log('inside if');
+		// Append content to contentArea
+		$('.profile-posts').append(content);
+	} else {
+	console.log('inside else');
+		// Append content to contentArea
+		$('#contentArea').append(content);
+	}
+
 }
 function getSteemPosts(usernames,tags,count,lastPermlink) {
 //console.log('getSteemPosts usernames: '+usernames+' tags: '+tags+' count: '+count+' lastPermlink: '+lastPermlink);
 	if (typeof count === "undefined") count=10; // Default to 10 if no count specified.
-	if (typeof lastPermlink === "undefined") lastPermlink=''; // Default to 10 if no count specified.
+	if (typeof lastPermlink === "undefined") lastPermlink=''; // Default to empty string if no permlink specified.
 
 	steem_tags = tags;
 	steem_posts_count = count;
@@ -219,8 +219,8 @@ function displaySteemPost(err, post) {
 	$("#steem-post-content").html(body_html);
 	$("#steem-post-title").html(steem_post.title);
 
-	// Get comments
-	getSteemComments(steem_post.author,steem_post.permlink);
+		// Get comments
+		getSteemComments(steem_post.author,steem_post.permlink);
 }
 function getSteemPost(username,postid) {
 	//
@@ -244,7 +244,8 @@ function displaySteemProfile(err, profile) {
 
 	var metadata = JSON.parse(steem_profile.json_metadata);
 	template = template.replace('{steem_profile_website}','<a href="'+metadata.profile.website+'">'+metadata.profile.website+'</a>');
-template = template.replace('{steem_profile_location}',metadata.profile.location);
+	template = template.replace('{steem_profile_location}',metadata.profile.location);
+	template = template.replace(/{steem_profile_username}/g,steem_profile.name);
 	// Display template
 	$('#contentArea').html(template);
 
@@ -262,6 +263,12 @@ template = template.replace('{steem_profile_location}',metadata.profile.location
 	$("#profile-about").html(metadata.profile.about);
 	$("#profile-location").html(metadata.profile.location);
 	$("#profile-website").html('<a href="'+metadata.profile.website+'">'+metadata.profile.website+'</a>');
+
+	// If profile template has a space for user posts.
+	if ($(".profile-posts")[0]){
+		steem_posts_displayed = new Array();
+		getSteemPosts(steem_profile.name,'',25,'');
+	}
 }
 function getSteemProfile(username) {
 	//

@@ -299,6 +299,15 @@ footer span{
 		margin-right: 1em;
 	}
 
+	.steemitboard {
+		width:100%;
+		margin-left:auto;
+		margin-right: auto;
+	}
+	.steemitboard img {
+		vertical-align: top;
+		box-shadow: none !important;
+	}
 
 	/*Steem Post*/
 

@@ -51,12 +51,7 @@ function steem_load(args) {
 			break;
 	}
 }
-function steemPostsDisplayThumbnail(postid){
-	console.log("steemPostsDisplayThumbnail: "+postid);
-	$('#'+postid+' img.steemposts_thumbnail').css("display",'inline-block');
-	$('#'+postid+' span.steem_posts_preview').css("width",'70%');
 
-}
 function displaySteemPosts(err, posts) {
 	var template = steem_posts_template;
 	// Save posts in global variable
@@ -112,7 +107,6 @@ console.log("displaySteemPosts args: "+args);
 			template = template.replace(/{steem_posts_tag}/g,post_obj.category);
 			template = template.replace(/{steem_posts_title}/g,post_obj.title);
 			template = template.replace(/{steem_posts_permlink}/g,post_obj.permlink);
-			template = template.replace(/{steem_posts_img}/g,json_metadata.image);
 			template = template.replace(/{steem_posts_author}/g,post_obj.author);
 
 			created_date=new Date(post_obj.created);
@@ -121,11 +115,15 @@ console.log("displaySteemPosts args: "+args);
 
 			// Full body
 			body = converter.makeHtml(post_obj.body);
+			var imgSrc=findImg(body);
+			template = template.replace('{steem_posts_img}',imgSrc);
 			template = template.replace('{steem_posts_body}',body);
 
+			findImg();
+
 			// Body preview
-			body = body.replace(/<(?:.|\n)*?>/gm, ''); //strip html
-			if(body.length > 250) body = body.substring(0,247)+'...';
+			body = body.replace(/<img[^>"']*((("[^"]*")|('[^']*'))[^"'>]*)*>/gm,""); //strip html
+			//body= $(body).find("img").remove().end().html();
 			template = template.replace('{steem_posts_preview}',body);
 
 			// Append post to content string if it has a matching tag
@@ -147,7 +145,16 @@ console.log("displaySteemPosts args: "+args);
 	}
 	// Append content to contentArea
 	$('#contentArea').append(content);
+	$('.steem_posts_thumbnail img').on('load',function (e){
+		thumbLoaded(this.id);
+	});
 }
+
+function findImg(html_string){
+	var firstimg = $(html_string).find("img:first").attr("src");
+	return firstimg;
+}
+
 function getSteemPosts(usernames,tags,count,lastPermlink) {
 //console.log('getSteemPosts usernames: '+usernames+' tags: '+tags+' count: '+count+' lastPermlink: '+lastPermlink);
 	if (typeof count === "undefined") count=10; // Default to 10 if no count specified.
@@ -161,6 +168,15 @@ function getSteemPosts(usernames,tags,count,lastPermlink) {
 	steem.api.getDiscussionsByAuthorBeforeDate(usernames, lastPermlink, '2100-01-01T00:00:00', count,	function(err, result){displaySteemPosts(err, result)});
 	//displaySteemPosts(['AAA']);
 }
+
+function thumbLoaded(thumb_id){
+	var Permlink=thumb_id.substring(5);
+	var divID="steem_posts_"+Permlink;
+	$("#"+divID).removeClass("no_thumb");
+	$("#"+divID).addClass("has_thumb");
+}
+
+
 function displaySteemComment(comment_obj,target) {
 	var converter = new showdown.Converter();
 	author = comment_obj.author;

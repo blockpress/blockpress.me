@@ -4,33 +4,73 @@ html{
 	padding: 0;
 }
 
+/*Generic classes*/
+
+.no_thumb .steem_posts_thumbnail{
+	display: none;
+}
+
+.has_thumb .steem_posts_thumbnail{
+border: 1px solid;
+border-radius: 5px;
+display:inline-block;
+padding-top: 20%;
+position: relative;
+width:30%;
+overflow: hidden;
+margin-right: 0.5em;
+border-radius: 10px;
+}
+
+.has_thumb .steem_posts_thumbnail img{
+vertical-align: middle;
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+max-width:100%;
+min-height:100%;
+}
+
+.no_thumb .steem_posts_preview{
+	width:100%;
+	padding-top: 20%;
+	position: relative;
+}
+
+.no_thumb .steem_posts_preview span{
+	position:absolute;
+	top:0;
+}
+
+.has_thumb .steem_posts_preview{
+	display: inline-block;
+	width:66%;
+	max-height:300px;
+	overflow:hidden;
+	padding-top: 20%;
+	position: relative;
+	border-radius: 5px;
+	font-size: 0.75em;
+}
+
+.has_thumb .steem_posts_preview span{
+	vertical-align: middle;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	max-width:100%;
+	min-height:100%;
+}
+
 body{
 	width: 100%;
 	margin:0;
 	font-family: "Garamond", "Palatino", serif;
 	font-size: 1.3em;
-}
-
-header{
-	background-image: url("https://steemitimages.com/DQmUgGiwvvq39ig4UbY1GXYNboTjQtS4QiRiy5kEPanu4KZ/banner2.JPGx");
-	background-repeat: no-repeat;
-  background-size:cover;
-	background-position: center;
-	padding:0;
-	margin:0;
-}
-
-div#banner-gradient { margin-top: 0;}
-
-button#openNav{
-	font-size: 2em;
-	margin-left: 1em;
-	border:none;
-	position: fixed;
-	top:0.5em;
-	border-radius: 5px;
-	padding-bottom: 0.2em;
-	opacity: 0.7;
 }
 
 h1{
@@ -63,7 +103,6 @@ h3{
 	margin-right:auto;
 	margin-left:auto;
 	padding-bottom: 0.5em;
-
 }
 
 p{
@@ -83,25 +122,34 @@ img{
 
 a { text-decoration: none;}
 
-#leftpad{
-	padding: 0;
-	margin: 0;
+hr {
+    border-width: 1px;
 }
 
-/* sidebar styles menu and 'footer'*/
+/* Header styles */
 
-.sidebar {
-    height: 100%;
-    width: 300px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    padding-top: 20px;
-		text-align: center;
-		display:none;
+header{
+	background-image: url("https://steemitimages.com/DQmUgGiwvvq39ig4UbY1GXYNboTjQtS4QiRiy5kEPanu4KZ/banner2.JPGx");
+	background-repeat: no-repeat;
+  background-size:cover;
+	background-position: center;
+	padding:0;
+	margin:0;
+}
 
+div#banner-gradient { margin-top: 0;}
+
+/* Button styles */
+
+button#openNav{
+	font-size: 2em;
+	margin-left: 1em;
+	border:none;
+	position: fixed;
+	top:0.5em;
+	border-radius: 5px;
+	padding-bottom: 0.2em;
+	opacity: 0.7;
 }
 
 button#closeNav{
@@ -112,10 +160,7 @@ button#closeNav{
 	padding: 0 5px 2px 5px;
 }
 
-.sidebar a {
-    text-decoration: none;
-		text-align: center;
-}
+/* Menu Styles*/
 
 .menu div{
 	text-align: center;
@@ -125,6 +170,7 @@ button#closeNav{
 	padding-top: 2px;
 	padding-bottom: 1px;
 	margin-bottom: 1em;
+
 }
 
 .menu span{
@@ -141,40 +187,32 @@ button#closeNav{
 	width: 100%;
 }
 
-footer div{
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 2em;
-	padding-right: 2em;
-	font-size: 0.8em;
-	list-style: none;
-  text-align: center;
-}
+/* Sidebar styles*/
 
-footer span{
-	display: block;
-	margin: 0.5em;
-	font-size: 1em;
-	font-style: normal;
-}
-
- div.icon span a:link{
-	display: inline-block;
-	text-decoration: none;
-	font-style: oblique;
-	height: 45px;
-	width: 45px;
-	padding:0;
-	border-radius: 5px;
-	margin-bottom: 0.5em;
-}
-
- div.icon img{
+#leftpad{
+	padding: 0;
 	margin: 0;
-	max-width: 100%;
 }
 
-/* content area styles*/
+.sidebar {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding-top: 20px;
+		text-align: center;
+		display:none;
+}
+
+.sidebar a {
+    text-decoration: none;
+		text-align: center;
+}
+
+/* Content Area Styles */
 
 #contentArea{
   font-family: "Garamond", "Palatino", serif;
@@ -243,6 +281,10 @@ footer span{
 	  font-size: 1em;
 		padding-right: 1em;
 	}
+	#contentArea ul li p {
+    padding: 0;
+    margin: 0;
+}
 
 	#contentArea p{
     font-family: "Garamond", "Palatino", serif;
@@ -253,12 +295,37 @@ footer span{
 		text-align: left;
 	}
 
-	div.steem_posts_meta{
-		margin-bottom: 0.5em;
-		font-style: italic;
+	/* Footer styles*/
+
+	footer div{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 2em;
+		padding-right: 2em;
+		font-size: 0.8em;
+		list-style: none;
+	  text-align: center;
 	}
 
+	footer span{
+		display: block;
+		margin: 0.5em;
+		font-size: 1em;
+		font-style: normal;
+	}
+
+
+	/* Steem Content Modules */
+
 	/* Steem Profile */
+
+	#profile-image img {
+		display:block;
+		margin: 0 auto;
+		max-width: 100%;
+		border-radius: 50%;
+		margin-bottom: 1em;
+	}
 
 	#steem_profile{
 		text-align: center;
@@ -272,14 +339,6 @@ footer span{
 		margin-top: 15px;
 	}
 
-	#profile-image img {
-		display:block;
-		margin: 0 auto;
-		max-width: 100%;
-		border-radius: 50%;
-		margin-bottom: 1em;
-
-	}
 	#profile-about {
 		max-width: 50%;
 		margin-right:auto;
@@ -302,7 +361,7 @@ footer span{
 
 	/*Steem Post*/
 
-	#contentArea #steem-post img{
+	 #steem-post img{
 		/* width: 90%; This makes small images like steemitboard badges display real ugly */
 		max-width: 90%;
 		border-radius: 0;
@@ -312,7 +371,7 @@ footer span{
 	}
 	/* steem post comments */
 	#steem-post-comments {
-		border-top: 1px solid #000;
+		border-top: 1px solid;
 		padding: 0.7em;
 	}
 	#steem-post-comments span.steem_comment {
@@ -326,6 +385,7 @@ footer span{
 	}
 	#steem-post-comments div.steem_comment .steem_comment_meta {
 	    font-size: 0.6em;
+			padding: 0.3em;
 	}
 	.steem-comments {
 	    padding-left: 1px;
@@ -338,6 +398,50 @@ footer span{
 			padding-right:0;
 	    width: 100%;
 	}
+#steem-post-comments img{
+	box-shadow:none ;
+	padding:0.5em;
+}
+
+
+/* Steem Posts */
+
+div.steem_posts_meta{
+	margin-bottom: 0.5em;
+	font-style: italic;
+}
+
+.steem_posts_preview {
+	max-width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	overflow:hidden;
+	max-height: 30%;
+}
+
+/*Social Menu*/
+
+	div.icon, div.icon:hover, div.icon:focus{
+		box-shadow:none;
+	}
+
+	div.icon span a:link{
+	display: inline-block;
+	text-decoration: none;
+	font-style: oblique;
+	height: 45px;
+	width: 45px;
+	padding:0;
+	border-radius: 5px;
+	margin-bottom: 0.5em;
+}
+
+ div.icon img{
+	margin: 0;
+	max-width: 100%;
+}
+
+/* Responsive Design */
 
 	@media only screen and (max-width: 800px) {
 
@@ -362,7 +466,7 @@ footer span{
 			border-right: none;
 		}
 
-.steem_posts_preview, .steem_posts_author, #steem-post-comments {
+ .steem_posts_author, #steem-post-comments {
 			margin-left: 1em;
 			display: block;
 		}

@@ -1,44 +1,82 @@
 
-/*grey/brown palette:
-#0f0d0c RGB 15, 13, 12,
-#211e1a RGB 33, 30, 26
-#332e29 RBG 51, 46, 41,
-#474139 RGB 71, 65, 57,
-#5b5349
-#6f6559
-
-orange palette:
-#c87c1a
-#ec9c36
-#eeae5c
-#f0be7e
-
-offwhite palette:
-#eee1cf
-#fcf4e9
+/* brown palette:
+dark chocolate:     #160a09; RGB  22, 10, 9,
+chocolate sauce:    #2a1914 RGB  42, 25, 20
+hot cocoa:          #392b23 RGB 57, 43, 35,
+milk chocolate:     #653f26 RGB 101, 53, 38
+orange:             #ec9c36
+cream orange:       #f0be7e
+light cream orange: #ecd1aa
 */
 
+/* Generic Classes */
+
+.boxshadowL{
+  box-shadow:3px 3px 25px #ec9c36;
+}
+.boxshadowM{
+  box-shadow:2px 2px 5px #ec9c36;
+}
+
+.boxshadowM img{
+  box-shadow:2px 2px 5px #ec9c36;
+}
+.boxshadowM #profile-banner{
+  box-shadow:2px 2px 5px #ec9c36;
+}
+.boxshadowM .menu span a{
+  box-shadow:2px 2px 5px #ec9c36;
+}
+
+.boxshadowM .menu span a:hover{
+  box-shadow:2px 2px 5px #f0be7e;
+}
+
+.boxshadowM .menu span a:focus{
+  box-shadow:2px 2px 5px #f0be7e;
+}
+
+.boxshadowMlight{
+  box-shadow:2px 2px 5px #ecd1aa;
+}
+
+.boxshadowMlight:hover{
+  box-shadow:2px 2px 5px #ec9c36;
+}
+
+.boxshadowMlight img:hover{
+  box-shadow:2px 2px 5px #ecd1aa;
+}
+
+.boxShadowS{
+  box-shadow: 1px 1px 10px #ec9c36;
+}
+
+.boxShadowXS {
+  box-shadow:1px 1px 5px #ec9c36;
+}
+
 body{
-  background-color: #0f0d0c;
+  background-color: #160a09;
 }
 
 h1{
     color:#f0be7e;
-		text-shadow: 1px 1px 5px #0f0d0c,2px 2px 10px #eee1cf;
+		text-shadow: 1px 1px 5px #160a09;
 }
 
 h2{
     color:#ec9c36;
-		text-shadow: 1px 1px  #eee1cf;
+		text-shadow: 1px 1px  #ecd1aa;
 }
 
 h3{
     color:#ec9c36;
-		text-shadow: 1px 1px  #eee1cf;
+		text-shadow: 1px 1px  #ecd1aa;
 }
 
 p{
-  color: #eee1cf;
+  color: #ecd1aa;
 }
 
 a:link {
@@ -54,143 +92,136 @@ a:active, a:focus{
 	color:#f0be7e;
 }
 img{
-	color: #0f0d0c;
-	border-color: #5b5349;
-	box-shadow: 3px 3px 27px #0f0d0c;
+	color: #160a09;
+	border-color: #160a09;
+}
+
+hr {
+    color: rgba(33, 30, 26, 0.2);
 }
 
 /*Header styles*/
 
 header{
-	background-color: #211e1a;
-	border-color: : #474139;
-	box-shadow: 1px 1px 6px #474139;
+	background-color: #2a1914;
+	border-color:#653f26;
 }
 
 header.no_bg_img {
-background: linear-gradient(#211e1a,#474139);
+background: linear-gradient(#2a1914,#392b23);
 }
 
 div#banner-gradient {
-	background: linear-gradient(to right, rgba(33, 30, 26,0.5), rgba(71, 65, 57, 1));
+	background: linear-gradient(to right, rgba(42, 25, 20,0.5), rgba(57, 43, 35, 1));
 }
 
 /* Button styles */
 
 button#openNav {
-  background: #474139;
+  background: #653f26;
   color: #f0be7e;
 }
 
-button#openNav:hover { background: #c87c1a;}
+button#openNav:hover { background: #ec9c36;}
 
 button#closeNav {
-  background: #474139;
-	color: #6f6559;
-  box-shadow: 2px 2px 5px #f0be7e;
+  background: #653f26;
+	color: #160a09;
+  box-shadow: #f0be7e;
 }
 
 button#closeNav:hover {
-	box-shadow:  #fcf4e9;
+	box-shadow:  #ecd1aa;
 	background: #f0be7e;
-	color: #0f0d0c;
+	color: #160a09;
 }
 
 /* Menu Styles*/
 
 .menu span a {
-background-color:#332e29;
-box-shadow: 1px 1px 5px #0f0d0c;
+background-color:#2a1914;
+box-shadow: #160a09;
 }
 
 .menu span a:hover {
-	background-color:#5b5349;
-	box-shadow: 1px 1px 5px #eee1cf;
+	background-color: #653f26;
+	box-shadow: #ecd1aa;
 }
 
 .menu span a:focus {
-	background-color:#5b5349;
-	box-shadow: 1px 1px 5px #eee1cf;
+	background-color: #653f26;
+	box-shadow: #ecd1aa;
 }
 
 .menu span a:active {
-	background-color:#6f6559;
-	box-shadow: 1px 1px 5px  #fcf4e9;
-	color:#eee1cf;
+	background-color:#2a1914;
+	box-shadow:  #ecd1aa;
+	color:#ecd1aa;
 }
 
 /* Sidebar styles*/
 
-.sidebar { background-color: #332e29;}
-
-/*.sidebar a { color: #d7c7c3;}
-
-.sidebar a:hover { color: #f1f1f1;}
-
-.sidebar a:focus { color: #f1f1f1;}
-
-.sidebar a:active { color: #f1f1f1;}*/
+.sidebar { background-color: #2a1914;}
 
 .sidebar .menu span a {
-  background: #6f6559;
-  color: #eeae5c;
+  background: #653f26 ;
+  color: #f0be7e;
   box-shadow: none;
 }
 
 .sidebar .menu span a:hover {
-  color:#fcf4e9;
+  color:#ecd1aa;
   box-shadow: none;
 }
 
 .sidebar .menu span a:focus {
-   color:#fcf4e9;
+   color:#ecd1aa;
    box-shadow: none;
  }
 
 .sidebar .menu span a:active {
-  color:#fcf4e9;
+  color:#ecd1aa;
   box-shadow: none;
 }
 
 .sidebar .menu div {
   background-color: #f0be7e;
-  box-shadow: 1px 1px 6px #5d2534;
+  box-shadow: #5d2534;
 }
 
 .sidebar .menu span {
-  background: #6f6559;
+  background: #653f26;
   color: #5d2534;
 }
 
 /* content area styles*/
 
 #contentArea {
-	color: #eee1cf;
-	border-color: #474139;
-	background-color: #332e29;
-	box-shadow: 1px 1px 15px #474139;
+	color: #ecd1aa;
+	border-color: #653f26;
+	background-color: #392b23;
 }
 
 #contentArea h1{
-    color: #eeae5c;
+    color: #f0be7e;
 }
 
 #contentArea h2{
     color:#ec9c36;
 }
 #contentArea h3{
-    color: #c87c1a;
+    color: #ec9c36;
 }
 
-#contentArea p {color: #eee1cf;}
+#contentArea p {color: #ecd1aa;}
 
 #contentArea ul li {
-	  color: #eee1cf; 	/* set color of list item text */
+	  color: #ecd1aa; 	/* set color of list item text */
 	}
 
 #contentArea ul li::before {
 	  color: #ec9c36;    /* color of unicode character */
-
+}
 	/*Footer styles*/
 #footer-menu li a:link{
 	color:#ec9c36;
@@ -200,22 +231,22 @@ box-shadow: 1px 1px 5px #0f0d0c;
 
 /* Steem Profile */
 
-#profile-image img { box-shadow:1px 1px 10px #0f0d0c;}
+#profile-image img { box-shadow:#160a09;}
 
 #profile-banner {
-  background-color:#0f0d0c;
-	color: #211e1a;
-	box-shadow: 3px 3px 27px #0f0d0c;
+  background-color:#160a09;
+	color: #2a1914;
+	box-shadow: 3px 3px 27px #160a09;
 }
-#profile-banner h1 {color: #eee1cf;}
+#profile-banner h1 {color: #ecd1aa;}
 
-#profile-banner #profile-about {color: #eee1cf;}
+#profile-banner #profile-about {color: #ecd1aa;}
 
-#profile-banner #profile-info { color: #eee1cf;}
+#profile-banner #profile-info {color: #ecd1aa;}
 
-#profile-banner #profile-info a {color: #eee1cf;}
+#profile-banner #profile-info a {color: #ecd1aa;}
 
-#profile-banner #profile-info a:visited { color:#eee1cf;}
+#profile-banner #profile-info a:visited { color:#ecd1aa;}
 
 #profile-banner #profile-info a:active { color:#f0be7e;}
 
@@ -223,15 +254,17 @@ box-shadow: 1px 1px 5px #0f0d0c;
 
 /*Steem Post*/
 
-#contentArea #steem-post img { box-shadow:1px 1px 10px #0f0d0c;}
-
 /* Steem Posts */
 
 .steem_posts { border-bottom-color: #424242;}
 
 .steem_posts_meta { color: #f3f1ee;}
 
-div.steem_posts_meta { color: #eee1cf;}
+div.steem_posts_meta { color: #ecd1aa;}
+
+.steem_posts_preview {
+  background-color:#2a1914;
+}
 
 /*Social Menu*/
 
@@ -239,21 +272,18 @@ div.icon span a:link { color:#f0be7e;}
 
 div.icon span a:visited { color:#f0be7e;}
 
-div.icon span a:hover {
- color:#5b5349;
- box-shadow: 1px 1px 10px #f0be7e;
-}
-
-div.icon span a:focus { color:#5b5349;}
-
 div.icon span a:active { color:#f0be7e;}
+
+div.icon span img{
+   filter:hue-rotate(185deg) saturate(0.75);
+}
 
 
 /* Responsive Design */
 
 @media only screen and (max-width: 800px) {
 
-.sidebar { background-color: #0f0d0c;}
+.sidebar { background-color: #160a09;}
 
 .steem_posts_date { color:#f0be7e;}
 }

@@ -1,63 +1,107 @@
 /*
 offwhite palette:
-#beb19f (darkest)
-#ded1bf
-#eee1cf
-#fcf4e9 (lightest)
+latte:          #beb19f
+grey vanilla:   #ded1bf
+pink vanilla:   #eee1cf
+vanilla:        #fcf4e9
 
-font palette:
-#332 (darkest)
-#443
-#554
-#665
-#998 (lightest)
-
-
-link palette:
-#874 (darkest)
-#982
-#a93 (lightest)
+black:          #1e251d
+dark grey:      #28281e
+grey:           #3c3c32
+dark gold:      #504628
+light gold:     #96834c
 */
+
+/* Generic Classes */
+
+.boxshadowL{
+  box-shadow:3px 3px 25px #28281e ;
+}
+.boxshadowM{
+  box-shadow:2px 2px 5px #28281e ;
+}
+
+.boxshadowM img{
+  box-shadow:2px 2px 5px #28281e ;
+}
+
+.boxshadowM #profile-banner{
+  box-shadow:2px 2px 5px #28281e ;
+}
+.boxshadowM .menu span a{
+  box-shadow:2px 2px 5px #28281e ;
+}
+
+.boxshadowM .menu span a:hover{
+  box-shadow:2px 2px 5px #504628;
+}
+
+.boxshadowM .menu span a:focus{
+  box-shadow:2px 2px 5px #504628;
+}
+
+.boxshadowMlight{
+  box-shadow:2px 2px 5px #fcf4e9;
+}
+
+.boxshadowMlight:hover{
+  box-shadow:2px 2px 5px #504628;
+}
+
+.boxshadowMlight img:hover{
+  box-shadow:2px 2px 5px #fcf4e9;
+}
+
+.boxShadowS{
+  box-shadow: 1px 1px 10px #28281e ;
+}
+
+.boxShadowXS {
+  box-shadow:1px 1px 5px #28281e ;
+}
+
 
 body { background-color: #eee1cf;}
 
 h1 {
-  color:#332;
-  text-shadow: 1px 1px 5px #443,2px 2px 10px #998;
+  color:#1e251d ;
+  text-shadow: 1px 1px 5px #28281e ,2px 2px 10px  #96834c ;
 }
 
 h2 {
-  color:#332;
-	text-shadow: 1px 1px  #443;
+  color:#1e251d ;
+	text-shadow: 1px 1px  #28281e ;
 }
 
 h3 {
-  color:#332;
-	text-shadow: 1px 1px  #443;
+  color:#1e251d ;
+	text-shadow: 1px 1px  #28281e ;
 }
 
-p { color: #665;}
+p { color: #3c3c32 ;}
 
-a:link { color:#874;}
+a:link { color:#96834c;}
 
-a:visited { color:#763;}
+a:visited { color:#96834c;}
 
-a:hover { color:#541;}
+a:hover { color:#504628;}
 
-a:active, a:focus { color:#430;}
+a:active, a:focus { color:#504628;}
 
 img {
 	color: #0f0d0c;
 	border-color: #5b5349;
-	box-shadow: 3px 3px 27px #332;
+}
+
+hr {
+    color: rgba(222,209,191, 0.2)
 }
 
 /*Header styles*/
 
 header {
 	background-color: #ded1bf;
-	border-color: : #beb19f;
-	box-shadow: 1px 1px 6px #443;
+	border-color: #beb19f;
 }
 
 header.no_bg_img {
@@ -72,46 +116,39 @@ div#banner-gradient {
 
 button#openNav {
   background: #fcf4e9;
-  color: #332;
+  color: #1e251d ;
 }
 
 button#openNav:hover {
   background: #ded1bf;
-  box-shadow: 1px 1px 5px #fcf4e9;
 }
 
 button#closeNav {
   background: #ded1bf;
-	color: #998;
-  box-shadow: 2px 2px 5px #332;
+	color: #28281e ;
 }
 
 button#closeNav:hover {
 	background: #beb19f;
-	color: #554;
-  box-shadow: #554;
+	color: #28281e ;
 }
 
 /* Menu Styles*/
 
 .menu span a {
   background-color:#fcf4e9;
-  box-shadow: 1px 1px 5px #332;
 }
 
 .menu span a:hover {
 	background-color:#beb19f;
-	box-shadow: 1px 1px 5px #332;
 }
 
 .menu span a:focus {
 	background-color:#beb19f;
-	box-shadow: 1px 1px 5px #332;
 }
 
 .menu span a:active {
 	background-color:#ded1bf;
-	box-shadow: 1px 1px 5px #332;
 	color:#eee1cf;
 }
 
@@ -140,60 +177,61 @@ button#closeNav:hover {
   /* content area styles*/
 
 #contentArea {
-	color: #665;
-	border-color: #332;
+	color: #3c3c32 ;
+	border-color: #1e251d;
 	background-color: #fcf4e9;
-	box-shadow: 1px 1px 15px #332;
 }
 
-#contentArea h1 { color: #332;}
+#contentArea h1 {
+color: #96834c;
+text-shadow: 1px 1px 5px #beb19f;
+}
 
-#contentArea h2 { color:#443;}
+#contentArea h2 { color:#504628 ;}
 
-#contentArea h3 { color: #554;}
+#contentArea h3 { color: #504628 ;}
 
-#contentArea p {color: #665;}
+#contentArea p {color: #3c3c32 ;}
 
 #contentArea ul li {
-  color: #332; 	/* set color of list item text */
+  color: #1e251d ; 	/* set color of list item text */
 }
 
 #contentArea ul li::before {
-  color: #443;   /* color of unicode character */
+  color: #28281e ;   /* color of unicode character */
 }
 
 /* Footer Styles*/
 
-#footer-menu li a:link { color:#ec9c36;}
+#footer-menu li a:link { color:#504628;}
 
 /* Steem Content Modules*/
 
 /* Steem Profile */
 
 #profile-banner {
-	background-color: #665;
+	background-color: #3c3c32 ;
 	color: #beb19f;
-	box-shadow: 3px 3px 27px #332;
 }
 
 #profile-banner h1 { color: #eee1cf;}
 
-#profile-about { color: #332;}
+#profile-about { color: #1e251d ;}
 
-#profile-info { color: #332;}
+#profile-info { color: #1e251d ;}
 
-#profile-info a { color: #874;}
+#profile-info a { color: #504628;}
 
-#profile-info a:visited { color:#874;}
+#profile-info a:visited { color:#504628;}
 
 #profile-info a:hover {
- color: #a93;
- text-shadow: 1px 1px 10px #998;
+ color: #1e251d ;
+ text-shadow: 1px 1px 10px #28281e ;
 }
 
 #profile-info a:active {
- color:  #a93;
- text-shadow: 1px 1px 10px #998;
+ color:  #1e251d ;
+ text-shadow: 1px 1px 10px #28281e ;
 }
 
 #profile-banner #profile-about {color: #eee1cf;}
@@ -205,12 +243,12 @@ button#closeNav:hover {
 #profile-banner #profile-info a:visited {color:#eee1cf;}
 
 #profile-banner #profile-info a:hover {
-	color:#f0be7e;
+	color:#96834c;
   text-shadow: none;
 }
 
 #profile-banner #profile-info a:active {
-	color:#f0be7e;
+	color:#96834c;
   text-shadow: none;
 }
 
@@ -218,30 +256,42 @@ button#closeNav:hover {
 
 /* Steem Posts */
 
-.steem_posts {border-bottom-color: #332;}
+.steem_posts {border-bottom-color: #1e251d ;}
 
-.steem_posts_meta {color: #998;}
+.steem_posts_meta {color: #28281e ;}
 
-div.steem_posts_meta {color: #998;}
+div.steem_posts_meta {color: #28281e ;}
+
+.steem_posts_preview {
+  background-color: #ded1bf;
+}
 
 
 /*Social Menu*/
 
-div.icon span a:link { color:#332;}
+div.icon span a:link { color:#1e251d ;}
 
-div.icon span a:visited { color:#332;}
+div.icon span a:visited { color:#1e251d ;}
 
 div.icon span a:hover {
  color:#beb19f;
- box-shadow: 1px 1px 10px #332;
 }
 
 div.icon span a:focus { color:#beb19f;}
 
-div.icon span a:active { color:#332;}
+div.icon span a:active { color:#1e251d ;}
 
 div.icon span a img{
   box-shadow: none;
 }
+
+div.icon span img{
+   filter:sepia(100%) brightness(80%);
+}
+
+div.icon span img:hover{
+   filter:sepia(50%) brightness(90%);
+}
+
 
 /* Responsive Design */

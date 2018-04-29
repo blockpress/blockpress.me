@@ -1,5 +1,5 @@
 /* Palette:
-plum:  #5d2534
+plum:  #5d2534   RGB  93, 37, 52
 red: #bd0e3b
 purple: #a06775
 pink: #d21f65;
@@ -7,7 +7,54 @@ brown:  #9d8c8e
 cream: #d7c7c3
 white: #eadfdc
 */
+/* Generic Classes */
 
+.boxshadowL{
+  box-shadow:3px 3px 25px #5d2534;
+}
+
+.boxshadowM{
+  box-shadow:2px 2px 5px #5d2534;
+}
+.boxshadowM img{
+  box-shadow:2px 2px 5px #5d2534;
+}
+
+.boxshadowM #profile-banner{
+  box-shadow:2px 2px 5px #a06775 ;
+}
+.boxshadowM .menu span a{
+  box-shadow:2px 2px 5px #a06775 ;
+}
+
+.boxshadowM .menu span a:hover{
+  box-shadow:2px 2px 5px #d7c7c3;
+}
+
+.boxshadowM .menu span a:focus{
+  box-shadow:2px 2px 5px #d7c7c3;
+}
+
+
+.boxshadowMlight{
+  box-shadow:2px 2px 5px #d7c7c3;
+}
+
+.boxshadowMlight:hover{
+  box-shadow:2px 2px 5px #d21f65;
+}
+
+.boxshadowMlight img:hover{
+  box-shadow:2px 2px 5px #d7c7c3;
+}
+
+.boxShadowS{
+  box-shadow: 1px 1px 10px #5d2534;
+}
+
+.boxShadowXS {
+  box-shadow:1px 1px 5px #5d2534;
+}
 
 body {
   background-color: #d7c7c3;
@@ -42,13 +89,16 @@ a:active { color: #a06775;}
 
 img { color: #d7c7c3;}
 
+hr {
+    color: rgba(93, 37, 52, 0.2)
+}
+
 
 /*Header styles*/
 
 header {
 	background-color:#5d2534;
 	border-color:#eadfdc;
-	box-shadow: 1px 1px 6px #5d2534;
 }
 
 header.no_bg_img {
@@ -56,7 +106,7 @@ header.no_bg_img {
 }
 
 div#banner-gradient {
-	background: linear-gradient(to right, rgba(234,223,220,0), rgba( 138,12,52,1));
+	background: linear-gradient(to right, rgba(93, 37, 52,0), rgba( 138,12,52,1));
 }
 
 /* Button styles */
@@ -71,7 +121,6 @@ button#openNav:hover { background: #bd0e3b;}
 button#closeNav {
   background:  #a06775;
 	color: #9d8c8e;
-  box-shadow: 2px 2px 5px #413;
 }
 
 button#closeNav:hover {
@@ -89,17 +138,17 @@ button#closeNav:hover {
 
 .menu span a:hover {
   color:#bd0e3b;
-  box-shadow: 1px 1px 5px #eadfdc;
+  box-shadow: #eadfdc;
 }
 
 .menu span a:focus {
   color:#bd0e3b;
-  box-shadow: 1px 1px 5px #eadfdc;
+  box-shadow: #eadfdc;
 }
 
 .menu span a:active {
   color:#bd0e3b;
-  box-shadow: 1px 1px 5px #eadfdc;
+  box-shadow: #eadfdc;
 }
 
 /* Sidebar styles*/
@@ -123,25 +172,19 @@ button#closeNav:hover {
 .sidebar .menu span a:hover {
   background: #9d8c8e;
   color:#bd0e3b;
-  box-shadow: none;
 }
 
 .sidebar .menu span a:focus {
   background: #9d8c8e;
    color:#bd0e3b;
-   box-shadow: none;
  }
 
 .sidebar .menu span a:active {
   background: #9d8c8e;
   color:#bd0e3b;
-  box-shadow: none;
 }
 
-.sidebar .menu div {
-  background-color: #d7c7c3;
-  box-shadow: 1px 1px 6px #5d2534;
-}
+.sidebar .menu div { background-color: #d7c7c3; }
 
 .sidebar .menu span {
   background: #9d8c8e;
@@ -153,7 +196,6 @@ button#closeNav:hover {
 #contentArea {
   background-color:  #9d8c8e;
   border-color: #5d2534;
-  box-shadow: 1px 1px 6px #5d2534;
 }
 
 #contentArea h1 {
@@ -187,13 +229,10 @@ button#closeNav:hover {
 
 /* Steem Profile */
 
-#profile-image img { box-shadow:1px 1px 10px #5d2534;}
-
-
 #profile-banner {
 	background-color:#5d2534;
 	color: #eadfdc;
-	box-shadow: 3px 3px 27px #5d2534;
+	box-shadow: #5d2534;
 }
 
 #profile-banner h1 {color: #eadfdc;}
@@ -218,10 +257,17 @@ button#closeNav:hover {
 
 /*Steem Post*/
 
-#contentArea #steem-post img { box-shadow:1px 1px 10px# 5d2534;}
-
 /* Steem Posts */
 
+.steem_posts_preview {
+  background-color:#d7c7c3;
+}
+
+/* Steem Posts comments*/
+
+#steem-post-comments {
+border-color:#5d2534;
+}
 /*Social Menu*/
 
 div.icon span a:link { color:#d7c7c3;}
@@ -230,12 +276,16 @@ div.icon span a:visited { color:#d7c7c3;}
 
 div.icon span a:hover {
  color:#a06775;
- box-shadow: 1px 1px 10px #d7c7c3;
+ box-shadow: #d7c7c3;
 }
 
 div.icon span a:focus { color:#a06775;}
 
 div.icon span a:active { color:#d7c7c3;}
+
+div.icon span img{
+   filter:hue-rotate(90deg);
+}
 
 
 /* Responsive Design */

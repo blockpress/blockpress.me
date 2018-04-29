@@ -134,10 +134,8 @@ function displaySteemPosts(err, posts) {
 		// Append content to contentArea
 		$('#contentArea').append(content);
 	}
-<<<<<<< HEAD
-=======
-	// Append content to contentArea
-	$('#contentArea').append(content);
+
+	// Add onload event to thumbnails...
 	$('.steem_posts_thumbnail img').on('load',function (e){
 		thumbLoaded(this.id);
 	});
@@ -146,7 +144,6 @@ function displaySteemPosts(err, posts) {
 function findImg(html_string){
 	var firstimg = $(html_string).find("img:first").attr("src");
 	return firstimg;
->>>>>>> 1447d46dd7ef451668029ec607ea0e964a355785
 }
 
 function getSteemPosts(usernames,tags,count,lastPermlink) {

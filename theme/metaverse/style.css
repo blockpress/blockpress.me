@@ -1,19 +1,67 @@
+/*Generic Classes*/
+.no_thumb .steem_posts_thumbnail{
+	display: none;
+}
+
+.has_thumb .steem_posts_thumbnail{
+border: 1px solid;
+display:inline-block;
+padding-top: 20%;
+position: relative;
+width:30%;
+overflow: hidden;
+vertical-align: middle;
+margin-right: 0.5em;
+margin-bottom: 0.5em;
+border-radius:10px;
+}
+
+.has_thumb .steem_posts_thumbnail img{
+vertical-align: middle;
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+max-width:100%;
+min-height:100%;
+}
+.no_thumb .steem_posts_preview{
+	width:100%;
+	padding-top: 20%;
+	position: relative;
+}
+
+.no_thumb .steem_posts_preview span{
+	position:absolute;
+	top:0;
+}
+
+.has_thumb .steem_posts_preview{
+	width:66%;
+	max-height:300px;
+	padding-top: 20%;
+	position: relative;
+}
+
+.has_thumb .steem_posts_preview span{
+	vertical-align: middle;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	max-width:100%;
+	min-height:100%;
+}
+
 body{
 	width: 100%;
 	margin:0;
-	text-align:justified;
+	text-align:justify;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1.3em;
 	padding: 0;
-}
-
-header{
-	padding: 0,3em;
-	border-width: 1px;
-	border-style: solid;
-	border-right: 0;
-	border-left: 0;
-	margin-bottom: 1em;
 }
 
 h1{
@@ -36,6 +84,46 @@ h2{
 		padding-bottom: 0.5em;
 }
 
+p{
+	margin-right:auto;
+	margin-left:auto;
+}
+
+img{
+	max-width: 70%;
+	margin-right:auto;
+	margin-left:auto;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	box-shadow: 3px 3px 27px;
+}
+
+a:link {
+  text-decoration: none;
+	outline:0;
+}
+
+hr {
+    border-width: 1px;
+}
+
+/* Header styles */
+
+header{
+	padding:0.3em;
+	border-width: 1px;
+	border-style: solid;
+	border-right: 0;
+	border-left: 0;
+	margin-bottom: 1em;
+	box-shadow: 1px 1px 6px;
+}
+
+/* Button styles */
+
+/* Menu Styles*/
+
 .menu div{
 	text-align: center;
   padding-left: 0;
@@ -56,28 +144,14 @@ h2{
 	border-radius: 5px;
 }
 
-p{
-	margin-right:auto;
-	margin-left:auto;
-}
-
-a:link {
-  text-decoration: none;
-	outline:0;
-}
-img{
-	max-width: 70%;
-	margin-right:auto;
-	margin-left:auto;
-	border-radius: 10px;
-	border-width: 1px;
-	border-style: solid;
-}
-
 .transparent, .transparent div{
 	background:none !important;
+	box-shadow: none !important;
 }
 
+/* Sidebar styles*/
+
+/* content area styles*/
 
 #contentArea {
 	width: 70%;
@@ -88,6 +162,7 @@ img{
 	border-style: solid;
 	border-radius: 6px;
 	padding: 1em;
+
 }
 
 #contentArea h1{
@@ -128,7 +203,6 @@ img{
 }
 
 	/* Change bullet color of list item by replacing it with CSS*/
-
 	#contentArea ul li {
 		list-style: none;
 		font-size: 1em;
@@ -136,6 +210,12 @@ img{
 		margin-left: 2em;
 		padding: 0.5em;
 	}
+
+	#contentArea ul li p {
+    padding: 0;
+    margin: 0;
+		display:inline-block;
+}
 
 	#contentArea ul li::before {
  		content: "\25CF"; /* Unicode of character to precede the list item */
@@ -157,7 +237,6 @@ img{
 	#contentArea img{
 		display: block;
     margin: auto;
-    max-width: 70%;
 	}
 
 	/*Footer styles*/
@@ -220,6 +299,7 @@ footer{
 	width: 100%;
 	max-width: 100%;
 	border-radius: 50%;
+	box-shadow: none;
 }
 #profile-about {
 	font-size: 0.7em;
@@ -258,7 +338,12 @@ footer{
 	max-width: 100%;
 	display: inline-block;
 	vertical-align: top;
+	overflow:hidden;
+	max-height: 30%;
+	border-radius: 5px;
+	font-size: 0.75em;
 }
+
 .steem_posts_meta {
 	font-size: 0.7em;
 	font-style: italic;
@@ -276,6 +361,7 @@ div.steem_posts_meta{
 	font-style: italic;
 }
 /* steem post comments */
+
 #steem-post-comments {
 	border-top: 1px solid #000;
 	padding: 0.7em;
@@ -291,7 +377,15 @@ div.steem_posts_meta{
 }
 #steem-post-comments div.steem_comment .steem_comment_meta {
     font-size: 0.6em;
+		padding:0.5em;
 }
+
+#steem-post-comments img{
+	box-shadow:none ;
+	padding:0.5em;
+	border:none;
+}
+
 .steem-comments {
     padding-left: 1px;
 		padding-right:0;
@@ -303,6 +397,11 @@ div.steem_posts_meta{
 		padding-right:0;
     width: 100%;
 }
+/* Steem Posts */
+
+/*Social Menu*/
+
+/* Responsive Design */
 
 @media only screen and (max-width: 800px) {
 
@@ -327,10 +426,6 @@ div.steem_posts_meta{
 		margin-left:0;
 		padding-right: 1em;
 		padding-left: 1em;
-	}
-
-	#contentArea img.steemposts_thumbnail{
-		max-width: 100%;
 	}
 
 	.menu span{
@@ -363,6 +458,7 @@ div.steem_posts_meta{
 	margin-right: auto;
 	margin-left: auto;
 }
+
 #profile-banner h1{
 	position: relative;
 	top:-150px;
@@ -376,21 +472,33 @@ div.steem_posts_meta{
 	border-radius: 0;
 	max-height: none;
 	margin-bottom: 0.5em;
+	max-width: 100%;
 }
+
 .steem_posts{
 	padding: 0em;
 }
-.steem_posts_preview {
-	margin-left: 1em;
-	font-size: 1em;
-	padding-bottom: 1em;
-}
+
+
 #contentArea .steem_posts h2{
 	font-size: 1.25em;
-	width: 85%;
+	width: 100%;
+	text-align: center;
 }
 .steem_posts_meta{
-margin-left: 1.5em;
+width: 100%;
+text-align: center;
+}
+
+.has_thumb .steem_posts_thumbnail{
+display:block;
+width:30%;
+margin-left:auto;
+margin-right: auto;
+}
+
+.has_thumb .steem_posts_preview{
+	display: none;
 }
 
 /* Steem Post*/
@@ -403,8 +511,7 @@ margin-left: 1.5em;
 	width: 85%;
 }
 
-#contentArea #steem-post img{
-width: 100%;
+#contentArea #steem-post img{comment
 max-width: 100%;
 border-radius: 0;
 padding: 0;
@@ -429,7 +536,13 @@ border: none;
 	margin-left: 1em;
 	margin-right: 0.5em;
 }
-
+#steem-post-comments img{
+	padding:0;
+	max-width: 100%;
+	border-radius: 0;
+	margin: 0;
+	border: none;
+}
 }
 @media only screen and (max-width: 400px) {
 	.menu span{

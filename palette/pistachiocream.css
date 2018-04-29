@@ -1,0 +1,306 @@
+/*
+cream:      #e8f0d2   RGB 232, 240, 210
+lime:       #70c535   RGB 158, 197, 53
+pistachio:  #d2f0da   RGB 210, 240, 218
+mint:       #50ce8b   RGB 80, 206, 139
+dark mint:  #0c6244   RGB 12, 98, 68
+sea:        #38ab8d    RGB 56, 171, 141
+*/
+
+/* Generic Classes */
+
+.boxshadowL{
+  box-shadow:3px 3px 25px #0c6244;
+}
+.boxshadowM{
+  box-shadow:2px 2px 5px #0c6244;
+}
+
+.boxshadowM img{
+  box-shadow:2px 2px 5px #0c6244;
+}
+
+.boxshadowM #profile-banner{
+  box-shadow:2px 2px 5px #0c6244;
+}
+
+.boxshadowM .menu span a{
+  box-shadow:2px 2px 5px #50ce8b;
+}
+
+.boxshadowM .menu span a:hover{
+  box-shadow:2px 2px 5px #d2f0da;
+}
+
+.boxshadowM .menu span a:focus{
+  box-shadow:2px 2px 5px #d2f0da;
+}
+
+.boxshadowMlight{
+  box-shadow:2px 2px 5px #d2f0da;
+}
+
+.boxshadowMlight:hover{
+  box-shadow:2px 2px 5px #e8f0d2;
+}
+
+.boxshadowMlight img:hover{
+  box-shadow:2px 2px 5px #d2f0da;
+}
+
+.boxShadowS{
+  box-shadow: 1px 1px 10px #0c6244;
+}
+
+.boxShadowXS {
+  box-shadow:1px 1px 5px #0c6244;
+}
+
+body {
+  background-color: #e8f0d2;
+	color: #0c6244;
+}
+
+h1 {
+  color:#d2f0da;
+  text-shadow: 1px 1px #0c6244, 1px 1px 5px #e8f0d2;
+  }
+
+h2 {
+  color:#d2f0da;
+  text-shadow: 1px 1px #0c6244, 1px 1px 5px #e8f0d2;
+}
+
+h3 {
+  color:#d2f0da;
+  text-shadow: 1px 1px #0c6244, 1px 1px 5px #e8f0d2;
+}
+
+p { color: #0c6244;}
+
+
+a { color: #50ce8b;}
+
+a:hover { color:  #70c535 ;}
+
+a:focus { color:  #70c535 ;}
+
+a:active { color: #50ce8b}
+
+img { color: #e8f0d2;}
+
+hr {
+    color: rgba(56, 171, 141, 0.2)
+}
+
+
+/*Header styles*/
+
+header {
+	background-color:#0c6244;
+	border-color: #0c6244;
+	box-shadow: #0c6244;
+}
+
+header.no_bg_img {
+  background: linear-gradient( #38ab8d ,#0c6244);
+}
+
+div#banner-gradient {
+	background: linear-gradient(to right, rgba(56, 171, 141,0), rgba(12, 98, 68,1));
+}
+
+/* Button styles */
+
+button#openNav {
+  background: #0c6244;
+  color: #e8f0d2;
+}
+
+button#openNav:hover { background:  #50ce8b ;}
+
+button#closeNav {
+  background:  #50ce8b;
+	color: #d2f0da;
+  box-shadow: #413;
+}
+
+button#closeNav:hover {
+	box-shadow:  #967;
+	background: #e8f0d2;
+	color:  #38ab8d ;
+}
+
+/* Menu Styles*/
+
+.menu span a {
+  background: #d2f0da;
+  color: #0c6244;
+}
+
+.menu span a:hover {
+  color: #70c535 ;
+  box-shadow: #0c6244;
+}
+
+.menu span a:focus {
+  color: #70c535 ;
+  box-shadow: #0c6244;
+}
+
+.menu span a:active {
+  color: #50ce8b ;
+  box-shadow: #0c6244;
+}
+.menu div {background: #d2f0da;}
+
+/* Sidebar styles*/
+
+.sidebar { background-color:  #38ab8d ;}
+
+.sidebar a { color: #e8f0d2;}
+
+.sidebar a:hover { color: #70c535;}
+
+.sidebar a:focus { color: #70c535;}
+
+.sidebar a:active { color: #e8f0d2;}
+
+.sidebar .menu span a {
+  background: #d2f0da;
+  color: #0c6244;
+  box-shadow: none;
+}
+
+.sidebar .menu span a:hover {
+  background: #d2f0da;
+  color: #70c535 ;
+  box-shadow: none;
+}
+
+.sidebar .menu span a:focus {
+  background: #d2f0da;
+   color: #70c535 ;
+   box-shadow: none;
+ }
+
+.sidebar .menu span a:active {
+  background: #d2f0da;
+  color: #50ce8b ;
+  box-shadow: none;
+}
+
+.sidebar .menu div {
+  background-color: #0c6244;
+  box-shadow: #0c6244;
+}
+
+.sidebar .menu span {
+  background: #d2f0da;
+  color: #0c6244;
+}
+
+/* Content Area Styles */
+
+#contentArea {
+  background-color:  #d2f0da;
+  border-color: #0c6244;
+  box-shadow: #0c6244;
+}
+
+#contentArea h1 {
+  color:#50ce8b;
+  text-shadow: 1px 1px #0c6244,1px 1px 5px #e8f0d2;
+}
+
+#contentArea h2 {
+  color:#50ce8b;
+  text-shadow: 1px 1px #0c6244,1px 1px 5px #e8f0d2;
+}
+
+#contentArea h3 {
+  color:#50ce8b;
+  text-shadow: 1px 1px #0c6244,1px 1px 5px #e8f0d2;
+}
+
+#contentArea p { color:#0c6244;}
+
+#contentArea ul li {
+  color: #0c6244; 	/* set color of list item text */
+ }
+
+ #contentArea ul li::before {
+   color: #50ce8b;   /* color of unicode character */
+ }
+
+/* Footer styles*/
+
+/* Steem Content Modules */
+
+/* Steem Profile */
+
+#profile-image img { box-shadow:#0c6244;}
+
+
+#profile-banner {
+	background-color:#0c6244;
+	color:  #0c6244;
+	box-shadow: #0c6244;
+}
+
+#profile-banner h1 {color:  #0c6244;}
+
+#profile-banner #profile-about {color:  #d2f0da;}
+
+#profile-banner #profile-info {color:  #d2f0da;}
+
+#profile-banner #profile-info a {color: #50ce8b ;}
+
+#profile-banner #profile-info a:visited {color:#50ce8b ;}
+
+#profile-banner #profile-info a:hover {
+	color:  #70c535;
+  text-shadow: 1px 1px 10px #e8f0d2;
+}
+
+#profile-banner #profile-info a:active {
+	color:  #0c6244;
+  text-shadow: 1px 1px 10px #e8f0d2;
+}
+
+/*Steem Post*/
+
+/* Steem Posts */
+
+.steem_posts_preview {
+  background-color:#e8f0d2 ;
+}
+
+/*Social Menu*/
+
+div.icon span a:link { color:#e8f0d2;}
+
+div.icon span a:visited { color:#e8f0d2;}
+
+div.icon span a:hover {
+ color:#70c535
+ box-shadow: #e8f0d2;
+}
+
+div.icon span a:focus { color:#70c535}
+
+div.icon span a:active { color:#e8f0d2;}
+
+div.icon span img{
+   filter:hue-rotate(320deg) contrast(180%) brightness(110%);
+}
+
+
+/* Responsive Design */
+
+@media only screen and (max-width: 800px) {
+
+.sidebar { background-color: #0c6244;}
+
+.steem_posts_date { color:#e8f0d2;}
+}

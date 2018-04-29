@@ -18,7 +18,6 @@ function steem_menuitem(args) {
 	var args_json = JSON.stringify(args);
 	// get json object ready for injecting into html href...
 	args_json = args_json.replace(/"/g,'&quot;');
-	//console.log(args_json);
 	return "javascript:steem_load('"+args_json+"');";
 }
 
@@ -27,11 +26,7 @@ function steem_display(content) {
 }
 function steem_load(args) {
 	steem_args = args;
-	//console.log("Inside steem_load.");
-//console.log('args: '+args);
 	args = JSON.parse(args.replace(/&quot;/g,'"'));
-//console.log('args JSON parsed: '+args);
-	//console.log(args.show);
 
 	switch(args.show) {
 		case "profile":
@@ -60,7 +55,7 @@ function steemPostsDisplayThumbnail(postid){
 function displaySteemPosts(err, posts) {
 	var template = steem_posts_template;
 	// Save posts in global variable
-	//console.log(posts);
+	console.log(posts);
 	steem_posts = posts;
 
 	var args = steem_args;
@@ -71,6 +66,9 @@ function displaySteemPosts(err, posts) {
 
 	// Loop through posts, populate the template and append it to contentArea
 	var post, postsLength = steem_posts.length;
+	if(postsLength == 0) {
+		loop_end = true;
+	}
 	for (var i = 0; i < postsLength && !loop_end; i++) {
 		post_obj = steem_posts[i];
 		json_metadata = JSON.parse(post_obj.json_metadata);
@@ -86,11 +84,9 @@ function displaySteemPosts(err, posts) {
 		else if(post_tags.indexOf(steem_tags) !== -1) show_post = true;
 
 		if(steem_posts_displayed.indexOf(post_obj.permlink) !== -1) {
-			//loop_end = true;
 			show_post = false;
 		} else {
 			last_permlink = post_obj.permlink;
-	//console.log("Last permlink: "+last_permlink);
 		}
 
 		if(show_post) {
@@ -126,30 +122,22 @@ function displaySteemPosts(err, posts) {
 		}
 	}
 	if(display_count < steem_posts_count && !loop_end) {
-//console.log("username: "+steem_username);
-console.log("steem_posts_count: "+steem_posts_count);
-//console.log("last_permlink: "+last_permlink);
 		getSteemPosts(steem_username,steem_tags,steem_posts_count,last_permlink);
 	}
-	if(loop_end) console.log('Blocked infinite loop. Quitting...');
-	if(display_count >= steem_posts_count) {
+	//if(loop_end) console.log('Blocked infinite loop. Quitting...');
+	//if(display_count >= steem_posts_count) {
 		//console.log('Reached post limit. Quitting...');
 		//console.log(steem_posts_displayed);
-	}
-	console.log('before if');
+	//}
 	if ($(".profile-posts")[0]){
-	console.log('inside if');
 		// Append content to contentArea
 		$('.profile-posts').append(content);
 	} else {
-	console.log('inside else');
 		// Append content to contentArea
 		$('#contentArea').append(content);
 	}
-
 }
 function getSteemPosts(usernames,tags,count,lastPermlink) {
-//console.log('getSteemPosts usernames: '+usernames+' tags: '+tags+' count: '+count+' lastPermlink: '+lastPermlink);
 	if (typeof count === "undefined") count=10; // Default to 10 if no count specified.
 	if (typeof lastPermlink === "undefined") lastPermlink=''; // Default to empty string if no permlink specified.
 
@@ -160,6 +148,18 @@ function getSteemPosts(usernames,tags,count,lastPermlink) {
 	steem.api.setOptions({ url: 'https://api.steemit.com' });
 	steem.api.getDiscussionsByAuthorBeforeDate(usernames, lastPermlink, '2100-01-01T00:00:00', count,	function(err, result){displaySteemPosts(err, result)});
 	//displaySteemPosts(['AAA']);
+}
+function tagSelected(username,tag,count) {
+	// Tag is selected, so clear currently displayed posts...
+	if ($(".profile-posts")[0]){
+		// Clear posts area of profile page
+		$('.profile-posts').html('');
+	} else {
+		// Clear contentArea
+		$('#contentArea').html('');
+	}
+	steem_posts_displayed = new Array();
+	getSteemPosts(username,tag,count,'');
 }
 function displaySteemComment(comment_obj,target) {
 	var converter = new showdown.Converter();
@@ -236,6 +236,12 @@ function simpleReputation(raw_reputation) {
 	return simple_reputation;
 }
 
+function addLinksToTags(text,author) {
+	if (typeof author === "undefined") author=''; // Default to all users if no user specified.
+	text = text.replace(/#(\S+)/g,'<a href="javascript:tagSelected(\''+author+'\',\'$1\',25,\'\');" title="View posts tagged with #$1">#$1</a>');
+	return text;
+}
+
 function displaySteemProfile(err, profile) {
 	// Save profile in global variable
 	steem_profile = profile[0];
@@ -260,7 +266,7 @@ function displaySteemProfile(err, profile) {
 	$("#profile-name").html(metadata.profile.name);
 	var reputation = simpleReputation(steem_profile.reputation);
 	$("#profile-reputation").html(Math.round(reputation));
-	$("#profile-about").html(metadata.profile.about);
+	$("#profile-about").html(addLinksToTags(metadata.profile.about,steem_profile.name));
 	$("#profile-location").html(metadata.profile.location);
 	$("#profile-website").html('<a href="'+metadata.profile.website+'">'+metadata.profile.website+'</a>');
 

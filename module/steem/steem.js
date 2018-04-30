@@ -158,7 +158,7 @@ function getSteemPosts(usernames,tags,count,lastPermlink) {
 	steem.api.getDiscussionsByAuthorBeforeDate(usernames, lastPermlink, '2100-01-01T00:00:00', count,	function(err, result){displaySteemPosts(err, result)});
 	//displaySteemPosts(['AAA']);
 }
-<<<<<<< HEAD
+
 function tagSelected(username,tag,count) {
 	// Tag is selected, so clear currently displayed posts...
 	if ($(".profile-posts")[0]){
@@ -171,7 +171,6 @@ function tagSelected(username,tag,count) {
 	steem_posts_displayed = new Array();
 	getSteemPosts(username,tag,count,'');
 }
-=======
 
 function thumbLoaded(thumb_id){
 	var Permlink=thumb_id.substring(5);
@@ -180,8 +179,6 @@ function thumbLoaded(thumb_id){
 	$("#"+divID).addClass("has_thumb");
 }
 
-
->>>>>>> 1447d46dd7ef451668029ec607ea0e964a355785
 function displaySteemComment(comment_obj,target) {
 	var converter = new showdown.Converter();
 	author = comment_obj.author;

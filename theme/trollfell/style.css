@@ -368,6 +368,42 @@ button#closeNav{
 		box-shadow: none !important;
 	}
 
+	/* Steemit board badges (posts, comments, upvotes, rewards, replies, upvoted)*/
+	img.badgeTiny {
+		width: 50px;
+		height: 60px;
+	}
+	img.badgeSmall {
+		width: 60px;
+		height: 72px;
+	}
+	img.badgeMedium {
+		width: 75px;
+		height: 90px;
+	}
+	img.badgeLarge {
+		width: 90px;
+		height: 108px;
+	}
+
+	/* Square steemitboard badges (level, birthdays, steemfest, witness, daily, weekly and monthly author) */
+	img.badgeSqTiny {
+		width: 60px;
+		height: 60px;
+	}
+	img.badgeSqSmall {
+		width: 70px;
+		height: 70px;
+	}
+	img.badgeSqMedium {
+		width: 80px;
+		height: 80px;
+	}
+	img.badgeSqLarge {
+		width: 100px;
+		height: 100px;
+	}
+
 	/*Steem Post*/
 
 	 #steem-post img{
@@ -452,43 +488,78 @@ div.steem_posts_meta{
 
 /* Responsive Design */
 
-	@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
 
-		.sidebar {
-		    height: 100%;
-		    padding-top: 20px;
-				text-align: center;
-				display:block;
-				position:static;
-				width:100%;
-		}
+	.sidebar {
+	    height: 100%;
+	    padding-top: 20px;
+			text-align: center;
+			display:block;
+			position:static;
+			width:100%;
+	}
 
-		button#closeNav, button#openNav{ display: none;}
+	button#closeNav, button#openNav{ display: none;}
 
-		#contentArea{
-			width: 100% !important;
-			margin-left: 0;
-			margin-right: 0;
-			padding: 0;
-			padding-bottom: 1em;
-			border-left: none;
-			border-right: none;
-		}
+	#contentArea{
+		width: 100% !important;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+		padding-bottom: 1em;
+		border-left: none;
+		border-right: none;
+	}
 
  .steem_posts_author, #steem-post-comments {
 			margin-left: 1em;
 			display: block;
-		}
+	}
 
-.steem_posts_date{
-	margin-left: 1em;
-	display:block;
-	font-size: 0.8em;
-}
+	.steem_posts_date{
+		margin-left: 1em;
+		display:block;
+		font-size: 0.8em;
+	}
 
-#leftpad{
-	padding-left:0 !important;
-	margin: 0;
-}
+	#leftpad{
+		padding-left:0 !important;
+		margin: 0;
+	}
 
-}
+	/* Steemit board badges (posts, comments, upvotes, rewards, replies, upvoted)*/
+	img.badgeTiny {
+		width: 35px;
+		height: 42px;
+	}
+	img.badgeSmall {
+		width: 45px;
+		height: 54px;
+	}
+	img.badgeMedium {
+		width: 50px;
+		height: 60px;
+	}
+	img.badgeLarge {
+		width: 60px;
+		height: 72px;
+	}
+
+	/* Square steemitboard badges (level, birthdays, steemfest, witness, daily, weekly and monthly author) */
+	img.badgeSqTiny {
+		width: 40px;
+		height: 40px;
+	}
+	img.badgeSqSmall {
+		width: 50px;
+		height: 50px;
+	}
+	img.badgeSqMedium {
+		width: 60px;
+		height: 60px;
+	}
+	img.badgeSqLarge {
+		width: 70px;
+		height: 70px;
+	}
+} /* end of media max-width 800px */

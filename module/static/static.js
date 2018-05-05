@@ -10,5 +10,8 @@ function static_load(file) {
   $.ajax({
       type: 'GET',
       url: file
-  }).done(static_display)
-};
+  }).done(static_display);
+}
+function static_permlink(permlink) {
+  static_load(permlink);
+}

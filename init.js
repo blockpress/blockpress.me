@@ -95,8 +95,6 @@ function parseThemeHTML(themeHTML) {
   document.title = config.sitetitle;
 
   parseMenu();
-	parseFirstPage();
-	parseSocialMenu();
 }
 
 // Create the Menu
@@ -127,22 +125,35 @@ function parseMenu() {
 
 		list.append('<span><a href="'+href+'">'+label+'</a></span>');
 	}
+
+	parseFirstPage();
+	parseSocialMenu();
 }
 
 /*** Functions for loading the default content ***/
 function parseFirstPage() {
-	var type, args;
-	if('firstpage' in config) {
-		type = config.firstpage.type;
-		args = config.firstpage.args;
-	} else {
-		var menuItem = getFirstContentModuleFromMenu(content.menu);
-		type = menuItem.type;
-		args = menuItem.args;
-	}
-	load_funct = type+"_load";
+  var load_funct, type, args;
+  let params = (new URL(document.location)).searchParams;
 
-	window[load_funct](args);
+  if(params.has("p")) {
+    let p = params.get("p").split("/");
+    type = p.shift();
+    args = p;
+  	load_funct = type+"_permlink";
+  } else {
+    if('firstpage' in config) {
+  		type = config.firstpage.type;
+  		args = config.firstpage.args;
+  	} else {
+  		var menuItem = getFirstContentModuleFromMenu(content.menu);
+  		type = menuItem.type;
+  		args = menuItem.args;
+  	}
+  	load_funct = type+"_load";
+    args = JSON.stringify(args);
+  }
+  console.log("load_funct: "+load_funct+" "+args);
+  	window[load_funct](args);
 }
 function getFirstContentModuleFromMenu(menu) {
 		// Look for first content module in menu

@@ -1,5 +1,5 @@
 // Globals used in this module
-var steem_args, steem_profile, steem_post;
+var steem_args, steem_profile, steem_post, steem_libs_to_load = 2;
 
 // Steem profile variables
 var steem_profile_template,steem_profile;
@@ -25,13 +25,21 @@ function steem_display(content) {
 	$('#contentArea').html(content);
 }
 function steem_load(args) {
+	if(steem_libs_to_load > 0) {
+		// Try to call menu again in 1/10 of a second.
+		setTimeout(function () {
+			steem_load(args);
+		}, 100);
+		return null;
+	}
+
 	steem_args = args;
 	args = JSON.parse(args.replace(/&quot;/g,'"'));
 
 	switch(args.show) {
 		case "profile":
 			//console.log("Get profile of: "+args.user);
-			getSteemProfile(args.user);
+			getSteemProfile(args.user,args.tag);
 			break;
 		case "posts":
 			// First clear contentArea, because we might need to make multiple calls to refill it.
@@ -45,6 +53,40 @@ function steem_load(args) {
 			//console.log("post: "+args.user+" "+args.postid);
 			break;
 	}
+}
+function steem_permlink(permlink) {
+	let args, username;
+	switch(permlink.length) {
+		case 1:
+			// username -> profile
+			// @username -> profile
+			if(permlink[0].substring(0,1) == "@") {	username = permlink[0].substring(1); }
+			else { username = permlink[0]; }
+
+			args = '{"show":"profile","user":"'+username+'"}';
+			break;
+		case 2:
+			if(permlink[0].substring(0,1) == "@") {
+				// @username/tag -> profile with posts for a tag
+				args = '{"show":"profile","user":"'+permlink[0].substring(1)+'","tag":"'+permlink[1]+'"}';
+			} else if (permlink[1].substring(0,1) == "@") {
+				// tag/@username -> postlisting for a user by tag
+				args = '{"show":"posts","user":"'+permlink[1].substring(1)+'","tag":"'+permlink[0]+'"}';
+			} else {
+				// posts/tag -> post listing (not yet implemented)
+				console.log("This steem feature is not yet implemented!");
+				return false;
+			}
+
+			break;
+		case 3:
+			// tag/@username/post_permlink -> post
+			args = '{"show":"post","user":"'+permlink[1].substring(1)+'","postid":"'+permlink[2]+'"}';
+			break;
+	}
+console.log("steem_permlink args: "+args);
+
+  steem_load(args);
 }
 
 function displaySteemPosts(err, posts) {
@@ -290,12 +332,17 @@ function displaySteemProfile(err, profile) {
 
 	// If profile template has a space for user posts.
 	if ($(".profile-posts")[0]){
-		steem_posts_displayed = new Array();
-		getSteemPosts(steem_profile.name,'',25,'');
+		if(steem_tags == '') {
+			steem_posts_displayed = new Array();
+			getSteemPosts(steem_profile.name,'',25,'');
+		} else {
+			steem_posts_displayed = new Array();
+			getSteemPosts(steem_profile.name,steem_tags,25,'');
+		}
 	}
 }
-function getSteemProfile(username) {
-	//
+function getSteemProfile(username,tag) {
+	steem_tags = tag;
 	steem.api.setOptions({ url: 'https://api.steemit.com' });
 	steem.api.getAccounts([username],	function(err, profile){displaySteemProfile(err, profile)});
 }
@@ -304,6 +351,7 @@ function getSteemProfile(username) {
 $.getScript( "lib/showdown/showdown.min.js").done(function( script, textStatus ) {
 		//console.log( textStatus );
 		console.log( "showdown.min.js load was performed." );
+		steem_libs_to_load--;
 	})
 	.fail(function( jqxhr, settings, exception ) {
 		console.log( exception );
@@ -319,6 +367,7 @@ $.getScript( "lib/steem-js/steem.min.js", function( data, textStatus, jqxhr ) {
 	//console.log( textStatus ); // Success
 	//console.log( jqxhr.status ); // 200
 	console.log( "steem.min.js load was performed." );
+	steem_libs_to_load--;
 });
 
 //Template loaded functions

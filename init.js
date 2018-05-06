@@ -1,4 +1,4 @@
-var config, modules_to_load;
+var config, modules_to_load, popstate = false;
 
 /*** Functions for handling config.json ***/
 // Parse config.json once loaded...
@@ -30,9 +30,6 @@ function parseModules(modules_data) {
 // Parse an individual module item, load the script...
 function parseModule(module_name) {
 	$.getScript( "module/"+module_name+"/"+module_name+".js", function( data, textStatus, jqxhr ) {
-		//console.log( data ); // Data returned
-		//console.log( textStatus ); // Success
-		//console.log( jqxhr.status ); // 200
 		console.log( "Load was performed for "+module_name+"." );
 
 		var index = modules_to_load.indexOf(module_name);
@@ -88,7 +85,6 @@ function parseThemeHTML(themeHTML) {
   $(document.body).html(themeHTML);
   if(banner_image != "") {
   		$('.banner_image').css("background-image",banner_image);
-      console.log('banner_image: '+banner_image);
 	}
   $('#sitetitle').text(config.sitetitle);
   $('#tagline').text(config.tagline);
@@ -109,18 +105,15 @@ function parseMenu() {
 
 	var list = $('<div/>').appendTo('#menuArea');
 	var href_funct, href, label, menuitem, menu = config.menu;
-	// console.log(menu);
 
 	var arrayLength = menu.length;
 	for (var i = 0; i < arrayLength; i++) {
-		//console.log(menu[i]);
 		//Do something
 		label = menu[i].label;
 		type = menu[i].type;
 		args = menu[i].args;
 		href_funct = type+"_menuitem";
 
-		//console.log(href_funct);
 		href = window[href_funct](args);
 
 		list.append('<span><a href="'+href+'">'+label+'</a></span>');
@@ -152,7 +145,6 @@ function parseFirstPage() {
   	load_funct = type+"_load";
     args = JSON.stringify(args);
   }
-  console.log("load_funct: "+load_funct+" "+args);
   	window[load_funct](args);
 }
 function getFirstContentModuleFromMenu(menu) {
@@ -196,7 +188,6 @@ function parseSocialMenu() {
 		if(typeof smenu.link_url == "string" && smenu.link_url != "") {
 			$(".socialmenu a.link_url").prop("href",smenu.link_url);
 			var link_url = smenu.link_url.replace(/https\:\/\//g,'');
-			console.log(link_url);
 			$(".socialmenu a.link_url").text(link_url);
 		}	else $(".socialmenu .email").hide();
 
@@ -209,7 +200,11 @@ function parseSocialMenu() {
 	}
 }
 
-
+function pushStateWithoutDuplicate(title, url) {
+  window.historyInitiated = true;
+  if(!popstate) history.pushState('', title, url);
+  popstate = false;
+}
 
 // JQuery ready function that is called once document has loaded.
 $(document).ready(function() {
@@ -218,4 +213,11 @@ $(document).ready(function() {
 		// Else load default config on failure
 		$.ajax("config.json").done(parseConfig).fail(configFail);
 	});
+
+  window.addEventListener("popstate", function(e) {
+    if (window.historyInitiated) {
+      popstate = true;
+      parseFirstPage();
+    }
+  });
 });

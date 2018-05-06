@@ -145,7 +145,7 @@ function parseFirstPage() {
   	load_funct = type+"_load";
     args = JSON.stringify(args);
   }
-  	window[load_funct](args);
+  window[load_funct](args);
 }
 function getFirstContentModuleFromMenu(menu) {
 		// Look for first content module in menu
@@ -202,7 +202,10 @@ function parseSocialMenu() {
 
 function pushStateWithoutDuplicate(title, url) {
   window.historyInitiated = true;
-  if(!popstate) history.pushState('', title, url);
+  if(!popstate) {
+    if(title != '') document.title = title;
+    history.pushState('', title, url);
+  }
   popstate = false;
 }
 

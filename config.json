@@ -15,10 +15,10 @@
 		"": ""
 	},
 
-	"firstpage": {"type": "static", "args": ["content/default/welcome_to_blockpress.html"]},
+	"firstpage": {"type": "static", "args": ["default/welcome_to_blockpress.html"]},
 
 	"menu": [
-    {"label": "Home", "type": "static", "args": "content/default/welcome_to_blockpress.html"},
+    {"label": "Home", "type": "static", "args": "default/welcome_to_blockpress.html"},
 	  {"label": "Anton's Posts", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress", "count":10}},
 	  {"label": "Dana's Posts", "type": "steem", "args": {"show":"posts", "user":"dana-varahi", "tag":"blockpress", "count":10}}
   ],

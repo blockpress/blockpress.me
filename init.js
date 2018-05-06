@@ -11,7 +11,7 @@ function parseConfig(config_json) {
 function configFail() {
   console.log('FAILED TO LOAD CONFIG!');
 	// Load default theme and display error page.
-	config={"sitetitle": "Error loading config","palette":"vanilla","theme":"metaverse","modules":["static"],"firstpage":{"type":"static","args":["content/default/config_load_error.html"]},"menu":[]};
+	config={"sitetitle": "Error loading config","palette":"vanilla","theme":"metaverse","modules":["static"],"firstpage":{"type":"static","args":["default/config_load_error.html"]},"menu":[]};
   parseModules(config.modules);
 }
 
@@ -129,7 +129,7 @@ function parseFirstPage() {
   let params = (new URL(document.location)).searchParams;
 
   if(params.has("p")) {
-    let p = params.get("p").split("/");
+    let p = params.get("p").replace(/,/g, '/').split("/");
     type = p.shift();
     args = p;
   	load_funct = type+"_permlink";

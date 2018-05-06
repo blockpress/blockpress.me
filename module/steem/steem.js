@@ -45,7 +45,8 @@ function steem_load(args) {
 			$('#contentArea').html('');
 			steem_posts_displayed = new Array();
 			getSteemPosts(args.user,args.tag,args.count,'');
-			pushStateWithoutDuplicate('', './?p=steem/'+args.tag+'/@'+args.user);
+			if(args.user == '') { pushStateWithoutDuplicate('Posts tagged '+args.tag, './?p=steem/posts/'+args.tag); }
+			else { pushStateWithoutDuplicate('Posts by '+args.user, './?p=steem/'+args.tag+'/@'+args.user); }
 			break;
 		case "post":
 			getSteemPost(args.user,args.postid);
@@ -72,8 +73,7 @@ function steem_permlink(permlink) {
 				args = '{"show":"posts","user":"'+permlink[1].substring(1)+'","tag":"'+permlink[0]+'"}';
 			} else {
 				// posts/tag -> post listing (not yet implemented)
-				console.log("This steem feature is not yet implemented!");
-				return false;
+				args = '{"show":"posts","user":"","tag":"'+permlink[1]+'"}';
 			}
 
 			break;
@@ -82,7 +82,6 @@ function steem_permlink(permlink) {
 			args = '{"show":"post","user":"'+permlink[1].substring(1)+'","postid":"'+permlink[2]+'"}';
 			break;
 	}
-
   steem_load(args);
 }
 
@@ -188,7 +187,13 @@ function getSteemPosts(usernames,tags,count,lastPermlink) {
 	steem_username = usernames;
 
 	steem.api.setOptions({ url: 'https://api.steemit.com' });
-	steem.api.getDiscussionsByAuthorBeforeDate(usernames, lastPermlink, '2100-01-01T00:00:00', count,	function(err, result){displaySteemPosts(err, result)});
+	if(usernames == '') {
+		let query = {
+		    tag: tags, // This tag is used to filter the results by a specific post tag
+		    limit: count, // This limit allows us to limit the number of results returned to 5
+		};
+		steem.api.getDiscussionsByCreated(query,function(err, result){displaySteemPosts(err, result)});
+	}	else { steem.api.getDiscussionsByAuthorBeforeDate(usernames, lastPermlink, '2100-01-01T00:00:00', count,	function(err, result){displaySteemPosts(err, result)}); }
 	//displaySteemPosts(['AAA']);
 }
 
@@ -197,11 +202,11 @@ function tagSelected(username,tag,count) {
 	if ($(".profile-posts")[0]){
 		// Clear posts area of profile page
 		$('.profile-posts').html('');
-		pushStateWithoutDuplicate('', './?p=steem/@'+username+'/'+tag);
+		pushStateWithoutDuplicate('Posts by @'+username+' tagged '+tag, './?p=steem/@'+username+'/'+tag);
 	} else {
 		// Clear contentArea
 		$('#contentArea').html('');
-		pushStateWithoutDuplicate('', './?p=steem/'+tag+'/@'+username);
+		pushStateWithoutDuplicate('Posts tagged #'+tag+' by @'+username, './?p=steem/'+tag+'/@'+username);
 	}
 	steem_posts_displayed = new Array();
 	getSteemPosts(username,tag,count,'');
@@ -323,7 +328,7 @@ function displaySteemProfile(err, profile) {
 		} else {
 			steem_posts_displayed = new Array();
 			getSteemPosts(steem_profile.name,steem_tags,25,'');
-			pushStateWithoutDuplicate('Profile page for '+metadata.profile.name+' #'+steem_tags, './?p=steem/@'+steem_profile.name+'/'+steem_tags);
+			pushStateWithoutDuplicate('Profile page for '+metadata.profile.name+' tagged #'+steem_tags, './?p=steem/@'+steem_profile.name+'/'+steem_tags);
 		}
 	}
 }
@@ -335,7 +340,6 @@ function getSteemProfile(username,tag) {
 
 //Load the showdown library (for parsing markdown)
 $.getScript( "lib/showdown/showdown.min.js").done(function( script, textStatus ) {
-		//console.log( textStatus );
 		console.log( "showdown.min.js load was performed." );
 		steem_libs_to_load--;
 	})
@@ -349,9 +353,6 @@ $.getScript( "lib/showdown/showdown.min.js").done(function( script, textStatus )
 
 //Load the steem javascript API
 $.getScript( "lib/steem-js/steem.min.js", function( data, textStatus, jqxhr ) {
-	//console.log( data ); // Data returned
-	//console.log( textStatus ); // Success
-	//console.log( jqxhr.status ); // 200
 	console.log( "steem.min.js load was performed." );
 	steem_libs_to_load--;
 });
@@ -394,7 +395,7 @@ function loadSteemTemplates() {
 		$.ajax("./module/steem/steem-posts.html").done(steemPostsTemplateLoaded);
 	});
 	// Get template from theme
-	var theme_template = "/theme/"+config.theme+"/steem-comment.html";
+	var theme_template = "./theme/"+config.theme+"/steem-comment.html";
 	$.ajax(theme_template).done(steemCommentTemplateLoaded).fail(function(){
 		// Else use default template
 		$.ajax("./module/steem/steem-comment.html").done(steemCommentTemplateLoaded);

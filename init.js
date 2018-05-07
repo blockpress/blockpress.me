@@ -134,6 +134,7 @@ function parseFirstPage() {
     args = p;
   	load_funct = type+"_permlink";
   } else {
+    popstate = true;
     if('firstpage' in config) {
   		type = config.firstpage.type;
   		args = config.firstpage.args;

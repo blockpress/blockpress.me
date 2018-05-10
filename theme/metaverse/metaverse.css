@@ -1,4 +1,5 @@
 /*Generic Classes*/
+
 .no_thumb .steem_posts_thumbnail{
 	display: none;
 }
@@ -96,7 +97,6 @@ img{
 	border-radius: 10px;
 	border-width: 1px;
 	border-style: solid;
-	box-shadow: 3px 3px 27px;
 }
 
 a:link {
@@ -117,7 +117,6 @@ header{
 	border-right: 0;
 	border-left: 0;
 	margin-bottom: 1em;
-	box-shadow: 1px 1px 6px;
 }
 
 /* Button styles */
@@ -511,13 +510,14 @@ margin-right: auto;
 	width: 85%;
 }
 
-#contentArea #steem-post img{comment
+#contentArea #steem-post img{
 max-width: 100%;
 border-radius: 0;
 padding: 0;
 margin: 0;
 border: none;
 }
+
 #contentArea #steem-post h1{
 	width:85%;
 	margin-right: auto;

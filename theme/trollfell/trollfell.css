@@ -129,7 +129,6 @@ hr {
 /* Header styles */
 
 header{
-	background-image: url("https://steemitimages.com/DQmUgGiwvvq39ig4UbY1GXYNboTjQtS4QiRiy5kEPanu4KZ/banner2.JPGx");
 	background-repeat: no-repeat;
   background-size:cover;
 	background-position: center;
@@ -137,7 +136,7 @@ header{
 	margin:0;
 }
 
-div#banner-gradient { margin-top: 0;}
+div.gradient2 { margin-top: 0;}
 
 /* Button styles */
 
@@ -153,11 +152,10 @@ button#openNav{
 }
 
 button#closeNav{
-	margin-bottom:1em;
-	font-size: 1em;
+	background-color: transparent !important;
+	font-size: 3em;
 	border: none;
-	border-radius: 5px;
-	padding: 0 5px 2px 5px;
+	padding: 0 2px 2px 2px;
 }
 
 /* Menu Styles*/
@@ -194,7 +192,7 @@ button#closeNav{
 	margin: 0;
 }
 
-.sidebar {
+#sidebar {
     height: 100%;
     width: 300px;
     position: fixed;
@@ -202,12 +200,11 @@ button#closeNav{
     top: 0;
     left: 0;
     overflow: hidden;
-    padding-top: 20px;
 		text-align: center;
 		display:none;
 }
 
-.sidebar a {
+#sidebar a {
     text-decoration: none;
 		text-align: center;
 }
@@ -490,7 +487,7 @@ div.steem_posts_meta{
 
 @media only screen and (max-width: 800px) {
 
-	.sidebar {
+	#sidebar {
 	    height: 100%;
 	    padding-top: 20px;
 			text-align: center;

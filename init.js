@@ -56,7 +56,7 @@ function parseTheme(theme) {
   $("<link/>", {
      rel: "stylesheet",
      type: "text/css",
-     href: "./theme/"+theme+"/style.css"
+     href: "./theme/"+theme+"/"+theme+".css"
   }).appendTo("head");
 }
 // Load the theme template

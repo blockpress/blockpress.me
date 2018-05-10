@@ -140,8 +140,8 @@ function displaySteemPosts(err, posts) {
 			// Full body
 			body = converter.makeHtml(post_obj.body);
 			var imgSrc=findImg(body);
-			template = template.replace('{steem_posts_img}',imgSrc);
-			template = template.replace('{steem_posts_body}',body);
+			template = template.replace(/{steem_posts_img}/g,imgSrc);
+			template = template.replace(/{steem_posts_body}/g,body);
 
 			findImg();
 
@@ -159,6 +159,7 @@ function displaySteemPosts(err, posts) {
 	if(display_count < steem_posts_count && !loop_end) {
 		getSteemPosts(steem_username,steem_tags,steem_posts_count,last_permlink);
 	}
+
 	if ($(".profile-posts")[0]){
 		// Append content to contentArea
 		$('.profile-posts').append(content);
@@ -203,7 +204,12 @@ function tagSelected(username,tag,count) {
 		// Clear posts area of profile page
 		$('.profile-posts').html('');
 		pushStateWithoutDuplicate('Posts by @'+username+' tagged '+tag, './?p=steem/@'+username+'/'+tag);
-	} else {
+	} else if(tag,count){
+		$('#contentArea').html('');
+		pushStateWithoutDuplicate('Posts tagged #'+steem_tags,'./?p=steem/posts/'+steem_tags);
+
+	}
+		else {
 		// Clear contentArea
 		$('#contentArea').html('');
 		pushStateWithoutDuplicate('Posts tagged #'+tag+' by @'+username, './?p=steem/'+tag+'/@'+username);
@@ -223,6 +229,7 @@ function displaySteemComment(comment_obj,target) {
 	var converter = new showdown.Converter();
 	author = comment_obj.author;
 	comment = converter.makeHtml(comment_obj.body);
+	comment = addLinksToUsr(addLinksToTags(comment));
 
 	template = steem_comment_template;
 	template = template.replace(/{steem_comment}/g,comment);
@@ -260,7 +267,7 @@ function displaySteemPost(err, post) {
 	template = template.replace(/{steem_post_title}/g,steem_post.title);
 	template = template.replace(/{steem_post_permlink}/g,steem_post.permlink);
 	template = template.replace(/{steem_post_author}/g,steem_post.author);
-
+console.log('steem_post: '+JSON.stringify(steem_post));
 	// Display template
 	$('#contentArea').html(template);
 	pushStateWithoutDuplicate(steem_post.title+' by '+steem_post.author, './?p=steem/'+steem_post.category+'/@'+steem_post.author+'/'+steem_post.permlink);
@@ -270,12 +277,14 @@ function displaySteemPost(err, post) {
 	var body_html = converter.makeHtml(steem_post.body);
 
 	// Then add post values
-	$("#steem-post-content").html(body_html);
+	$("#steem-post-content").html(addLinksToUsr(addLinksToTags(body_html)));
 	$("#steem-post-title").html(steem_post.title);
 
 	// Get comments
 	getSteemComments(steem_post.author,steem_post.permlink);
 }
+
+
 function getSteemPost(username,postid) {
 	steem.api.setOptions({ url: 'https://api.steemit.com' });
 	steem.api.getContent(username, postid,	function(err, result){displaySteemPost(err, result)});
@@ -291,7 +300,12 @@ function simpleReputation(raw_reputation) {
 
 function addLinksToTags(text,author) {
 	if (typeof author === "undefined") author=''; // Default to all users if no user specified.
-	text = text.replace(/#(\S+)/g,'<a href="javascript:tagSelected(\''+author+'\',\'$1\',25,\'\');" title="View posts tagged with #$1">#$1</a>');
+	text = text.replace(/\s#(\S+)/g,' <a href="javascript:tagSelected(\''+author+'\',\'$1\',25,\'\');" title="View posts tagged with #$1">#$1</a>');
+	return text;
+}
+
+function addLinksToUsr(text){
+	text = text.replace(/\s@([-_\w\d]+)/g,' <a href="javascript:getSteemProfile(\'$1\');" title="View user mention @$1">@$1</a>');
 	return text;
 }
 
@@ -301,11 +315,15 @@ function displaySteemProfile(err, profile) {
 	template = steem_profile_template;
 
 	var metadata = JSON.parse(steem_profile.json_metadata);
-	template = template.replace('{steem_profile_website}','<a href="'+metadata.profile.website+'">'+metadata.profile.website+'</a>');
-	template = template.replace('{steem_profile_location}',metadata.profile.location);
+	template = template.replace(/{steem_profile_website}/g,'<a href="'+metadata.profile.website+'">'+metadata.profile.website+'</a>');
+	var location='';
+	if (typeof metadata.profile.location != 'undefined') location=metadata.profile.location;
+	template = template.replace(/{steem_profile_location}/g,location);
 	template = template.replace(/{steem_profile_username}/g,steem_profile.name);
+
 	// Display template
 	$('#contentArea').html(template);
+
 
 	// Then add profile values
 	$("#profile-banner").css("background","url("+metadata.profile.cover_image+") no-repeat");
@@ -315,8 +333,8 @@ function displaySteemProfile(err, profile) {
 	$("#profile-name").html(metadata.profile.name);
 	var reputation = simpleReputation(steem_profile.reputation);
 	$("#profile-reputation").html(Math.round(reputation));
-	$("#profile-about").html(addLinksToTags(metadata.profile.about,steem_profile.name));
-	$("#profile-location").html(metadata.profile.location);
+	$("#profile-about").html(addLinksToUsr(addLinksToTags(metadata.profile.about,steem_profile.name)));
+	if (typeof metadata.profile.location != 'undefined') $("#profile-location").html(metadata.profile.location);
 	$("#profile-website").html('<a href="'+metadata.profile.website+'">'+metadata.profile.website+'</a>');
 
 	// If profile template has a space for user posts.

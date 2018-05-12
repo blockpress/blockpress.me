@@ -11,50 +11,73 @@ light cream orange: #ecd1aa
 
 /* Generic Classes */
 
-.boxshadowL{
-  box-shadow:3px 3px 25px #ec9c36;
-}
-.boxshadowM{
-  box-shadow:2px 2px 5px #ec9c36;
-}
-
-.boxshadowM img{
-  box-shadow:2px 2px 5px #ec9c36;
-}
-.boxshadowM #profile-banner{
-  box-shadow:2px 2px 5px #ec9c36;
-}
-.boxshadowM .menu span a{
-  box-shadow:2px 2px 5px #ec9c36;
+.enclosure1{
+  color:#f0be7e;
+  background-color: #2a1914;
+  border-color:#653f26;
 }
 
-.boxshadowM .menu span a:hover{
-  box-shadow:2px 2px 5px #f0be7e;
+.enclosure2{
+  color: #ecd1aa;
+  border-color: #653f26;
+  background-color: #392b23;
 }
 
-.boxshadowM .menu span a:focus{
-  box-shadow:2px 2px 5px #f0be7e;
+.enclosure3{
+  color:#ecd1aa;
+  border-color: #ec9c36;
+  background-color: #2a1914;
 }
 
-.boxshadowMlight{
-  box-shadow:2px 2px 5px #ecd1aa;
+
+.gradient1 { background: linear-gradient(#2a1914,#392b23);}
+
+.gradient2 { background: linear-gradient(to right, rgba(42, 25, 20,0.5), rgba(57, 43, 35, 1));}
+
+.gradient3 { background: linear-gradient(to left, rgba(42, 25, 20,0.5), rgba(57, 43, 35, 1));}
+
+.button1{
+  background: #653f26;
+  color: #f0be7e;
 }
 
-.boxshadowMlight:hover{
-  box-shadow:2px 2px 5px #ec9c36;
+.button1:hover{background: #ec9c36;}
+
+.button2{
+  background: #653f26;
+	color: #160a09;
 }
 
-.boxshadowMlight img:hover{
-  box-shadow:2px 2px 5px #ecd1aa;
+.button2:hover{
+  background: #f0be7e;
+	color: #160a09;
 }
 
-.boxShadowS{
-  box-shadow: 1px 1px 10px #ec9c36;
-}
 
-.boxShadowXS {
-  box-shadow:1px 1px 5px #ec9c36;
-}
+.boxshadowL{ box-shadow:3px 3px 25px #ec9c36;}
+
+.boxshadowM{ box-shadow:2px 2px 5px #ec9c36;}
+
+.boxshadowM img{ box-shadow:2px 2px 5px #ec9c36;}
+
+.boxshadowM #profile-banner{ box-shadow:2px 2px 5px #ec9c36;}
+
+.boxshadowM .menu span a{ box-shadow:2px 2px 5px #ec9c36;}
+
+.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px #f0be7e;}
+
+.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #f0be7e;}
+
+.boxshadowMlight{ box-shadow:2px 2px 5px #ecd1aa;}
+
+.boxshadowMlight:hover{ box-shadow:2px 2px 5px #ec9c36;}
+
+.boxshadowMlight img:hover{ box-shadow:2px 2px 5px #ecd1aa;}
+
+.boxShadowS{ box-shadow: 1px 1px 10px #ec9c36;}
+
+.boxShadowXS { box-shadow:1px 1px 5px #ec9c36;}
+
 
 body{
   background-color: #160a09;
@@ -102,105 +125,65 @@ hr {
 
 /*Header styles*/
 
-header{
-	background-color: #2a1914;
-	border-color:#653f26;
-}
-
-header.no_bg_img {
-background: linear-gradient(#2a1914,#392b23);
-}
-
-div#banner-gradient {
-	background: linear-gradient(to right, rgba(42, 25, 20,0.5), rgba(57, 43, 35, 1));
-}
-
 /* Button styles */
-
-button#openNav {
-  background: #653f26;
-  color: #f0be7e;
-}
-
-button#openNav:hover { background: #ec9c36;}
-
-button#closeNav {
-  background: #653f26;
-	color: #160a09;
-  box-shadow: #f0be7e;
-}
-
-button#closeNav:hover {
-	box-shadow:  #ecd1aa;
-	background: #f0be7e;
-	color: #160a09;
-}
 
 /* Menu Styles*/
 
 .menu span a {
-background-color:#2a1914;
-box-shadow: #160a09;
+  background-color:#392b23;
 }
-
 .menu span a:hover {
-	background-color: #653f26;
-	box-shadow: #ecd1aa;
+  color: #f0be7e;
+  background-color:#653f26;
 }
 
 .menu span a:focus {
-	background-color: #653f26;
-	box-shadow: #ecd1aa;
+  color: #f0be7e;
+  background-color:#653f26;
 }
 
 .menu span a:active {
-	background-color:#2a1914;
-	box-shadow:  #ecd1aa;
-	color:#ecd1aa;
+  color:#f0be7e;
+  background-color:#653f26;
 }
+
+.menu div{background: #392b23;}
 
 /* Sidebar styles*/
 
-.sidebar { background-color: #2a1914;}
 
-.sidebar .menu span a {
+#sidebar .menu span a {
   background: #653f26 ;
   color: #f0be7e;
   box-shadow: none;
 }
 
-.sidebar .menu span a:hover {
+#sidebar .menu span a:hover {
   color:#ecd1aa;
   box-shadow: none;
 }
 
-.sidebar .menu span a:focus {
+#sidebar .menu span a:focus {
    color:#ecd1aa;
    box-shadow: none;
  }
 
-.sidebar .menu span a:active {
+#sidebar .menu span a:active {
   color:#ecd1aa;
   box-shadow: none;
 }
 
-.sidebar .menu div {
+#sidebar .menu div {
   background-color: #f0be7e;
-  box-shadow: #5d2534;
 }
 
-.sidebar .menu span {
+#sidebar .menu span {
   background: #653f26;
   color: #5d2534;
 }
 
 /* content area styles*/
 
-#contentArea {
-	color: #ecd1aa;
-	border-color: #653f26;
-	background-color: #392b23;
-}
 
 #contentArea h1{
     color: #f0be7e;
@@ -231,12 +214,9 @@ box-shadow: #160a09;
 
 /* Steem Profile */
 
-#profile-image img { box-shadow:#160a09;}
-
 #profile-banner {
   background-color:#160a09;
 	color: #2a1914;
-	box-shadow: 3px 3px 27px #160a09;
 }
 #profile-banner h1 {color: #ecd1aa;}
 
@@ -268,13 +248,13 @@ div.steem_posts_meta { color: #ecd1aa;}
 
 /*Social Menu*/
 
-div.icon span a:link { color:#f0be7e;}
+div.icon a:link { color:#f0be7e;}
 
-div.icon span a:visited { color:#f0be7e;}
+div.icon a:visited { color:#f0be7e;}
 
-div.icon span a:active { color:#f0be7e;}
+div.icon a:active { color:#f0be7e;}
 
-div.icon span img{
+div.icon img{
    filter:hue-rotate(185deg) saturate(0.75);
 }
 
@@ -283,7 +263,7 @@ div.icon span img{
 
 @media only screen and (max-width: 800px) {
 
-.sidebar { background-color: #160a09;}
+#sidebar { background-color: #160a09;}
 
 .steem_posts_date { color:#f0be7e;}
 }

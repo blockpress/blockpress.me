@@ -13,49 +13,68 @@ white-moss: #DEF9DE  RGB 222, 249, 222
 */
 /* Generic Classes */
 
-.boxshadowL{
-  box-shadow:3px 3px 25px #773090;
-}
-.boxshadowM{
-  box-shadow:2px 2px 5px #773090;
-}
-
-.boxshadowM img{
-  box-shadow:2px 2px 5px #773090;
-}
-.boxshadowM #profile-banner{
-  box-shadow:2px 2px 5px #773090 ;
-}
-.boxshadowM .menu span a{
-  box-shadow:2px 2px 5px #773090 ;
+.enclosure1{
+  color: #2B1234;
+	border-color: #F8E311;
+	background-color: #D66415;
 }
 
-.boxshadowM .menu span a:hover{
-  box-shadow:2px 2px 5px #F8E311;
+.enclosure2{
+  color: #773090;
+  background-color: #1E9B1E;
+	border-color: #F8E311;
 }
 
-.boxshadowM .menu span a:focus{
-  box-shadow:2px 2px 5px #F8E311;
-}
-.boxshadowMlight{
-  box-shadow:2px 2px 5px #DEF9DE;
-}
-
-.boxshadowMlight:hover{
-  box-shadow:2px 2px 5px #F8E311;
+.enclosure3{
+  color:#F8E311;
+  border-color: #DEF9DE;
+  background-color: #773090;
 }
 
-.boxshadowMlight img:hover{
-  box-shadow:2px 2px 5px #DEF9DE;
+.gradient1 { background: linear-gradient(#1E9B1E,#2B1234);}
+
+.gradient2 { background: linear-gradient(to right, rgba(30, 155, 30,0.5), rgba( 43, 18, 52,1));}
+
+.gradient3 { background: linear-gradient(to left, rgba(30, 155, 30,0.5), rgba( 214, 100, 21,1));}
+
+.button1{
+  background: #6f6559;
+  color: #D615A7;
+}
+.button1:hover{background: #773090;}
+
+.button2{
+  background: #773090;
+	color: #D615A7;
+}
+.button2:hover{
+  background: #2B1234;
+	color: #D615A7;
 }
 
-.boxShadowS{
-  box-shadow: 1px 1px 10px #773090;
-}
+.boxshadowL{ box-shadow:3px 3px 25px #773090;}
 
-.boxShadowXS {
-  box-shadow:1px 1px 5px #773090;
-}
+.boxshadowM{ box-shadow:2px 2px 5px #773090;}
+
+.boxshadowM img{ box-shadow:2px 2px 5px #773090;}
+
+.boxshadowM #profile-banner{ box-shadow:2px 2px 5px #773090 ;}
+
+.boxshadowM .menu span a{ box-shadow:2px 2px 5px #773090 ;}
+
+.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px #F8E311;}
+
+.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #F8E311;}
+
+.boxshadowMlight{ box-shadow:2px 2px 5px #DEF9DE;}
+
+.boxshadowMlight:hover{ box-shadow:2px 2px 5px #F8E311;}
+
+.boxshadowMlight img:hover{ box-shadow:2px 2px 5px #DEF9DE;}
+
+.boxShadowS{ box-shadow: 1px 1px 10px #773090;}
+
+.boxShadowXS { box-shadow:1px 1px 5px #773090;}
 
 body { background-color: #2B1234;
       color:#DEF9DE;
@@ -88,7 +107,6 @@ a:active, a:focus { color:#D615A7;}
 img {
 	color: #2B1234;
 	border-color: #2B1234;
-	box-shadow: #2B1234;
 }
 
 hr {
@@ -97,112 +115,74 @@ hr {
 
 /*Header styles*/
 
-header {
-	background-color: #1581D6;
-	background: linear-gradient(#1E9B1E,#2B1234);
-	border-color: : #DEF9DE;
-	box-shadow: #DEF9DE;
-}
-
-header.no_bg_img {
-  background: linear-gradient(#1E9B1E,#2B1234);
-}
-
-div#banner-gradient {
-	background: linear-gradient(to right, rgba(30, 155, 30,0.5), rgba( 43, 18, 52,1));
-}
-
 /* Button styles */
-
-button#openNav {
-  background: #6f6559;
-  color: #D615A7;
-}
-
-button#openNav:hover {
-  background: #773090;
-  box-shadow: #DEF9DE;
-}
-
-button#closeNav {
-  background: #773090;
-	color: #D615A7;
-  box-shadow: #2B1234;
-}
-
-button#closeNav:hover {
-	background: #2B1234;
-	color: #D615A7;
-  box-shadow: #DEF9DE;
-}
 
 /* Menu Styles*/
 
 .menu span a {background-color:#1E9B1E;}
 
-.menu span a:hover { background-color:#79ed97;}
+.menu span a:hover {
+  color:#773090;
+  background-color:#79ed97;
+}
 
-.menu span a:focus {background-color:#79ed97;}
+.menu span a:focus {
+  color:#773090;
+  background-color:#79ed97;
+}
 
 .menu span a:active {
-	background-color:#79ed97;
-	color:#2B1234;
+  color:#2B1234;
+  background-color:#79ed97;
 }
+
+.menu div{ background: #1E9B1E;}
 
 /*Sidebar styles*/
 
-.sidebar { background-color: #773090;}
 
-.sidebar a { color:  #F8E311;}
+#sidebar a { color:  #F8E311;}
 
-.sidebar a:hover { color: #DEF9DE;}
+#sidebar a:hover { color: #DEF9DE;}
 
-.sidebar a:focus { color: #DEF9DE;}
+#sidebar a:focus { color: #DEF9DE;}
 
-.sidebar a:active { color: #DEF9DE;}
+#sidebar a:active { color: #DEF9DE;}
 
-.sidebar .menu div {
+#sidebar .menu div {
   background-color: #79ed97;
-  box-shadow: #5d2534;
 }
 
-.sidebar .menu span {
+#sidebar .menu span {
   background:#1E9B1E;
   color: #5d2534;
 }
 
-.sidebar .menu span a {
+#sidebar .menu span a {
   background: #1E9B1E;
   color: #5d2534;
   box-shadow: none;
 }
 
-.sidebar .menu span a:hover {
+#sidebar .menu span a:hover {
   background: #1E9B1E;
   color:#bd0e3b;
   box-shadow: none;
 }
 
-.sidebar .menu span a:focus {
+#sidebar .menu span a:focus {
   background: #1E9B1E;
    color:#bd0e3b;
    box-shadow: none;
  }
 
-.sidebar .menu span a:active {
+#sidebar .menu span a:active {
   background: #1E9B1E;
   color:#bd0e3b;
   box-shadow: none;
 }
 
   /* content area styles*/
-
-#contentArea {
-	color: #2B1234;
-	border-color: #F8E311;
-	background-color: #D66415;
-	box-shadow:  #F8E311;
-}
 
 #contentArea h1 { color: #D61544;}
 
@@ -231,7 +211,6 @@ button#closeNav:hover {
 #profile-banner {
 	color: #DEF9DE;
   background-color: #D615A7;
-	box-shadow: #DEF9DE;
 }
 #profile-banner h1 { color: #DEF9DE;}
 
@@ -277,29 +256,28 @@ button#closeNav:hover {
 div.steem_posts_meta { color: #2B1234;}
 
 .steem_posts_preview {
-  background-color:#1E9B1E;
+  background-color:#D66415;
 }
 
 /*Social Menu*/
 
-div.icon span a:link { color:#DEF9DE;}
+div.icon a:link { color:#DEF9DE;}
 
-div.icon span a:visited { color:#DEF9DE;}
+div.icon a:visited { color:#DEF9DE;}
 
-div.icon span a:hover {
+div.icon a:hover {
  color:#F8E311;
- box-shadow: #DEF9DE;
 }
 
-div.icon span a:focus { color:#F8E311;}
+div.icon a:focus { color:#F8E311;}
 
-div.icon span a:active { color:#F8E311;}
+div.icon a:active { color:#F8E311;}
 
-div.icon span a img{
+div.icon a img{
   box-shadow: none;
 }
 
-div.icon span img{
+div.icon img{
    filter:hue-rotate(240deg);
 }
 
@@ -307,7 +285,7 @@ div.icon span img{
 
 @media only screen and (max-width: 800px) {
 
-.sidebar { background-color: #5d2534;}
+#sidebar { background-color: #5d2534;}
 
 .steem_posts_date { color:#d7c7c3;}
 }

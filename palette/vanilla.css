@@ -1,65 +1,17 @@
 /*
-offwhite palette:
-latte:          #beb19f
-grey vanilla:   #ded1bf
-pink vanilla:   #eee1cf
-vanilla:        #fcf4e9
+latte:          #beb19f   RGB 190, 177, 159
+grey vanilla:   #ded1bf   RGB 222, 209, 191
+pink vanilla:   #eee1cf   RGB 238, 225, 207
+vanilla:        #fcf4e9   RGB 252, 244, 233
 
-black:          #1e251d
-dark grey:      #28281e
-grey:           #3c3c32
-dark gold:      #504628
-light gold:     #96834c
+black:          #1e251d   RGB 30, 37, 29
+dark grey:      #28281e   RGB 40, 40, 30
+grey:           #3c3c32   RGB 60, 60, 50
+dark gold:      #504628   RGB 80, 70, 40
+light gold:     #96834c   RGB 150, 131, 76
 */
 
-/* Generic Classes */
-
-.boxshadowL{
-  box-shadow:3px 3px 25px #28281e ;
-}
-.boxshadowM{
-  box-shadow:2px 2px 5px #28281e ;
-}
-
-.boxshadowM img{
-  box-shadow:2px 2px 5px #28281e ;
-}
-
-.boxshadowM #profile-banner{
-  box-shadow:2px 2px 5px #28281e ;
-}
-.boxshadowM .menu span a{
-  box-shadow:2px 2px 5px #28281e ;
-}
-
-.boxshadowM .menu span a:hover{
-  box-shadow:2px 2px 5px #504628;
-}
-
-.boxshadowM .menu span a:focus{
-  box-shadow:2px 2px 5px #504628;
-}
-
-.boxshadowMlight{
-  box-shadow:2px 2px 5px #fcf4e9;
-}
-
-.boxshadowMlight:hover{
-  box-shadow:2px 2px 5px #504628;
-}
-
-.boxshadowMlight img:hover{
-  box-shadow:2px 2px 5px #fcf4e9;
-}
-
-.boxShadowS{
-  box-shadow: 1px 1px 10px #28281e ;
-}
-
-.boxShadowXS {
-  box-shadow:1px 1px 5px #28281e ;
-}
-
+/* HTML Classes */
 
 body { background-color: #eee1cf;}
 
@@ -93,45 +45,88 @@ img {
 	border-color: #5b5349;
 }
 
-hr {
-    color: rgba(222,209,191, 0.2)
-}
+hr { color: rgba(222,209,191, 0.2)}
 
-/*Header styles*/
 
-header {
-	background-color: #ded1bf;
+/* Generic Classes */
+
+/* Enclosure Classes
+(can be applied to elemens such as headers, footers or document body)*/
+
+.enclosure1{
+  background-color: #ded1bf;
 	border-color: #beb19f;
+  color: #1e251d;
 }
 
-header.no_bg_img {
-  background: linear-gradient(#ded1bf,#beb19f);
+.enclosure2{
+  color: #3c3c32 ;
+	border-color: #1e251d;
+	background-color: #fcf4e9;
+}
+.enclosure3{
+  color:#96834c;
+  border-color: #96834c;
+  background-color: #beb19f;
 }
 
-div#banner-gradient {
-	background: linear-gradient(to right, rgba(222,209,191,0.5), rgba( 190,177,159,1));
-}
+/* Gradient Classes
+(can be applied to add gradient to any element with a background) */
 
-/* Button styles */
+.gradient1 { background: linear-gradient(#ded1bf,#beb19f);}
 
-button#openNav {
+.gradient2 { background: linear-gradient(to right, rgba(222,209,191,0.5), rgba( 190,177,159,1));}
+
+.gradient3 { background: linear-gradient(to left, rgba(222,209,191,0.5), rgba( 190,177,159,1));}
+
+/* Button Classes
+(to be used with any elements that act like a button)*/
+
+.button1{
   background: #fcf4e9;
   color: #1e251d ;
 }
 
-button#openNav:hover {
+.button1:hover{ background: #96834c;}
+
+.button2{
   background: #ded1bf;
+  color: #96834c;
 }
 
-button#closeNav {
-  background: #ded1bf;
-	color: #28281e ;
+.button2:hover{
+  background: #beb19f;
+  color: #28281e;
 }
 
-button#closeNav:hover {
-	background: #beb19f;
-	color: #28281e ;
-}
+/*Box Shadow Classes
+(can be added to any element */
+
+.boxshadowL{ box-shadow:3px 3px 25px #28281e;}
+
+.boxshadowM{ box-shadow:2px 2px 5px #28281e;}
+
+.boxshadowM img{ box-shadow:2px 2px 5px #28281e;}
+
+.boxshadowM #profile-banner{box-shadow:2px 2px 5px #28281e;}
+
+.boxshadowM .menu span a{box-shadow:2px 2px 5px #28281e;}
+
+.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px #504628;}
+
+.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #504628;}
+
+.boxshadowMlight{ box-shadow:2px 2px 5px #fcf4e9;}
+
+.boxshadowMlight:hover{ box-shadow:2px 2px 5px #504628;}
+
+.boxshadowMlight img:hover{ box-shadow:2px 2px 5px #fcf4e9;}
+
+.boxShadowS{ box-shadow: 1px 1px 10px #28281e;}
+
+.boxShadowXS { box-shadow:1px 1px 5px #28281e;}
+
+
 
 /* Menu Styles*/
 
@@ -148,39 +143,33 @@ button#closeNav:hover {
 }
 
 .menu span a:active {
-	background-color:#ded1bf;
+	*background-color:#ded1bf;
 	color:#eee1cf;
 }
 
+.menu div {background: #fcf4e9;}
+
 /*Sidebar styles*/
 
-.sidebar .menu span a {
+#sidebar .menu span a {
   background: none;
   box-shadow: none;
 }
 
-.sidebar .menu span a:hover { box-shadow: none;}
+#sidebar .menu span a:hover { box-shadow: none;}
 
-.sidebar .menu span a:focus { box-shadow: none;}
+#sidebar .menu span a:focus { box-shadow: none;}
 
-.sidebar .menu span a:active { box-shadow: none;}
+#sidebar .menu span a:active { box-shadow: none;}
 
-.sidebar { background-color: #beb19f;}
-
-.sidebar .menu span {
+#sidebar .menu span {
   background: #ded1bf;
   color: #5d2534;
 }
 
-.sidebar.menu div { background-color: #fcf4e9;}
+#sidebar .menu div { background-color: #fcf4e9;}
 
   /* content area styles*/
-
-#contentArea {
-	color: #3c3c32 ;
-	border-color: #1e251d;
-	background-color: #fcf4e9;
-}
 
 #contentArea h1 {
 color: #96834c;
@@ -269,27 +258,27 @@ div.steem_posts_meta {color: #28281e ;}
 
 /*Social Menu*/
 
-div.icon span a:link { color:#1e251d ;}
+div.icon a:link { color:#1e251d ;}
 
-div.icon span a:visited { color:#1e251d ;}
+div.icon a:visited { color:#1e251d ;}
 
-div.icon span a:hover {
+div.icon a:hover {
  color:#beb19f;
 }
 
-div.icon span a:focus { color:#beb19f;}
+div.icon a:focus { color:#beb19f;}
 
-div.icon span a:active { color:#1e251d ;}
+div.icon a:active { color:#1e251d ;}
 
-div.icon span a img{
+div.icon a img{
   box-shadow: none;
 }
 
-div.icon span img{
+div.icon img{
    filter:sepia(100%) brightness(80%);
 }
 
-div.icon span img:hover{
+div.icon img:hover{
    filter:sepia(50%) brightness(90%);
 }
 

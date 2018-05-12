@@ -7,54 +7,77 @@ brown:  #9d8c8e
 cream: #d7c7c3
 white: #eadfdc
 */
+
 /* Generic Classes */
 
-.boxshadowL{
-  box-shadow:3px 3px 25px #5d2534;
+.enclosure1{
+  color:#d7c7c3;
+  background-color:#5d2534;
+	border-color:#eadfdc;
 }
 
-.boxshadowM{
-  box-shadow:2px 2px 5px #5d2534;
-}
-.boxshadowM img{
-  box-shadow:2px 2px 5px #5d2534;
-}
-
-.boxshadowM #profile-banner{
-  box-shadow:2px 2px 5px #a06775 ;
-}
-.boxshadowM .menu span a{
-  box-shadow:2px 2px 5px #a06775 ;
+.enclosure2{
+  color:#5d2534;
+  background-color:  #9d8c8e;
+  border-color: #5d2534;
 }
 
-.boxshadowM .menu span a:hover{
-  box-shadow:2px 2px 5px #d7c7c3;
+.enclosure3{
+  color: #d7c7c3;
+  border-color:#d7c7c3;
+  background-color:#5d2534;
 }
 
-.boxshadowM .menu span a:focus{
-  box-shadow:2px 2px 5px #d7c7c3;
+.gradient1 { background: linear-gradient(#a06775,#5d2534);}
+
+.gradient2 { background: linear-gradient(to right, rgba(93, 37, 52,0), rgba( 138,12,52,1));}
+
+.gradient3 { background: linear-gradient(to left, rgba(93, 37, 52,0), rgba( 138,12,52,1));}
+
+
+.button1{
+  background: #5d2534;
+  color: #d7c7c3;
+}
+
+.button1:hover{ background: #bd0e3b;}
+
+.button2{
+  background:  #a06775;
+	color: #9d8c8e;
+}
+
+.button2:hover{
+  background: #d7c7c3;
+	color: #d21f65;
 }
 
 
-.boxshadowMlight{
-  box-shadow:2px 2px 5px #d7c7c3;
-}
+.boxshadowL{box-shadow:3px 3px 25px #5d2534;}
 
-.boxshadowMlight:hover{
-  box-shadow:2px 2px 5px #d21f65;
-}
+.boxshadowM{ box-shadow:2px 2px 5px #5d2534;}
 
-.boxshadowMlight img:hover{
-  box-shadow:2px 2px 5px #d7c7c3;
-}
+.boxshadowM img{ box-shadow:2px 2px 5px #5d2534;}
 
-.boxShadowS{
-  box-shadow: 1px 1px 10px #5d2534;
-}
+.boxshadowM #profile-banner{ box-shadow:2px 2px 5px #a06775;}
 
-.boxShadowXS {
-  box-shadow:1px 1px 5px #5d2534;
-}
+.boxshadowM .menu span a{ box-shadow:2px 2px 5px #a06775;}
+
+.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px #d7c7c3;}
+
+.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #d7c7c3;}
+
+.boxshadowMlight{ box-shadow:2px 2px 5px #d7c7c3;}
+
+.boxshadowMlight:hover{ box-shadow:2px 2px 5px #d21f65;}
+
+.boxshadowMlight img:hover{ box-shadow:2px 2px 5px #d7c7c3;}
+
+.boxShadowS{ box-shadow: 0px 0px 10px #5d2534;}
+
+.boxShadowXS{ box-shadow:1px 1px 5px #5d2534;}
+
+/* HTML Classes*/
 
 body {
   background-color: #d7c7c3;
@@ -89,45 +112,11 @@ a:active { color: #a06775;}
 
 img { color: #d7c7c3;}
 
-hr {
-    color: rgba(93, 37, 52, 0.2)
-}
-
+hr { color: rgba(93, 37, 52, 0.2)}
 
 /*Header styles*/
 
-header {
-	background-color:#5d2534;
-	border-color:#eadfdc;
-}
-
-header.no_bg_img {
-  background: linear-gradient(#a06775,#5d2534);
-}
-
-div#banner-gradient {
-	background: linear-gradient(to right, rgba(93, 37, 52,0), rgba( 138,12,52,1));
-}
-
 /* Button styles */
-
-button#openNav {
-  background: #5d2534;
-  color: #d7c7c3;
-}
-
-button#openNav:hover { background: #bd0e3b;}
-
-button#closeNav {
-  background:  #a06775;
-	color: #9d8c8e;
-}
-
-button#closeNav:hover {
-	box-shadow:  #967;
-	background: #d7c7c3;
-	color: #d21f65;
-}
 
 /* Menu Styles*/
 
@@ -138,65 +127,60 @@ button#closeNav:hover {
 
 .menu span a:hover {
   color:#bd0e3b;
-  box-shadow: #eadfdc;
+  background: #d7c7c3;
 }
 
 .menu span a:focus {
   color:#bd0e3b;
-  box-shadow: #eadfdc;
+  background: #d7c7c3;
 }
 
 .menu span a:active {
   color:#bd0e3b;
-  box-shadow: #eadfdc;
+  background: #d7c7c3;
 }
+
+.menu div{ background-color: #9d8c8e;}
 
 /* Sidebar styles*/
 
-.sidebar { background-color: #5d2534;}
+#sidebar a { color: #d7c7c3;}
 
-.sidebar a { color: #d7c7c3;}
+#sidebar a:hover { color: #f1f1f1;}
 
-.sidebar a:hover { color: #f1f1f1;}
+#sidebar a:focus { color: #f1f1f1;}
 
-.sidebar a:focus { color: #f1f1f1;}
+#sidebar a:active { color: #f1f1f1;}
 
-.sidebar a:active { color: #f1f1f1;}
-
-.sidebar .menu span a {
+#sidebar .menu span a {
   background: #9d8c8e;
   color: #5d2534;
   box-shadow: none;
 }
 
-.sidebar .menu span a:hover {
+#sidebar .menu span a:hover {
   background: #9d8c8e;
   color:#bd0e3b;
 }
 
-.sidebar .menu span a:focus {
+#sidebar .menu span a:focus {
   background: #9d8c8e;
    color:#bd0e3b;
  }
 
-.sidebar .menu span a:active {
+#sidebar .menu span a:active {
   background: #9d8c8e;
   color:#bd0e3b;
 }
 
-.sidebar .menu div { background-color: #d7c7c3; }
+#sidebar .menu div { background-color: #d7c7c3; }
 
-.sidebar .menu span {
+#sidebar .menu span {
   background: #9d8c8e;
   color: #5d2534;
 }
 
 /* content area styles*/
-
-#contentArea {
-  background-color:  #9d8c8e;
-  border-color: #5d2534;
-}
 
 #contentArea h1 {
   color:#a06775;
@@ -232,7 +216,6 @@ button#closeNav:hover {
 #profile-banner {
 	background-color:#5d2534;
 	color: #eadfdc;
-	box-shadow: #5d2534;
 }
 
 #profile-banner h1 {color: #eadfdc;}
@@ -270,20 +253,19 @@ border-color:#5d2534;
 }
 /*Social Menu*/
 
-div.icon span a:link { color:#d7c7c3;}
+div.icon  a:link { color:#d7c7c3;}
 
-div.icon span a:visited { color:#d7c7c3;}
+div.icon  a:visited { color:#d7c7c3;}
 
-div.icon span a:hover {
+div.icon  a:hover {
  color:#a06775;
- box-shadow: #d7c7c3;
 }
 
-div.icon span a:focus { color:#a06775;}
+div.icon  a:focus { color:#a06775;}
 
-div.icon span a:active { color:#d7c7c3;}
+div.icon  a:active { color:#d7c7c3;}
 
-div.icon span img{
+div.icon img{
    filter:hue-rotate(90deg);
 }
 
@@ -292,7 +274,7 @@ div.icon span img{
 
 @media only screen and (max-width: 800px) {
 
-.sidebar { background-color: #5d2534;}
+#sidebar { background-color: #5d2534;}
 
 .steem_posts_date { color:#d7c7c3;}
 }

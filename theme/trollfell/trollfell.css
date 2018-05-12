@@ -143,20 +143,27 @@ div.gradient2 { margin-top: 0;}
 button#openNav{
 	font-size: 2em;
 	margin-left: 1em;
-	border:none;
 	position: fixed;
 	top:0.5em;
 	border-radius: 5px;
 	padding-bottom: 0.2em;
 	opacity: 0.7;
+	border:none;
 }
+
+button#openNav:focus{ outline:0;}
+
 
 button#closeNav{
 	background-color: transparent !important;
 	font-size: 3em;
 	border: none;
 	padding: 0 2px 2px 2px;
+	border:none;
 }
+
+button#closeNav{ outline:0;}
+
 
 /* Menu Styles*/
 
@@ -411,35 +418,42 @@ button#closeNav{
 		margin: 0;
 		border: none;
 	}
+	
 	/* steem post comments */
 	#steem-post-comments {
 		border-top: 1px solid;
 		padding: 0.7em;
 	}
+
 	#steem-post-comments span.steem_comment {
 	    padding-right:0.7em;
 	}
+
 	#steem-post-comments div.steem_comment {
 	    margin:0;
 	    padding-left:1em;
 	    padding-right:0;
 	    padding-top:0.7em;
 	}
+
 	#steem-post-comments div.steem_comment .steem_comment_meta {
 	    font-size: 0.6em;
 			padding: 0.3em;
 	}
+
 	.steem-comments {
 	    padding-left: 1px;
 			padding-right:0;
 	    display: none;
 	}
+
 	#steem-post-comments div.steem_comment p {
 	    margin:0;
 	    padding-left:1em;
 			padding-right:0;
 	    width: 100%;
 	}
+
 #steem-post-comments img{
 	box-shadow:none ;
 	padding:0.5em;

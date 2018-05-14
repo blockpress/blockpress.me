@@ -26,6 +26,7 @@ function parseModules(modules_data) {
 	}
 	parseTheme(config.theme);
 	parsePalette(config.palette);
+  loadThemeJs(config.theme);
 }
 // Parse an individual module item, load the script...
 function parseModule(module_name) {
@@ -36,6 +37,16 @@ function parseModule(module_name) {
 		modules_to_load.splice(index, 1);
 	});
 }
+
+// Load theme specific js files
+
+function loadThemeJs(theme_name) {
+  //console.log('Im in')
+	$.getScript("theme/"+theme_name+"/"+theme_name+".js", function( data, textStatus, jqxhr){
+		console.log( "Load was performed for "+theme_name+".");
+	});
+}
+
 
 /*** Functions for parsing themes ***/
 // Parse the theme
@@ -66,6 +77,9 @@ function getThemeHTML(theme) {
     url: "./theme/"+theme+"/template.html"
   });
 }
+
+
+
 // Theme template failed to load...
 function themeHTMLFail() {
   console.log('FAILED TO LOAD THEME HTML!');

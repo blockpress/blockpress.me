@@ -1,7 +1,7 @@
 <div id="leftpad">
 	<header role="banner" class="banner_image boxshadowM enclosure1" >
 		<div class="gradient2">
-			<button id="openNav"  class="button1 boxshadowM" onclick="openSidebar()">&#9776;</button>
+			<button id="openNav"  class="button1 boxshadowM">&#9776;</button>
       	<h1><strong id="sitetitle">Blockpress</strong></h1>
       	<h2 id="tagline"></h2>
 		</div>
@@ -10,7 +10,7 @@
 </div>
 
 <div  id="sidebar" class="enclosure3">
-  <button id="closeNav" class="button2" onclick="closeSidebar()">&times;</button>
+  <button id="closeNav" class="button2">&times;</button>
 <!-- menu -->
 		<nav role="navigation">
 			<div id="menuArea" class="menu"></div>
@@ -59,21 +59,4 @@
 						</span>
 			</div>
 		</footer>
-
-		<script>
-		function openSidebar() {
-			$("#leftpad").animate({'padding-left': "300px"},500);
-			$("#contentArea").animate({'width':'95%','display':'inline-block'},500);
-			$("#sidebar").show(500);
-			$("#openNav").hide();
-		}
-
-		function closeSidebar() {
-			$("#leftpad").animate({'padding-left': "0px"},500)
-			$("#contentArea").animate({'width':'70%','display':'block'},500);
-			$("#sidebar").hide(500);
-			$("#openNav").show();
-		}
-		</script>
-
 	</div>

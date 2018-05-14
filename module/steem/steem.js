@@ -348,6 +348,8 @@ function displaySteemProfile(err, profile) {
 			getSteemPosts(steem_profile.name,steem_tags,25,'');
 			pushStateWithoutDuplicate('Profile page for '+metadata.profile.name+' tagged #'+steem_tags, './?p=steem/@'+steem_profile.name+'/'+steem_tags);
 		}
+	} else {
+		pushStateWithoutDuplicate('Profile page for '+metadata.profile.name, './?p=steem/@'+steem_profile.name);		
 	}
 }
 function getSteemProfile(username,tag) {

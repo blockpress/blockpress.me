@@ -45,7 +45,7 @@ img {
 }
 
 hr {
-    color: rgba(0,239,0, 0.2)
+    color: rgba(0,239,0, 0.2);
 }
 
 /* Generic Classes */
@@ -311,16 +311,16 @@ div.steem_posts_meta {color: #00ee00;}
 }
 
 /*Social Menu*/
-div.icon span a img{
+.social a img{
   box-shadow: none;
 }
 
-div.icon span img{
-   filter:hue-rotate(320deg) brightness(110%) blur(1px);
+.social img{
+   filter:hue-rotate(290deg) brightness(110%) blur(1px);
 }
 
-div.icon span img:hover{
-   filter:hue-rotate(320deg) brightness(190%) blur(0px);
+.social img:hover{
+   filter:hue-rotate(290deg) brightness(190%) blur(0px);
 }
 
 

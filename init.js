@@ -98,7 +98,7 @@ function parseThemeHTML(themeHTML) {
 	themeHTML = themeHTML.replace(/{sitetitle}/g,config.sitetitle);
   $(document.body).html(themeHTML);
   if(banner_image != "") {
-  		$('.banner_image').css("background-image",banner_image);
+  		$('.banner_image').css("background-image","url("+banner_image+")");
 	}
   $('#sitetitle').text(config.sitetitle);
   $('#tagline').text(config.tagline);

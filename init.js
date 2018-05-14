@@ -26,7 +26,6 @@ function parseModules(modules_data) {
 	}
 	parseTheme(config.theme);
 	parsePalette(config.palette);
-  loadThemeJs(config.theme);
 }
 // Parse an individual module item, load the script...
 function parseModule(module_name) {
@@ -69,12 +68,14 @@ function parseTheme(theme) {
      type: "text/css",
      href: "./theme/"+theme+"/"+theme+".css"
   }).appendTo("head");
+
+  loadThemeJs(theme);
 }
 // Load the theme template
 function getThemeHTML(theme) {
   return $.ajax({
     type: 'GET',
-    url: "./theme/"+theme+"/template.html"
+    url: "./theme/"+theme+"/"+theme+".html"
   });
 }
 

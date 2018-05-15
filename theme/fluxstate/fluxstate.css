@@ -153,6 +153,30 @@
 			overflow: hidden;
 		}
 
+    /* Steem post styles */
+    #steem-post img {
+      max-width: 90%;
+    }
+    .steemCommentsAdd {
+      margin-top:1.5em;
+    }
+
+    /* steem-comment styles */
+    div.steem_comment {
+      font-size: 1em;
+      margin-left: 1em;
+      padding: 0.5em;
+      border-width: 1px;
+      border-style: solid;
+    }
+    #contentArea span.steem_comment p {
+      font-size: 0.9em;
+    }
+    .steem_comment_meta {
+      font-size: 0.7em;
+    }
+
+
 /* Flux-State Menu Styles */
 
 #mainMenu {
@@ -193,6 +217,7 @@
 }
 #socialMenu a {
 	text-decoration: none;
+  background-color: transparent;
 }
 #socialMenu a:hover {
 	background-color: transparent;

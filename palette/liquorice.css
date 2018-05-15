@@ -58,11 +58,11 @@ hr {
   color: #1e251d;
 }
 .enclosure2{
-	border-color: #00ee00;
+	border-color: #00dd00;
 	background-color: #161616;
 }
 .enclosure3{
-  border-color: #00ee00;
+  border-color: #00cc00;
   background-color: #1c1c1c;
 }
 
@@ -293,9 +293,16 @@ text-shadow: 1px 1px 5px #beb19f;
 .steemitboard img {
     filter: sepia(90%) hue-rotate(60deg) brightness(110%);
 }
+/* Steem Posts */
+
+
 /*Steem Post*/
 
-/* Steem Posts */
+/* Steem Comment */
+    div.steem_comment {
+      border-color: #111;
+    }
+
 
 .steem_posts {border-bottom-color: #00ee00;}
 

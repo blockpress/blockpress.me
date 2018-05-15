@@ -202,13 +202,12 @@ button#closeNav{ outline:0;}
 #sidebar {
     height: 100%;
     width: 300px;
-    position: fixed;
+    position:fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    left:-300px;
     overflow: hidden;
 		text-align: center;
-		display:none;
 }
 
 #sidebar a {
@@ -418,7 +417,7 @@ button#closeNav{ outline:0;}
 		margin: 0;
 		border: none;
 	}
-	
+
 	/* steem post comments */
 	#steem-post-comments {
 		border-top: 1px solid;

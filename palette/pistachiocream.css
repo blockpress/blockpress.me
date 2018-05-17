@@ -239,7 +239,10 @@ div.socialmenu.icon a:focus { color:#70c535}
 div.socialmenu.icon a:active { color:#e8f0d2;}
 
 div.socialmenu.icon img{
-   filter:hue-rotate(320deg) contrast(180%) brightness(110%);
+   filter:hue-rotate(310deg) contrast(180%) brightness(110%);
+}
+div.socialmenu.icon img:hover{
+   filter:hue-rotate(300deg) contrast(160%) brightness(140%);
 }
 
 /*STEEM MODULES STYLES*/

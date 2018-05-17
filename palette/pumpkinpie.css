@@ -239,6 +239,9 @@ div.socialmenu.icon a img{
 div.socialmenu.icon img{
    filter:hue-rotate(240deg);
 }
+div.socialmenu.icon img:hover{
+   filter:hue-rotate(160deg) brightness(120%);
+}
 /*STEEM MODULES STYLES*/
 
 /*Steem Profile*/

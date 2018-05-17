@@ -244,6 +244,9 @@ div.socialmenu.icon img{
    filter:hue-rotate(90deg);
 }
 
+div.socialmenu.icon img:hover{
+   filter:hue-rotate(90deg) brightness(150%);
+}
 /*STEEM MODULES STYLES*/
 
 /* Steem Profile */

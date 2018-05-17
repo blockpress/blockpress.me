@@ -9,8 +9,14 @@ magenta:#dd00dd;
 yellow: #dddd00;
 */
 
+/* GENERAL THEME STYLES */
+
 /* HTML Classes */
-body { background-color: #111111;}
+
+body {
+   background-color: #111111;
+   color: #00ee00;
+ }
 
 h1 {
   color:#00ee00;
@@ -52,26 +58,32 @@ hr {
 /* Enclosure Classes
 (can be applied to elemens such as headers, footers or document body)*/
 
-.enclosure3{
+.enclosure1{
   background-color: #111111;
 	border-color: #00ee00;
   color: #1e251d;
 }
+
+/* Enclosure2 Styles */
+
 .enclosure2{
 	border-color: #00dd00;
-	background-color: #161616;
+	background-color: #131313;
 }
-.enclosure1{
+
+/* Enclosure3 Styles */
+
+.enclosure3{
   border-color: #00cc00;
-  background-color: #1c1c1c;
+  background-color: #161616;
 }
 
 /* Pattern Classes
 (can be applied to add gradient to any element with a background) */
+
 .pattern1 { background: linear-gradient(#111111,#222222);}
 
-.pattern2 { background: linear-gradient(to right, rgba(16,16,16,0.9), rgba(16,16,16,1));
-}
+.pattern2 { background: linear-gradient(to right, rgba(16,16,16,0.9), rgba(16,16,16,1));}
 
 .pattern3 { background: linear-gradient(to left, rgba(16,16,16,0.9), rgba(16,16,16,1));}
 
@@ -104,58 +116,35 @@ hr {
 
 /*Box Shadow Classes
 (can be added to any element */
-.boxshadowL{
-  box-shadow:0px 0px 25px #eeeeee ;
-}
-.boxshadowM{
-  box-shadow:0px 0px 5px #eeeeee ;
-}
 
-.boxshadowM img{
-  box-shadow:2px 2px 5px #eeeeee;
-}
+.boxshadowL{  box-shadow:0px 0px 25px #eeeeee ;}
+.boxshadowM{ box-shadow:0px 0px 5px #eeeeee ; }
 
-.boxshadowM #profile-banner{
-  box-shadow:0px 0px 5px #eeeeee;
-}
-.boxshadowM .menu span a{
-  box-shadow:0px 0px 5px #cccccc;
-}
+.boxshadowM img{ box-shadow:2px 2px 5px #eeeeee; }
 
-.boxshadowM .menu span a:hover{
-  box-shadow:0px 0px 8px #eeeeee;
-}
+.boxshadowM #profile-banner{ box-shadow:0px 0px 5px #eeeeee; }
+.boxshadowM .menu span a{ box-shadow:0px 0px 5px #cccccc; }
 
-.boxshadowM .menu span a:focus{
-  box-shadow:0px 0px 10px #eeeeee;
-}
+.boxshadowM .menu span a:hover{ box-shadow:0px 0px 8px #eeeeee; }
 
-.boxshadowMInv{
-  box-shadow:0px 0px 5px #eeeeee;
-}
+.boxshadowM .menu span a:focus{ box-shadow:0px 0px 10px #eeeeee; }
 
-.boxshadowMInv:hover{
-  box-shadow:0px 0px 8px #eeeeee;
-}
+.boxshadowMInv{ box-shadow:0px 0px 5px #eeeeee; }
 
-.boxshadowMInv img:hover{
-  box-shadow:0px 0px 5px #eeeeee;
-}
+.boxshadowMInv:hover{ box-shadow:0px 0px 8px #eeeeee; }
 
-.boxShadowS{
-  box-shadow: 0px 0px 10px #eeeeee;
-}
+.boxshadowMInv img:hover{ box-shadow:0px 0px 5px #eeeeee; }
 
-.boxShadowXS {
-  box-shadow:0px 0px 5px #eeeeee;
-}
+.boxShadowS{ box-shadow: 0px 0px 10px #eeeeee; }
+
+.boxShadowXS { box-shadow:0px 0px 5px #eeeeee; }
 
 
 
 
 /*Header styles*/
 
-header {
+/* header {
 	background-color: #111111;
 	border-color: #00ee00;
 }
@@ -166,79 +155,92 @@ header.no_bg_img {
 
 div#banner-gradient {
 	background: linear-gradient(to right, rgba(16,16,16,0.5), rgba( 16,16,16,1));
-}
+} */
 
 /* Menu Styles*/
 
-.menu span a {
-  background-color:#111111;
+.menu1 span a {
+  background-color:#161616;
 	color:#00dddd;
 }
 
-.menu span a:hover {
+.menu1 span a:hover {
 	background-color:#00dddd;
 	color:#eeeeee;
 }
 
-.menu span a:focus {
+.menu1 span a:focus {
 	background-color:#00dddd;
 	color:#eeeeee;
 }
 
-.menu span a:active {
+.menu1 span a:active {
 	background-color:#00eeee;
 	color:#111111;
 }
 
 /*Sidebar styles*/
-#sidebar .menu span a {
+.menu2 span a {
   background: none;
   box-shadow: none;
 }
 
-#sidebar .menu span a:hover { box-shadow: none;}
+.menu2 span a:hover { box-shadow: none;}
 
-#sidebar .menu span a:focus { box-shadow: none;}
+.menu2 span a:focus { box-shadow: none;}
 
-#sidebar .menu span a:active { box-shadow: none;}
+.menu2 span a:active { box-shadow: none;}
 
-#sidebar .menu span {
+.menu2 span {
   background: #111111;
   color: #00ee00;
 }
 
-#sidebar .menu div { background-color: #00ee00;}
+.menu2 div { background-color: #00ee00;}
 
   /* content area styles*/
 
-#contentArea {
+.enclosure2 {
 	color: #00ee00;
 	border-color: #00ee00;
 	background-color: #111111;
 }
 
-#contentArea h1 {
+.enclosure2 h1 {
 color: #00ee00;
 text-shadow: 1px 1px 5px #beb19f;
 }
 
-#contentArea h2 { color:#00ee00;}
+.enclosure2 h2 { color:#00ee00;}
 
-#contentArea h3 { color: #00ee00;}
+.enclosure2 h3 { color: #00ee00;}
 
-#contentArea p {color: #00ee00;}
+.enclosure2 p {color: #00ee00;}
 
-#contentArea ul li {
+.enclosure2 ul li {
   color: #00ee00; 	/* set color of list item text */
 }
 
-#contentArea ul li::before {
+.enclosure2 ul li::before {
   color: #00ee00;   /* color of unicode character */
 }
 
 /* Footer Styles*/
 
-#footer-menu li a:link { color:#504628;}
+/* #footer-menu li a:link { color:#504628;} */
+
+/*Social Menu*/
+div.socialmenu.icon a img{
+  box-shadow: none;
+}
+
+div.socialmenu.icon img{
+   filter:hue-rotate(290deg) brightness(110%) blur(1px);
+}
+
+div.socialmenu.icon img:hover{
+   filter:hue-rotate(290deg) brightness(190%) blur(0px);
+}
 
 /* Steem Content Modules*/
 
@@ -317,18 +319,6 @@ div.steem_posts_meta {color: #00ee00;}
   filter: sepia(80%) hue-rotate(70deg);
 }
 
-/*Social Menu*/
-.social a img{
-  box-shadow: none;
-}
-
-.social img{
-   filter:hue-rotate(290deg) brightness(110%) blur(1px);
-}
-
-.social img:hover{
-   filter:hue-rotate(290deg) brightness(190%) blur(0px);
-}
 
 
 /* Responsive Design */

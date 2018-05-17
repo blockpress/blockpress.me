@@ -247,6 +247,9 @@ div.socialmenu.icon a:active { color:#eeeef5; }
 div.socialmenu.icon img{
    filter:hue-rotate(30deg) contrast(120%) brightness(120%);
 }
+div.socialmenu.icon img:hover{
+   filter:hue-rotate(30deg) contrast(160%) brightness(180%);
+}
 
 /*STEEM MODULES STYLES*/
 

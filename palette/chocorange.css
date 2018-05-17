@@ -221,6 +221,9 @@ div.socialmenu.icon a:active { color:#f0be7e;}
 div.socialmenu.icon img{
    filter:hue-rotate(185deg) saturate(0.75);
 }
+div.socialmenu.icon img:hover{
+   filter:hue-rotate(185deg) brightness(160%);
+}
 
 /*STEEM MODULES STYLES*/
 

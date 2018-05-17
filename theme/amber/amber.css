@@ -201,7 +201,7 @@ header{
 	margin-left:15%;
 }
 
-#content .menu a{
+#content a{
 	box-shadow: none;
 }
 
@@ -241,7 +241,6 @@ header{
 	}
 	#contentArea p{
 		font-size: 1em;
-	  color:black;
 		text-align: left;
 	}
 
@@ -347,9 +346,8 @@ div.icon img{
 	max-width: 70%;
 	margin-right:auto;
 	margin-left:auto;
-	margin-top: 1em;
-	margin-bottom: 1em;
 }
+
 #profile-info a {
 	text-decoration: none;
 }

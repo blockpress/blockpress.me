@@ -123,14 +123,14 @@ header{
 
 /* Menu Styles*/
 
-.menu div{
+.menu1 div{
 	text-align: center;
   padding-left: 0;
 	margin-bottom: 0.2em;
 	flex-wrap: wrap;
 }
 
-.menu span{
+.menu1 span{
   display: inline-block;
   font-size: 1em;
   text-transform: uppercase;
@@ -138,7 +138,7 @@ header{
 	margin-right: 0.3em;
 	height: 2.5em;
 }
-.menu span a {
+.menu1 span a {
 	padding:8px;
 	border-radius: 5px;
 }
@@ -427,7 +427,7 @@ div.steem_posts_meta{
 		padding-left: 1em;
 	}
 
-	.menu span{
+	.menu1 span{
 		display: inline-block;
 	}
 
@@ -545,14 +545,14 @@ border: none;
 }
 }
 @media only screen and (max-width: 400px) {
-	.menu span{
+	.menu1 span{
 		display:block;
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
 
 	}
-	.menu span a{
+	.menu1 span a{
 		width:100%;
 		display:block;
 		border-radius: 0;

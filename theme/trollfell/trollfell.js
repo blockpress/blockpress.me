@@ -4,16 +4,16 @@ $.getScript( "lib/transit/jquery.transit.min.js", function( data, textStatus, jq
 
 
 $('#openNav').click(function() {
-  $("#sidebar").transition({ x: '+=300px' });
-  $("#leftpad").transition({'padding-left': "300px"},400);
-  $("#contentArea").transition({'width':'95%','display':'inline-block'},400);
-  $("#openNav").hide();
+  $("#sidebar").transition({ x: '+=300px', delay: 200});
+  $("#leftpad").transition({'padding-left': "300px",delay: 200},400, 'ease');
+  $("#contentArea").transition({'width':'95%','display':'inline-block',delay: 200},400,'ease');
+  $("#openNav").transition({scale:0,delay: 100});
 });
 
 $('#closeNav').click(function() {
   console.log('closenav');
-  $("#sidebar").transition({ x :'-=300px' });
-  $("#leftpad").transition({'padding-left': "0"},400)
-  $("#contentArea").transition({'width':'70%','display':'block'},400);
-  $("#openNav").show();
+  $("#sidebar").transition({ x :'-=300px', delay: 200 });
+  $("#leftpad").transition({'padding-left': "0",delay: 200},400,'ease')
+  $("#contentArea").transition({'width':'70%','display':'block',delay: 200},400,'ease');
+  $("#openNav").transition({scale:1,delay: 100});
 });

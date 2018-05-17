@@ -52,7 +52,7 @@ hr {
 /* Enclosure Classes
 (can be applied to elemens such as headers, footers or document body)*/
 
-.enclosure1{
+.enclosure3{
   background-color: #111111;
 	border-color: #00ee00;
   color: #1e251d;
@@ -61,19 +61,19 @@ hr {
 	border-color: #00dd00;
 	background-color: #161616;
 }
-.enclosure3{
+.enclosure1{
   border-color: #00cc00;
   background-color: #1c1c1c;
 }
 
-/* Gradient Classes
+/* Pattern Classes
 (can be applied to add gradient to any element with a background) */
-.gradient1 { background: linear-gradient(#111111,#222222);}
+.pattern1 { background: linear-gradient(#111111,#222222);}
 
-.gradient2 { background: linear-gradient(to right, rgba(16,16,16,0.9), rgba(16,16,16,1));
+.pattern2 { background: linear-gradient(to right, rgba(16,16,16,0.9), rgba(16,16,16,1));
 }
 
-.gradient3 { background: linear-gradient(to left, rgba(16,16,16,0.9), rgba(16,16,16,1));}
+.pattern3 { background: linear-gradient(to left, rgba(16,16,16,0.9), rgba(16,16,16,1));}
 
 /* Button Classes
 (to be used with any elements that act like a button)*/
@@ -130,15 +130,15 @@ hr {
   box-shadow:0px 0px 10px #eeeeee;
 }
 
-.boxshadowMlight{
+.boxshadowMInv{
   box-shadow:0px 0px 5px #eeeeee;
 }
 
-.boxshadowMlight:hover{
+.boxshadowMInv:hover{
   box-shadow:0px 0px 8px #eeeeee;
 }
 
-.boxshadowMlight img:hover{
+.boxshadowMInv img:hover{
   box-shadow:0px 0px 5px #eeeeee;
 }
 

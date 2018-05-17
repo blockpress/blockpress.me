@@ -136,7 +136,7 @@ header{
 	margin:0;
 }
 
-div.gradient2 { margin-top: 0;}
+div.pattern1 { margin-top: 0;}
 
 /* Button styles */
 
@@ -167,7 +167,7 @@ button#closeNav{ outline:0;}
 
 /* Menu Styles*/
 
-.menu div{
+.menu2 div{
 	text-align: center;
 	list-style: none;
 	text-align: center;
@@ -178,7 +178,7 @@ button#closeNav{ outline:0;}
 
 }
 
-.menu span{
+.menu2 span{
   display: block;
   font-size: 1.25em;
   text-transform: uppercase;
@@ -187,7 +187,7 @@ button#closeNav{ outline:0;}
 	margin-bottom: 1px;
 }
 
-.menu span a {
+.menu2 span a {
 	text-decoration:none;
 	width: 100%;
 }

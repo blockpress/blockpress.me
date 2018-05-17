@@ -7,70 +7,9 @@ dark mint:  #0c6244   RGB 12, 98, 68
 sea:        #38ab8d   RGB 56, 171, 141
 */
 
-/* Generic Classes */
+/*GENERAL THEME STYLES*/
 
-.enclosure1{
-  color:#d2f0da;
-  background-color:#0c6244;
-	border-color: #0c6244;
-}
-
-.enclosure2{
-  color:#0c6244;
-  background-color: #d2f0da;
-  border-color: #0c6244;
-}
-
-.enclosure3{
-  color:#0c6244;
-  border-color: #0c6244;
-  background-color: #38ab8d;
-}
-
-.gradient1 { background: linear-gradient( #38ab8d ,#0c6244);}
-
-.gradient2 { background: linear-gradient(to right, rgba(56, 171, 141,0), rgba(12, 98, 68,1));}
-
-.gradient3 {background: linear-gradient(to left, rgba(56, 171, 141,0), rgba(12, 98, 68,1));}
-
-.button1{
-  background: #0c6244;
-  color: #e8f0d2;
-}
-.button1:hover{background: #50ce8b;}
-
-.button2{
-  background: #50ce8b;
-	color: #d2f0da;
-}
-.button2:hover{
-  background: #e8f0d2;
-	color:  #38ab8d;
-}
-
-.boxshadowL{ box-shadow:3px 3px 25px #0c6244;}
-
-.boxshadowM{ box-shadow:2px 2px 5px #0c6244;}
-
-.boxshadowM img{ box-shadow:2px 2px 5px #0c6244;}
-
-.boxshadowM #profile-banner{ box-shadow:2px 2px 5px #0c6244;}
-
-.boxshadowM .menu span a{ box-shadow:2px 2px 5px #50ce8b;}
-
-.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px #d2f0da;}
-
-.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #d2f0da;}
-
-.boxshadowMlight{ box-shadow:2px 2px 5px #d2f0da;}
-
-.boxshadowMlight:hover{ box-shadow:2px 2px 5px #e8f0d2;}
-
-.boxshadowMlight img:hover{ box-shadow:2px 2px 5px #d2f0da;}
-
-.boxShadowS{ box-shadow: 1px 1px 10px #0c6244;}
-
-.boxShadowXS { box-shadow:1px 1px 5px #0c6244;}
+/* HTML Classes */
 
 body {
   background-color: #e8f0d2;
@@ -109,173 +48,212 @@ hr {
     color: rgba(56, 171, 141, 0.2)
 }
 
+/* Generic Classes */
 
-/*Header styles*/
+/* Enclosure Classes
+(can be applied to elemens such as headers, footers or document body)*/
 
-/* Button styles */
+/*Enclosure1 Styles*/
+
+.enclosure1{
+  color:#d2f0da;
+  background-color:#0c6244;
+	border-color: #0c6244;
+}
+
+/*Enclosure2 styles*/
+
+.enclosure2{
+  color:#0c6244;
+  background-color: #d2f0da;
+  border-color: #0c6244;
+}
+
+.enclosure2 h1 {
+  color:#50ce8b;
+  text-shadow: 1px 1px #0c6244,1px 1px 5px #e8f0d2;
+}
+
+.enclosure2 h2 {
+  color:#50ce8b;
+  text-shadow: 1px 1px #0c6244,1px 1px 5px #e8f0d2;
+}
+
+.enclosure2 h3 {
+  color:#50ce8b;
+  text-shadow: 1px 1px #0c6244,1px 1px 5px #e8f0d2;
+}
+
+.enclosure2 p { color:#0c6244;}
+
+.enclosure2 ul li {
+  color: #0c6244; 	/* set color of list item text */
+ }
+
+.enclosure2 ul li::before {
+   color: #50ce8b;   /* color of unicode character */
+ }
+
+/*Enclosure3 Styles*/
+
+.enclosure3{
+  color:#0c6244;
+  border-color: #0c6244;
+  background-color: #38ab8d;
+}
+
+/* Pattern Classes
+(can be applied to add gradients, textures etc to any element with a background) */
+
+.pattern1 { background: linear-gradient( #38ab8d ,#0c6244);}
+
+.pattern2 { background: linear-gradient(to right, rgba(56, 171, 141,0), rgba(12, 98, 68,1));}
+
+.pattern3 {background: linear-gradient(to left, rgba(56, 171, 141,0), rgba(12, 98, 68,1));}
+
+/* Button Classes
+(to be used with any elements that act like a button)*/
+
+.button1{
+  background: #0c6244;
+  color: #e8f0d2;
+}
+.button1:hover{background: #50ce8b;}
+
+.button2{
+  background: #50ce8b;
+	color: #d2f0da;
+}
+.button2:hover{
+  background: #e8f0d2;
+	color:  #38ab8d;
+}
+
+/*Box Shadow Classes
+(can be added to any element */
+
+.boxshadowL{ box-shadow:3px 3px 25px #0c6244;}
+
+
+.boxshadowM{ box-shadow:2px 2px 5px #0c6244;}
+
+.boxshadowM img{ box-shadow:2px 2px 5px #0c6244;}
+
+.boxshadowM .menu span a{ box-shadow:2px 2px 5px #50ce8b;}
+
+.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px #d2f0da;}
+
+.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #d2f0da;}
+
+
+.boxshadowMInv{ box-shadow:2px 2px 5px #d2f0da;}
+
+.boxshadowMInv:hover{ box-shadow:2px 2px 5px #e8f0d2;}
+
+.boxshadowMInv img:hover{ box-shadow:2px 2px 5px #d2f0da;}
+
+
+.boxShadowS{ box-shadow: 1px 1px 10px #0c6244;}
+
+.boxShadowXS { box-shadow:1px 1px 5px #0c6244;}
+
 
 /* Menu Styles*/
 
-.menu span a {
+.menu1 span a {
   background: #d2f0da;
   color: #0c6244;
 }
 
-.menu span a:hover {
+.menu1 span a:hover {
   color: #e8f0d2;
   background: #50ce8b;
 }
 
-.menu span a:focus {
+.menu1 span a:focus {
   color: #e8f0d2;
   background: #50ce8b;
 }
 
-.menu span a:active {
+.menu1 span a:active {
   color: #e8f0d2;
   background: #50ce8b;
 }
 
-.menu div {background: #d2f0da;}
+.menu1 div {background: #d2f0da;}
 
-/* Sidebar styles*/
+/*Menu2 Styles*/
 
+.menu2 a { color: #e8f0d2;}
 
-#sidebar a { color: #e8f0d2;}
+.menu2 a:hover { color: #70c535;}
 
-#sidebar a:hover { color: #70c535;}
+.menu2 a:focus { color: #70c535;}
 
-#sidebar a:focus { color: #70c535;}
+.menu2 a:active { color: #e8f0d2;}
 
-#sidebar a:active { color: #e8f0d2;}
-
-#sidebar .menu span a {
+.menu2 span a {
   background: #d2f0da;
   color: #0c6244;
   box-shadow: none;
 }
 
-#sidebar .menu span a:hover {
+.menu2 span a:hover {
   background: #d2f0da;
   color: #70c535 ;
   box-shadow: none;
 }
 
-#sidebar .menu span a:focus {
+.menu2 span a:focus {
   background: #d2f0da;
    color: #70c535 ;
    box-shadow: none;
  }
 
-#sidebar .menu span a:active {
+.menu2 span a:active {
   background: #d2f0da;
   color: #50ce8b ;
   box-shadow: none;
 }
 
-#sidebar .menu div {
+.menu2 div {
   background-color: #0c6244;
 }
 
-#sidebar .menu span {
+.menu2 span {
   background: #d2f0da;
   color: #0c6244;
 }
+/*Social Menu Styles*/
 
-/* Content Area Styles */
+div.socialmenu.icon a:link { color:#e8f0d2;}
 
-#contentArea {
+div.socialmenu.icon a:visited { color:#e8f0d2;}
 
-}
-
-#contentArea h1 {
-  color:#50ce8b;
-  text-shadow: 1px 1px #0c6244,1px 1px 5px #e8f0d2;
-}
-
-#contentArea h2 {
-  color:#50ce8b;
-  text-shadow: 1px 1px #0c6244,1px 1px 5px #e8f0d2;
-}
-
-#contentArea h3 {
-  color:#50ce8b;
-  text-shadow: 1px 1px #0c6244,1px 1px 5px #e8f0d2;
-}
-
-#contentArea p { color:#0c6244;}
-
-#contentArea ul li {
-  color: #0c6244; 	/* set color of list item text */
- }
-
- #contentArea ul li::before {
-   color: #50ce8b;   /* color of unicode character */
- }
-
-/* Footer styles*/
-
-/* Steem Content Modules */
-
-/* Steem Profile */
-
-#profile-banner {
-	background-color:#0c6244;
-	color:  #0c6244;
-}
-
-#profile-banner h1 {color:  #0c6244;}
-
-#profile-banner #profile-about {color:  #d2f0da;}
-
-#profile-banner #profile-info {color:  #d2f0da;}
-
-#profile-banner #profile-info a {color: #50ce8b ;}
-
-#profile-banner #profile-info a:visited {color:#50ce8b ;}
-
-#profile-banner #profile-info a:hover {
-	color:  #70c535;
-  text-shadow: 1px 1px 10px #e8f0d2;
-}
-
-#profile-banner #profile-info a:active {
-	color:  #0c6244;
-  text-shadow: 1px 1px 10px #e8f0d2;
-}
-
-/*Steem Post*/
-
-/* Steem Posts */
-
-.steem_posts_preview {
-  background-color:#e8f0d2 ;
-}
-
-/*Social Menu*/
-
-div.icon a:link { color:#e8f0d2;}
-
-div.icon a:visited { color:#e8f0d2;}
-
-div.icon a:hover {
+div.socialmenu.icon a:hover {
  color:#70c535
 }
 
-div.icon a:focus { color:#70c535}
+div.socialmenu.icon a:focus { color:#70c535}
 
-div.icon a:active { color:#e8f0d2;}
+div.socialmenu.icon a:active { color:#e8f0d2;}
 
-div.icon img{
+div.socialmenu.icon img{
    filter:hue-rotate(320deg) contrast(180%) brightness(110%);
 }
 
+/*STEEM MODULES STYLES*/
 
-/* Responsive Design */
+/* Steem Profile */
 
-@media only screen and (max-width: 800px) {
+.boxshadowM #profile-banner{ box-shadow:2px 2px 5px #0c6244;}
 
-#sidebar { background-color: #0c6244;}
+/* Steem Posts */
 
-.steem_posts_date { color:#e8f0d2;}
+div.steem_posts_preview h1 {
+  text-shadow: 1px 1px #0c6244;
+}
+
+div.steem_posts_preview h2 {
+  text-shadow: 1px 1px #0c6244;
 }

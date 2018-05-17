@@ -9,7 +9,50 @@ cream orange:       #f0be7e
 light cream orange: #ecd1aa
 */
 
+/* GENERAL THEME STYLES */
+
+/* HTML Classes */
+
+body { background-color: #160a09; }
+
+h1{
+    color:#f0be7e;
+		text-shadow: 1px 1px 5px #160a09;
+}
+
+h2{
+    color:#ec9c36;
+		text-shadow: 1px 1px  #ecd1aa;
+}
+
+h3{
+    color:#ec9c36;
+		text-shadow: 1px 1px  #ecd1aa;
+}
+
+p { color: #ecd1aa;}
+
+a:link { color:#ec9c36;}
+
+a:visited { color:#ec9c36;}
+
+a:hover { color:#f0be7e;}
+
+a:active, a:focus { color:#f0be7e;}
+
+img{
+	color: #160a09;
+	border-color: #160a09;
+}
+
+hr { color: rgba(33, 30, 26, 0.2);}
+
 /* Generic Classes */
+
+/* Enclosure Classes
+(can be applied to elemens such as headers, footers or document body)*/
+
+/*Enclosure1 Styles*/
 
 .enclosure1{
   color:#f0be7e;
@@ -17,11 +60,36 @@ light cream orange: #ecd1aa
   border-color:#653f26;
 }
 
+/* Enclosure2 Styles */
+
 .enclosure2{
   color: #ecd1aa;
   border-color: #653f26;
   background-color: #392b23;
 }
+
+.enclosure2 h1{
+    color: #f0be7e;
+}
+
+.enclosure2 h2{
+    color:#ec9c36;
+}
+.enclosure2 h3{
+    color: #ec9c36;
+}
+
+.enclosure2 p {color: #ecd1aa;}
+
+.enclosure2 ul li {
+	  color: #ecd1aa; 	/* set color of list item text */
+	}
+
+.enclosure2 ul li::before {
+	  color: #ec9c36;    /* color of unicode character */
+}
+
+/*Enclosure3 Styles*/
 
 .enclosure3{
   color:#ecd1aa;
@@ -29,12 +97,17 @@ light cream orange: #ecd1aa
   background-color: #2a1914;
 }
 
+/* Pattern Classes
+(can be applied to add gradients, textures etc to any element with a background) */
 
-.gradient1 { background: linear-gradient(#2a1914,#392b23);}
+.pattern1 { background: linear-gradient(#2a1914,#392b23);}
 
-.gradient2 { background: linear-gradient(to right, rgba(42, 25, 20,0.5), rgba(57, 43, 35, 1));}
+.pattern2 { background: linear-gradient(to right, rgba(42, 25, 20,0.5), rgba(57, 43, 35, 1));}
 
-.gradient3 { background: linear-gradient(to left, rgba(42, 25, 20,0.5), rgba(57, 43, 35, 1));}
+.pattern3 { background: linear-gradient(to left, rgba(42, 25, 20,0.5), rgba(57, 43, 35, 1));}
+
+/* Button Classes
+(to be used with any elements that act like a button)*/
 
 .button1{
   background: #653f26;
@@ -53,14 +126,15 @@ light cream orange: #ecd1aa
 	color: #160a09;
 }
 
+/*Box Shadow Classes
+(can be added to any element */
 
 .boxshadowL{ box-shadow:3px 3px 25px #ec9c36;}
+
 
 .boxshadowM{ box-shadow:2px 2px 5px #ec9c36;}
 
 .boxshadowM img{ box-shadow:2px 2px 5px #ec9c36;}
-
-.boxshadowM #profile-banner{ box-shadow:2px 2px 5px #ec9c36;}
 
 .boxshadowM .menu span a{ box-shadow:2px 2px 5px #ec9c36;}
 
@@ -68,202 +142,88 @@ light cream orange: #ecd1aa
 
 .boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #f0be7e;}
 
-.boxshadowMlight{ box-shadow:2px 2px 5px #ecd1aa;}
 
-.boxshadowMlight:hover{ box-shadow:2px 2px 5px #ec9c36;}
+.boxshadowMInv{ box-shadow:2px 2px 5px #ecd1aa;}
 
-.boxshadowMlight img:hover{ box-shadow:2px 2px 5px #ecd1aa;}
+.boxshadowMInv:hover{ box-shadow:2px 2px 5px #ec9c36;}
+
+.boxshadowMInv img:hover{ box-shadow:2px 2px 5px #ecd1aa;}
+
 
 .boxShadowS{ box-shadow: 1px 1px 10px #ec9c36;}
 
+
 .boxShadowXS { box-shadow:1px 1px 5px #ec9c36;}
 
+/* Menu Classes*/
 
-body{
-  background-color: #160a09;
-}
+/*Menu1 Styles*/
 
-h1{
-    color:#f0be7e;
-		text-shadow: 1px 1px 5px #160a09;
-}
-
-h2{
-    color:#ec9c36;
-		text-shadow: 1px 1px  #ecd1aa;
-}
-
-h3{
-    color:#ec9c36;
-		text-shadow: 1px 1px  #ecd1aa;
-}
-
-p{
-  color: #ecd1aa;
-}
-
-a:link {
-	color:#ec9c36;
-}
-a:visited{
-	color:#ec9c36;
-}
-a:hover{
-	color:#f0be7e;
-}
-a:active, a:focus{
-	color:#f0be7e;
-}
-img{
-	color: #160a09;
-	border-color: #160a09;
-}
-
-hr {
-    color: rgba(33, 30, 26, 0.2);
-}
-
-/*Header styles*/
-
-/* Button styles */
-
-/* Menu Styles*/
-
-.menu span a {
+.menu1 span a {
   background-color:#392b23;
 }
-.menu span a:hover {
+
+.menu1 span a:hover {
   color: #f0be7e;
   background-color:#653f26;
 }
 
-.menu span a:focus {
+.menu1 span a:focus {
   color: #f0be7e;
   background-color:#653f26;
 }
 
-.menu span a:active {
+.menu1 span a:active {
   color:#f0be7e;
   background-color:#653f26;
 }
 
-.menu div{background: #392b23;}
+.menu1 div { background: #392b23;}
 
-/* Sidebar styles*/
+/*Menu2 Styles*/
 
-
-#sidebar .menu span a {
+.menu2 span a {
   background: #653f26 ;
   color: #f0be7e;
   box-shadow: none;
 }
 
-#sidebar .menu span a:hover {
+.menu2 span a:hover {
   color:#ecd1aa;
   box-shadow: none;
 }
 
-#sidebar .menu span a:focus {
+.menu2 span a:focus {
    color:#ecd1aa;
    box-shadow: none;
  }
 
-#sidebar .menu span a:active {
+.menu2 span a:active {
   color:#ecd1aa;
   box-shadow: none;
 }
 
-#sidebar .menu div {
-  background-color: #f0be7e;
-}
+.menu2 div { background-color: #f0be7e;}
 
-#sidebar .menu span {
+.menu2 span {
   background: #653f26;
   color: #5d2534;
 }
 
-/* content area styles*/
+/* Social Menu Styles */
 
+div.socialmenu.icon a:link { color:#f0be7e;}
 
-#contentArea h1{
-    color: #f0be7e;
-}
+div.socialmenu.icon a:visited { color:#f0be7e;}
 
-#contentArea h2{
-    color:#ec9c36;
-}
-#contentArea h3{
-    color: #ec9c36;
-}
+div.socialmenu.icon a:active { color:#f0be7e;}
 
-#contentArea p {color: #ecd1aa;}
-
-#contentArea ul li {
-	  color: #ecd1aa; 	/* set color of list item text */
-	}
-
-#contentArea ul li::before {
-	  color: #ec9c36;    /* color of unicode character */
-}
-	/*Footer styles*/
-#footer-menu li a:link{
-	color:#ec9c36;
-}
-
-/* Steem Content Modules */
-
-/* Steem Profile */
-
-#profile-banner {
-  background-color:#160a09;
-	color: #2a1914;
-}
-#profile-banner h1 {color: #ecd1aa;}
-
-#profile-banner #profile-about {color: #ecd1aa;}
-
-#profile-banner #profile-info {color: #ecd1aa;}
-
-#profile-banner #profile-info a {color: #ecd1aa;}
-
-#profile-banner #profile-info a:visited { color:#ecd1aa;}
-
-#profile-banner #profile-info a:active { color:#f0be7e;}
-
-#profile-banner #profile-info a:hover { color:#f0be7e;}
-
-/*Steem Post*/
-
-/* Steem Posts */
-
-.steem_posts { border-bottom-color: #424242;}
-
-.steem_posts_meta { color: #f3f1ee;}
-
-div.steem_posts_meta { color: #ecd1aa;}
-
-.steem_posts_preview {
-  background-color:#2a1914;
-}
-
-/*Social Menu*/
-
-div.icon a:link { color:#f0be7e;}
-
-div.icon a:visited { color:#f0be7e;}
-
-div.icon a:active { color:#f0be7e;}
-
-div.icon img{
+div.socialmenu.icon img{
    filter:hue-rotate(185deg) saturate(0.75);
 }
 
+/*STEEM MODULES STYLES*/
 
-/* Responsive Design */
+/* Steem Profile */
 
-@media only screen and (max-width: 800px) {
-
-#sidebar { background-color: #160a09;}
-
-.steem_posts_date { color:#f0be7e;}
-}
+.boxshadowM #profile-banner{ box-shadow:2px 2px 5px #ec9c36;}

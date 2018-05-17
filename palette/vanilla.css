@@ -11,13 +11,15 @@ dark gold:      #504628   RGB 80, 70, 40
 light gold:     #96834c   RGB 150, 131, 76
 */
 
+/* GENERAL THEME STYLES */
+
 /* HTML Classes */
 
 body { background-color: #eee1cf;}
 
 h1 {
   color:#1e251d ;
-  text-shadow: 1px 1px 5px #28281e ,2px 2px 10px  #96834c ;
+  text-shadow: 1px 1px 5px #28281e;
 }
 
 h2 {
@@ -53,31 +55,57 @@ hr { color: rgba(222,209,191, 0.2)}
 /* Enclosure Classes
 (can be applied to elemens such as headers, footers or document body)*/
 
+/* Enclosure1 Styles*/
+
 .enclosure1{
-  background-color: #ded1bf;
-	border-color: #beb19f;
-  color: #1e251d;
+  color:#eee1cf;
+  border-color: #96834c;
+  background-color: #3c3c32;
 }
+
+/* Enclosure2 Styles */
 
 .enclosure2{
   color: #3c3c32 ;
 	border-color: #1e251d;
 	background-color: #fcf4e9;
 }
-.enclosure3{
-  color:#96834c;
-  border-color: #96834c;
-  background-color: #beb19f;
+
+.enclosure2 h1 {
+color: #96834c;
+text-shadow: 1px 1px 5px #beb19f;
 }
 
-/* Gradient Classes
-(can be applied to add gradient to any element with a background) */
+.enclosure2 h2 { color:#504628 ;}
 
-.gradient1 { background: linear-gradient(#ded1bf,#beb19f);}
+.enclosure2 h3 { color: #504628 ;}
 
-.gradient2 { background: linear-gradient(to right, rgba(222,209,191,0.5), rgba( 190,177,159,1));}
+.enclosure2 p {color: #3c3c32 ;}
 
-.gradient3 { background: linear-gradient(to left, rgba(222,209,191,0.5), rgba( 190,177,159,1));}
+.enclosure2 ul li {
+  color: #1e251d ; 	/* set color of list item text */
+}
+
+.enclosure2 ul li::before {
+  color: #28281e ;   /* color of unicode character */
+}
+
+/* Enclosure3 Styles */
+
+.enclosure3{
+  background-color: #ded1bf;
+	border-color: #1e251d;
+  color: #3c3c32;
+}
+
+/* Pattern Classes
+(can be applied to add gradients, textures etc to any element with a background) */
+
+.pattern1 { background: linear-gradient(#ded1bf,#beb19f);}
+
+.pattern2 { background: linear-gradient(to right, rgba(222,209,191,0.5), rgba( 190,177,159,1));}
+
+.pattern3 { background: linear-gradient(to left, rgba(222,209,191,0.5), rgba( 190,177,159,1));}
 
 /* Button Classes
 (to be used with any elements that act like a button)*/
@@ -104,11 +132,10 @@ hr { color: rgba(222,209,191, 0.2)}
 
 .boxshadowL{ box-shadow:3px 3px 25px #28281e;}
 
+
 .boxshadowM{ box-shadow:2px 2px 5px #28281e;}
 
 .boxshadowM img{ box-shadow:2px 2px 5px #28281e;}
-
-.boxshadowM #profile-banner{box-shadow:2px 2px 5px #28281e;}
 
 .boxshadowM .menu span a{box-shadow:2px 2px 5px #28281e;}
 
@@ -116,171 +143,95 @@ hr { color: rgba(222,209,191, 0.2)}
 
 .boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #504628;}
 
-.boxshadowMlight{ box-shadow:2px 2px 5px #fcf4e9;}
 
-.boxshadowMlight:hover{ box-shadow:2px 2px 5px #504628;}
+.boxshadowMInv{ box-shadow:2px 2px 5px #fcf4e9;}
 
-.boxshadowMlight img:hover{ box-shadow:2px 2px 5px #fcf4e9;}
+.boxshadowMInv:hover{ box-shadow:2px 2px 5px #504628;}
+
+.boxshadowMInv img:hover{ box-shadow:2px 2px 5px #fcf4e9;}
+
 
 .boxShadowS{ box-shadow: 1px 1px 10px #28281e;}
+
 
 .boxShadowXS { box-shadow:1px 1px 5px #28281e;}
 
 
+/* Menu Classes*/
 
-/* Menu Styles*/
+/*Menu1 Styles*/
 
-.menu span a {
-  background-color:#fcf4e9;
+.menu1 span a {
+background-color:#fcf4e9;
 }
 
-.menu span a:hover {
+.menu1 span a:hover {
 	background-color:#beb19f;
 }
 
-.menu span a:focus {
+.menu1 span a:focus {
 	background-color:#beb19f;
 }
 
-.menu span a:active {
-	*background-color:#ded1bf;
+.menu1 span a:active {
+	background-color:#ded1bf;
 	color:#eee1cf;
 }
 
-.menu div {background: #fcf4e9;}
+.menu1 div {background: #fcf4e9;}
 
-/*Sidebar styles*/
+/* Menu2 Styles */
 
-#sidebar .menu span a {
+.menu2 span a {
   background: none;
   box-shadow: none;
 }
 
-#sidebar .menu span a:hover { box-shadow: none;}
+.menu2 span a:hover { box-shadow: none;}
 
-#sidebar .menu span a:focus { box-shadow: none;}
+.menu2 span a:focus { box-shadow: none;}
 
-#sidebar .menu span a:active { box-shadow: none;}
+.menu2 span a:active { box-shadow: none;}
 
-#sidebar .menu span {
+.menu2 span {
   background: #ded1bf;
   color: #5d2534;
 }
 
-#sidebar .menu div { background-color: #fcf4e9;}
+.menu2 div { background-color: #fcf4e9;}
 
-  /* content area styles*/
+/* Social Menu Styles*/
 
-#contentArea h1 {
-color: #96834c;
-text-shadow: 1px 1px 5px #beb19f;
-}
+div.socialmenu.icon a:link { color:#1e251d ;}
 
-#contentArea h2 { color:#504628 ;}
+div.socialmenu.icon a:visited { color:#1e251d ;}
 
-#contentArea h3 { color: #504628 ;}
-
-#contentArea p {color: #3c3c32 ;}
-
-#contentArea ul li {
-  color: #1e251d ; 	/* set color of list item text */
-}
-
-#contentArea ul li::before {
-  color: #28281e ;   /* color of unicode character */
-}
-
-/* Footer Styles*/
-
-#footer-menu li a:link { color:#504628;}
-
-/* Steem Content Modules*/
-
-/* Steem Profile */
-
-#profile-banner {
-	background-color: #3c3c32 ;
-	color: #beb19f;
-}
-
-#profile-banner h1 { color: #eee1cf;}
-
-#profile-about { color: #1e251d ;}
-
-#profile-info { color: #1e251d ;}
-
-#profile-info a { color: #504628;}
-
-#profile-info a:visited { color:#504628;}
-
-#profile-info a:hover {
- color: #1e251d ;
- text-shadow: 1px 1px 10px #28281e ;
-}
-
-#profile-info a:active {
- color:  #1e251d ;
- text-shadow: 1px 1px 10px #28281e ;
-}
-
-#profile-banner #profile-about {color: #eee1cf;}
-
-#profile-banner #profile-info {color: #eee1cf;}
-
-#profile-banner #profile-info a {color: #eee1cf;}
-
-#profile-banner #profile-info a:visited {color:#eee1cf;}
-
-#profile-banner #profile-info a:hover {
-	color:#96834c;
-  text-shadow: none;
-}
-
-#profile-banner #profile-info a:active {
-	color:#96834c;
-  text-shadow: none;
-}
-
-/*Steem Post*/
-
-/* Steem Posts */
-
-.steem_posts {border-bottom-color: #1e251d ;}
-
-.steem_posts_meta {color: #28281e ;}
-
-div.steem_posts_meta {color: #28281e ;}
-
-.steem_posts_preview {
-  background-color: #ded1bf;
-}
-
-
-/*Social Menu*/
-
-div.icon a:link { color:#1e251d ;}
-
-div.icon a:visited { color:#1e251d ;}
-
-div.icon a:hover {
+div.socialmenu.icon a:hover {
  color:#beb19f;
 }
 
-div.icon a:focus { color:#beb19f;}
+div.socialmenu.icon a:focus { color:#beb19f;}
 
-div.icon a:active { color:#1e251d ;}
+div.socialmenu.icon a:active { color:#1e251d ;}
 
-div.icon a img{
+div.socialmenu.icon a img{
   box-shadow: none;
 }
 
-div.icon img{
+div.socialmenu.icon img{
    filter:sepia(100%) brightness(80%);
 }
 
-div.icon img:hover{
+div.socialmenu.icon img:hover{
    filter:sepia(50%) brightness(90%);
 }
 
+/*STEEM MODULES STYLES*/
 
-/* Responsive Design */
+/*Steem Profile*/
+
+div#profile-banner a { color: #1e251d;}
+
+.enclosure2 #profile-banner  h1 {text-shadow: none};
+
+.boxshadowM #profile-banner{box-shadow:2px 2px 5px #28281e;}

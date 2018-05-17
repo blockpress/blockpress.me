@@ -19,21 +19,24 @@ body {
 	font-size: 1.5em;
 }
 
-#contentArea h1 {
+.enclosure3 h1 {
 	font-weight: bolder;
 	font-size: 1em;
 }
-#contentArea h2 {
+.enclosure3 h2 {
 	font-weight: bold;
 	font-size: 1em;
 }
-#contentArea h3 {
+.enclosure3 h3 {
 	font-weight: bold;
 	font-style: italic;
 	font-size: 1em;
 }
-#contentArea p {
+.enclosure3 p {
 	font-size: 1em;
+}
+.enclosure3.menu1 div {
+  background-color: transparent !important;
 }
 
 /* Steem module styles */

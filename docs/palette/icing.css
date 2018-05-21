@@ -1,0 +1,258 @@
+/*
+pale blue:  #eeeef5    RGB 238, 238, 245
+pale grey:  #dcdddf   RGB 220, 221, 223
+blue grey:  #cccdda   RGB  204, 205, 218
+grey:       #a2a2a7   RGB 162, 162, 167
+blue:       #898ba3   RGB 137, 139, 163
+dark blue:  #6c6e89   RGB 108, 110, 137
+*/
+
+/*GENERAL THEME STYLES*/
+
+/* HTML Classes */
+body {
+  background-color: #eeeef5;
+	color: #898ba3;
+}
+
+h1 {
+  color: #cccdda ;
+  text-shadow: 1px 1px #898ba3;
+}
+
+h2 {
+  color: #cccdda ;
+  text-shadow: 1px 1px #898ba3;
+}
+
+h3 {
+  color: #cccdda ;
+  text-shadow: 1px 1px #898ba3;
+}
+
+p { color: #898ba3;}
+
+
+a { color: #a2a2a7 ;}
+
+a:hover { color: #6c6e89;}
+
+a:focus { color: #6c6e89;}
+
+a:active { color: #a2a2a7;}
+
+img { color: #eeeef5; }
+
+hr {
+    color: rgba(108, 110, 137, 0.2);
+}
+
+/* Generic Classes */
+/* Enclosure Classes
+(can be applied to elemens such as headers, footers or document body)*/
+
+/*Enclosure1 Styles*/
+
+.enclosure1{
+  color: #cccdda ;
+  background-color:#898ba3;
+	border-color: #898ba3;
+}
+
+/*Enclosure2 styles*/
+
+.enclosure2{
+  color:#898ba3;
+  background-color: #cccdda ;
+  border-color: #898ba3;
+}
+
+.enclosure2 h1 {
+  color:#a2a2a7 ;
+  text-shadow: 1px 1px #898ba3;
+}
+
+.enclosure2 h2 {
+  color:#a2a2a7;
+  text-shadow: 1px 1px #898ba3;
+
+}
+
+.enclosure2 h3 {
+  color:#a2a2a7;
+  text-shadow: 1px 1px #898ba3;
+}
+
+.enclosure2 p { color:#898ba3;}
+
+.enclosure2 ul li {
+  color: #898ba3; 	/* set color of list item text */
+}
+
+ .enclosure2 ul li::before {
+   color: #a2a2a7;   /* color of unicode character */
+ }
+
+/*Enclosure3 Styles*/
+
+.enclosure3{
+  color:#cccdda;
+  border-color: #898ba3;
+  background-color: #6c6e89;
+}
+
+.enclosure3 p{ color: #cccdda;}
+
+.enclosure3 a:hover{color: #eeeef5}
+
+/* Pattern Classes
+(can be applied to add gradients, textures etc to any element with a background) */
+
+.pattern1 { background: linear-gradient( #6c6e89 ,#898ba3);}
+
+.pattern2 { background: linear-gradient(to right, rgba(108, 110, 137,0), rgba(137, 139, 163 ,1));}
+
+.pattern3 { background: linear-gradient(to left, rgba(108, 110, 137,0), rgba(137, 139, 163 ,1));}
+
+/* Button Classes
+(to be used with any elements that act like a button)*/
+
+.button1{
+  background: #898ba3;
+  color: #eeeef5;
+}
+.button1:hover{background: #a2a2a7;}
+
+.button2{
+  background: #a2a2a7;
+	color: #cccdda ;
+}
+
+.button2:hover{
+  background: #eeeef5;
+	color: #898ba3;
+}
+
+/*Box Shadow Classes
+(can be added to any element */
+
+.boxshadowL{ box-shadow:3px 3px 25px #898ba3;}
+
+
+.boxshadowM{ box-shadow:2px 2px 5px #898ba3;}
+
+.boxshadowM img{ box-shadow:2px 2px 5px #898ba3;}
+
+.boxshadowM .menu span a{ box-shadow:2px 2px 5px #a2a2a7;}
+
+.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px  #cccdda;}
+
+.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px  #cccdda;}
+
+
+.boxshadowMInv{ box-shadow:2px 2px 5px  #cccdda;}
+
+.boxshadowMInv:hover{ box-shadow:2px 2px 5px #eeeef5;}
+
+.boxshadowMInv img:hover{ box-shadow:2px 2px 5px  #cccdda;}
+
+
+.boxShadowS{ box-shadow: 1px 1px 10px #898ba3;}
+
+
+.boxShadowXS { box-shadow:1px 1px 5px #898ba3;}
+
+/* Menu Classes*/
+
+/*Menu1 Styles*/
+
+.menu1 span a {
+  background: #cccdda;
+  color: #898ba3;
+}
+
+.menu1 span a:hover {
+  background: #a2a2a7;
+  color: #6c6e89;
+}
+
+.menu1 span a:focus {
+  background: #a2a2a7;
+  color: #6c6e89;
+}
+
+.menu1 span a:active {
+  background: #a2a2a7;
+  color: #eeeef5;
+}
+.menu1 div {background:  #cccdda ;}
+
+/*Menu2 Styles*/
+
+.menu2 a { color: #eeeef5; }
+
+.menu2 a:hover { color: #898ba3;}
+
+.menu2 a:focus { color: #898ba3;}
+
+.menu2 a:active { color: #898ba3;}
+
+.menu2 span a {
+  background:  #cccdda;
+  color: #898ba3;
+  box-shadow: none;
+}
+
+.menu2 span a:hover {
+  background:  #cccdda;
+  color: #6c6e89;
+  box-shadow: none;
+}
+
+.menu2 span a:focus {
+  background:  #cccdda;
+   color: #6c6e89;
+   box-shadow: none;
+ }
+
+.menu2 span a:active {
+  background:#cccdda;
+  color: #a2a2a7;
+  box-shadow: none;
+}
+
+.menu2 div {
+  background-color: #898ba3;
+}
+
+.menu2 span {
+  background:  #cccdda ;
+  color: #898ba3;
+}
+
+/* Social Menu Styles */
+
+div.socialmenu.icon a:link { color:#eeeef5;}
+
+div.socialmenu.icon a:visited { color:#eeeef5; }
+
+div.socialmenu.icon a:hover {
+ color:#dcdddf;
+}
+
+div.socialmenu.icon a:focus { color:#dcdddf;}
+
+div.socialmenu.icon a:active { color:#eeeef5; }
+
+div.socialmenu.icon img{
+   filter:hue-rotate(30deg) contrast(120%) brightness(120%);
+}
+div.socialmenu.icon img:hover{
+   filter:hue-rotate(30deg) contrast(160%) brightness(180%);
+}
+
+/*STEEM MODULES STYLES*/
+
+/* Steem Profile */
+
+.boxshadowM #profile-banner{ box-shadow:2px 2px 5px #898ba3;}

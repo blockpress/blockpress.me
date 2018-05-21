@@ -1,0 +1,36 @@
+{
+  "sitetitle": "BlockPress Github Pages",
+  "tagline":"BlockPress running in Github Pages",
+	"palette": "icing",
+  "theme": "amber",
+
+	"themeoptions": {
+		"banner_image": "",
+		"site_image": ""
+	},
+
+	"modules": ["steem","static"],
+
+	"firstpage": {"type": "static", "args": ["github_pages.html"]},
+
+	"menu": [
+    {"label": "Blockpress", "type": "static", "args": ["github_pages.html"]},
+	  {"label": "Anton", "type": "steem", "args": {"show":"profile", "user":"antonchanning"}},
+  	{"label": "Dana", "type": "steem", "args": {"show":"profile", "user":"dana-varahi"}}
+  ],
+
+	"socialmenu": {
+		"steemit": "https://steemit.com/trending/blockpress",
+		"github": "https://github.com/blockpress/blockpress.me",
+		"linkedin": "",
+		"twitter": "",
+		"facebook": "https://www.facebook.com/groups/blockpress/",
+		"reddit": "https://www.reddit.com/r/blockpressCMS/",
+		"gplus": "",
+		"stackoverflow": "",
+		"link_url": "https://blockpress.me",
+		"email": ""
+	},
+
+	"dateformat": {"locale": "en-US", "options":{ "weekday": "long", "year": "numeric", "month": "long", "day": "numeric" }}
+}

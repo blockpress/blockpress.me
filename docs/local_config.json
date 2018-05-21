@@ -15,8 +15,8 @@
 
 	"menu": [
     {"label": "Blockpress", "type": "static", "args": ["github_pages.html"]},
-	  {"label": "Anton", "type": "steem", "args": {"show":"profile", "user":"antonchanning"}},
-  	{"label": "Dana", "type": "steem", "args": {"show":"profile", "user":"dana-varahi"}}
+	  {"label": "Dana", "type": "steem", "args": {"show":"posts", "user":"dana-varahi", "tag":"blockpress", "count": "50"}},
+	  {"label": "Anton", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress", "count": "50"}}
   ],
 
 	"socialmenu": {

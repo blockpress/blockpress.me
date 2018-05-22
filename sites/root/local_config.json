@@ -1,0 +1,39 @@
+{
+  "sitetitle": "Blockpress.me",
+  "tagline":"The CMS with blockchains for its database...",
+	"palette": "vanilla",
+  "theme": "amber",
+
+	"themeoptions": {
+		"banner_image": "",
+		"site_image": ""
+	},
+
+	"modules": ["steem","static"],
+
+	"firstpage": {"type": "static", "args": "home.html"},
+
+	"menu": [
+    {"label": "About", "type": "static", "args": "home.html"},
+	  {"label": "Pitch", "type": "static", "args": "pitch.html"},
+	  {"label": "Team", "type": "static", "args": "team.html"},
+	  {"label": "Dana's Updates", "type": "steem", "args": {"show":"posts", "user":"dana-varahi", "tag":"blockpress", "count": "50"}},
+	  {"label": "Anton's Updates", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress", "count": "50"}}
+  ],
+
+
+	"socialmenu": {
+		"steemit": "https://steemit.com/@blockpress",
+		"github": "https://github.com/blockpress/blockpress.me",
+		"linkedin": "",
+		"twitter": "",
+		"facebook": "https://www.facebook.com/groups/blockpress/",
+		"reddit": "https://www.reddit.com/r/blockpressCMS/",
+		"gplus": "",
+		"stackoverflow": "",
+		"link_url": "https://steem.chat/channel/blockpress",
+		"email": ""
+	},
+
+	"dateformat": {"locale": "en-US", "options":{ "weekday": "long", "year": "numeric", "month": "long", "day": "numeric" }}
+}

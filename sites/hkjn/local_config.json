@@ -1,0 +1,32 @@
+{
+  "sitetitle": "HKJN",
+	"tagline": "",
+	"palette": "",
+  "theme": "henrik",
+
+	"themeoptions": {
+		"banner_image": "",
+		"site_image": ""
+	},
+
+	"modules": ["static","link"],
+
+	"menu": [
+    {"label": "Home", "type": "static", "args": ["home.html"]},
+  	{"label": "Trackers", "type": "static", "args": ["trackers.html"]}
+  ],
+
+	"socialmenu": {
+		"steemit": "",
+		"github": "https://github.com/hkjn",
+		"linkedin": "https://www.linkedin.com/in/hekjon",
+		"twitter": "https://twitter.com/hkjn",
+		"facebook": "https://www.facebook.com/hekjon",
+		"gplus": "https://plus.google.com/+HenrikJonsson",
+		"stackoverflow": "",
+		"link_url": "https://hkjn.me/index",
+		"email": "me@hkjn.me"
+	},
+
+	"dateformat": {"locale": "en-US", "options":{ "weekday": "long", "year": "numeric", "month": "long", "day": "numeric" }}
+}

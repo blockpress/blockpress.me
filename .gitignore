@@ -1,3 +1,5 @@
+.git
+.git/*
 *.DS_Store
 *.sw?
 /code/local_config.json

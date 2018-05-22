@@ -1,0 +1,37 @@
+{
+  "sitetitle": "Anton Channing",
+  "tagline":"Visionary Open Source Developer",
+
+	"palette": "liquorice",
+  "theme": "fluxstate",
+
+	"themeoptions": {
+		"banner_image": "https://steemitimages.com/2048x512/https://steemitimages.com/DQmWSrqGMDVZYwcXVsD5m1ebyrwiavzGUnsnjb2GNE8kevz/cropped-banner-serpents.png",
+		"site_image": "content/img/anton.jpg"
+	},
+
+	"modules": ["steem","static"],
+
+	"firstpage": {"type": "steem", "args": {"show":"profile", "user":"antonchanning"}},
+
+	"menu": [
+    {"label": "Profile", "type": "steem", "args": {"show":"profile", "user":"antonchanning"}},
+	  {"label": "Projects", "type": "static", "args": "projects.html"},
+    {"label": "BlockPress", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress","count":"50"}},
+    {"label": "SteemSwitch", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"steemswitch","count":"50"}}
+  ],
+
+	"socialmenu": {
+		"steemit": "https://steemit.com/@antonchanning",
+		"github": "https://github.com/antonchanning",
+		"linkedin": "https://www.linkedin.com/in/anthony-channing-widmanski/",
+		"twitter": "https://twitter.com/antonchanning",
+		"facebook": "https://www.facebook.com/antonchanning",
+		"gplus": "https://plus.google.com/u/0/+AntonChanning",
+		"stackoverflow": "https://stackoverflow.com/users/story/641534",
+		"link_url": "https://antonchanning.com",
+		"email": "antonchanning@pm.me"
+	},
+
+	"dateformat": {"locale": "en-US", "options":{ "weekday": "long", "year": "numeric", "month": "long", "day": "numeric" }}
+}

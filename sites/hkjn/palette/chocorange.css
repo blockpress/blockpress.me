@@ -1,0 +1,232 @@
+
+/* brown palette:
+dark chocolate:     #160a09; RGB  22, 10, 9,
+chocolate sauce:    #2a1914 RGB  42, 25, 20
+hot cocoa:          #392b23 RGB 57, 43, 35,
+milk chocolate:     #653f26 RGB 101, 53, 38
+orange:             #ec9c36
+cream orange:       #f0be7e
+light cream orange: #ecd1aa
+*/
+
+/* GENERAL THEME STYLES */
+
+/* HTML Classes */
+
+body { background-color: #160a09; }
+
+h1{
+    color:#f0be7e;
+		text-shadow: 1px 1px 5px #160a09;
+}
+
+h2{
+    color:#ec9c36;
+		text-shadow: 1px 1px  #ecd1aa;
+}
+
+h3{
+    color:#ec9c36;
+		text-shadow: 1px 1px  #ecd1aa;
+}
+
+p { color: #ecd1aa;}
+
+a:link { color:#ec9c36;}
+
+a:visited { color:#ec9c36;}
+
+a:hover { color:#f0be7e;}
+
+a:active, a:focus { color:#f0be7e;}
+
+img{
+	color: #160a09;
+	border-color: #160a09;
+}
+
+hr { color: rgba(33, 30, 26, 0.2);}
+
+/* Generic Classes */
+
+/* Enclosure Classes
+(can be applied to elemens such as headers, footers or document body)*/
+
+/*Enclosure1 Styles*/
+
+.enclosure1{
+  color:#f0be7e;
+  background-color: #2a1914;
+  border-color:#653f26;
+}
+
+/* Enclosure2 Styles */
+
+.enclosure2{
+  color: #ecd1aa;
+  border-color: #653f26;
+  background-color: #392b23;
+}
+
+.enclosure2 h1{
+    color: #f0be7e;
+}
+
+.enclosure2 h2{
+    color:#ec9c36;
+}
+.enclosure2 h3{
+    color: #ec9c36;
+}
+
+.enclosure2 p {color: #ecd1aa;}
+
+.enclosure2 ul li {
+	  color: #ecd1aa; 	/* set color of list item text */
+	}
+
+.enclosure2 ul li::before {
+	  color: #ec9c36;    /* color of unicode character */
+}
+
+/*Enclosure3 Styles*/
+
+.enclosure3{
+  color:#ecd1aa;
+  border-color: #ec9c36;
+  background-color: #2a1914;
+}
+
+/* Pattern Classes
+(can be applied to add gradients, textures etc to any element with a background) */
+
+.pattern1 { background: linear-gradient(#2a1914,#392b23);}
+
+.pattern2 { background: linear-gradient(to right, rgba(42, 25, 20,0.5), rgba(57, 43, 35, 1));}
+
+.pattern3 { background: linear-gradient(to left, rgba(42, 25, 20,0.5), rgba(57, 43, 35, 1));}
+
+/* Button Classes
+(to be used with any elements that act like a button)*/
+
+.button1{
+  background: #653f26;
+  color: #f0be7e;
+}
+
+.button1:hover{background: #ec9c36;}
+
+.button2{
+  background: #653f26;
+	color: #160a09;
+}
+
+.button2:hover{
+  background: #f0be7e;
+	color: #160a09;
+}
+
+/*Box Shadow Classes
+(can be added to any element */
+
+.boxshadowL{ box-shadow:3px 3px 25px #ec9c36;}
+
+
+.boxshadowM{ box-shadow:2px 2px 5px #ec9c36;}
+
+.boxshadowM img{ box-shadow:2px 2px 5px #ec9c36;}
+
+.boxshadowM .menu span a{ box-shadow:2px 2px 5px #ec9c36;}
+
+.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px #f0be7e;}
+
+.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #f0be7e;}
+
+
+.boxshadowMInv{ box-shadow:2px 2px 5px #ecd1aa;}
+
+.boxshadowMInv:hover{ box-shadow:2px 2px 5px #ec9c36;}
+
+.boxshadowMInv img:hover{ box-shadow:2px 2px 5px #ecd1aa;}
+
+
+.boxShadowS{ box-shadow: 1px 1px 10px #ec9c36;}
+
+
+.boxShadowXS { box-shadow:1px 1px 5px #ec9c36;}
+
+/* Menu Classes*/
+
+/*Menu1 Styles*/
+
+.menu1 span a {
+  background-color:#392b23;
+}
+
+.menu1 span a:hover {
+  color: #f0be7e;
+  background-color:#653f26;
+}
+
+.menu1 span a:focus {
+  color: #f0be7e;
+  background-color:#653f26;
+}
+
+.menu1 span a:active {
+  color:#f0be7e;
+  background-color:#653f26;
+}
+
+.menu1 div { background: #392b23;}
+
+/*Menu2 Styles*/
+
+.menu2 span a {
+  background: #653f26 ;
+  color: #f0be7e;
+  box-shadow: none;
+}
+
+.menu2 span a:hover {
+  color:#ecd1aa;
+  box-shadow: none;
+}
+
+.menu2 span a:focus {
+   color:#ecd1aa;
+   box-shadow: none;
+ }
+
+.menu2 span a:active {
+  color:#ecd1aa;
+  box-shadow: none;
+}
+
+.menu2 div { background-color: #f0be7e;}
+
+.menu2 span {
+  background: #653f26;
+  color: #5d2534;
+}
+
+/* Social Menu Styles */
+
+div.socialmenu.icon a:link { color:#f0be7e;}
+
+div.socialmenu.icon a:visited { color:#f0be7e;}
+
+div.socialmenu.icon a:active { color:#f0be7e;}
+
+div.socialmenu.icon img{
+   filter:hue-rotate(185deg) saturate(0.75);
+}
+div.socialmenu.icon img:hover{
+   filter:hue-rotate(185deg) brightness(160%);
+}
+
+/*STEEM MODULES STYLES*/
+
+/* Steem Profile */
+
+.boxshadowM #profile-banner{ box-shadow:2px 2px 5px #ec9c36;}

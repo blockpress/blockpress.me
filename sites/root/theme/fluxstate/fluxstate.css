@@ -1,0 +1,387 @@
+body {
+  margin: 0;
+}
+
+#terminal {
+    height: 90vh;
+    overflow-y: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    overflow-x: hidden;
+		font-size: 1.2em;
+		position: relative;
+    margin: 0.5em;
+}
+#contentArea{
+	padding: 2em;
+	min-height: 100%;
+	font-family: monospace;
+	font-size: 1.5em;
+}
+
+.enclosure3 h1 {
+	font-weight: bolder;
+	font-size: 1em;
+}
+.enclosure3 h2 {
+	font-weight: bold;
+	font-size: 1em;
+}
+.enclosure3 h3 {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1em;
+}
+.enclosure3 p {
+	font-size: 1em;
+}
+.enclosure3.menu1 div {
+  background-color: transparent !important;
+}
+
+/* Steem module styles */
+/* ** Steem profile styles ** */
+#steemProfile {
+	vertical-align: text-top;
+}
+#profile-image {
+	vertical-align: text-top;
+	display: inline-block;
+	max-width: 225px;
+	width: 30%;
+}
+#profile-image img {
+	width: 100%;
+	border-radius: 5px;
+}
+#profileStats {
+	vertical-align: text-top;
+	display: inline-block;
+	width: 65%;
+}
+	.steemitboard {
+		width:100%;
+		margin-left:auto;
+		margin-right: auto;
+		margin-top: 1em;
+	}
+	.steemitboard img {
+		vertical-align: top;
+		box-shadow: none !important;
+	}
+
+		/* Steemit board badges (posts, comments, upvotes, rewards, replies, upvoted)*/
+		img.badgeTiny {
+			width: 50px;
+			height: 60px;
+		}
+		img.badgeSmall {
+			width: 60px;
+			height: 72px;
+		}
+		img.badgeMedium {
+			width: 75px;
+			height: 90px;
+		}
+		img.badgeLarge {
+			width: 90px;
+			height: 108px;
+		}
+
+		/* Square steemitboard badges (level, birthdays, steemfest, witness, daily, weekly and monthly author) */
+		img.badgeSqTiny {
+			width: 60px;
+			height: 60px;
+		}
+		img.badgeSqSmall {
+			width: 70px;
+			height: 70px;
+		}
+		img.badgeSqMedium {
+			width: 80px;
+			height: 80px;
+		}
+		img.badgeSqLarge {
+			width: 100px;
+			height: 100px;
+		}
+		/* ** Steem posts styles ** */
+		.steem_posts {
+			width: 300px;
+			height: 200px;
+			overflow: hidden;
+			position: relative;
+			display: inline-block;
+			padding: 0;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.steem_posts a {
+			text-decoration: none;
+		}
+		.steemPostDetails .steem_posts_author {
+			font-size: 0.8em;
+		}
+		.steemPostDetails .steem_posts_preview {
+			font-size: 0.6em;
+		}
+		.no_thumb .steem_posts_thumbnail {
+			display: none;
+		}
+		.has_thumb .steem_posts_thumbnail {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.has_thumb .steem_posts_thumbnail img {
+			width: 300px;
+			height: 200px;
+		}
+		.steemPostDetails {
+			display: inline-block;
+			position: absolute;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+		}
+		.no_thumb .steemPostDetails {
+			opacity: 0.6;
+		}
+		.no_thumb .steemPostDetails:hover {
+			opacity: 1;
+		}
+		.has_thumb .steemPostDetails {
+			opacity: 0;
+		}
+		.has_thumb .steemPostDetails:hover {
+			opacity: 0.8;
+		}
+		.has_thumb .steemPostDetails .steem_posts_preview {
+			overflow: hidden;
+		}
+
+    /* Steem post styles */
+    #steem-post img {
+      max-width: 90%;
+    }
+    .steemCommentsAdd {
+      margin-top:1.5em;
+    }
+
+    /* steem-comment styles */
+    div.steem_comment {
+      font-size: 1em;
+      margin-left: 1em;
+      padding: 0.5em;
+      border-width: 1px;
+      border-style: solid;
+    }
+    #contentArea span.steem_comment p {
+      font-size: 0.9em;
+    }
+    .steem_comment_meta {
+      font-size: 0.7em;
+    }
+
+
+/* Flux-State Menu Styles */
+
+#mainMenu {
+	display: none;
+	min-height: 100%;
+}
+#mainMenu h1 {
+	font-weight: bolder;
+	font-family: monospace;
+	font-size: 3em;
+	text-align: center;
+}
+#menuArea span {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-family: monospace;
+	font-size: 2em;
+	margin-top: 1em;
+}
+#menuArea span a {
+	text-decoration: none;
+	padding: 0.5em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+#socialMenu {
+	display: none;
+	min-height: 100%;
+	text-align: center;
+}
+#socialMenu h1 {
+	font-weight: bolder;
+	font-family: monospace;
+	font-size: 3em;
+	text-align: center;
+}
+#socialMenu a {
+	text-decoration: none;
+  background-color: transparent;
+}
+#socialMenu a:hover {
+	background-color: transparent;
+}
+.socialmenu {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 200px;
+	display: inline-block;
+}
+
+#sitetitles h1 {
+	font-family: monospace;
+	font-size: 1em;
+	font-weight: bold;
+	display: inline-block;
+	padding-right: 20px;
+}
+#sitetitles h2 {
+	font-family: monospace;
+	font-style: italic;
+	font-size: 1em;
+	display: inline-block;
+}
+
+#fluxstate-menu {
+	position: sticky;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0, 0.8);
+	width: 100%;
+	margin: 0;
+	padding: 10px;
+}
+
+.social img{
+   display: inline-block;
+	 margin: 0.5em;
+}
+
+/* Materical Icons Support */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../.././lib/fonts/micons/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(../.././lib/fonts/micons/MaterialIcons-Regular.woff2) format('woff2'),
+    url(../.././lib/fonts/micons/MaterialIcons-Regular.woff) format('woff'),
+    url(../.././lib/fonts/micons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.micon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.micon.md-18 { font-size: 18px; }
+.micon.md-24 { font-size: 24px; }
+.micon.md-36 { font-size: 36px; }
+.micon.md-48 { font-size: 48px; }
+
+@media only screen and (max-width: 800px) {
+  #terminal {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .steem_posts {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 67%;
+    margin-bottom: 0.4em;
+  }
+  .has_thumb .steemPostDetails {
+    opacity: 0.6;
+    width: 100%;
+  }
+  .has_thumb .steem_posts_thumbnail img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width:none;
+    max-height: none;
+  }
+  .has_thumb .steem_posts_preview {
+    display: none;
+  }
+
+  #profile-image {
+  	display: block;
+  	width: 100%;
+    max-width: none;
+  }
+
+	/* Steemit board badges (posts, comments, upvotes, rewards, replies, upvoted)*/
+	img.badgeTiny {
+		width: 35px;
+		height: 42px;
+	}
+	img.badgeSmall {
+		width: 45px;
+		height: 54px;
+	}
+	img.badgeMedium {
+		width: 50px;
+		height: 60px;
+	}
+	img.badgeLarge {
+		width: 60px;
+		height: 72px;
+	}
+
+	/* Square steemitboard badges (level, birthdays, steemfest, witness, daily, weekly and monthly author) */
+	img.badgeSqTiny {
+		width: 40px;
+		height: 40px;
+	}
+	img.badgeSqSmall {
+		width: 50px;
+		height: 50px;
+	}
+	img.badgeSqMedium {
+		width: 60px;
+		height: 60px;
+	}
+	img.badgeSqLarge {
+		width: 70px;
+		height: 70px;
+	}
+
+	.micon {
+    font-size: 64px;
+  }
+}

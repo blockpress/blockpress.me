@@ -1,0 +1,324 @@
+/*
+black:  #111111;
+white:  #eeeeee;
+red:    #ee0000;
+green:  #00ee00;
+blue:   #0000ee;
+cyan:   #00dddd;
+magenta:#dd00dd;
+yellow: #dddd00;
+*/
+
+/* GENERAL THEME STYLES */
+
+/* HTML Classes */
+
+body {
+   background-color: #111111;
+   color: #00ee00;
+ }
+
+h1 {
+  color:#00ee00;
+  text-shadow: 1px 1px 5px #28281e, 2px 2px 10px  #96834c;
+}
+
+h2 {
+  color:#00ee00;
+	text-shadow: 1px 1px  #28281e ;
+}
+
+h3 {
+  color:#00ee00;
+	text-shadow: 1px 1px  #28281e ;
+}
+
+p { color: #00ee00;}
+
+a { color:#00ddcc;}
+
+a:visited { color:#00ffee;}
+
+a:hover { color:#eeeeee;}
+
+a:focus { color:#eeeeee;}
+
+a:active { color:#00ffee;}
+
+img {
+	color: #00ee00;
+	border-color: #5b5349;
+}
+
+hr {
+    color: rgba(0,239,0, 0.2);
+}
+
+/* Generic Classes */
+/* Enclosure Classes
+(can be applied to elemens such as headers, footers or document body)*/
+
+.enclosure1{
+  background-color: #111111;
+	border-color: #00ee00;
+  color: #1e251d;
+}
+
+/* Enclosure2 Styles */
+
+.enclosure2{
+	border-color: #00dd00;
+	background-color: #131313;
+}
+
+/* Enclosure3 Styles */
+
+.enclosure3{
+  border-color: #00cc00;
+  background-color: #161616;
+}
+
+/* Pattern Classes
+(can be applied to add gradient to any element with a background) */
+
+.pattern1 { background: linear-gradient(#111111,#222222);}
+
+.pattern2 { background: linear-gradient(to right, rgba(16,16,16,0.9), rgba(16,16,16,1));}
+
+.pattern3 { background: linear-gradient(to left, rgba(16,16,16,0.9), rgba(16,16,16,1));}
+
+/* Button Classes
+(to be used with any elements that act like a button)*/
+
+.button1{
+  border-color: #00ee00;
+  background: #111111;
+  color: #00ee00;
+}
+
+.button1:hover{
+  background: #00ee00;
+  color: #111111;
+  border-color: #eeeeee;
+}
+
+.button2{
+  border-color: #00ee00;
+  background: #111111;
+  color: #00ee00;
+}
+
+.button2:hover{
+  background: #00ee00;
+  color: #eeeeee;
+  border-color: #eeeeee;
+}
+
+/*Box Shadow Classes
+(can be added to any element */
+
+.boxshadowL{  box-shadow:0px 0px 25px #eeeeee ;}
+.boxshadowM{ box-shadow:0px 0px 5px #eeeeee ; }
+
+.boxshadowM img{ box-shadow:2px 2px 5px #eeeeee; }
+
+.boxshadowM #profile-banner{ box-shadow:0px 0px 5px #eeeeee; }
+.boxshadowM .menu span a{ box-shadow:0px 0px 5px #cccccc; }
+
+.boxshadowM .menu span a:hover{ box-shadow:0px 0px 8px #eeeeee; }
+
+.boxshadowM .menu span a:focus{ box-shadow:0px 0px 10px #eeeeee; }
+
+.boxshadowMInv{ box-shadow:0px 0px 5px #eeeeee; }
+
+.boxshadowMInv:hover{ box-shadow:0px 0px 8px #eeeeee; }
+
+.boxshadowMInv img:hover{ box-shadow:0px 0px 5px #eeeeee; }
+
+.boxShadowS{ box-shadow: 0px 0px 10px #eeeeee; }
+
+.boxShadowXS { box-shadow:0px 0px 5px #eeeeee; }
+
+
+
+
+/*Header styles*/
+
+/* header {
+	background-color: #111111;
+	border-color: #00ee00;
+}
+
+header.no_bg_img {
+  background: linear-gradient(#111111,#111111);
+}
+
+div#banner-gradient {
+	background: linear-gradient(to right, rgba(16,16,16,0.5), rgba( 16,16,16,1));
+} */
+
+/* Menu Styles*/
+
+.menu1 span a {
+  background-color:#161616;
+	color:#00dddd;
+}
+
+.menu1 span a:hover {
+	background-color:#00dddd;
+	color:#eeeeee;
+}
+
+.menu1 span a:focus {
+	background-color:#00dddd;
+	color:#eeeeee;
+}
+
+.menu1 span a:active {
+	background-color:#00eeee;
+	color:#111111;
+}
+
+/*Sidebar styles*/
+.menu2 span a {
+  background: none;
+  box-shadow: none;
+}
+
+.menu2 span a:hover { box-shadow: none;}
+
+.menu2 span a:focus { box-shadow: none;}
+
+.menu2 span a:active { box-shadow: none;}
+
+.menu2 span {
+  background: #111111;
+  color: #00ee00;
+}
+
+.menu2 div { background-color: #00ee00;}
+
+  /* content area styles*/
+
+.enclosure2 {
+	color: #00ee00;
+	border-color: #00ee00;
+	background-color: #111111;
+}
+
+.enclosure2 h1 {
+color: #00ee00;
+text-shadow: 1px 1px 5px #beb19f;
+}
+
+.enclosure2 h2 { color:#00ee00;}
+
+.enclosure2 h3 { color: #00ee00;}
+
+.enclosure2 p {color: #00ee00;}
+
+.enclosure2 ul li {
+  color: #00ee00; 	/* set color of list item text */
+}
+
+.enclosure2 ul li::before {
+  color: #00ee00;   /* color of unicode character */
+}
+
+/* Footer Styles*/
+
+/* #footer-menu li a:link { color:#504628;} */
+
+/*Social Menu*/
+div.socialmenu.icon a img{
+  box-shadow: none;
+}
+
+div.socialmenu.icon img{
+   filter:hue-rotate(290deg) brightness(110%) blur(1px);
+}
+
+div.socialmenu.icon img:hover{
+   filter:hue-rotate(290deg) brightness(190%) blur(0px);
+}
+
+/* Steem Content Modules*/
+
+/* Steem Profile */
+
+#profile-banner {
+	background-color: #111111 ;
+	color: #00ee00;
+}
+
+#profile-banner h1 { color: #00ee00;}
+
+#profile-image img {
+    filter: sepia(80%) hue-rotate(70deg);
+}
+
+#profile-about { color: #00ee00;}
+
+#profile-info { color: #00ee00;}
+
+#profile-info a { color: #504628;}
+
+#profile-info a:visited { color:#504628;}
+
+#profile-info a:hover {
+ color: #1e251d ;
+ text-shadow: 1px 1px 10px #28281e ;
+}
+
+#profile-info a:active {
+ color:  #1e251d ;
+ text-shadow: 1px 1px 10px #28281e ;
+}
+
+#profile-banner #profile-about {color: #00ee00;}
+
+#profile-banner #profile-info {color: #00ee00;}
+
+#profile-banner #profile-info a {color: #eee1cf;}
+
+#profile-banner #profile-info a:visited {color:#eee1cf;}
+
+#profile-banner #profile-info a:hover {
+	color:#96834c;
+  text-shadow: none;
+}
+
+#profile-banner #profile-info a:active {
+	color:#96834c;
+  text-shadow: none;
+}
+.steemitboard img {
+    filter: sepia(90%) hue-rotate(60deg) brightness(110%);
+}
+/* Steem Posts */
+
+
+/*Steem Post*/
+
+/* Steem Comment */
+    div.steem_comment {
+      border-color: #111;
+    }
+
+
+.steem_posts {border-bottom-color: #00ee00;}
+
+.steem_posts_meta {color: #00ee00;}
+
+div.steem_posts_meta {color: #00ee00;}
+
+.steem_posts_preview {
+  background-color: #111111;
+}
+.has_thumb .steem_posts_thumbnail img {
+  filter: sepia(80%) hue-rotate(70deg);
+}
+
+
+
+/* Responsive Design */

@@ -1,0 +1,560 @@
+/*Generic Classes*/
+
+.no_thumb .steem_posts_thumbnail{
+	display: none;
+}
+
+.has_thumb .steem_posts_thumbnail{
+border: 1px solid;
+display:inline-block;
+padding-top: 20%;
+position: relative;
+width:30%;
+overflow: hidden;
+vertical-align: middle;
+margin-right: 0.5em;
+margin-bottom: 0.5em;
+border-radius:10px;
+}
+
+.has_thumb .steem_posts_thumbnail img{
+vertical-align: middle;
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+max-width:100%;
+min-height:100%;
+}
+.no_thumb .steem_posts_preview{
+	width:100%;
+	padding-top: 20%;
+	position: relative;
+}
+
+.no_thumb .steem_posts_preview span{
+	position:absolute;
+	top:0;
+}
+
+.has_thumb .steem_posts_preview{
+	width:66%;
+	max-height:300px;
+	padding-top: 20%;
+	position: relative;
+}
+
+.has_thumb .steem_posts_preview span{
+	vertical-align: middle;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	max-width:100%;
+	min-height:100%;
+}
+
+body{
+	width: 100%;
+	margin:0;
+	text-align:justify;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1.3em;
+	padding: 0;
+}
+
+h1{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-style: normal;
+		font-size: 1.8em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+h2{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-style: normal;
+		font-size: 1.6em;
+    margin-bottom: 0.5em;
+    text-align: center;
+		width: 70%;
+		margin-right:auto;
+		margin-left:auto;
+		padding-bottom: 0.5em;
+}
+
+p{
+	margin-right:auto;
+	margin-left:auto;
+}
+
+img{
+	max-width: 70%;
+	margin-right:auto;
+	margin-left:auto;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+a:link {
+  text-decoration: none;
+	outline:0;
+}
+
+hr {
+    border-width: 1px;
+}
+
+/* Header styles */
+
+header{
+	padding:0.3em;
+	border-width: 1px;
+	border-style: solid;
+	border-right: 0;
+	border-left: 0;
+	margin-bottom: 1em;
+}
+
+/* Button styles */
+
+/* Menu Styles*/
+
+.menu1 div{
+	text-align: center;
+  padding-left: 0;
+	margin-bottom: 0.2em;
+	flex-wrap: wrap;
+}
+
+.menu1 span{
+  display: inline-block;
+  font-size: 1em;
+  text-transform: uppercase;
+	margin-left: 0.3em;
+	margin-right: 0.3em;
+	height: 2.5em;
+}
+.menu1 span a {
+	padding:8px;
+	border-radius: 5px;
+}
+
+.transparent, .transparent div{
+	background:none !important;
+	box-shadow: none !important;
+}
+
+/* Sidebar styles*/
+
+/* content area styles*/
+
+#contentArea {
+	width: 70%;
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom: 1em;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 6px;
+	padding: 1em;
+
+}
+
+#contentArea h1{
+    font-size: 1.4em;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-style: normal;
+    margin-bottom: 0.5em;
+    text-align: center;
+		text-shadow: none;
+}
+
+#contentArea h2{
+    font-size: 1.2em;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-style: normal;
+    margin-bottom: 0.5em;
+    text-align: left;
+		margin-right:auto;
+		margin-left:auto;
+		text-shadow: none;
+}
+#contentArea h3{
+    font-size: 1em;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-style: normal;
+    margin-bottom: 0.5em;
+    text-align: left;
+		margin-right:auto;
+		margin-left:auto;
+		text-shadow: none;
+}
+
+ #contentArea ul{
+	  display: block;
+    list-style-type: disc;
+		margin-right:auto;
+		margin-left:auto;
+}
+
+	/* Change bullet color of list item by replacing it with CSS*/
+	#contentArea ul li {
+		list-style: none;
+		font-size: 1em;
+		margin-right:auto;
+		margin-left: 2em;
+		padding: 0.5em;
+	}
+
+	#contentArea ul li p {
+    padding: 0;
+    margin: 0;
+		display:inline-block;
+}
+
+	#contentArea ul li::before {
+ 		content: "\25CF"; /* Unicode of character to precede the list item */
+	  font-size: 1em;
+		padding-right: 1em;
+}
+
+	#contentArea p{
+		font-size: 1em;
+		margin-right:auto;
+		margin-left: 1em;
+		text-align: left;
+	}
+
+	#contentArea p img{
+		margin-top: 1em;
+	}
+
+	#contentArea img{
+		display: block;
+    margin: auto;
+	}
+
+	/*Footer styles*/
+
+footer{
+	text-align: center;
+	font-style: italic;
+	font-size: 0.7em;
+	margin-bottom: 3em;
+}
+
+#footer-menu li{
+	display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 2em;
+	padding-right: 2em;
+	font-size: 0.8em;
+}
+#footer-menu li a:link{
+	text-decoration: none;
+	font-style: oblique;
+	color:#ec9c36;
+
+}
+#footer-menu ul{
+  list-style: none;
+  text-align: center;
+}
+
+
+/* Steem Content Module Themes */
+
+/* Steem Profile */
+
+#profile-banner {
+	width: 100%;
+	max-width: 1000px;
+	height: 180px;
+	margin-right:auto;
+	margin-left:auto;
+}
+#profile-banner h1 {
+	margin-top: 25px;
+}
+
+#profile-banner h1 span{
+	vertical-align:bottom;
+}
+#profile-image {
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+	vertical-align: middle;
+	margin-top: 15px;
+}
+#profile-image img {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	border-radius: 50%;
+	box-shadow: none;
+}
+#profile-about {
+	font-size: 0.7em;
+	text-align: center;
+	max-width: 50%;
+	margin-right:auto;
+	margin-left:auto;
+}
+#profile-info {
+	font-size: 0.7em;
+	text-align: center;
+	max-width: 70%;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+#profile-info a {
+	text-decoration: none;
+}
+#profile-info span{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+
+/* Steem Posts */
+
+.steem_posts{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	padding: 0.7em;
+}
+
+.steem_posts_preview {
+	max-width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	overflow:hidden;
+	max-height: 30%;
+	border-radius: 5px;
+	font-size: 0.75em;
+}
+
+.steem_posts_meta {
+	font-size: 0.7em;
+	font-style: italic;
+}
+
+#contentArea img.steem_posts_thumbnail{
+	max-width: 20%;
+	max-height: 15%;
+	display: inline-block;
+	margin-right: 1em;
+}
+
+div.steem_posts_meta{
+	margin-bottom: 0.7em;
+	font-style: italic;
+}
+/* steem post comments */
+
+#steem-post-comments {
+	border-top: 1px solid #000;
+	padding: 0.7em;
+}
+#steem-post-comments span.steem_comment {
+    padding-right:0.7em;
+}
+#steem-post-comments div.steem_comment {
+    margin:0;
+    padding-left:1em;
+    padding-right:0;
+    padding-top:0.7em;
+}
+#steem-post-comments div.steem_comment .steem_comment_meta {
+    font-size: 0.6em;
+		padding:0.5em;
+}
+
+#steem-post-comments img{
+	box-shadow:none ;
+	padding:0.5em;
+	border:none;
+}
+
+.steem-comments {
+    padding-left: 1px;
+		padding-right:0;
+    display: none;
+}
+#steem-post-comments div.steem_comment p {
+    margin:0;
+    padding-left:1em;
+		padding-right:0;
+    width: 100%;
+}
+/* Steem Posts */
+
+/*Social Menu*/
+
+/* Responsive Design */
+
+@media only screen and (max-width: 800px) {
+
+	h1{
+		font-size: 150%;
+	}
+	h2{
+		font-size: 120%;
+	}
+
+	#contentArea {
+		width: 100%;
+		margin-right:0;
+		margin-left:0;
+		padding:1em;
+		padding-left: 0;
+		border-radius: 0;
+		border: none;
+	}
+
+	#contentArea p {
+		margin-left:0;
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+
+	.menu1 span{
+		display: inline-block;
+	}
+
+	/* Steem Profile*/
+
+#profile-banner{
+	margin: 0;
+	margin-top: 140px;
+}
+#profile-about {
+	max-width: 90%;
+	position: relative;
+	top:-130px;
+}
+#profile-info {
+	max-width: 99%;
+	position: relative;
+	top:-120px;
+}
+
+#profile-image{
+	display: block;
+	height:96px;
+	width:96px;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#profile-banner h1{
+	position: relative;
+	top:-150px;
+}
+
+/* Steem Posts*/
+
+#contentArea img.steemposts_thumbnail{
+	width: 100%;
+	display:block;
+	border-radius: 0;
+	max-height: none;
+	margin-bottom: 0.5em;
+	max-width: 100%;
+}
+
+.steem_posts{
+	padding: 0em;
+}
+
+
+#contentArea .steem_posts h2{
+	font-size: 1.25em;
+	width: 100%;
+	text-align: center;
+}
+.steem_posts_meta{
+width: 100%;
+text-align: center;
+}
+
+.has_thumb .steem_posts_thumbnail{
+display:block;
+width:30%;
+margin-left:auto;
+margin-right: auto;
+}
+
+.has_thumb .steem_posts_preview{
+	display: none;
+}
+
+/* Steem Post*/
+#contentArea .steem_post h1{
+	font-size: 1.5em;
+	width: 85%;
+}
+#contentArea .steem_post h2{
+	font-size: 1.25em;
+	width: 85%;
+}
+
+#contentArea #steem-post img{
+max-width: 100%;
+border-radius: 0;
+padding: 0;
+margin: 0;
+border: none;
+}
+
+#contentArea #steem-post h1{
+	width:85%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#contentArea #steem-post h2{
+	width:85%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#contentArea ul li{
+	font-size: 0.8em;
+	max-width: 90%;
+	margin-left: 1em;
+	margin-right: 0.5em;
+}
+#steem-post-comments img{
+	padding:0;
+	max-width: 100%;
+	border-radius: 0;
+	margin: 0;
+	border: none;
+}
+}
+@media only screen and (max-width: 400px) {
+	.menu1 span{
+		display:block;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+
+	}
+	.menu1 span a{
+		width:100%;
+		display:block;
+		border-radius: 0;
+	}
+}

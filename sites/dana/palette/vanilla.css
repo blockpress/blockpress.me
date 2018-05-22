@@ -1,0 +1,237 @@
+/*
+latte:          #beb19f   RGB 190, 177, 159
+grey vanilla:   #ded1bf   RGB 222, 209, 191
+pink vanilla:   #eee1cf   RGB 238, 225, 207
+vanilla:        #fcf4e9   RGB 252, 244, 233
+
+black:          #1e251d   RGB 30, 37, 29
+dark grey:      #28281e   RGB 40, 40, 30
+grey:           #3c3c32   RGB 60, 60, 50
+dark gold:      #504628   RGB 80, 70, 40
+light gold:     #96834c   RGB 150, 131, 76
+*/
+
+/* GENERAL THEME STYLES */
+
+/* HTML Classes */
+
+body { background-color: #eee1cf;}
+
+h1 {
+  color:#1e251d ;
+  text-shadow: 1px 1px 5px #28281e;
+}
+
+h2 {
+  color:#1e251d ;
+	text-shadow: 1px 1px  #28281e ;
+}
+
+h3 {
+  color:#1e251d ;
+	text-shadow: 1px 1px  #28281e ;
+}
+
+p { color: #3c3c32 ;}
+
+a:link { color:#96834c;}
+
+a:visited { color:#96834c;}
+
+a:hover { color:#504628;}
+
+a:active, a:focus { color:#504628;}
+
+img {
+	color: #0f0d0c;
+	border-color: #5b5349;
+}
+
+hr { color: rgba(222,209,191, 0.2)}
+
+
+/* Generic Classes */
+
+/* Enclosure Classes
+(can be applied to elemens such as headers, footers or document body)*/
+
+/* Enclosure1 Styles*/
+
+.enclosure1{
+  color:#eee1cf;
+  border-color: #96834c;
+  background-color: #3c3c32;
+}
+
+/* Enclosure2 Styles */
+
+.enclosure2{
+  color: #3c3c32 ;
+	border-color: #1e251d;
+	background-color: #fcf4e9;
+}
+
+.enclosure2 h1 {
+color: #96834c;
+text-shadow: 1px 1px 5px #beb19f;
+}
+
+.enclosure2 h2 { color:#504628 ;}
+
+.enclosure2 h3 { color: #504628 ;}
+
+.enclosure2 p {color: #3c3c32 ;}
+
+.enclosure2 ul li {
+  color: #1e251d ; 	/* set color of list item text */
+}
+
+.enclosure2 ul li::before {
+  color: #28281e ;   /* color of unicode character */
+}
+
+/* Enclosure3 Styles */
+
+.enclosure3{
+  background-color: #ded1bf;
+	border-color: #1e251d;
+  color: #3c3c32;
+}
+
+/* Pattern Classes
+(can be applied to add gradients, textures etc to any element with a background) */
+
+.pattern1 { background: linear-gradient(#ded1bf,#beb19f);}
+
+.pattern2 { background: linear-gradient(to right, rgba(222,209,191,0.5), rgba( 190,177,159,1));}
+
+.pattern3 { background: linear-gradient(to left, rgba(222,209,191,0.5), rgba( 190,177,159,1));}
+
+/* Button Classes
+(to be used with any elements that act like a button)*/
+
+.button1{
+  background: #fcf4e9;
+  color: #1e251d ;
+}
+
+.button1:hover{ background: #96834c;}
+
+.button2{
+  background: #ded1bf;
+  color: #96834c;
+}
+
+.button2:hover{
+  background: #beb19f;
+  color: #28281e;
+}
+
+/*Box Shadow Classes
+(can be added to any element */
+
+.boxshadowL{ box-shadow:3px 3px 25px #28281e;}
+
+
+.boxshadowM{ box-shadow:2px 2px 5px #28281e;}
+
+.boxshadowM img{ box-shadow:2px 2px 5px #28281e;}
+
+.boxshadowM .menu span a{box-shadow:2px 2px 5px #28281e;}
+
+.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px #504628;}
+
+.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #504628;}
+
+
+.boxshadowMInv{ box-shadow:2px 2px 5px #fcf4e9;}
+
+.boxshadowMInv:hover{ box-shadow:2px 2px 5px #504628;}
+
+.boxshadowMInv img:hover{ box-shadow:2px 2px 5px #fcf4e9;}
+
+
+.boxShadowS{ box-shadow: 1px 1px 10px #28281e;}
+
+
+.boxShadowXS { box-shadow:1px 1px 5px #28281e;}
+
+
+/* Menu Classes*/
+
+/*Menu1 Styles*/
+
+.menu1 span a {
+background-color:#fcf4e9;
+}
+
+.menu1 span a:hover {
+	background-color:#beb19f;
+}
+
+.menu1 span a:focus {
+	background-color:#beb19f;
+}
+
+.menu1 span a:active {
+	background-color:#ded1bf;
+	color:#eee1cf;
+}
+
+.menu1 div {background: #fcf4e9;}
+
+/* Menu2 Styles */
+
+.menu2 span a {
+  background: none;
+  box-shadow: none;
+}
+
+.menu2 span a:hover { box-shadow: none;}
+
+.menu2 span a:focus { box-shadow: none;}
+
+.menu2 span a:active { box-shadow: none;}
+
+.menu2 span {
+  background: #ded1bf;
+  color: #5d2534;
+}
+
+.menu2 div { background-color: #fcf4e9;}
+
+/* Social Menu Styles*/
+
+div.socialmenu.icon a:link { color:#1e251d ;}
+
+div.socialmenu.icon a:visited { color:#1e251d ;}
+
+div.socialmenu.icon a:hover {
+ color:#beb19f;
+}
+
+div.socialmenu.icon a:focus { color:#beb19f;}
+
+div.socialmenu.icon a:active { color:#1e251d ;}
+
+div.socialmenu.icon a img{
+  box-shadow: none;
+}
+
+div.socialmenu.icon img{
+   filter:sepia(100%) brightness(80%);
+}
+
+div.socialmenu.icon img:hover{
+   filter:sepia(50%) brightness(90%);
+}
+
+/*STEEM MODULES STYLES*/
+
+/*Steem Profile*/
+
+div#profile-banner a { color: #1e251d;}
+
+.enclosure2 #profile-banner  h1 {text-shadow: none};
+
+.boxshadowM #profile-banner{box-shadow:2px 2px 5px #28281e;}

@@ -1,12 +1,12 @@
 /*
-black:  #111111;
-white:  #eeeeee;
-red:    #ee0000;
-green:  #00ee00;
-blue:   #0000ee;
-cyan:   #00dddd;
-magenta:#dd00dd;
-yellow: #dddd00;
+black:  #111111   rgba   17, 17, 17
+white:  #eeeeee   rgba   238, 238, 238
+red:    #ee0000   rgba   238, 0, 0
+green:  #00ee00   rgba   0, 238, 0
+blue:   #0000ee   rgba   0, 0, 238
+cyan:   #00dddd   rgba   0, 221, 221
+magenta:#dd00dd   rgba   221, 0, 221
+yellow: #dddd00   rgba   221, 221, 0
 */
 
 /* GENERAL THEME STYLES */

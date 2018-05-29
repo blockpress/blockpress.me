@@ -1,12 +1,12 @@
 /*
-black:  #111111   rgba   17, 17, 17
-white:  #eeeeee   rgba   238, 238, 238
-red:    #ee0000   rgba   238, 0, 0
-green:  #00ee00   rgba   0, 238, 0
-blue:   #0000ee   rgba   0, 0, 238
-cyan:   #00dddd   rgba   0, 221, 221
-magenta:#dd00dd   rgba   221, 0, 221
-yellow: #dddd00   rgba   221, 221, 0
+black:        #111111   rgba   17, 17, 17
+dark grey:    #131313   rgba   19, 19, 19
+grey:         #161616   rgba   22, 22, 22
+white:        #eeeeee   rgba   238, 238, 238
+light green:  #00ee00   rgba   0, 238, 0
+green:        #00dd00   rgba   0, 221, 0
+dark green:   #00cc00   rgba   0, 204, 0
+cyan:         #00dddd   rgba   0, 221, 221
 */
 
 /* GENERAL THEME STYLES */

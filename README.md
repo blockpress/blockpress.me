@@ -6,10 +6,10 @@ In the [BlockPress wiki](https://github.com/blockpress/blockpress.me/wiki) you c
 * [Installation](https://github.com/blockpress/blockpress.me/wiki/Installation)
 * [Configuration](https://github.com/blockpress/blockpress.me/wiki/Configuration-tutorial)
 * [Styling](https://github.com/blockpress/blockpress.me/wiki/Styling)
+* [Modules](https://github.com/blockpress/blockpress.me/wiki/Modules)
 
 ### Coming soon
 We are currently working on writing sections for:
-* Modules
 * Developer reference
 
 ## Example websites

@@ -10,7 +10,7 @@
 		"site_image": "content/img/anton.jpg"
 	},
 
-	"modules": ["steem","static"],
+	"modules": ["steem","static","cat"],
 
 	"firstpage": {"type": "steem", "args": {"show":"profile", "user":"antonchanning"}},
 
@@ -18,7 +18,8 @@
     {"label": "Profile", "type": "steem", "args": {"show":"profile", "user":"antonchanning"}},
 	  {"label": "Projects", "type": "static", "args": "projects.html"},
     {"label": "BlockPress", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress","count":"50"}},
-    {"label": "SteemSwitch", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"steemswitch","count":"50"}}
+    {"label": "SteemSwitch", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"steemswitch","count":"50"}},
+    {"label": "Cat", "type": "cat", "args": ""}
   ],
 
 	"socialmenu": {

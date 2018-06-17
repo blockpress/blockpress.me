@@ -3,7 +3,7 @@
 	<head>
 		<title id="title">loading...</title>
 		<script src="jquery.js"></script>
-		<script src="init.jsx"></script>
+		<script src="init.js"></script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon"
@@ -17,7 +17,7 @@
 				margin-top: 2em;
 			}
 
-			img, h1 {
+			.BPloading {
 	    animation: hue-rotate 1s infinite;
 			}
 
@@ -37,7 +37,7 @@
 	</head>
 
 	<body>
-		<img src="content/default/BP-logo-196px.png" alt="BlockPress Logo spinning" id="loadingLogo"></img>
-		<h1>Please wait while BlockPress loads your content.</h1>
+		<img src="content/default/BP-logo-196px.png" alt="BlockPress Logo spinning" class="BPloading"></img>
+		<h1 class="BPloading">Please wait while BlockPress loads your content.</h1>
 	</body>
 </html>

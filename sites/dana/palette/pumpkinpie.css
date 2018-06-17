@@ -1,13 +1,10 @@
 /*
 liquorice:  #2B1234  RGB 43, 18, 52
 lavender:   #773090  RGB 119, 48, 144
-blue:       #1581D6  RGB 21, 129, 214
 dark green: #1E9B1E  RGB 30, 155, 30
 green:      #79ed97  RGB 121, 237, 151
-pink:       #D615A7  RGB 214, 21, 167
 red:        #D61544  RGB 214, 21, 68
 orange:     #D66415  RGB 214, 100, 21
-yellow:     #F8E311  RGB 248, 227, 17
 white-moss: #DEF9DE  RGB 222, 249, 222
 */
 
@@ -41,9 +38,9 @@ a:link { color:#D61544;}
 
 a:visited { color:#D61544;}
 
-a:hover { color:#D615A7;}
+a:hover { color:#D66415;}
 
-a:active, a:focus { color:#D615A7;}
+a:active, a:focus { color:#D66415;}
 
 img {
 	color: #2B1234;
@@ -63,7 +60,7 @@ hr {
 
 .enclosure1{
   color: #2B1234;
-	border-color: #F8E311;
+	border-color: #D66415;
 	background-color: #D66415;
 }
 /*Enclosure2 styles*/
@@ -71,7 +68,7 @@ hr {
 .enclosure2{
   color: #773090;
   background-color: #1E9B1E;
-	border-color: #F8E311;
+	border-color: #D66415;
 }
 
 .enclosure2 h1 { color: #D61544;}
@@ -93,7 +90,7 @@ hr {
 /*Enclosure3 Styles*/
 
 .enclosure3{
-  color:#F8E311;
+  color:#D66415;
   border-color: #DEF9DE;
   background-color: #773090;
 }
@@ -112,17 +109,17 @@ hr {
 
 .button1{
   background: #6f6559;
-  color: #D615A7;
+  color: #D66415;
 }
 .button1:hover{background: #773090;}
 
 .button2{
   background: #773090;
-	color: #D615A7;
+	color: #D66415;
 }
 .button2:hover{
   background: #2B1234;
-	color: #D615A7;
+	color: #D66415;
 }
 
 /*Box Shadow Classes
@@ -137,14 +134,14 @@ hr {
 
 .boxshadowM .menu span a{ box-shadow:2px 2px 5px #773090 ;}
 
-.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px #F8E311;}
+.boxshadowM .menu span a:hover{ box-shadow:2px 2px 5px #D66415;}
 
-.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #F8E311;}
+.boxshadowM .menu span a:focus{ box-shadow:2px 2px 5px #D66415;}
 
 
 .boxshadowMInv{ box-shadow:2px 2px 5px #DEF9DE;}
 
-.boxshadowMInv:hover{ box-shadow:2px 2px 5px #F8E311;}
+.boxshadowMInv:hover{ box-shadow:2px 2px 5px #D66415;}
 
 .boxshadowMInv img:hover{ box-shadow:2px 2px 5px #DEF9DE;}
 
@@ -178,7 +175,7 @@ hr {
 /*Menu2 Styles*/
 
 
-.menu2 a { color:  #F8E311;}
+.menu2 a { color:  #D66415;}
 
 .menu2 a:hover { color: #DEF9DE;}
 
@@ -225,12 +222,12 @@ div.socialmenu.icon a:link { color:#DEF9DE;}
 div.socialmenu.icon a:visited { color:#DEF9DE;}
 
 div.socialmenu.icon a:hover {
- color:#F8E311;
+ color:#D66415;
 }
 
-div.socialmenu.icon a:focus { color:#F8E311;}
+div.socialmenu.icon a:focus { color:#D66415;}
 
-div.socialmenu.icon a:active { color:#F8E311;}
+div.socialmenu.icon a:active { color:#D66415;}
 
 div.socialmenu.icon a img{
   box-shadow: none;
@@ -247,5 +244,9 @@ div.socialmenu.icon img:hover{
 /*Steem Profile*/
 
 div#profile-banner a { color:#1E9B1E;}
+
+div#profile-banner a:hover { color:#D66415;}
+
+div#profile-banner a:focus { color:#D66415;}
 
 .boxshadowM #profile-banner{ box-shadow:2px 2px 5px #773090 ;}

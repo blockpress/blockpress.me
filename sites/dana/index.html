@@ -6,8 +6,38 @@
 		<script src="init.js"></script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon"
+      type="image/png"
+      href="content/default/BP-logo-16px.png">
+		<style>
+			body{
+				background: #1a1813;
+				color: #bca43a;
+				text-align: center;
+				margin-top: 2em;
+			}
+
+			.BPloading {
+	    animation: hue-rotate 1s infinite;
+			}
+
+			@keyframes hue-rotate {
+			    0% { filter:hue-rotate(0deg);}
+					12% {filter:hue-rotate(45deg); }
+					25% { filter:hue-rotate(90deg);}
+					37% {filter:hue-rotate(135deg); }
+			    50% { filter:hue-rotate(180deg);}
+					62% { filter:hue-rotate(225deg);}
+					75% { filter:hue-rotate(270deg);}
+					87% { filter: hue-rotate(315deg);}
+			    100% { filter:hue-rotate(360deg);}
+				}
+
+		</style>
 	</head>
+
 	<body>
-		<h1>Loading...</h1>
+		<img src="content/default/BP-logo-196px.png" alt="BlockPress Logo spinning" class="BPloading"></img>
+		<h1 class="BPloading">Please wait while BlockPress loads your content.</h1>
 	</body>
 </html>

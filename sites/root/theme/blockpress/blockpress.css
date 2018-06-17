@@ -277,6 +277,7 @@ header{
 			padding: 20px;
 			cursor: pointer;
 			width: auto;
+			margin-bottom: 0.5em;
 		}
 		a.download-button:hover {
 			background-color: #aabbcc;

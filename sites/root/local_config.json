@@ -1,8 +1,8 @@
 {
-  "sitetitle": "Blockpress.me",
+  "sitetitle": "BlockPress",
   "tagline":"The CMS with blockchains for its database...",
 	"palette": "vanilla",
-  "theme": "amber",
+  "theme": "blockpress",
 
 	"themeoptions": {
 		"banner_image": "",
@@ -15,10 +15,10 @@
 
 	"menu": [
     {"label": "About", "type": "static", "args": "home.html"},
+	  {"label": "Download", "type": "static", "args": "download.html"},
 	  {"label": "Pitch", "type": "static", "args": "pitch.html"},
 	  {"label": "Team", "type": "static", "args": "team.html"},
-	  {"label": "Dana's Updates", "type": "steem", "args": {"show":"posts", "user":"dana-varahi", "tag":"blockpress", "count": "50"}},
-	  {"label": "Anton's Updates", "type": "steem", "args": {"show":"posts", "user":"antonchanning", "tag":"blockpress", "count": "50"}}
+	  {"label": "News", "type": "steem", "args": {"show":"posts", "user":"blockpress", "tag":"", "count": "50"}}
   ],
 
 

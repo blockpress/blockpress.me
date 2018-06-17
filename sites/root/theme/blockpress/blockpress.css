@@ -128,6 +128,19 @@ hr { border-width: 1px; }
 header{
   padding-top:0.5em;
 }
+
+.BPLogo {
+	display: inline-block;
+	padding-left: 2em;
+}
+.BPLogo img {
+	max-width: 100%;
+	box-shadow: none !important;
+}
+.BPTitle {
+	display: inline-block;
+}
+
 /* Button styles */
 
 /* Menu Styles*/
@@ -251,6 +264,42 @@ header{
 	#contentArea a {
 	  text-decoration: none;
 	}
+
+		.download-buttons {
+			text-align: center;
+			padding-top: 2em;
+			padding-bottom: 4em;
+		}
+		a.download-button {
+			display: inline-block;
+			background-color: #ccbbaa;
+			border-radius: 23px;
+			padding: 20px;
+			cursor: pointer;
+			width: auto;
+		}
+		a.download-button:hover {
+			background-color: #aabbcc;
+		}
+		.download-button-logo {
+			width: 100px;
+			display: inline-block;
+		}
+		.download-button-text {
+			display: inline-block;
+		}
+		.download-button-text h2 {
+			font-size: 0.9em;
+			padding-bottom: 0;
+			width: auto;
+		}
+		.download-button-text h3 {
+			padding-top: 0.3em;
+			font-size: 0.8em;
+		}
+		.download-button-text p {
+			font-size: 0.6em !important;
+		}
 
 	/*Footer styles*/
 
